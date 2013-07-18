@@ -1,0 +1,92 @@
+/*
+Theme Name:     Investigative News Network
+Theme URI:      http://investigativenewsnetwork.org
+Description:    Child theme for the Investigative News Network built with the Project Largo parent theme
+Author:         Adam Schweigert/INN
+Author URI:     http://investigativenewsnetwork.org
+Template:       largo
+Version:        0.1.0
+*/
+
+/* @import url("../largo/style.css"); */
+@import url("css/inn.css");
+
+h1, h2, h3,
+#menu-footer-navigation li.menu-label {
+  font-family: "news-gothic-std", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "news-gothic-std", "Helvetica Neue", Helvetica, sans-serif;
+}
+.entry-title,
+.page-title,
+.related-items h3 {
+  letter-spacing: 0;
+}
+h1.entry-title {
+  line-height: 1.1;
+}
+p {
+  font-family: "ff-meta-serif-web-pro", Georgia, serif;
+  font-weight: 500;
+}
+ul, ol {
+  font-size: 19px;
+}
+#content ul,
+#content ol {
+  font-family: "ff-meta-serif-web-pro", Georgia, serif;
+}
+.guide-nav {
+  background-color: #eee;
+  padding: 1.5em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+}
+.guide-nav h4,
+.guide-nav h4 a {
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 21px;
+}
+.guide-nav ul {
+  font-size: 15px;
+  line-height: 1.2;
+  list-style-type: square;
+}
+.guide-nav .current_page_item {
+  font-weight: bold;
+}
+.guide-nav .current_page_item ul {
+  font-weight: normal;
+}
+
+@media (min-width: 769px) and (max-width: 979px) {
+
+}
+
+@media (max-width: 768px) {
+  .guide-nav.span3 {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .type-page .span9 {
+	  width: 100%;
+	  margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+}
