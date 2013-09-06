@@ -30,7 +30,7 @@
 			foreach ($social as $network) {
 				if ( !empty($meta['inn_'.$network][0])) {
 					if ( 'facebook' == $network ) {
-						$url = "https://fb.com/" . $meta['inn_facebook'][0];
+						$url = "https://facebook.com/" . $meta['inn_facebook'][0];
 					} else if ( 'twitter' == $network ) {
 						$url = "https://twitter.com/" . $meta['inn_twitter'][0];
 					} else {
@@ -39,10 +39,16 @@
 					if ( 'googleplus' == $network ) $network = 'gplus';
 					?>
 					<li><a href="<?php echo $url; ?>" target="_blank"><i class="icon-<?php echo $network; ?>"></i></a></li>
+
 					<?php
 				}
 			}
+			if ( !empty($meta['inn_donate'][0])) { ?>
+				<li class="donate-btn"><a href="<?php echo safe_url( $meta['inn_donate'][0] ); ?>" target="_blank"><i class="icon-heart"></i>Donate Now</a></li>
+		<?php
+			}
 		?>
+
 		</ul>
 	</footer>
 	</div>

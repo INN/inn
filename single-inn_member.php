@@ -23,7 +23,7 @@ get_header();
 			//get our posts
 			$wp_query->query( array(
 				'post_type' => 'network_content',
-				'posts_per_page' => 5,
+				'posts_per_page' => 10,
 				'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
 				'suppress_filters' => false,
 				'meta_key' => 'from_member_id',

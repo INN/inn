@@ -126,6 +126,12 @@ function inn_meta_boxes() {
         'desc'   => "The URL of this member’s website, including http(s)://"
       ),
       array(
+        'name'  => 'Donation Page',
+        'id'    => $prefix . 'donate',
+        'type'  => 'text',
+        'desc'   => "The URL of this member’s donation page, including http(s)://"
+      ),
+      array(
         'name'  => 'RSS',
         'id'    => $prefix . 'rss',
         'type'  => 'text',
@@ -480,6 +486,7 @@ function inn_members_by_letter( $query ) {
   if ( $query->is_post_type_archive('inn_member') && $query->is_main_query()  ) {
 	  $query->set( 'orderby', 'title' );
 	  $query->set( 'order', 'ASC' );
+	  $query->set( 'posts_per_page', -1 );
   }
 
   //include network content on homepage-featured archive

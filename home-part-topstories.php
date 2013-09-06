@@ -47,10 +47,19 @@
 					endif;
 
 					if ( 'network_content' == get_post_type() ) :
-						$member_permalink = get_permalink( get_post_meta( $ids[0], 'from_member_id', TRUE ));
+						$member_id = get_post_meta( $ids[0], 'from_member_id', TRUE );
+						$member_permalink = get_permalink( $member_id );
 						$member_name = get_membername_from_post( $ids[0] );
+						$member_meta = get_post_custom( $member_id );
+						if ($member_meta) $member_donate_link = $member_meta['inn_donate'][0];
 					?>
 						<div class="more"><a href="<?php echo $member_permalink; ?>">More From <?php echo $member_name; ?> »</a></div>
+						<?php if ($member_donate_link) { ?>
+							<div class="donate">
+								<p><strong><?php echo $member_name; ?> is a nonprofit organization.</strong><br />If you value their work, please help support it.</p>
+								<div class="donate-btn"><a href="<?php echo $member_donate_link; ?>"><i class="icon-heart"></i>Donate Now</a></div>
+							</div>
+						<?php } ?>
 					<?php endif;
 
 			endwhile;
@@ -75,8 +84,22 @@
 			while ( $substories->have_posts() ) : $substories->the_post(); $ids[] = get_the_ID();
 				if ($count <= 3) : ?>
 					<div class="story">
-			        	<?php if ( $tags === 'top' && inn_homepage_tag() ) : ?>
-			        		<h5 class="top-tag"><?php inn_homepage_tag(1); ?></h5>
+			        	<?php
+			        		if ( $tags === 'top' && inn_homepage_tag() ) :
+			        			if ( 'network_content' == get_post_type() ) :
+									$member_id = get_post_meta( $ids[0], 'from_member_id', TRUE );
+									$member_meta = get_post_custom( $member_id );
+									if ($member_meta) $member_donate_link = $member_meta['inn_donate'][0];
+								endif;
+			        	?>
+			        		<h5 class="top-tag">
+			        			<?php
+			        				inn_homepage_tag(1);
+									if ( $member_donate_link ) {
+										echo ' <span class="donate-link"><a href="' . $member_donate_link . '"><i class="icon-heart"></i>Donate Now</a></span>';
+									}
+								?>
+							</h5>
 			        	<?php endif; ?>
 			        	<h3><a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a></h3>
 			        	<a href="<?php the_permalink(); ?>" target="_blank"><?php the_post_thumbnail(); ?></a>
