@@ -193,3 +193,29 @@ function largo_byline( $echo = true ) {
 		echo $output;
 	return $output;
 }
+function largo_google_analytics() {
+		if ( !is_user_logged_in() ) : // don't track logged in users ?>
+			<script>
+			    var _gaq = _gaq || [];
+			    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+				_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+			<?php if ( of_get_option( 'ga_id', true ) ) : // make sure the ga_id setting is defined ?>
+				_gaq.push(['_setAccount', '<?php echo of_get_option( "ga_id" ) ?>']);
+				_gaq.push(['_trackPageview']);
+			<?php endif; ?>
+			    _gaq.push(
+					["largo._setAccount", "UA-17578670-4"],
+					["largo._setCustomVar", 1, "SiteName", "<?php bloginfo('name') ?>"],
+					["largo._setDomainName", "<?php echo str_replace( 'http://' , '' , home_url()) ?>"],
+					["largo._setAllowLinker", true],
+					["largo._trackPageview"]
+				);
+
+			    (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+	<?php endif;
+}
