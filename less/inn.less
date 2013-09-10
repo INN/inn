@@ -684,6 +684,24 @@ article.inn_member {
 		.member {
 			display: none;
 		}
+		.donate {
+			margin-top: 18px;
+			background-color: #efefef;
+			padding: 15px;
+			.border-radius(10px);
+			text-align: center;
+			p {
+				font-size: 17px;
+			}
+			.donate-btn {
+				max-width: 200px;
+				float: none;
+				margin: 0 auto;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 15px;
+				padding: 5px;
+			}
+		}
 	}
 }
 h5.top-tag {
@@ -692,6 +710,20 @@ h5.top-tag {
 }
 #homepage-featured .sub-stories h5.top-tag {
 	margin-bottom: 3px;
+	span.donate-link a {
+		color: #fff;
+		white-space: nowrap;
+		i.icon-heart {
+			color: #cdcdcd;
+		}
+	}
+	&:hover span.donate-link a {
+		color: #bd261d;
+		text-decoration: none;
+		i.icon-heart {
+			color: #bd261d;
+		}
+	}
 }
 #series-header {
 	margin-bottom: 1em;
