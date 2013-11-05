@@ -219,3 +219,19 @@ function largo_google_analytics() {
 			</script>
 	<?php endif;
 }
+
+/**
+ * Add custom RSS feeds for member stories
+ * Template used is feed-member-stories.php
+ */
+function add_query_vars_filter( $vars ){
+  $vars[] = 'top_stories';
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
+function inn_member_stories_rss() {
+	add_filter('pre_option_rss_use_excerpt', '__return_zero');
+	load_template( get_stylesheet_directory() . '/feed-member-stories.php' );
+}
+add_feed('member_stories', 'inn_member_stories_rss');
