@@ -161,7 +161,12 @@ function inn_meta_boxes() {
         'type'  => 'text',
         'desc'   => "The URL of this member’s YouTube account/channel, including http(s)://"
       ),
-
+	  array(
+        'name'  => 'Github URL',
+        'id'    => $prefix . 'github',
+        'type'  => 'text',
+        'desc'   => "The URL of this member’s github account, including http(s)://"
+      ),
     )
   );
   new RW_Meta_Box( $meta_box ); //URLs
