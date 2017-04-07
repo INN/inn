@@ -1,0 +1,26 @@
+.type-argolinks {
+  margin-bottom: 2em;
+}
+.type-argolinks h3 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+.type-argolinks h3 a {
+  color: #555555;
+}
+.type-argolinks h3 a:hover {
+  color: #09c9ff;
+}
+.type-argolinks p {
+  font-size: 15px;
+  margin-bottom: 0.5em;
+}
+.type-argolinks p.source span {
+  font-style: italic;
+  padding-left: 10px;
+  color: #909799;
+}
+.stories article.type-argolinks {
+  border-bottom: none;
+  margin-bottom: 2em;
+}

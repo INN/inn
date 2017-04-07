@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Money</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="For-Funders" sketch:type="MSArtboardGroup" transform="translate(-509.000000, -3233.000000)" fill="#1EBDEA">
+            <g id="Money" sketch:type="MSLayerGroup" transform="translate(509.000000, 3233.000000)">
+                <path d="M30.1238194,60.434997 C13.5821774,60.434997 0.123819444,46.9752645 0.123819444,30.434111 C0.123819444,13.8911855 13.5821774,0.434996975 30.1238194,0.434996975 C46.6654615,0.434996975 60.1238194,13.8911855 60.1238194,30.434111 C60.1238194,46.9752645 46.6654615,60.434997 30.1238194,60.434997 M30.1238194,3.73082403 C15.3984798,3.73082403 3.41974384,15.7092062 3.41974384,30.434111 C3.41974384,45.1590158 15.3984798,57.137398 30.1238194,57.137398 C44.8491591,57.137398 56.827895,45.1590158 56.827895,30.434111 C56.827895,15.7092062 44.8491591,3.73082403 30.1238194,3.73082403" id="Fill-47" sketch:type="MSShapeGroup"></path>
+                <text id="$" sketch:type="MSTextLayer" font-family="Effra" font-size="36.2537308" font-weight="260">
+                    <tspan x="20.7333333" y="40.5789474">$</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
