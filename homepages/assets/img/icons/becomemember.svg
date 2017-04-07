@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="41px" viewBox="0 0 40 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>checkmark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="INN-Homepage-3" sketch:type="MSArtboardGroup" transform="translate(-698.000000, -4895.000000)" fill="#AAAAAA">
+            <g id="checkmark" sketch:type="MSLayerGroup" transform="translate(698.000000, 4895.000000)">
+                <path d="M20.0347222,40.6545291 C9.0790625,40.6545291 0.165486111,31.6345663 0.165486111,20.5496068 C0.165486111,9.46345977 9.0790625,0.4458719 20.0347222,0.4458719 C30.9903819,0.4458719 39.9039583,9.46345977 39.9039583,20.5496068 C39.9039583,31.6345663 30.9903819,40.6545291 20.0347222,40.6545291 M20.0347222,2.65455157 C10.2820139,2.65455157 2.34840278,10.681796 2.34840278,20.5496068 C2.34840278,30.4174176 10.2820139,38.444662 20.0347222,38.444662 C29.7874306,38.444662 37.7210417,30.4174176 37.7210417,20.5496068 C37.7210417,10.681796 29.7874306,2.65455157 20.0347222,2.65455157" id="Fill-43" sketch:type="MSShapeGroup"></path>
+                <path d="M17.6616806,29.2358927 L7.526375,18.9548451 L9.07084722,17.3945197 L17.6640278,26.1116797 L30.9997708,12.6185468 L32.5418958,14.1812471 L17.6616806,29.2358927" id="Fill-44" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

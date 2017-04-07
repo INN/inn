@@ -1,0 +1,29 @@
+@import "variables.less";
+
+// news/press page
+.type-argolinks {
+  margin-bottom: 2em;
+  h3 {
+    font-size: 18px;
+    margin-bottom: 0.5em;
+    a {
+	  color: @dkgray;
+	  &:hover {
+	    color: @blue;
+	  }
+    }
+  }
+  p {
+	font-size: 15px;
+	margin-bottom: 0.5em;
+    &.source span {
+      font-style: italic;
+      padding-left: 10px;
+      color: @medgray;
+    }
+  }
+}
+.stories article.type-argolinks {
+  border-bottom: none;
+  margin-bottom: 2em;
+}

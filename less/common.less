@@ -1,0 +1,273 @@
+body,
+.btn-primary,
+.btn,
+.navbar,
+h1,h2,h3,h4,h5,
+.widgettitle,
+input, button, select, textarea  {
+  font-family: @sans;
+  color: @dkgray;
+}
+h1 {
+  color: @xdkgray;
+}
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="url"],
+input[type="search"] {
+  border-radius: 0;
+}
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+  font-family: @serif;
+  font-weight: 300;
+}
+h1,h2,h3,h4,h5,
+.widgettitle {
+  font-weight: 500;
+}
+a {
+  color: @linkcolor;
+  &:hover {
+    color: @linkhover;
+  }
+}
+.btn {
+  text-shadow: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 12px 24px;
+  background-color: @btnbg;
+  color: #fff;
+  border-radius: 0;
+  &:hover {
+    background-color: darken(@btnbg, 6.3%);
+    color: #fff;
+  }
+  &.btn-primary {
+    color: #fff;
+    background-color: @btnprimarybg;
+    &:hover {
+	  background-color: darken(@btnprimarybg, 6.3%);
+    }
+  }
+  &.btn.search-submit {
+    padding: 4px 10px;
+  }
+}
+.donate-btn a:hover {
+  color: #fff;
+}
+#top-nav {
+  li {
+	padding-top: 2px;
+	&.main_site_home_link {
+      padding-top: 0;
+      font-size: 16px;
+      font-weight: bold;
+      a {
+        color: @blue;
+      }
+    } 
+  } 
+}
+.dropdown-menu .main_site_home_link {
+  display: none;
+}
+.navbar {
+  margin-bottom: 0;
+  li.home-icon>a img {
+    height: 58px;
+  }
+}
+// footer adjustments
+.footer-bg {
+  background-color: @dkgray;
+}
+#site-footer .widgettitle,
+#site-footer li.menu-label,
+#menu-footer-navigation li,
+#supplementary ul.menu li {
+  border-bottom: none;
+}
+#supplementary div:nth-child(3) {
+  margin-top: 2.015em;
+}
+#supplementary div:first-child {
+  padding: 10px 30px 0 0;
+}
+#supplementary div.menu-footer-2-container {
+  padding: 0;
+}
+
+#site-footer {
+  a {
+    color: @ltgray;
+    &:hover {
+      color: @blue;
+    }
+  }
+  .widgettitle,
+  li.menu-label {
+    color: #fafafa;
+    font-weight: 500;
+    a {
+	  color: #fafafa;
+    }
+  }
+  #footer-social {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 0;
+    text-align: center;
+    li {
+      float: none;
+      display: inline-block;
+      i {
+        color: #fff;
+        background-color: @medgray;
+        padding: 14px;
+        border-radius: 30px;
+        margin: 0 4px;
+        &:hover {
+          background-color: #fff;
+          color: @medgray;
+        }
+        &.icon-github:hover {
+          color: @medgray;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      float: none;
+      li { 
+	    min-height: 56px; 
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    img[alt="INN logo"] {
+      width: 400px;
+    }
+  }
+  @media (max-width: 480px) {
+    img[alt="INN logo"] {
+      max-width: 75%;
+      padding: 2em 0;
+    }
+  }
+  .widget.widget_sp_image {
+    margin-top: 1em;
+  }
+}
+#menu-footer-navigation,
+#supplementary ul.menu {
+  font-family: @sans;
+}
+#supplementary {
+  border-bottom: none;
+  padding-top: 3em;
+  margin-bottom: 0;
+}
+#boilerplate {
+  .span6 {
+    margin: 0 auto;
+    float: none;
+    &.right {
+	  text-align: center;
+    }
+  }
+  text-align: center;
+  border-top: none;
+  .copyright,
+  .menu,
+  .footer-bottom {
+    margin-bottom: 0.5em;
+  }
+}
+@media (max-width: 768px) {
+  #site-footer {
+    text-align: center;
+  }
+  #site-footer img.alignleft {
+	float: none;
+    margin: 0 auto 1.5em;
+  }
+  #site-footer p,
+  #site-footer li {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  #boilerplate .copyright,
+  #boilerplate .menu,
+  #boilerplate .footer-bottom {
+    margin-bottom: 1.5em;
+  }
+  #supplementary {
+    padding-top: 1em;
+  }
+  #supplementary div:nth-child(2),
+  #site-footer #supplementary div:nth-child(2) .widget,
+  #site-footer #supplementary div:nth-child(2) ul.menu {
+    margin-bottom: 0;
+  }
+  #supplementary div:nth-child(3) {
+    margin-top: 0;
+  }
+  #supplementary div:first-child {
+    padding: 0;
+  }
+  #menu-footer-navigation li,
+  #supplementary ul.menu li {
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+  #site-footer .widget_nav_menu .widgettitle {
+    font-size: 21px;
+    margin-bottom: 0.5em;
+  }
+}
+.footer-credit-padding-inn-logo-missing {
+  margin-top: 0;
+}
+
+.top-tag {
+  font-weight: 300;
+}
+.stories {
+  h2.entry-title {
+    font-size: 24px;
+    margin-bottom: 0.5em;
+    a {
+	  color: @dkgray;
+	  &:hover {
+	    color: @blue;
+	  }
+	}
+  }
+  h5.byline {
+    display: none;
+  }
+}
+.type-pull-quote {
+  border-left: 1px solid @ltgray;
+  padding-left: 40px;
+  color: @dkgray;
+
+  @media (max-width: 768px) {
+      padding: 20px 10px;
+      text-align: center;
+      border: none;
+      border-top: 3px solid @dkgray;
+      border-bottom: 3px solid @dkgray;
+      margin: 0 auto 1em;
+      max-width: 90%;
+  }
+}

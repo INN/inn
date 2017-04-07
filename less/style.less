@@ -1,0 +1,481 @@
+/*
+Theme Name:     INN
+Theme URI:      http://inn.org
+Description:    Child theme for the Institute for Nonprofit News built with the Project Largo parent theme
+Author:         The INN Nerds
+Author URI:     http://nerds.inn.org
+Template:       largo
+Version:        0.2.0
+*/
+
+@import "variables.less";
+@import "utilities.less";
+@import "common.less";
+@import "forms.less";
+
+#header-social {
+  .icon-youtube-parent,
+  .icon-gplus-parent,
+  .icon-linkedin-parent,
+  .icon-github-parent {
+    display: none;
+  }
+}
+.search-submit.btn {
+  padding: 4px 10px; 
+}
+#site-header {
+  img {
+    max-width: 280px;
+    margin-left: 100px;
+  }
+  a.btn-primary {
+    margin-right: 100px;
+    margin-top: 12px;
+  }
+  .widget {
+    margin-bottom: 0;
+  }
+}
+.navbar .container {
+  padding: 0 90px;
+  @media (max-width: 1050px) {
+    padding: 0 10px;
+  }
+}  
+
+#header-search {
+  float: right;
+  margin-left: 0;
+}
+.alert {
+  padding: 3px 2.5%;
+  background-color: #df4646;
+  width: 95%;
+  clear: both;
+  p {
+    margin-bottom: 0;
+    color: #fff;
+    font-family: "effra", helvetica, sans-serif;
+    text-align: center;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+//temporarily hide the alert on the homepage to avoid duplication
+.home .alert {
+  display: none;
+}
+
+#page {
+  max-width: 100%;
+  padding: 0;
+}
+#main {
+  max-width: 1170px;
+  margin: 4em auto;
+  .row-fluid {
+    img.icon,
+    a.program img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.8em;
+    }
+    .span4 {
+      text-align: center;
+      padding: 2em 5em;
+      &#sidebar {
+	    padding: 1em 2em;
+	    text-align: left;
+      }
+      @media (max-width: 980px) {
+        padding: 1.5em 2em;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+        margin: 0;
+        clear: both;
+        padding: 0.5em 10%;
+      }
+    }
+    @media (max-width: 1230px) {
+      .span6 {
+	    padding: 1em 2em;
+	  }
+    }
+    .span5,
+    .span6,
+    .span7 {
+      @media (max-width: 980px) {
+        padding: 1.5em 2em;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+        margin: 0;
+        clear: both;
+        padding: 0.5em 10%;
+      }
+    }
+
+    h5 {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 0.25em;
+      &.top-tag {
+	    font-weight: 300;
+	    font-size: 16px;
+      }
+      a {
+        color: @medgray;
+        &:hover {
+          color: @blue;
+        }
+      }
+    }
+    p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}
+body.page #content {
+  width: 70%;
+  margin: 0 auto;
+  float: none;
+}
+body.page.page-template-single-two-column {
+  #content {
+    width: 65.9574468%;
+    float: left;
+  }
+  @media only screen and (max-width: 768px) {
+    #content, #sidebar {
+      width: 100%;
+      padding: 0 2%;
+    }
+  }
+}
+body.page.page-template-full-page #content {
+  margin-left: 0;
+  width: 100%;
+}
+body.normal.page .entry-content {
+  padding: 0;
+}
+h1.entry-title {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+h5.byline {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+// Building blocks (normal and interstitial)
+#hero,
+section.interstitial {
+  max-width: 100%;
+  background-color: @dkgray;
+}
+section,
+.interstitial .content {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+section.normal {
+  height: auto;
+  h3 {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    width: 62%;
+    background-color: @blue;
+    color: @blue;
+    line-height: 10px;
+    margin: 2em auto 1.5em;
+    span {
+      background-color: #fff;
+      padding: 0 60px;
+    }
+    @media (max-width: 900px) {
+      width: 90%;
+      span {
+        padding: 0 30px;
+      }
+    }
+    @media (max-width: 600px) {
+      line-height: 1.5;
+      background-color: transparent;
+      margin: 0.5em auto;
+      span {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.interstitial {
+  max-width: 100%;
+  padding: 3em;
+  margin: 0 auto 3em;
+  background-color: @dkgray;
+  color: @xltgray;
+  h3 {
+  color: @xltgray;
+  }
+}
+
+.interstitial.branding {
+  img {
+    float: left;
+    margin: 1em 3em 1em 1em;
+  }
+  .content {
+    overflow: auto;
+  }
+  .content-inner {
+    float: right;
+    width: 75%;
+  }
+  h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 0.25em;
+    text-align: left;
+  }
+  form {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+  input {
+    float: left;
+    margin-right: 6px;
+    padding: 12px 10px;
+    width: 400px
+  }
+  input.btn {
+    display: block;
+    float: left;
+    clear: none;
+    padding: 13px 1em;
+    width: 200px;
+  }
+  @media ( max-width: 700px ) {
+    img {
+      float: none;
+      margin: 0 auto 1em;
+      width: 30%;
+    }
+    .content {
+      overflow: visible;
+    }
+    .content-inner {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+    }
+    input {
+      float: none;
+      margin-right: 0;
+      max-width: 75%;
+      &.btn {
+        float: none;
+        margin: 0 auto;
+        clear: both;
+      }
+    }
+  }
+}
+
+#quick-links {
+  text-align: center;
+  margin-bottom: 2em;
+  h4 {
+    color: @dkgray;
+    text-transform: uppercase;
+    @media (max-width: 600px) {
+	  margin-bottom: 0.5em;
+	}
+  }
+  li {
+    font-size: 1.25em;
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px 0 0;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 0;
+    & > .span12 {
+      padding: 1em 2.5em;
+    }
+    li {
+	  display: list-item;
+	  margin-bottom: 0.5em;
+    }
+  }
+}
+
+#programs,
+#member-info {
+  h3 {
+    background-color: @orange;
+    color: @orange;
+    @media (max-width: 600px) {
+      line-height: 1.5;
+      background-color: transparent;
+      margin-bottom: 0.5em;
+    }
+  }
+  h5 a:hover {
+    color: @orange;
+  }
+}
+
+@media (max-width: 530px) {
+  .single #content {
+    padding: 0 5%;
+  }
+}
+.article-bottom .widget {
+  padding: 0 !important;
+}
+
+// skinny left nav on interior pages
+.internal-subnav {
+  h3 {
+    font-size: 24px;
+    margin-bottom: 1.25em;
+    text-transform: uppercase;
+    color: @linkcolor;
+  }
+  ul {
+    margin-left: 0;
+    padding-bottom: 2em;
+    border-right: 10px @blue solid;
+    li {
+      list-style: none;
+      font-size: 15px;
+      &.current_page_item {
+        font-weight: bold;
+      }
+      a {
+        color: @medgray;
+        &:hover {
+          color: @linkhover;
+        }
+      }
+    }
+    &.children {
+      margin: 12px 0 0 20px;
+      font-weight: normal;
+      border-right: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.internal-subnav-dropdown {
+  text-align: center;
+  margin: 0 0 1.5em 0;
+  h3 {
+    font-size: 20px;
+    margin: 0 0 0.5em 0;
+  }
+  .choose-a-page {
+    font-size: 16px;
+    color: @ltgray;
+    margin: 0 0 0.5em 0;
+  }
+}
+
+body.normal.page #content.has-menu,
+body.normal.single #content.has-menu {
+  margin-left: 0;
+  padding-left: 80px;
+  width: 74.4680851%;
+  float: left;
+  @media (max-width: 980px) {
+	width: 100%;
+	padding: 0 10%;
+  }
+  @media (max-width: 640px) {
+    padding: 0 3%;
+  }
+}
+body.normal.page .stories .top-tag {
+  float: none;
+}
+
+.single-pauinn_project {
+  .bottom {
+    padding-top: 2em;
+    h3 {
+	  font-size: 21px;
+	  margin-bottom: 0.75em;
+    }
+    ul {
+      margin: 0;
+      li {
+	    list-style: none;
+	  }
+    }
+    .span6 {
+	  li {
+	    padding-right: 40px;
+	    margin-bottom: 1.5em;
+	    a {
+		  color: @medgray;
+		  &:hover {
+		    color: @blue;
+		  }
+	    }
+	  }
+      &.members {
+        a {
+	      display: block;
+	      float: left;
+        }
+        img {
+	      width: 32px;
+	      height: 32px;
+	      border-radius: 5px;
+	      margin: 0 8px 1em 0;
+	    }
+	  }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #main {
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  body.page #content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #header-extras .donate-link { display: none; }
+}
+
+
+// requested changes to https://inn.org/2017/01/2016-nonprofit-news-top-stories/
+.postid-434290 {
+  .top-tag,
+  .byline,
+  #nav-below {
+    display: none;
+  }	
+}
