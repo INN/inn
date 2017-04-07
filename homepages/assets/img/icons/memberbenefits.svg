@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="41px" viewBox="0 0 40 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Plus sign</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="INN-Homepage-3" sketch:type="MSArtboardGroup" transform="translate(-252.000000, -4895.000000)" fill="#AAAAAA">
+            <g id="Plus-sign" sketch:type="MSLayerGroup" transform="translate(252.000000, 4895.000000)">
+                <path d="M19.9513889,40.6545291 C8.99572917,40.6545291 0.0821527778,31.6345663 0.0821527778,20.5496068 C0.0821527778,9.46345977 8.99572917,0.4458719 19.9513889,0.4458719 C30.9070486,0.4458719 39.820625,9.46345977 39.820625,20.5496068 C39.820625,31.6345663 30.9070486,40.6545291 19.9513889,40.6545291 M19.9513889,2.65455157 C10.1986806,2.65455157 2.26506944,10.681796 2.26506944,20.5496068 C2.26506944,30.4174176 10.1986806,38.444662 19.9513889,38.444662 C29.7040972,38.444662 37.6377083,30.4174176 37.6377083,20.5496068 C37.6377083,10.681796 29.7040972,2.65455157 19.9513889,2.65455157" id="Fill-38" sketch:type="MSShapeGroup"></path>
+                <path d="M9.38888889,19.3621446 L30.5138889,19.3621446 L30.5138889,21.737069 L9.38888889,21.737069 L9.38888889,19.3621446 Z" id="Fill-39" sketch:type="MSShapeGroup"></path>
+                <path d="M18.7777778,9.86244707 L21.125,9.86244707 L21.125,31.2367665 L18.7777778,31.2367665 L18.7777778,9.86244707 Z" id="Fill-40" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

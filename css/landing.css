@@ -1,0 +1,212 @@
+.flip-horizontal {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph;
+  /*IE*/
+  filter: fliph;
+  /*IE*/
+}
+.page-template-landing-page #page {
+  max-width: 100%;
+  padding: 0;
+}
+.page-template-landing-page #main {
+  margin: 2em 0;
+  max-width: 100%;
+}
+#main .page-content {
+  padding: 2em 5em;
+}
+@media (max-width: 980px) {
+  #main .page-content {
+    padding: 2em;
+  }
+}
+@media (max-width: 600px) {
+  #main .page-content {
+    padding: 0 2em;
+  }
+}
+#main .page-content p {
+  font-size: 18px;
+}
+@media (max-width: 600px) {
+  #main .page-content p {
+    text-align: center;
+  }
+}
+#main section {
+  clear: both;
+}
+#main section.normal h3 {
+  margin-top: 1em;
+}
+@media (max-width: 600px) {
+  #main {
+    margin-top: 2em;
+  }
+  #main section.normal h3 {
+    margin-top: 0;
+  }
+}
+.normal > .row-fluid .page-content p {
+  font-family: "leitura-news", georgia, serif;
+  line-height: 1.7em;
+}
+.normal h3 span {
+  color: #555555;
+}
+.interstitial {
+  margin-bottom: 5em;
+}
+@media (max-width: 600px) {
+  .interstitial {
+    margin-bottom: 2em;
+  }
+}
+#news-and-benefits-and-funders.row-fluid {
+  margin-bottom: 2em;
+}
+#news-and-benefits-and-funders.row-fluid #news {
+  padding: 2em 0 2em 5em;
+}
+@media (max-width: 980px) {
+  #news-and-benefits-and-funders.row-fluid #news {
+    padding: 1.5em 0 1.5em 2em;
+  }
+}
+@media (max-width: 600px) {
+  #news-and-benefits-and-funders.row-fluid #news {
+    width: 100%;
+    margin: 0;
+    clear: both;
+    padding: 0.5em 0 0.5em 10%;
+  }
+}
+#news-and-benefits-and-funders.row-fluid .widget {
+  padding: 0 40px 0 0;
+}
+#news-and-benefits-and-funders.row-fluid .largo-recent-posts span.sep,
+#news-and-benefits-and-funders.row-fluid .largo-recent-posts span.by-author,
+#news-and-benefits-and-funders.row-fluid .largo-recent-posts span.edit-link {
+  display: none;
+}
+#news-and-benefits-and-funders.row-fluid .largo-recent-posts .entry-date:before {
+  content: "Posted ";
+}
+#news-and-benefits-and-funders.row-fluid .largo-recent-posts .entry-date,
+#news-and-benefits-and-funders.row-fluid .largo-recent-posts .entry-date:before {
+  font-weight: 200;
+  font-size: 18px;
+}
+#news-and-benefits-and-funders.row-fluid .largo-recent-posts h5 {
+  margin: 0;
+  font-size: 22px;
+}
+#news-and-benefits-and-funders.row-fluid .largo-recent-posts .byline {
+  color: #aaaaaa;
+}
+#news-and-benefits-and-funders.row-fluid .largo-recent-posts .post-lead {
+  margin-bottom: 1.7em;
+}
+#news-and-benefits-and-funders.row-fluid #benefits-and-funders {
+  padding: 2em 5em 2em 0;
+}
+@media (max-width: 980px) {
+  #news-and-benefits-and-funders.row-fluid #benefits-and-funders {
+    padding: 1.5em  2em 1.5em 0;
+  }
+}
+@media (max-width: 600px) {
+  #news-and-benefits-and-funders.row-fluid #benefits-and-funders {
+    width: 100%;
+    margin: 0;
+    clear: both;
+    padding: 0.5em 10% 0.5em 0;
+  }
+}
+#news-and-benefits-and-funders.row-fluid #benefits-and-funders ul {
+  margin: 0;
+  padding: 0;
+}
+#news-and-benefits-and-funders.row-fluid #benefits-and-funders li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  margin: 0 0 1.5em 0;
+}
+#news-and-benefits-and-funders.row-fluid #benefits-and-funders ul.donors li {
+  margin: 0 0 0.5em 0;
+}
+@media (max-width: 600px) {
+  #news-and-benefits-and-funders.row-fluid #benefits-and-funders ul.donors li {
+    margin-bottom: 1em;
+  }
+}
+#news-and-benefits-and-funders.row-fluid #benefits-and-funders .learn-more {
+  font-size: 18px;
+}
+#news-and-benefits-and-funders.row-fluid li a {
+  color: #555555;
+}
+#news-and-benefits-and-funders.row-fluid li a:hover {
+  color: #09c9ff;
+}
+@media (max-width: 600px) {
+  #news-and-benefits-and-funders.row-fluid #news,
+  #news-and-benefits-and-funders.row-fluid #benefits-and-funders {
+    text-align: center;
+    padding: 1em 2.5em;
+  }
+}
+@media (max-width: 600px) {
+  #news-and-benefits-and-funders.row-fluid .widget {
+    padding: 0;
+  }
+}
+#membership-callout .content img {
+  width: 10%;
+  margin: 1em 7.5%;
+}
+#membership-callout .content-inner {
+  float: left;
+}
+#membership-callout .btn {
+  background: #df4646;
+}
+#membership-callout .btn:hover {
+  background: #da2b2b;
+}
+@media (max-width: 768px) {
+  #membership-callout {
+    text-align: center;
+    float: left;
+  }
+  #membership-callout h3 {
+    text-align: center;
+  }
+  #membership-callout .content-inner {
+    width: 100%;
+  }
+  #membership-callout .content img {
+    float: none;
+    display: block;
+    margin: 1.2em auto 2.4em auto;
+  }
+}
+#programs h3,
+#member-info h3 {
+  background-color: #09c9ff;
+}
+@media (max-width: 600px) {
+  #programs h3,
+  #member-info h3 {
+    background-color: #fff;
+  }
+}
+#inn-brags h3 {
+  text-align: center;
+}

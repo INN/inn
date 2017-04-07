@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="50px" viewBox="0 0 60 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>bar chart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="INN-Homepage-3" sketch:type="MSArtboardGroup" transform="translate(-704.000000, -3215.000000)" fill="#FF9657">
+            <g id="Consulting" sketch:type="MSLayerGroup" transform="translate(-51.000000, 3018.000000)">
+                <g id="bar-chart" transform="translate(755.204837, 197.000000)" sketch:type="MSShapeGroup">
+                    <path d="M18.6399648,46.1504162 L14.9207746,46.1504162 L14.9207746,27.1749901 L7.48239437,27.1749901 L7.48239437,46.1504162 L3.76320423,46.1504162 L3.76320423,23.3799049 L18.6399648,23.3799049 L18.6399648,46.1504162" id="Fill-176"></path>
+                    <path d="M37.2359155,46.1504162 L33.5167254,46.1504162 L33.5167254,15.7897344 L26.0783451,15.7897344 L26.0783451,46.1504162 L22.3591549,46.1504162 L22.3591549,11.9946492 L37.2359155,11.9946492 L37.2359155,46.1504162" id="Fill-177"></path>
+                    <path d="M55.8318662,46.1504162 L52.1126761,46.1504162 L52.1126761,4.4044788 L44.6742958,4.4044788 L44.6742958,46.1504162 L40.9551056,46.1504162 L40.9551056,0.609393579 L55.8318662,0.609393579 L55.8318662,46.1504162" id="Fill-178"></path>
+                    <path d="M0.0440140845,46.1504162 L59.5510563,46.1504162 L59.5510563,49.9455014 L0.0440140845,49.9455014 L0.0440140845,46.1504162 Z" id="Fill-179"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,186 @@
+.gform_wrapper.donation_form_wrapper,
+.gform_wrapper.membership_form_wrapper {
+  .gfield_required,
+  .ginput_product_price_label {
+    display: none;
+  }
+  h2.gsection_title {
+    font-size: 32px;
+  }
+  .gsection {
+    border-bottom: 1px solid @ltgray;
+  }
+  .field_sublabel_above {
+    height: auto;
+    margin-bottom: 0;
+  }
+  .top_label .gfield_label {
+    font-size: 0.875em;
+    margin: 0.75em 0 0.188em;
+  }
+  .gfield_checkbox li label {
+    max-width: 95%;
+    margin: 4px 0 0 10px;
+    @media (max-width: 680px) {
+	  max-width: 85%;
+    }
+  }
+  
+  // buttons
+  .gform_button,
+  .gform_next_button,
+  .gform_previous_button {
+    padding: 12px 36px;
+    background-color: @blue;
+    color: #fff;
+    font-family: @sans;
+    border: none;
+    font-size: 21px;
+    font-weight: bold;
+  }
+  .gform_button[type=submit],
+  .gform_next_button {
+    background-color: @orange;
+    position: relative;
+    top: -4px;
+  }
+  // try to set the height of dropdown menus to match text fields
+  &.gf_browser_chrome .ginput_complex .ginput_right select,
+  &.gf_browser_chrome .ginput_complex select {
+    height: 41px;
+    margin-bottom: 0 !important;
+  }
+  &.gf_browser_chrome .gfield_checkbox li input[type=checkbox] {
+    margin-top: 0.25em;
+  }
+ 
+}
+
+.gform_wrapper.donation_form_wrapper {
+  #field_1_15 .gfield_label {
+    display: none;
+  }
+  label.gfield_label {
+    font-weight: 400;
+  }
+  label.gfield_label+div.ginput_container {
+    margin-top: 0;
+  }
+  .gfield_price {
+    width: 30%;
+    float: left;
+    .ginput_amount {
+	  width: 100%;
+    }
+    @media (max-width: 1050px) {
+	  width: 35%;
+    }
+    @media (max-width: 980px) {
+	  width: 50%;
+	}
+  }
+  #field_1_15 {
+    clear: none;
+  }
+  // make the radio buttons look like real buttons
+  ul.gfield_radio {
+	position: relative;
+	top: 53px;
+	display: inline;
+    li {
+      display: inline;
+      margin-right: 12px;
+      width: auto;
+      input {
+	    display: none;
+      }
+      label {
+	    padding: 7px 24px;
+	    margin: 0;
+	    background-color: @blue;
+	    font-size: 18px;
+	    font-family: @sans;
+	    color: #fff;
+      }
+      input[type=radio]:checked+label {
+	    background-color: @orange;
+	    font-weight: 500;
+      }
+      @media (max-width: 480px) {
+	    display: block;
+	    margin: 10px 0 0;
+	    text-align: center;
+	    label {
+	      width: 100%;
+	    }
+	  }
+    }
+    @media (max-width: 980px) {
+	  clear: both;
+	  top: 0;
+	  left: 0;
+	}
+  }
+  .ginput_container_address,
+  .gfield_total,
+  .ginput_container_creditcard {
+    margin-bottom: 0.875em;
+  }
+  .gfield_price_1_20,
+  .gfield_total {
+	width: 100%;
+    .gfield_label {
+	  font-family: @sans;
+	  font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gf_name_has_2 span,
+    .ginput_complex .ginput_right,
+    .ginput_complex .ginput_left,
+    .ginput_complex .ginput_cardinfo_left {
+      width: 100% !important;
+    }
+    ul.gfield_radio li {
+	  display: block;
+	  clear: both;
+	  float: none;
+	  text-align: center;
+    }
+    .gfield_price,
+    .top_label input.medium {
+	  width: 97.5%;
+    }
+    div.ginput_container_name span {
+	  margin-right: 0;
+	  padding-right: 0;
+    }
+    .ginput_complex .ginput_right {
+	  margin-left: 0;
+    }
+    .ginput_complex .ginput_cardinfo_left {
+	  margin-right: 0;
+    }
+  }
+}
+.gform_wrapper.membership_form_wrapper {
+  .gfield_radio label {
+    position: relative;
+    left: 5px;
+    top: 2px;
+    font-size: 17px;
+  }
+  #field_2_26,
+  #field_2_24 label.gfield_label,
+  #field_2_17 label.gfield_label {
+    display: none;
+  }
+  #field_2_15 {
+	margin: 2em 0 3em;
+    font-size: 14px;
+  }
+  #field_2_33 .gfield_label {
+    font-size: 24px;
+  }
+}

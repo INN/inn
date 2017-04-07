@@ -2,31 +2,24 @@
 /**
  * The homepage template
  */
+
+/**
+ * ======== DO NOT EDIT OR CLONE THIS FILE FOR A CHILD THEME =======
+ *
+ * Largo comes with a built-in homepage template system, documented in homepages/README.md
+ * It's generally better to use that system than to have your child theme use its own home.php template
+ */
+
 get_header();
 
 /*
  * Collect post IDs in each loop so we can avoid duplicating posts
  * and get the theme option to determine if this is a two column or three column layout
  */
-$ids = array();
-$layout = of_get_option('homepage_layout');
-$tags = of_get_option ('tag_display');
-?>
+$home_template = largo_get_active_homepage_layout();
 
-<div id="content" class="stories span8" role="main">
+global $largo;
 
-	<div id="content-main" class="span12">
-		<?php get_template_part( 'home-part-topstories' ); ?>
-	</div>
+largo_render_homepage_layout($home_template);
 
-</div><!-- #content-->
-
-<?php get_sidebar(); ?>
-
-<div class="clearfix row-fluid" id="home-bottom">
-	<?php
-		if ( is_active_sidebar( 'inn-home-bottom' ) )	dynamic_sidebar( 'inn-home-bottom' );
-	?>
-</div>
-
-<?php get_footer(); ?>
+get_footer();
