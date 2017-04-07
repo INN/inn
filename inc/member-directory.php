@@ -54,3 +54,110 @@ function inn_member_directory() {
 
 }
 add_action( 'init', 'inn_member_directory', 0 );
+
+add_action( 'cmb2_admin_init', 'inn_member_info' );
+function inn_member_info() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_';
+
+	/**
+	 * Initiate the metabox
+	 */
+	$member_info = new_cmb2_box( array(
+		'id'            => 'member_info',
+		'title'         => __( 'Member Info', 'cmb2' ),
+		'object_types'  => array( 'member_directory', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'low',
+		'show_names'    => true, // Show field names on the left
+	) );
+
+	$member_info->add_field( array(
+		'name'       => __( 'Year Founded', 'cmb2' ),
+		'desc'       => __( '', 'cmb2' ),
+		'id'         => $prefix . 'year_founded',
+		'type'       => 'text',
+		'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+	$member_info->add_field( array(
+		'name'       => __( 'INN Member Since', 'cmb2' ),
+		'desc'       => __( '', 'cmb2' ),
+		'id'         => $prefix . 'inn_join_year',
+		'type'       => 'text',
+		'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
+		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
+		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
+		// 'on_front'        => false, // Optionally designate a field to wp-admin only
+		// 'repeatable'      => true,
+	) );
+
+	// Email text field
+	$member_info->add_field( array(
+		'name' => __( 'Contact Email', 'cmb2' ),
+		'desc' => __( '', 'cmb2' ),
+		'id'   => $prefix . 'email',
+		'type' => 'text_email',
+	) );
+
+	$member_info->add_field( array(
+		'name' => __( 'Website URL', 'cmb2' ),
+		'desc' => __( '', 'cmb2' ),
+		'id'   => $prefix . 'url',
+		'type' => 'text_url',
+		'protocols' => array( 'http', 'https' ), // Array of allowed protocols
+	) );
+
+	$member_info->add_field( array(
+		'name' => __( 'Donate URL', 'cmb2' ),
+		'desc' => __( '', 'cmb2' ),
+		'id'   => $prefix . 'donate_url',
+		'type' => 'text_url',
+		'protocols' => array( 'http', 'https' ), // Array of allowed protocols
+	) );
+
+	$member_info->add_field( array(
+		'name' => __( 'RSS Feed', 'cmb2' ),
+		'desc' => __( '', 'cmb2' ),
+		'id'   => $prefix . 'rss_feed',
+		'type' => 'text_url',
+		'protocols' => array( 'http', 'https' ), // Array of allowed protocols
+	) );
+
+	$member_info->add_field( array(
+		'name' => __( 'Twitter Profile', 'cmb2' ),
+		'desc' => __( '', 'cmb2' ),
+		'id'   => $prefix . 'twitter_url',
+		'type' => 'text_url',
+		'protocols' => array( 'http', 'https' ), // Array of allowed protocols
+	) );
+
+	$member_info->add_field( array(
+		'name' => __( 'Facebook Page', 'cmb2' ),
+		'desc' => __( '', 'cmb2' ),
+		'id'   => $prefix . 'facebook_url',
+		'type' => 'text_url',
+		'protocols' => array( 'http', 'https' ), // Array of allowed protocols
+	) );
+
+	$member_info->add_field( array(
+		'name' => __( 'Google+ URL', 'cmb2' ),
+		'desc' => __( '', 'cmb2' ),
+		'id'   => $prefix . 'google_plus_url',
+		'type' => 'text_url',
+		'protocols' => array( 'http', 'https' ), // Array of allowed protocols
+	) );
+
+	$member_info->add_field( array(
+		'name' => __( 'Youtube URL', 'cmb2' ),
+		'desc' => __( '', 'cmb2' ),
+		'id'   => $prefix . 'youtube_url',
+		'type' => 'text_url',
+		'protocols' => array( 'http', 'https' ), // Array of allowed protocols
+	) );
+}
