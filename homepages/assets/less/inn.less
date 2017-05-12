@@ -10,71 +10,108 @@
     max-width: 100%;
   }
   #hero {
-    background-image: url("../img/INN-Days-Hero.svg");
-    background-size: cover;
-    background-position: center;
+    background-image: none;
+    background-color: #6D72E6;
     padding: 50px;
-    padding-left: 100px;
     margin-bottom: 1em;
-
-    .content {
+    .content h2 {
       margin: 0 auto .75em;
-      max-width: 1220px;
+      max-width: 1152px;
+      text-align: center;
       color: #fff;
-
-      h2 {
-        font-size: 5.7em;
-        text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-        color: #fff;
-        margin-bottom: 12px;
+      font-size: 3em;
+      font-weight: 500;
+      line-height: 1;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+    .content h3 {
+      margin: 0 auto;
+      max-width: 1000px;
+      text-align: center;
+      color: #fff;
+      font-size: 2.1em;
+      font-weight: 400;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+    .btn-primary {
+      margin: 0 auto 1em;
+      display: block;
+      width: 200px;
+      background-color:#09C9FF;
+      margin-bottom: 0;
+      &:hover {
+        background-color:#1DC1F3;
       }
-
-      h3 {
-        font-size: 2.7em;
-        text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-        color: #fff;
-      }
-
-      h4 {
-        color: #fff;
-        text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-      }
-
-      .btn {
-        background-color: #000;
-        
-        &:hover {
-          background-color: lighten(#000, 10%);
+    }
+    #donation-description {
+      max-width: 100%;
+      text-align: center;
+      background-color: #fff;
+      padding: 1.2em;
+      height: 200px;
+      margin-left: 2.12765957%;
+      p {
+        margin-bottom: 1em;
+        &.small {
+          font-size:1em;
+          font-weight: 400;
+          color: black;
+          margin-top: 2%;
         }
       }
     }
 
+    .row-fluid {
+      max-width: 1170px;
+      margin: 0 auto;
+      div#img-container {
+        padding: 0;
+      }
+      div#img-box {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      #photo-cred {
+        color: white;
+        font-size: .8em;
+        float: right;
+        margin-top: 4px;
+      }
+    }
     @media (max-width: 1000px) {
-      padding: 30px;
+      .content h2 {
+        font-size: 2.5em;
+      }
+      
+      #img-container {
+        display: none;
+      }
 
-      .content { 
-        h2 {
-          font-size: 4em;
-        }
-        h3 {
-          font-size: 2em;
+      #donation-description {
+        width: 100%;
+        margin-left: 0;
+        clear: both;
+        height: inherit;
+        p.small {
+          margin-top: 0;
         }
       }
     }
-
     @media (max-width: 600px) {
       padding: 30px;
-
-      .content {
-        text-align: center;
-
-        h2 {
-          font-size: 3em;
-        }
+      #donation-description {
+        margin-left: 0;
+      }
+      .btn-primary {
+        max-width: 190px;
+        margin: 0 auto;
+      }
+      .content .row-fluid #img-container {
+        display: none;
       }
     }
   }
-
   #homepage-top-right {
     ol {
 	  margin: 0;

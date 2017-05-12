@@ -2,10 +2,25 @@
 
 <section id="hero">
 	<div class="content">
-		<h2>INN Days 2017</h2>
-		<h3>Growing the Business<br>of Nonprofit News</h3>
-		<h4>June 21-22, 2017 in Phoenix, AZ</h4>
-		<a class="btn" href="https://inn.org/2017/05/inn-days-2017/">Learn More</a> 
+		<h2> What you know thanks to nonprofit news</h2>
+		<div class="row-fluid">
+			<div class="span4" id="img-container">
+				<div id="img-box">
+					<a href="http://wisconsinwatch.org/2017/02/a-syrian-family-settles-in-wisconsin-just-before-u-s-refugee-pipeline-closes/"><img height="200px" src="<?php echo $img_path; ?>Rula-and-Abdul2-1170x812.jpg"></a>
+				</div>
+				<span id="photo-cred">Dee J. Hall</span>
+			</div>
+		  	<div id="donation-description" class="span4 clearfix">
+		      <p class="small">In 2016, reporters in nonprofit newsrooms across America broke thousands of stories while pursuing journalism in the public interest.</p>
+		      <a href="https://inn.org/2016-nonprofit-news-top-stories/" class="btn btn-primary">Read some of the best</a>
+		  	</div>
+		  	<div class="span4" id="img-container">
+				<div id="img-box">
+					<a href="http://www.civilbeat.org/2016/12/the-projector-images-of-2016/"><img src="<?php echo $img_path; ?>Hawaiian-Commercial-and-Sugar-Puunene-Sugar-Mill-burn-fireboys3.jpg"></a>
+				</div>
+				<span id="photo-cred">Cory Lum</span>
+			</div>
+	  	</div>
 	</div>
 </section>
 
