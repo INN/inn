@@ -11,18 +11,6 @@
 
 <section class="normal">
 
-	<div id="quick-links" class="row-fluid">
-		<div class="span12">
-			<h4>Quick links</h4>
-			<ul>
-				<li><a href="/members/">Member Directory</a></li>
-				<li><a href="/for-members/member-benefits/">Member Benefits</a></li>
-				<li><a href="/for-members/become-a-member/">Become A Member</a></li>
-				<li><a href="/for-members/dues/">Pay Your Dues</a></li>
-			</ul>
-		</div>
-	</div>
-
 	<div id="homepage-top-widgets" class="row-fluid">
 		<div id="homepage-top-left" class="span6">
 
