@@ -296,6 +296,9 @@ a:hover {
     max-width: 90%;
   }
 }
+.single .hero.span12 {
+  margin-left: 0;
+}
 .gform_wrapper.donation_form_wrapper .gfield_required,
 .gform_wrapper.membership_form_wrapper .gfield_required,
 .gform_wrapper.donation_form_wrapper .ginput_product_price_label,
