@@ -55,9 +55,9 @@ function inn_member_directory() {
 }
 add_action( 'init', 'inn_member_directory', 0 );
 
-function member_focus_areas() {
+function member_directory_tax() {
 
-	$labels = array(
+	$member_directory_labels = array(
 		'name'                       => _x( 'Focus Areas', 'Taxonomy General Name', 'inn' ),
 		'singular_name'              => _x( 'Focus Area', 'Taxonomy Singular Name', 'inn' ),
 		'menu_name'                  => __( 'Focus Areas', 'inn' ),
@@ -79,8 +79,8 @@ function member_focus_areas() {
 		'items_list'                 => __( 'Items list', 'inn' ),
 		'items_list_navigation'      => __( 'Items list navigation', 'inn' ),
 	);
-	$args = array(
-		'labels'                     => $labels,
+	$member_directory_args = array(
+		'labels'                     => $member_directory_labels,
 		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
@@ -88,10 +88,42 @@ function member_focus_areas() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'member_focus_areas', array( 'member_directory' ), $args );
+	register_taxonomy( 'ppu_focus_areas', array( 'member_directory' ), $member_directory_args );
 
+	$member_project_labels = array(
+		'name'                       => _x( 'Projects', 'inn' ),
+		'singular_name'              => _x( 'Project', 'inn' ),
+		'menu_name'                  => __( 'Projects', 'inn' ),
+		'all_items'                  => __( 'All Projects', 'inn' ),
+		'parent_item'                => __( 'Parent Item', 'inn' ),
+		'parent_item_colon'          => __( 'Parent Item:', 'inn' ),
+		'new_item_name'              => __( 'New Project', 'inn' ),
+		'add_new_item'               => __( 'Add New Project', 'inn' ),
+		'edit_item'                  => __( 'Edit Project', 'inn' ),
+		'update_item'                => __( 'Update Project', 'inn' ),
+		'view_item'                  => __( 'View Projects', 'inn' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'inn' ),
+		'add_or_remove_items'        => __( 'Add or remove items', 'inn' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'inn' ),
+		'popular_items'              => __( 'Popular Items', 'inn' ),
+		'search_items'               => __( 'Search Items', 'inn' ),
+		'not_found'                  => __( 'Not Found', 'inn' ),
+		'no_terms'                   => __( 'No items', 'inn' ),
+		'items_list'                 => __( 'Items list', 'inn' ),
+		'items_list_navigation'      => __( 'Items list navigation', 'inn' ),
+	);
+	$member_project_args = array(
+		'labels'                     => $member_project_labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'pauinn_project_tax', array( 'member_directory' ), $member_project_args );
 }
-add_action( 'init', 'member_focus_areas', 0 );
+add_action( 'init', 'member_directory_tax', 0 );
 
 add_action( 'cmb2_admin_init', 'inn_member_info' );
 function inn_member_info() {
@@ -203,59 +235,10 @@ function inn_member_info() {
 		) );
 
 		$member_info->add_field( array(
-			'name' => __( 'Contact Phone', 'inn' ),
-			'desc' => __( '', 'inn' ),
-			'id'   => $prefix . 'phone_number',
-			'type' => 'text_small',
-		) );
-
-		$member_info->add_field( array(
 			'name' => __( 'Address', 'inn' ),
 			'desc' => __( '', 'inn' ),
 			'id'   => $prefix . 'address',
 			'type' => 'address',
 		) );
-/*
-		$member_info->add_field( array(
-			'name' => __( '', 'inn' ),
-			'desc' => __( '', 'inn' ),
-			'id'   => $prefix . '',
-			'type' => 'text_medium',
-		) );
 
-		$member_info->add_field( array(
-			'name' => __( '', 'inn' ),
-			'desc' => __( '', 'inn' ),
-			'id'   => $prefix . '',
-			'type' => 'text_medium',
-		) );
-
-		$member_info->add_field( array(
-			'name' => __( '', 'inn' ),
-			'desc' => __( '', 'inn' ),
-			'id'   => $prefix . '',
-			'type' => 'text_medium',
-		) );
-
-		$member_info->add_field( array(
-			'name' => __( '', 'inn' ),
-			'desc' => __( '', 'inn' ),
-			'id'   => $prefix . '',
-			'type' => 'text_medium',
-		) );
-
-		$member_info->add_field( array(
-			'name' => __( '', 'inn' ),
-			'desc' => __( '', 'inn' ),
-			'id'   => $prefix . '',
-			'type' => 'text_medium',
-		) );
-
-		$member_info->add_field( array(
-			'name' => __( '', 'inn' ),
-			'desc' => __( '', 'inn' ),
-			'id'   => $prefix . '',
-			'type' => 'text_medium',
-		) );
-		*/
 }
