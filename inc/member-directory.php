@@ -50,7 +50,7 @@ function inn_member_directory() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'member_directory', $args );
+	register_post_type( 'inn_member', $args );
 
 }
 add_action( 'init', 'inn_member_directory', 0 );
@@ -88,7 +88,7 @@ function member_directory_tax() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'ppu_focus_areas', array( 'member_directory' ), $member_directory_args );
+	register_taxonomy( 'ppu_focus_areas', array( 'inn_member' ), $member_directory_args );
 
 	$member_project_labels = array(
 		'name'                       => _x( 'Projects', 'inn' ),
@@ -112,6 +112,7 @@ function member_directory_tax() {
 		'items_list'                 => __( 'Items list', 'inn' ),
 		'items_list_navigation'      => __( 'Items list navigation', 'inn' ),
 	);
+
 	$member_project_args = array(
 		'labels'                     => $member_project_labels,
 		'hierarchical'               => true,
@@ -121,7 +122,7 @@ function member_directory_tax() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'pauinn_project_tax', array( 'member_directory' ), $member_project_args );
+	register_taxonomy( 'pauinn_project_tax', array( 'inn_member' ), $member_project_args );
 }
 add_action( 'init', 'member_directory_tax', 0 );
 
@@ -137,7 +138,7 @@ function inn_member_info() {
 	$member_info = new_cmb2_box( array(
 		'id'            => 'member_info',
 		'title'         => __( 'Member Info', 'cmb2' ),
-		'object_types'  => array( 'member_directory', ), // Post type
+		'object_types'  => array( 'inn_member', ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'low',
 		'show_names'    => true, // Show field names on the left
