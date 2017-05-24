@@ -156,7 +156,7 @@ function member_directory_tax() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'pauinn_project_tax', array( 'inn_member' ), $member_project_args );
+	register_taxonomy( 'pauinn_project_tax', array( 'pauinn_project', 'pp_opportunity', 'post', 'inn_member' ), $member_project_args );
 }
 add_action( 'init', 'member_directory_tax', 0 );
 
