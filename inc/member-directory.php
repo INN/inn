@@ -1,4 +1,8 @@
 <?php
+
+/*
+ * Register inn_member post type
+ */
 function inn_member_directory() {
 
 	$labels = array(
@@ -54,6 +58,53 @@ function inn_member_directory() {
 }
 add_action( 'init', 'inn_member_directory', 0 );
 
+/*
+ * Add thumbnail to list table view for post type
+ */
+function inn_post_list_table_thumb_column( $cols ) {
+
+	$cols['thumbnail'] = __( 'Thumbnail' );
+
+	return $cols;
+}
+
+function inn_post_list_table_thumb_value( $column_name, $post_id ) {
+
+	$width = (int) 60;
+	$height = (int) 60;
+
+	if ( 'thumbnail' === $column_name ) {
+
+		// thumbnail of WP 2.9
+		$thumbnail_id = get_post_meta( $post_id, '_thumbnail_id', true );
+
+		// image from gallery
+		$attachments = get_children( array( 'post_parent' => $post_id, 'post_type' => 'attachment', 'post_mime_type' => 'image' ) );
+
+		if ( $thumbnail_id ) {
+			$thumb = wp_get_attachment_image( $thumbnail_id, array( $width, $height ), true );
+		} elseif ( $attachments ) {
+			foreach ( $attachments as $attachment_id => $attachment ) {
+				$thumb = wp_get_attachment_image( $attachment_id, array( $width, $height ), true );
+			}
+		}
+
+		if ( isset( $thumb ) && $thumb ) {
+			echo $thumb;
+		} else {
+			echo __( 'None' );
+		}
+	}
+}
+
+// for posts
+add_filter( 'manage_inn_member_posts_columns', 'inn_post_list_table_thumb_column' );
+add_action( 'manage_inn_member_posts_custom_column', 'inn_post_list_table_thumb_value', 10, 2 );
+
+// for pages
+add_filter( 'manage_pages_columns', 'AddThumbColumn' );
+add_action( 'manage_pages_custom_column', 'AddThumbValue', 10, 2 );
+
 function inn_project_post_type() {
 	$labels = array(
 		'name' => 'Projects',
@@ -66,7 +117,7 @@ function inn_project_post_type() {
 		'search_items' =>  sprintf( __( 'Search %1$s' ), 'Projects' ),
 		'not_found' =>  sprintf( __( 'No %1$s Found' ), 'Projects' ),
 		'not_found_in_trash' => sprintf( __( 'No %1$s Found in Trash' ), 'Projects' ),
-		'parent_item_colon' => ''
+		'parent_item_colon' => '',
 	);
 
 	$args = array(
@@ -82,7 +133,7 @@ function inn_project_post_type() {
 		'capability_type' => 'page',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
+		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
 	);
 
 	register_post_type( 'pauinn_project', $args );
