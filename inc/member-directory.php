@@ -223,7 +223,7 @@ function inn_member_info() {
 	$member_info = new_cmb2_box( array(
 		'id'            => 'member_info',
 		'title'         => __( 'Member Info', 'cmb2' ),
-		'object_types'  => array( 'inn_member', ), // Post type
+		'object_types'  => array( 'inn_member' ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'low',
 		'show_names'    => true, // Show field names on the left
