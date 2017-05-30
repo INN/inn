@@ -6,6 +6,10 @@ body.post-type-archive-inn_member .inn-members .inn_member {
   flex: 1 25%;
   text-align: center;
 }
+body.single-inn_member h1.entry-title {
+  margin-bottom: 0.5em;
+  text-align: left;
+}
 /* Member Widget */
 .inn-members-widget ul {
   list-style: none;
