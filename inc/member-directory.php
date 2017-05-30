@@ -45,6 +45,7 @@ function inn_member_directory() {
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
 		'menu_icon'             => 'dashicons-admin-users',
+		'rewrite'               => array( 'slugin' => 'member' ),
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
@@ -107,33 +108,33 @@ add_action( 'manage_pages_custom_column', 'AddThumbValue', 10, 2 );
 
 function inn_project_post_type() {
 	$labels = array(
-		'name' => 'Projects',
-		'singular_name' => 'Project',
-		'add_new' => sprintf( __( 'Add New %1$s' ), 'Project' ),
-		'add_new_item' => sprintf( __( 'Add New %1$s' ), 'Project' ),
-		'edit_item' => sprintf( __( 'Edit %1$s' ), 'Projects' ),
-		'new_item' => sprintf( __( 'New %1$s' ), 'Project' ),
-		'view_item' => sprintf( __( 'View %1$s' ), 'Project' ),
-		'search_items' =>  sprintf( __( 'Search %1$s' ), 'Projects' ),
-		'not_found' =>  sprintf( __( 'No %1$s Found' ), 'Projects' ),
-		'not_found_in_trash' => sprintf( __( 'No %1$s Found in Trash' ), 'Projects' ),
-		'parent_item_colon' => '',
+		'name'                  => 'Projects',
+		'singular_name'         => 'Project',
+		'add_new'               => sprintf( __( 'Add New %1$s' ), 'Project' ),
+		'add_new_item'          => sprintf( __( 'Add New %1$s' ), 'Project' ),
+		'edit_item'             => sprintf( __( 'Edit %1$s' ), 'Projects' ),
+		'new_item'              => sprintf( __( 'New %1$s' ), 'Project' ),
+		'view_item'             => sprintf( __( 'View %1$s' ), 'Project' ),
+		'search_items'          =>  sprintf( __( 'Search %1$s' ), 'Projects' ),
+		'not_found'             => sprintf( __( 'No %1$s Found' ), 'Projects' ),
+		'not_found_in_trash'    => sprintf( __( 'No %1$s Found in Trash' ), 'Projects' ),
+		'parent_item_colon'     => '',
 	);
 
 	$args = array(
-		'labels' => $labels,
-		'public' => true,
-		'publicly_queryable' => true,
-		'show_ui' => true,
-		'exclude_from_search' => false,
-		'query_var' => true,
-		'rewrite' => array( 'slug' => 'project' ),
-		'has_archive' => true,
-		'show_in_menu' => true,
-		'capability_type' => 'page',
-		'hierarchical' => false,
-		'menu_position' => null,
-		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+		'labels'                => $labels,
+		'public'                => true,
+		'publicly_queryable'    => true,
+		'show_ui'               => true,
+		'exclude_from_search'   => false,
+		'query_var'             => true,
+		'rewrite'               => array( 'slug' => 'project' ),
+		'has_archive'           => true,
+		'show_in_menu'          => true,
+		'capability_type'       => 'page',
+		'hierarchical'          => false,
+		'menu_position'         => null,
+		'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
 	);
 
 	register_post_type( 'pauinn_project', $args );
@@ -142,7 +143,7 @@ add_action( 'init', 'inn_project_post_type', 0 );
 
 function member_directory_tax() {
 
-	$member_directory_labels = array(
+	$focus_areas_labels = array(
 		'name'                       => _x( 'Focus Areas', 'Taxonomy General Name', 'inn' ),
 		'singular_name'              => _x( 'Focus Area', 'Taxonomy Singular Name', 'inn' ),
 		'menu_name'                  => __( 'Focus Areas', 'inn' ),
@@ -164,8 +165,8 @@ function member_directory_tax() {
 		'items_list'                 => __( 'Items list', 'inn' ),
 		'items_list_navigation'      => __( 'Items list navigation', 'inn' ),
 	);
-	$member_directory_args = array(
-		'labels'                     => $member_directory_labels,
+	$focus_areas_args = array(
+		'labels'                     => $focus_areas_labels,
 		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
@@ -173,7 +174,7 @@ function member_directory_tax() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'ppu_focus_areas', array( 'inn_member' ), $member_directory_args );
+	register_taxonomy( 'ppu_focus_areas', array( 'inn_member' ), $focus_areas_args );
 
 	$member_project_labels = array(
 		'name'                       => _x( 'Projects', 'inn' ),
@@ -202,6 +203,7 @@ function member_directory_tax() {
 		'labels'                     => $member_project_labels,
 		'hierarchical'               => true,
 		'public'                     => true,
+		'rewrite'                    => array( 'slug' => 'projects', 'with_front' => true, 'hierarchical' => true ),
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
