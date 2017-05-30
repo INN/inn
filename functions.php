@@ -53,6 +53,8 @@ function inn_landing_page_enqueue() {
 		wp_enqueue_style( 'press', get_stylesheet_directory_uri() . '/css/press.css', null, '1.0.0' );
 	} elseif ( is_page( 'people' ) ) {
 		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/people.css', null, '1.0.0' );
+	} elseif ( is_archive( 'inn_member' ) ) {
+		wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.0.0' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'inn_landing_page_enqueue', 200 );
@@ -141,3 +143,13 @@ function inn_add_search_box() {
 	get_template_part( 'partials/inn-nav-search-form' );
 }
 add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
+
+
+function inn_member_archive_query( $query ) {
+if ( $query->is_archive( 'inn_member') && $query->is_main_query() && ! is_admin() ) {
+        $query->set( 'posts_per_page', 500 );
+		$query->set( 'order', 'ASC' );
+		$query->set( 'orderby', 'title' );
+    }
+}
+add_action( 'pre_get_posts', 'inn_member_archive_query' );
