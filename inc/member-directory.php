@@ -203,7 +203,11 @@ function member_directory_tax() {
 		'labels'                     => $member_project_labels,
 		'hierarchical'               => true,
 		'public'                     => true,
-		'rewrite'                    => array( 'slug' => 'projects', 'with_front' => true, 'hierarchical' => true ),
+		'rewrite'                    => array(
+											'slug'         => 'projects',
+											'with_front'   => true,
+											'hierarchical' => true
+										),
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
