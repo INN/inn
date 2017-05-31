@@ -334,3 +334,58 @@ function inn_member_info() {
 		) );
 
 }
+
+add_action( 'updated_postmeta', 'inn_geocode_address', 10, 4 );
+/*
+ * function to geocode address, it will return false if unable to geocode address
+ * adapted from https://www.codeofaninja.com/2014/06/google-maps-geocoding-example-php.html
+ */
+function inn_geocode_address( $meta_id, $obj_id, $meta_key, $meta_value ) {
+	if ( '_address' === $meta_key ) {
+
+	    // url encode the address
+	    $address = urlencode( implode( ' ', maybe_unserialize( $meta_value ) ) );
+
+	    // google map geocode api url
+	    $url = "http://maps.google.com/maps/api/geocode/json?address={$address}";
+
+	    // get the json response
+	    $resp_json = file_get_contents( $url );
+
+	    // decode the json
+	    $resp = json_decode( $resp_json, true );
+
+	    // response status will be 'OK', if able to geocode given address
+	    if( 'OK' === $resp['status'] ) {
+
+	        // get the important data
+	        $lati = $resp['results'][0]['geometry']['location']['lat'];
+	        $longi = $resp['results'][0]['geometry']['location']['lng'];
+	        $formatted_address = $resp['results'][0]['formatted_address'];
+
+	        // verify if data is complete
+	        if ( $lati && $longi && $formatted_address ){
+
+	            // put the data in the array
+	            $data_arr = array();
+
+	            array_push(
+	                $data_arr,
+	                $lati,
+	                $longi,
+	                $formatted_address
+	            );
+
+				update_post_meta( $obj_id, '_address_latlon', array( $lati, $longi ) );
+				return;
+
+	        } else {
+	            return false;
+	        }
+
+	    } else {
+			exit;
+	        return false;
+	    }
+	}
+}
