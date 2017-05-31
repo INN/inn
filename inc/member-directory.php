@@ -384,7 +384,6 @@ function inn_geocode_address( $meta_id, $obj_id, $meta_key, $meta_value ) {
 	        }
 
 	    } else {
-			exit;
 	        return false;
 	    }
 	}
