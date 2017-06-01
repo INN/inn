@@ -45,11 +45,11 @@ function inn_member_directory() {
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
 		'menu_icon'             => 'dashicons-admin-users',
-		'rewrite'               => array( 'slugin' => 'member' ),
+		'rewrite'               => array( 'slug' => 'members' ),
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => false,
+		'has_archive'           => true,
 		'exclude_from_search'   => true,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -334,3 +334,159 @@ function inn_member_info() {
 		) );
 
 }
+
+add_action( 'updated_postmeta', 'inn_geocode_address', 10, 4 );
+/*
+ * function to geocode address, it will return false if unable to geocode address
+ * adapted from https://www.codeofaninja.com/2014/06/google-maps-geocoding-example-php.html
+ */
+function inn_geocode_address( $meta_id, $obj_id, $meta_key, $meta_value ) {
+	if ( '_address' === $meta_key ) {
+
+	    // url encode the address
+	    $address = urlencode( implode( ' ', maybe_unserialize( $meta_value ) ) );
+
+	    // google map geocode api url
+	    $url = "http://maps.google.com/maps/api/geocode/json?address={$address}";
+
+	    // get the json response
+	    $resp_json = file_get_contents( $url );
+
+	    // decode the json
+	    $resp = json_decode( $resp_json, true );
+
+	    // response status will be 'OK', if able to geocode given address
+	    if( 'OK' === $resp['status'] ) {
+
+	        // get the important data
+	        $lati = $resp['results'][0]['geometry']['location']['lat'];
+	        $longi = $resp['results'][0]['geometry']['location']['lng'];
+	        $formatted_address = $resp['results'][0]['formatted_address'];
+
+	        // verify if data is complete
+	        if ( $lati && $longi && $formatted_address ){
+
+	            // put the data in the array
+	            $data_arr = array();
+
+	            array_push(
+	                $data_arr,
+	                $lati,
+	                $longi,
+	                $formatted_address
+	            );
+
+				update_post_meta( $obj_id, '_address_latlon', array( $lati, $longi ) );
+				return;
+
+	        } else {
+	            return false;
+	        }
+
+	    } else {
+	        return false;
+	    }
+	}
+}
+
+
+/**
+ * Map on archive page
+ */
+function inn_member_map( $atts ) {
+
+	global $post;
+	$args = array(
+		'post_type' => 'inn_member',
+		'posts_per_page' => 500,
+		'order', 'ASC',
+		'orderby', 'title',
+	);
+
+	$members = get_posts( $args );
+
+	$api_key = "AIzaSyD82h0mNBtvoOmhC3N4YZwqJ_xLkS8yTuw";
+	ob_start();
+	?>
+	<div id="map-container">
+	</div>
+	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=<?php echo $api_key; ?>&sensor=false"></script>
+	<script type="text/javascript">
+		//convenience objects
+		var $map = jQuery("#map-container"),
+			gm = google.maps,
+			infoWin = new gm.InfoWindow({ content: "default" }),
+			markers = [];
+
+		//new look!
+		gm.visualRefresh = true;
+
+		//create the map
+		var gMap = new gm.Map(document.getElementById("map-container"), {
+			center: new gm.LatLng(39.828328, -98.579416),
+			zoom: 4,
+			mapTypeId: google.maps.MapTypeId.TERRAIN
+		});
+
+		// Function for creating a marker on the map
+		function createMarker( markerinfo ) {
+			var marker = new gm.Marker({
+				map: gMap,
+				draggable: false,
+				animation: gm.Animation.DROP,
+				position: markerinfo.latLng,
+				title: markerinfo.title
+			});
+			marker.data = markerinfo.d;
+
+			//event listening
+			gm.event.addListener(marker, 'click', function() {
+				infoWin.setContent( marker.data );
+				infoWin.open(gMap, marker);
+			});
+
+			//just making sure we have these?
+			markers.push(marker);
+		}
+
+		// The array of places
+		var marker_list = [
+		<?php
+		 foreach ( $members as $member ) :
+			setup_postdata( $post );
+			$coords = maybe_unserialize( $member->_address_latlon );
+
+		 	//skip members without coordinates
+		 	if ( empty( $coords ) ) {
+				continue;
+			}
+			$info = sprintf( '<div class="map-popup"><a href="%s" class="map-name">%s</a><br/><a href="%s" target="_blank">%s</a></div>',
+		 		get_author_posts_url($member->ID),
+		 		htmlspecialchars($member->post_title, ENT_QUOTES),
+		 		$member->_url,
+		 		$member->_url
+		 	);
+			 ?>{
+title: "<?php echo htmlspecialchars($member->display_name, ENT_QUOTES); ?>",
+latLng: new gm.LatLng(<?php echo $coords[0] . "," . $coords[1] ?>),
+d: '<?php echo $info; ?>'
+},<?php
+		 endforeach;
+		 wp_reset_postdata();
+		?>
+		];
+
+		//now load 'em up
+		for (var i = 0; i < marker_list.length; i++) {
+			(function(newmarker, idx) {
+				setTimeout( function() {
+					createMarker( newmarker );
+				}, idx * 20 );
+			})(marker_list[i], i);
+		}
+
+	</script>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode( 'inn-member-map', 'inn_member_map' );
