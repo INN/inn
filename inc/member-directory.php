@@ -453,7 +453,8 @@ function inn_member_map( $atts ) {
 		var marker_list = [
 		<?php
 		 foreach ( $members as $member ) :
-			setup_postdata( $post );
+			setup_postdata( $member );
+
 			$coords = maybe_unserialize( $member->_address_latlon );
 
 		 	//skip members without coordinates
@@ -461,8 +462,8 @@ function inn_member_map( $atts ) {
 				continue;
 			}
 			$info = sprintf( '<div class="map-popup"><a href="%s" class="map-name">%s</a><br/><a href="%s" target="_blank">%s</a></div>',
-		 		get_author_posts_url($member->ID),
-		 		htmlspecialchars($member->post_title, ENT_QUOTES),
+		 		get_the_permalink( $member->ID ),
+		 		htmlspecialchars( $member->post_title, ENT_QUOTES ),
 		 		$member->_url,
 		 		$member->_url
 		 	);
