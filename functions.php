@@ -41,7 +41,7 @@ add_action( 'init', 'inn_init' );
  */
 function inn_enqueue() {
 	if ( ! is_admin() ) {
-		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array( 'jquery' ), '1.1', true );
 	}
 
 	if ( is_archive( 'inn_member' ) ) {
@@ -53,7 +53,6 @@ function inn_enqueue() {
 
 			function categoryChangeFilter() {
 			  mixer.filter(categoryFilter.value);
-			  console.log( categoryFilter.value );
 			}
 
 			if (categoryFilter) {
@@ -62,7 +61,6 @@ function inn_enqueue() {
 
 			function stateChangeFilter() {
 			  mixer.filter(stateFilter.value);
-			  console.log( stateFilter.value );
 			}
 
 			if (stateFilter) {
