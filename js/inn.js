@@ -14,9 +14,4 @@ jQuery(document).ready( function($) {
 	//hide the member contact form, this is a hack to get around weird paupress sizing
 	$('.toggle').trigger('click');
 
-	// Submitting links for membership directory states
-	$('.member-nav select').on('change', function() {
-		window.location = $(this).val();
-	});
-
 });

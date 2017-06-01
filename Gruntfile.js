@@ -16,6 +16,7 @@ module.exports = function(grunt) {
                     'css/landing.css': 'less/landing.less',
                     'css/people.css': 'less/people.less',
                     'css/press.css': 'less/press.less',
+                    'css/members.css': 'less/members.less',
                     'css/style.css': 'less/style.less',
                     'homepages/assets/css/inn.css': 'homepages/assets/less/inn.less'
                 }
