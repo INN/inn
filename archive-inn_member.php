@@ -10,64 +10,64 @@ get_header();
 $queried_object = get_queried_object();
 
 $states = array(
-	'AL' => __('Alabama', 'inn'),
-	'AK' => __('Alaska', 'inn'),
-	'AZ' => __('Arizona', 'inn'),
-	'AR' => __('Arkansas', 'inn'),
-	'CA' => __('California', 'inn'),
-	'CO' => __('Colorado', 'inn'),
-	'CT' => __('Connecticut', 'inn'),
-	'DE' => __('Delaware', 'inn'),
-	'DC' => __('District Of Columbia', 'inn'),
-	'FL' => __('Florida', 'inn'),
-	'GA' => __('Georgia', 'inn'),
-	'HI' => __('Hawaii', 'inn'),
-	'ID' => __('Idaho', 'inn'),
-	'IL' => __('Illinois', 'inn'),
-	'IN' => __('Indiana', 'inn'),
-	'IA' => __('Iowa', 'inn'),
-	'KS' => __('Kansas', 'inn'),
-	'KY' => __('Kentucky', 'inn'),
-	'LA' => __('Louisiana', 'inn'),
-	'ME' => __('Maine', 'inn'),
-	'MD' => __('Maryland', 'inn'),
-	'MA' => __('Massachusetts', 'inn'),
-	'MI' => __('Michigan', 'inn'),
-	'MN' => __('Minnesota', 'inn'),
-	'MS' => __('Mississippi', 'inn'),
-	'MO' => __('Missouri', 'inn'),
-	'MT' => __('Montana', 'inn'),
-	'NE' => __('Nebraska', 'inn'),
-	'NV' => __('Nevada', 'inn'),
-	'NH' => __('New Hampshire', 'inn'),
-	'NJ' => __('New Jersey', 'inn'),
-	'NM' => __('New Mexico', 'inn'),
-	'NY' => __('New York', 'inn'),
-	'NC' => __('North Carolina', 'inn'),
-	'ND' => __('North Dakota', 'inn'),
-	'OH' => __('Ohio', 'inn'),
-	'OK' => __('Oklahoma', 'inn'),
-	'OR' => __('Oregon', 'inn'),
-	'PA' => __('Pennsylvania', 'inn'),
-	'RI' => __('Rhode Island', 'inn'),
-	'SC' => __('South Carolina', 'inn'),
-	'SD' => __('South Dakota', 'inn'),
-	'TN' => __('Tennessee', 'inn'),
-	'TX' => __('Texas', 'inn'),
-	'UT' => __('Utah', 'inn'),
-	'VT' => __('Vermont', 'inn'),
-	'VA' => __('Virginia', 'inn'),
-	'WA' => __('Washington', 'inn'),
-	'WV' => __('West Virginia', 'inn'),
-	'WI' => __('Wisconsin', 'inn'),
-	'WY' => __('Wyoming', 'inn'),
-	'AS' => __('American Samoa', 'inn'),
-	'FM' => __('Micronesia', 'inn'),
-	'GU' => __('Guam', 'inn'),
-	'MH' => __('Marshall Islands', 'inn'),
-	'PR' => __('Puerto Rico', 'inn'),
-	'VI' => __('U.S. Virgin Islands', 'inn'),
-	'intl' => __('International', 'inn'),
+	'AL' => __( 'Alabama', 'inn' ),
+	'AK' => __( 'Alaska', 'inn' ),
+	'AZ' => __( 'Arizona', 'inn' ),
+	'AR' => __( 'Arkansas', 'inn' ),
+	'CA' => __( 'California', 'inn' ),
+	'CO' => __( 'Colorado', 'inn' ),
+	'CT' => __( 'Connecticut', 'inn' ),
+	'DE' => __( 'Delaware', 'inn' ),
+	'DC' => __( 'District Of Columbia', 'inn' ),
+	'FL' => __( 'Florida', 'inn' ),
+	'GA' => __( 'Georgia', 'inn' ),
+	'HI' => __( 'Hawaii', 'inn' ),
+	'ID' => __( 'Idaho', 'inn' ),
+	'IL' => __( 'Illinois', 'inn' ),
+	'IN' => __( 'Indiana', 'inn' ),
+	'IA' => __( 'Iowa', 'inn' ),
+	'KS' => __( 'Kansas', 'inn' ),
+	'KY' => __( 'Kentucky', 'inn' ),
+	'LA' => __( 'Louisiana', 'inn' ),
+	'ME' => __( 'Maine', 'inn' ),
+	'MD' => __( 'Maryland', 'inn' ),
+	'MA' => __( 'Massachusetts', 'inn' ),
+	'MI' => __( 'Michigan', 'inn' ),
+	'MN' => __( 'Minnesota', 'inn' ),
+	'MS' => __( 'Mississippi', 'inn' ),
+	'MO' => __( 'Missouri', 'inn' ),
+	'MT' => __( 'Montana', 'inn' ),
+	'NE' => __( 'Nebraska', 'inn' ),
+	'NV' => __( 'Nevada', 'inn' ),
+	'NH' => __( 'New Hampshire', 'inn' ),
+	'NJ' => __( 'New Jersey', 'inn' ),
+	'NM' => __( 'New Mexico', 'inn' ),
+	'NY' => __( 'New York', 'inn' ),
+	'NC' => __( 'North Carolina', 'inn' ),
+	'ND' => __( 'North Dakota', 'inn' ),
+	'OH' => __( 'Ohio', 'inn' ),
+	'OK' => __( 'Oklahoma', 'inn' ),
+	'OR' => __( 'Oregon', 'inn' ),
+	'PA' => __( 'Pennsylvania', 'inn' ),
+	'RI' => __( 'Rhode Island', 'inn' ),
+	'SC' => __( 'South Carolina', 'inn' ),
+	'SD' => __( 'South Dakota', 'inn' ),
+	'TN' => __( 'Tennessee', 'inn' ),
+	'TX' => __( 'Texas', 'inn' ),
+	'UT' => __( 'Utah', 'inn' ),
+	'VT' => __( 'Vermont', 'inn' ),
+	'VA' => __( 'Virginia', 'inn' ),
+	'WA' => __( 'Washington', 'inn' ),
+	'WV' => __( 'West Virginia', 'inn' ),
+	'WI' => __( 'Wisconsin', 'inn' ),
+	'WY' => __( 'Wyoming', 'inn' ),
+	'AS' => __( 'American Samoa', 'inn' ),
+	'FM' => __( 'Micronesia', 'inn' ),
+	'GU' => __( 'Guam', 'inn' ),
+	'MH' => __( 'Marshall Islands', 'inn' ),
+	'PR' => __( 'Puerto Rico', 'inn' ),
+	'VI' => __( 'U.S. Virgin Islands', 'inn' ),
+	'intl' => __( 'International', 'inn' ),
 );
 ?>
 
@@ -87,9 +87,9 @@ $states = array(
 		</header>
 
 		<div class="member-nav">
-			<label><?php _e('Filter List By: ', 'inn'); ?></label>
+			<label><?php _e( 'Filter List By: ', 'inn' ); ?></label>
 			<select id="member-category">
-				<option value="" disabled selected><?php echo __('Focus Area', 'inn'); ?></option>
+				<option value="" disabled selected><?php echo __( 'Focus Area', 'inn' ); ?></option>
 				<option value="all">- All -</option>
 				<?php
 				$terms = get_terms( 'ppu_focus_areas', array( 'hide_empty' => FALSE ) );
@@ -101,7 +101,7 @@ $states = array(
 				?>
 			</select>
 			<select id="member-state">
-				<option value="" disabled selected><?php echo __('State', 'inn'); ?></option>
+				<option value="" disabled selected><?php echo __( 'State', 'inn' ); ?></option>
 				<option value="all">- All -</option>
 				<?php
 				foreach ( $states as $key => $state ) {
