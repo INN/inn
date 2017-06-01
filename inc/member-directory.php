@@ -453,7 +453,8 @@ function inn_member_map( $atts ) {
 		var marker_list = [
 		<?php
 		 foreach ( $members as $member ) :
-			setup_postdata( $post );
+			setup_postdata( $member );
+
 			$coords = maybe_unserialize( $member->_address_latlon );
 
 		 	//skip members without coordinates
