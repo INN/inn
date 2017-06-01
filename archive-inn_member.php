@@ -73,7 +73,7 @@ $states = array(
 
 <div class="clearfix">
 	<?php
-		if ( have_posts() || largo_have_featured_posts() ) {
+	if ( have_posts() || largo_have_featured_posts() ) {
 
 			// queue up the first post so we know what type of archive page we're dealing with
 			the_post();
@@ -115,7 +115,7 @@ $states = array(
 
 		<div class="row-fluid clearfix">
 			<div class="inn-members span12" role="main" id="content">
-			<?php
+				<?php
 				$counter = 1;
 				while ( have_posts() ) : the_post(); ?>
 					<?php
@@ -144,9 +144,10 @@ $states = array(
 				<?php endwhile; ?>
 			</div><!-- end content -->
 		</div>
-		<?php } else {
-			get_template_part( 'partials/content', 'not-found' );
-		}
+	<?php
+	} else {
+		get_template_part( 'partials/content', 'not-found' );
+	} // End if().
 	?>
 </div>
 
