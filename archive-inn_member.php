@@ -90,7 +90,7 @@ $states = array(
 			<label><?php _e( 'Filter List By: ', 'inn' ); ?></label>
 			<select id="member-category">
 				<option value="" disabled selected><?php echo __( 'Focus Area', 'inn' ); ?></option>
-				<option value="all">- All -</option>
+				<option value="">- All -</option>
 				<?php
 				$terms = get_terms( 'ppu_focus_areas', array( 'hide_empty' => FALSE ) );
 				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
@@ -102,7 +102,7 @@ $states = array(
 			</select>
 			<select id="member-state">
 				<option value="" disabled selected><?php echo __( 'State', 'inn' ); ?></option>
-				<option value="all">- All -</option>
+				<option value="">- All -</option>
 				<?php
 				foreach ( $states as $key => $state ) {
 					echo '<option value=".' . $key . '">' . $state . '</option>';
@@ -143,6 +143,7 @@ $states = array(
 					<?php $counter++; ?>
 				<?php endwhile; ?>
 			</div><!-- end content -->
+			<div id="inn-members-no-results">No members matched that criteria.</div>
 		</div>
 	<?php
 	} else {

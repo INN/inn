@@ -45,28 +45,28 @@ function inn_enqueue() {
 	}
 
 	if ( is_archive( 'inn_member' ) ) {
-		wp_enqueue_script( 'mixitup', get_stylesheet_directory_uri() . '/js/mixitup.min.js', array( 'jquery' ), '3.1.11', true );
-		wp_add_inline_script( 'mixitup', "
-			var mixer = mixitup('.inn-members');
-			var categoryFilter = document.querySelector('#member-category');
-			var stateFilter = document.querySelector('#member-state');
+		wp_enqueue_script( 'jquery-ui-dialog' );
+		wp_enqueue_style( 'wp-jquery-ui-dialog' );
+		wp_add_inline_script( 'jquery-ui-dialog', "
+			jQuery(document).ready(function($){
 
-			function categoryChangeFilter() {
-			  mixer.filter(categoryFilter.value);
-			}
+				$('#member-category').on('change', updateDisplay );
+				$('#member-state').on('change', updateDisplay );
 
-			if (categoryFilter) {
-			  categoryFilter.addEventListener('change', categoryChangeFilter);
-			}
+				function updateDisplay() {
+					var catFilter = $('#member-category').val() ? $('#member-category').val() : '';
+						stateFilter = $('#member-state').val() ? $('#member-state').val() : '';
 
-			function stateChangeFilter() {
-			  mixer.filter(stateFilter.value);
-			}
 
-			if (stateFilter) {
-			  stateFilter.addEventListener('change', stateChangeFilter);
-			}
-			" );
+					$( '.inn_member' ).not( catFilter + ' ' + stateFilter ).addClass( 'member-hide' );
+					$( '.inn_member' + catFilter + stateFilter ).removeClass( 'member-hide' );
+
+					if ( 0 == $( '.inn_member' + catFilter + stateFilter ).size() ) {
+						$( '#inn-members-no-results' ).dialog();
+					}
+				}
+			});
+		" );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'inn_enqueue' );
@@ -79,7 +79,7 @@ function inn_landing_page_enqueue() {
 	} elseif ( is_page( 'people' ) ) {
 		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/people.css', null, '1.0.0' );
 	}
-	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.0.0' );
+	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.1' );
 }
 add_action( 'wp_enqueue_scripts', 'inn_landing_page_enqueue', 200 );
 
