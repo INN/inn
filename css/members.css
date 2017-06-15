@@ -10,7 +10,8 @@ body.post-type-archive-inn_member .inn-members .inn_member.member-hide {
   display: none;
 }
 body.post-type-archive-inn_member #inn-members-no-results {
-  display: none;
+  text-align: center;
+  flex: auto;
 }
 body.single-inn_member h1.entry-title {
   margin-bottom: 0.5em;

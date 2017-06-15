@@ -144,8 +144,8 @@ $states = array(
 					</article>
 					<?php $counter++; ?>
 				<?php endwhile; ?>
+				<div id="inn-members-no-results" class="hidden">No members matched that criteria.</div>
 			</div><!-- end content -->
-			<div id="inn-members-no-results">No members matched that criteria.</div>
 		</div>
 	<?php
 	} else {

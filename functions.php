@@ -45,9 +45,7 @@ function inn_enqueue() {
 	}
 
 	if ( is_archive( 'inn_member' ) ) {
-		wp_enqueue_script( 'jquery-ui-dialog' );
-		wp_enqueue_style( 'wp-jquery-ui-dialog' );
-		wp_add_inline_script( 'jquery-ui-dialog', "
+		wp_add_inline_script( 'jquery-core', "
 			jQuery(document).ready(function($){
 
 				$('#member-category').on('change', updateDisplay );
@@ -58,6 +56,7 @@ function inn_enqueue() {
 				$('#member-state').change();
 
 				function updateDisplay() {
+					$( '#inn-members-no-results' ).addClass( 'hidden' );
 					var catFilter = $('#member-category').val() ? $('#member-category').val() : '';
 						stateFilter = $('#member-state').val() ? $('#member-state').val() : '';
 
@@ -66,7 +65,7 @@ function inn_enqueue() {
 					$( '.inn_member' + catFilter + stateFilter ).removeClass( 'member-hide' );
 
 					if ( 0 == $( '.inn_member' + catFilter + stateFilter ).size() ) {
-						$( '#inn-members-no-results' ).dialog();
+						$( '#inn-members-no-results' ).removeClass( 'hidden' );
 					}
 				}
 			});
@@ -83,7 +82,7 @@ function inn_landing_page_enqueue() {
 	} elseif ( is_page( 'people' ) ) {
 		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/people.css', null, '1.0.0' );
 	}
-	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.1' );
+	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.2' );
 }
 add_action( 'wp_enqueue_scripts', 'inn_landing_page_enqueue', 200 );
 
