@@ -57,8 +57,8 @@ function inn_enqueue() {
 
 				function updateDisplay() {
 					$( '#inn-members-no-results' ).addClass( 'hidden' );
-					var catFilter = $('#member-category').val() ? $('#member-category').val() : '';
-						stateFilter = $('#member-state').val() ? $('#member-state').val() : '';
+					var catFilter = $('#member-category').val() ? '.' + $('#member-category').val() : '';
+						stateFilter = $('#member-state').val() ? '.' + $('#member-state').val() : '';
 
 
 					$( '.inn_member' ).not( catFilter + ' ' + stateFilter ).addClass( 'member-hide' );
@@ -68,6 +68,21 @@ function inn_enqueue() {
 						$( '#inn-members-no-results' ).removeClass( 'hidden' );
 					}
 				}
+
+				// Build array of states from member list
+				var states = [];
+				$('.inn_member').each(function(){
+					var state = this.getAttribute('data-state');
+					states.push(state);
+				});
+
+				// Loop through options
+				$('#member-state option').each(function(){
+					// If the current item is not found in state array
+					if ( $.inArray( $(this).val(), states ) == -1 ) {
+						$(this).addClass( 'hidden' );
+					}
+				});
 			});
 		" );
 	}

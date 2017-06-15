@@ -95,7 +95,7 @@ $states = array(
 				$terms = get_terms( 'ppu_focus_areas', array( 'hide_empty' => FALSE ) );
 				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 					foreach ( $terms as $term ) {
-						echo '<option value=".' . $term->slug . '">' . $term->name . '</option>';
+						echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
 					}
 				}
 				?>
@@ -105,7 +105,7 @@ $states = array(
 				<option value="">- All -</option>
 				<?php
 				foreach ( $states as $key => $state ) {
-					echo '<option value=".' . $key . '">' . $state . '</option>';
+					echo '<option value="' . $key . '">' . $state . '</option>';
 				}
 				?>
 			</select>
@@ -130,7 +130,7 @@ $states = array(
 						}
 					}
 					?>
-					<article id="post-<?php echo $post->ID; ?>" class="inn_member directory mix <?php echo implode( ' ', $focus_areas ) . ' ' . $address['state']; ?>">
+					<article id="post-<?php echo $post->ID; ?>" class="inn_member directory mix <?php echo implode( ' ', $focus_areas ) . ' ' . $address['state']; ?>" data-state="<?php echo $address['state']; ?>">
 						<a href="<?php echo get_the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 						<h3><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<p class="member-since">Member since <?php echo $meta['_inn_join_year'][0]; ?></p>
