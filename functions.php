@@ -69,8 +69,9 @@ function inn_enqueue() {
 					}
 				}
 
-				// Build array of states from member list
 				var states = [];
+
+				// Build states array from member list
 				$('.inn_member').each(function(){
 					var state = this.getAttribute('data-state');
 					states.push(state);
@@ -78,10 +79,12 @@ function inn_enqueue() {
 
 				// Loop through options
 				$('#member-state option').each(function(){
-					// If the current item is not found in state array
+
+					// If the current item is not found in state array, hide it
 					if ( $.inArray( $(this).val(), states ) == -1 ) {
 						$(this).addClass( 'hidden' );
 					}
+
 				});
 			});
 		" );
