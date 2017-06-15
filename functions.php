@@ -53,6 +53,10 @@ function inn_enqueue() {
 				$('#member-category').on('change', updateDisplay );
 				$('#member-state').on('change', updateDisplay );
 
+				// trigger change on load
+				$('#member-category').change();
+				$('#member-state').change();
+
 				function updateDisplay() {
 					var catFilter = $('#member-category').val() ? $('#member-category').val() : '';
 						stateFilter = $('#member-state').val() ? $('#member-state').val() : '';
