@@ -122,6 +122,8 @@ $states = array(
 					$meta = get_post_meta( $post->ID );
 					$address = maybe_unserialize( $meta['_address'][0] );
 					$focus_areas_obj = get_the_terms( $post->ID, 'ppu_focus_areas' );
+					$focus_areas = [];
+
 					if ( $focus_areas_obj ) {
 						foreach ( $focus_areas_obj as $item ) {
 							$focus_areas[] = $item->slug;
