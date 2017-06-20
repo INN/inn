@@ -45,28 +45,49 @@ function inn_enqueue() {
 	}
 
 	if ( is_archive( 'inn_member' ) ) {
-		wp_enqueue_script( 'mixitup', get_stylesheet_directory_uri() . '/js/mixitup.min.js', array( 'jquery' ), '3.1.11', true );
-		wp_add_inline_script( 'mixitup', "
-			var mixer = mixitup('.inn-members');
-			var categoryFilter = document.querySelector('#member-category');
-			var stateFilter = document.querySelector('#member-state');
+		wp_add_inline_script( 'jquery-core', "
+			jQuery(document).ready(function($){
 
-			function categoryChangeFilter() {
-			  mixer.filter(categoryFilter.value);
-			}
+				$('#member-category').on('change', updateDisplay );
+				$('#member-state').on('change', updateDisplay );
 
-			if (categoryFilter) {
-			  categoryFilter.addEventListener('change', categoryChangeFilter);
-			}
+				// trigger change on load
+				$('#member-category').change();
+				$('#member-state').change();
 
-			function stateChangeFilter() {
-			  mixer.filter(stateFilter.value);
-			}
+				function updateDisplay() {
+					$( '#inn-members-no-results' ).addClass( 'hidden' );
+					var catFilter = $('#member-category').val() ? '.' + $('#member-category').val() : '';
+						stateFilter = $('#member-state').val() ? '.' + $('#member-state').val() : '';
 
-			if (stateFilter) {
-			  stateFilter.addEventListener('change', stateChangeFilter);
-			}
-			" );
+
+					$( '.inn_member' ).not( catFilter + ' ' + stateFilter ).addClass( 'member-hide' );
+					$( '.inn_member' + catFilter + stateFilter ).removeClass( 'member-hide' );
+
+					if ( 0 == $( '.inn_member' + catFilter + stateFilter ).size() ) {
+						$( '#inn-members-no-results' ).removeClass( 'hidden' );
+					}
+				}
+
+				var states = [];
+
+				// Build states array from member list
+				$('.inn_member').each(function(){
+					var state = this.getAttribute('data-state');
+					states.push(state);
+				});
+
+				// Loop through options
+				$('#member-state option').each(function(){
+
+					// If the current item is not found in state array, hide it
+					if ( $.inArray( $(this).val(), states ) == -1 ) {
+						$(this).addClass( 'hidden' );
+					}
+
+				});
+			});
+		" );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'inn_enqueue' );
@@ -79,7 +100,7 @@ function inn_landing_page_enqueue() {
 	} elseif ( is_page( 'people' ) ) {
 		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/people.css', null, '1.0.0' );
 	}
-	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.0.0' );
+	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.2' );
 }
 add_action( 'wp_enqueue_scripts', 'inn_landing_page_enqueue', 200 );
 

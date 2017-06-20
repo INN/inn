@@ -90,22 +90,22 @@ $states = array(
 			<label><?php _e( 'Filter List By: ', 'inn' ); ?></label>
 			<select id="member-category">
 				<option value="" disabled selected><?php echo __( 'Focus Area', 'inn' ); ?></option>
-				<option value="all">- All -</option>
+				<option value="">- All -</option>
 				<?php
 				$terms = get_terms( 'ppu_focus_areas', array( 'hide_empty' => FALSE ) );
 				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 					foreach ( $terms as $term ) {
-						echo '<option value=".' . $term->slug . '">' . $term->name . '</option>';
+						echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
 					}
 				}
 				?>
 			</select>
 			<select id="member-state">
 				<option value="" disabled selected><?php echo __( 'State', 'inn' ); ?></option>
-				<option value="all">- All -</option>
+				<option value="">- All -</option>
 				<?php
 				foreach ( $states as $key => $state ) {
-					echo '<option value=".' . $key . '">' . $state . '</option>';
+					echo '<option value="' . $key . '">' . $state . '</option>';
 				}
 				?>
 			</select>
@@ -122,13 +122,15 @@ $states = array(
 					$meta = get_post_meta( $post->ID );
 					$address = maybe_unserialize( $meta['_address'][0] );
 					$focus_areas_obj = get_the_terms( $post->ID, 'ppu_focus_areas' );
+					$focus_areas = [];
+
 					if ( $focus_areas_obj ) {
 						foreach ( $focus_areas_obj as $item ) {
 							$focus_areas[] = $item->slug;
 						}
 					}
 					?>
-					<article id="post-<?php echo $post->ID; ?>" class="inn_member directory mix <?php echo implode( ' ', $focus_areas ) . ' ' . $address['state']; ?>">
+					<article id="post-<?php echo $post->ID; ?>" class="inn_member directory mix <?php echo implode( ' ', $focus_areas ) . ' ' . $address['state']; ?>" data-state="<?php echo $address['state']; ?>">
 						<a href="<?php echo get_the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 						<h3><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<p class="member-since">Member since <?php echo $meta['_inn_join_year'][0]; ?></p>
@@ -138,10 +140,11 @@ $states = array(
 							<li><a href="<?php echo $meta['_twitter_url'][0]; ?>" target="_blank"><i class="icon-twitter"></i></a></li>
 							<li><a href="<?php echo $meta['_facebook_url'][0]; ?>" target="_blank"><i class="icon-facebook"></i></a></li>
 						</ul>
-						<p><a href="<?php echo $meta['_url']; ?>">Visit Website</a></p>
+						<p><a href="<?php echo $meta['_url'][0]; ?>">Visit Website</a></p>
 					</article>
 					<?php $counter++; ?>
 				<?php endwhile; ?>
+				<div id="inn-members-no-results" class="hidden">No members matched that criteria.</div>
 			</div><!-- end content -->
 		</div>
 	<?php
