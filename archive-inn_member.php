@@ -140,7 +140,7 @@ $states = array(
 							<li><a href="<?php echo $meta['_twitter_url'][0]; ?>" target="_blank"><i class="icon-twitter"></i></a></li>
 							<li><a href="<?php echo $meta['_facebook_url'][0]; ?>" target="_blank"><i class="icon-facebook"></i></a></li>
 						</ul>
-						<p><a href="<?php echo $meta['_url']; ?>">Visit Website</a></p>
+						<p><a href="<?php echo $meta['_url'][0]; ?>">Visit Website</a></p>
 					</article>
 					<?php $counter++; ?>
 				<?php endwhile; ?>
