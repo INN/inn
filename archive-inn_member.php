@@ -135,10 +135,18 @@ $states = array(
 						<h3><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<p class="member-since">Member since <?php echo $meta['_inn_join_year'][0]; ?></p>
 						<ul class="social">
-							<li><a href="mailto:<?php echo $meta['_email'][0]; ?>"><i class="icon-mail"></i></a></li>
-							<li><a href="<?php echo $meta['_rss_feed'][0]; ?>" target="_blank"><i class="icon-rss"></i></a></li>
-							<li><a href="<?php echo $meta['_twitter_url'][0]; ?>" target="_blank"><i class="icon-twitter"></i></a></li>
-							<li><a href="<?php echo $meta['_facebook_url'][0]; ?>" target="_blank"><i class="icon-facebook"></i></a></li>
+							<?php if ( $meta['_email'][0] ) : ?>
+								<li><a href="mailto:<?php echo $meta['_email'][0]; ?>"><i class="icon-mail"></i></a></li>
+							<?php endif; ?>
+							<?php if ( $meta['_rss_feed'][0] ) : ?>
+								<li><a href="<?php echo $meta['_rss_feed'][0]; ?>" target="_blank"><i class="icon-rss"></i></a></li>
+							<?php endif; ?>
+							<?php if ( $meta['_twitter_url'][0] ) : ?>
+								<li><a href="<?php echo $meta['_twitter_url'][0]; ?>" target="_blank"><i class="icon-twitter"></i></a></li>
+							<?php endif; ?>
+							<?php if ( $meta['_facebook_url'][0] ) : ?>
+								<li><a href="<?php echo $meta['_facebook_url'][0]; ?>" target="_blank"><i class="icon-facebook"></i></a></li>
+							<?php endif; ?>
 						</ul>
 						<p><a href="<?php echo $meta['_url'][0]; ?>">Visit Website</a></p>
 					</article>
