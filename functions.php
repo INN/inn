@@ -198,3 +198,25 @@ if ( $query->is_archive( 'inn_member') && $query->is_main_query() && ! is_admin(
     }
 }
 add_action( 'pre_get_posts', 'inn_member_archive_query' );
+
+
+// WooCommerce overrides
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
+
+add_filter( 'wc_product_sku_enabled', '__return_false' );
+
+add_filter( 'woocommerce_product_tabs', 'inn_woo_remove_product_tabs', 98 );
+function inn_woo_remove_product_tabs( $tabs ) {
+//    unset( $tabs['description'] );      	// Remove the description tab
+    unset( $tabs['reviews'] ); 			// Remove the reviews tab
+    unset( $tabs['additional_information'] );  	// Remove the additional information tab
+
+    return $tabs;
+
+}
+
+add_filter( 'woocommerce_checkout_login_message', 'inn_checkout_login_message' );
+function inn_checkout_login_message( $message ) {
+	return __( 'Have an account?', 'woocommerce' );
+}
