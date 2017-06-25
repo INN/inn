@@ -173,14 +173,6 @@ function inn_print_scripts() {
 //add_action('wp_print_styles', 'inn_print_scripts', 100);
 
 /**
- * Add alert banner to nav
- */
-function inn_alert() {
-	get_template_part( 'partials/alert' );
-}
-//add_action( 'largo_after_nav', 'inn_alert' );
-
-/**
  * Add search box to main nav
  * uncomment this and remove partials/nav-main.php when 0.5.5 ships
  */
