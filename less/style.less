@@ -56,14 +56,12 @@ Version:        0.2.0
 }
 #alert-container {
   background-color: @white;
-  border: 1px solid @black;
   padding: 0;
   clear: both;
   max-width: 1170px;
   box-sizing: border-box;
 
   .widget {
-    padding: 0.5em 2.5%;
   }
 
   p {
@@ -71,8 +69,18 @@ Version:        0.2.0
     color: @black;
     font-family: @sans;
     text-align: center;
-    a {
-      color: @black;
+  }
+  a {
+    color: @black;
+    padding: 0.5em 2.5%;
+    display: block;
+    border: 1px solid @black;
+
+    &:hover {
+      background-color: @btnbg;
+      color: @white;
+      text-decoration: none;
+      border: 1px solid @btnbg;
     }
   }
 }

@@ -534,14 +534,10 @@ a:hover {
 }
 #alert-container {
   background-color: white;
-  border: 1px solid #000000;
   padding: 0;
   clear: both;
   max-width: 1170px;
   box-sizing: border-box;
-}
-#alert-container .widget {
-  padding: 0.5em 2.5%;
 }
 #alert-container p {
   margin-bottom: 0;
@@ -549,8 +545,17 @@ a:hover {
   font-family: "effra", helvetica, sans-serif;
   text-align: center;
 }
-#alert-container p a {
+#alert-container a {
   color: #000000;
+  padding: 0.5em 2.5%;
+  display: block;
+  border: 1px solid #000000;
+}
+#alert-container a:hover {
+  background-color: #09c9ff;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #09c9ff;
 }
 #page {
   max-width: 100%;
