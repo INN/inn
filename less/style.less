@@ -48,25 +48,33 @@ Version:        0.2.0
   float: right;
   margin-left: 0;
 }
-.alert {
-  padding: 3px 2.5%;
-  background-color: #df4646;
-  width: 95%;
+
+.alert-wrapper {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+#alert-container {
+  background-color: @white;
+  border: 1px solid @black;
+  padding: 0;
   clear: both;
+  max-width: 1170px;
+  box-sizing: border-box;
+
+  .widget {
+    padding: 0.5em 2.5%;
+  }
+
   p {
     margin-bottom: 0;
-    color: #fff;
-    font-family: "effra", helvetica, sans-serif;
+    color: @black;
+    font-family: @sans;
     text-align: center;
     a {
-      color: #fff;
+      color: @black;
     }
   }
-}
-
-//temporarily hide the alert on the homepage to avoid duplication
-.home .alert {
-  display: none;
 }
 
 #page {
@@ -85,10 +93,9 @@ Version:        0.2.0
     }
     .span4 {
       text-align: center;
-      padding: 2em 5em;
-      &#sidebar {
-	    padding: 1em 2em;
-	    text-align: left;
+      & #sidebar {
+        padding: 1em 2em;
+        text-align: left;
       }
       @media (max-width: 980px) {
         padding: 1.5em 2em;

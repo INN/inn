@@ -32,7 +32,7 @@ button,
 select,
 textarea {
   font-family: "effra", helvetica, sans-serif;
-  color: #555555;
+  color: #4d4d4d;
 }
 h1 {
   color: #333333;
@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 .widgettitle {
-  font-weight: 500;
+  font-weight: 700;
 }
 a {
   color: #09c9ff;
@@ -113,7 +113,7 @@ a:hover {
   height: 58px;
 }
 .footer-bg {
-  background-color: #555555;
+  background-color: #4d4d4d;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label,
@@ -139,7 +139,7 @@ a:hover {
 #site-footer .widgettitle,
 #site-footer li.menu-label {
   color: #fafafa;
-  font-weight: 500;
+  font-weight: 700;
 }
 #site-footer .widgettitle a,
 #site-footer li.menu-label a {
@@ -272,7 +272,7 @@ a:hover {
   margin-bottom: 0.5em;
 }
 .stories h2.entry-title a {
-  color: #555555;
+  color: #4d4d4d;
 }
 .stories h2.entry-title a:hover {
   color: #09c9ff;
@@ -283,15 +283,15 @@ a:hover {
 .type-pull-quote {
   border-left: 1px solid #aaaaaa;
   padding-left: 40px;
-  color: #555555;
+  color: #4d4d4d;
 }
 @media (max-width: 768px) {
   .type-pull-quote {
     padding: 20px 10px;
     text-align: center;
     border: none;
-    border-top: 3px solid #555555;
-    border-bottom: 3px solid #555555;
+    border-top: 3px solid #4d4d4d;
+    border-bottom: 3px solid #4d4d4d;
     margin: 0 auto 1em;
     max-width: 90%;
   }
@@ -527,23 +527,30 @@ a:hover {
   float: right;
   margin-left: 0;
 }
-.alert {
-  padding: 3px 2.5%;
-  background-color: #df4646;
-  width: 95%;
-  clear: both;
+.alert-wrapper {
+  background: transparent;
+  border: none;
+  padding: 0;
 }
-.alert p {
+#alert-container {
+  background-color: white;
+  border: 1px solid #000000;
+  padding: 0;
+  clear: both;
+  max-width: 1170px;
+  box-sizing: border-box;
+}
+#alert-container .widget {
+  padding: 0.5em 2.5%;
+}
+#alert-container p {
   margin-bottom: 0;
-  color: #fff;
+  color: #000000;
   font-family: "effra", helvetica, sans-serif;
   text-align: center;
 }
-.alert p a {
-  color: #fff;
-}
-.home .alert {
-  display: none;
+#alert-container p a {
+  color: #000000;
 }
 #page {
   max-width: 100%;
@@ -561,9 +568,8 @@ a:hover {
 }
 #main .row-fluid .span4 {
   text-align: center;
-  padding: 2em 5em;
 }
-#main .row-fluid .span4#sidebar {
+#main .row-fluid .span4 #sidebar {
   padding: 1em 2em;
   text-align: left;
 }
@@ -655,7 +661,7 @@ h5.byline {
 #hero,
 section.interstitial {
   max-width: 100%;
-  background-color: #555555;
+  background-color: #4d4d4d;
 }
 section,
 .interstitial .content {
@@ -701,7 +707,7 @@ section.normal h3 span {
   max-width: 100%;
   padding: 3em;
   margin: 0 auto 3em;
-  background-color: #555555;
+  background-color: #4d4d4d;
   color: #edf1f4;
 }
 .interstitial h3 {
@@ -776,7 +782,7 @@ section.normal h3 span {
   margin-bottom: 2em;
 }
 #quick-links h4 {
-  color: #555555;
+  color: #4d4d4d;
   text-transform: uppercase;
 }
 @media (max-width: 600px) {
