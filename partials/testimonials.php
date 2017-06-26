@@ -1,4 +1,4 @@
-<section id="testimonial" class="interstitial branding">
+<section id="testimonial" class="branding">
 	<div class="content">
 		<?php $testimonial = inn_get_testimonial(); ?>
 		<img src="<?php echo $testimonial['photo_url']; ?>" />
