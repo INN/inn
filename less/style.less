@@ -100,7 +100,6 @@ Version:        0.2.0
       margin-bottom: 0.8em;
     }
     .span4 {
-      text-align: center;
       & #sidebar {
         padding: 1em 2em;
         text-align: left;
@@ -117,8 +116,8 @@ Version:        0.2.0
     }
     @media (max-width: 1230px) {
       .span6 {
-	    padding: 1em 2em;
-	  }
+        padding: 1em 2em;
+      }
     }
     .span5,
     .span6,
@@ -139,11 +138,10 @@ Version:        0.2.0
       font-weight: 400;
       margin-bottom: 0.25em;
       &.top-tag {
-	    font-weight: 300;
-	    font-size: 16px;
+        font-weight: 300;
+        font-size: 16px;
       }
       a {
-        color: @medgray;
         &:hover {
           color: @blue;
         }
@@ -198,38 +196,6 @@ section,
 .interstitial .content {
   margin: 0 auto;
   max-width: 1170px;
-}
-
-section.normal {
-  height: auto;
-  h3 {
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    width: 62%;
-    background-color: @blue;
-    color: @blue;
-    line-height: 10px;
-    margin: 2em auto 1.5em;
-    span {
-      background-color: #fff;
-      padding: 0 60px;
-    }
-    @media (max-width: 900px) {
-      width: 90%;
-      span {
-        padding: 0 30px;
-      }
-    }
-    @media (max-width: 600px) {
-      line-height: 1.5;
-      background-color: transparent;
-      margin: 0.5em auto;
-      span {
-        padding: 0;
-      }
-    }
-  }
 }
 
 .interstitial {

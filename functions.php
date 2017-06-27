@@ -12,6 +12,7 @@ $includes = array(
 	'/inc/sidebars.php',
 	'/homepages/homepage.php',
 	'/inc/member-directory.php',
+	'/inc/widgets/next-event.php',
 );
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
@@ -171,16 +172,6 @@ function inn_print_scripts() {
 	);
 }
 //add_action('wp_print_styles', 'inn_print_scripts', 100);
-
-/**
- * Add search box to main nav
- * uncomment this and remove partials/nav-main.php when 0.5.5 ships
- */
-function inn_add_search_box() {
-	get_template_part( 'partials/inn-nav-search-form' );
-}
-add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
-
 
 function inn_member_archive_query( $query ) {
 if ( $query->is_archive( 'inn_member') && $query->is_main_query() && ! is_admin() ) {

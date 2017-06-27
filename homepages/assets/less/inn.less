@@ -16,7 +16,7 @@
 
       .textwidget {
         font-size: 1.8rem;
-        line-height: 1.2;
+        color: @black;
       }
     }
   }
@@ -62,6 +62,57 @@
     border-bottom: none;
     @media (max-width: 768px) {
       border-bottom: @ltgray 1px solid;
+    }
+  }
+
+  #homepage-middle {
+    .widgettitle {
+      padding: 3px;
+      display: block;
+      font-weight: 300;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    // widget-specific styles
+    .widget_inn-next-event-widget {
+      border: 2px solid @dkgray;
+
+      .inner {
+        padding: 1.5rem 1.5rem;
+      }
+
+      .widgettitle {
+        background-color: @dkgray;
+        margin-bottom: 0;
+        text-align: center;
+        color: @white;
+        font-weight: 700;
+        a {
+         color: @white;
+        }
+      }
+
+      h3 {
+        margin-top: 1rem;
+        margin-bottom: 0.75rem;
+        color: @black;
+        a {
+          color: @black;
+          &:hover {
+            color: @black;
+          }
+        }
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      btn {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }

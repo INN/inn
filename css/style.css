@@ -58,6 +58,7 @@ h4,
 h5,
 .widgettitle {
   font-weight: 700;
+  line-height: 1.2;
 }
 a {
   color: #09c9ff;
@@ -88,6 +89,12 @@ a:hover {
 }
 .btn.btn.search-submit {
   padding: 4px 10px;
+}
+.btn.btn-small {
+  padding: 5px 9px;
+}
+.btn.btn-mini {
+  padding: 2px 6px;
 }
 .donate-btn a:hover {
   color: #fff;
@@ -571,9 +578,6 @@ a:hover {
   height: 40px;
   margin-bottom: 0.8em;
 }
-#main .row-fluid .span4 {
-  text-align: center;
-}
 #main .row-fluid .span4 #sidebar {
   padding: 1em 2em;
   text-align: left;
@@ -622,9 +626,6 @@ a:hover {
   font-weight: 300;
   font-size: 16px;
 }
-#main .row-fluid h5 a {
-  color: #909799;
-}
 #main .row-fluid h5 a:hover {
   color: #09c9ff;
 }
@@ -672,41 +673,6 @@ section,
 .interstitial .content {
   margin: 0 auto;
   max-width: 1170px;
-}
-section.normal {
-  height: auto;
-}
-section.normal h3 {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  width: 62%;
-  background-color: #09c9ff;
-  color: #09c9ff;
-  line-height: 10px;
-  margin: 2em auto 1.5em;
-}
-section.normal h3 span {
-  background-color: #fff;
-  padding: 0 60px;
-}
-@media (max-width: 900px) {
-  section.normal h3 {
-    width: 90%;
-  }
-  section.normal h3 span {
-    padding: 0 30px;
-  }
-}
-@media (max-width: 600px) {
-  section.normal h3 {
-    line-height: 1.5;
-    background-color: transparent;
-    margin: 0.5em auto;
-  }
-  section.normal h3 span {
-    padding: 0;
-  }
 }
 .interstitial {
   max-width: 100%;
