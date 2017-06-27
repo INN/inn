@@ -12,14 +12,22 @@
   font-size: 1.8rem;
   color: #000000;
 }
-.home #homepage-top-left {
+.home .sticky-nav-holder {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .home .sticky-nav-holder {
+    border-bottom: #aaaaaa 1px solid;
+  }
+}
+#homepage-top-left {
   margin-left: 0;
 }
-.home #homepage-top-left .widget_sp_image {
+#homepage-top-left .widget_sp_image {
   padding: 0;
   position: relative;
 }
-.home #homepage-top-left .widget_sp_image .widget_sp_image-description {
+#homepage-top-left .widget_sp_image .widget_sp_image-description {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,64 +38,56 @@
   font-size: 3rem;
   color: white;
 }
-.home #homepage-top-left .widget_sp_image .widget_sp_image-description p {
+#homepage-top-left .widget_sp_image .widget_sp_image-description p {
   display: table-cell;
   vertical-align: middle;
   padding-left: 3rem;
   height: 100%;
 }
-.home #homepage-top-left .widget_sp_image .widget_sp_image-description b {
+#homepage-top-left .widget_sp_image .widget_sp_image-description b {
   display: block;
   font-size: 150%;
   clear: both;
 }
-.home .sticky-nav-holder {
-  border-bottom: none;
-}
-@media (max-width: 768px) {
-  .home .sticky-nav-holder {
-    border-bottom: #aaaaaa 1px solid;
-  }
-}
-.home #homepage-middle .widgettitle {
+#homepage-middle .widgettitle {
   padding: 3px;
   display: block;
   font-weight: 300;
 }
-.home #homepage-middle h3 {
+#homepage-middle h3 {
   font-size: 1.4rem;
 }
-.home #homepage-middle .widget_inn-next-event-widget {
+#homepage-middle .widget_inn-next-event-widget {
   border: 2px solid #4d4d4d;
 }
-.home #homepage-middle .widget_inn-next-event-widget .inner {
+#homepage-middle .widget_inn-next-event-widget .inner {
   padding: 1.5rem 1.5rem;
 }
-.home #homepage-middle .widget_inn-next-event-widget .widgettitle {
+#homepage-middle .widget_inn-next-event-widget .widgettitle {
   background-color: #4d4d4d;
   margin-bottom: 0;
   text-align: center;
   color: white;
   font-weight: 700;
 }
-.home #homepage-middle .widget_inn-next-event-widget .widgettitle a {
+#homepage-middle .widget_inn-next-event-widget .widgettitle a {
   color: white;
 }
-.home #homepage-middle .widget_inn-next-event-widget h3 {
+#homepage-middle .widget_inn-next-event-widget h3 {
   margin-top: 1rem;
   margin-bottom: 0.75rem;
   color: #000000;
 }
-.home #homepage-middle .widget_inn-next-event-widget h3 a {
+#homepage-middle .widget_inn-next-event-widget h3 a {
   color: #000000;
 }
-.home #homepage-middle .widget_inn-next-event-widget h3 a:hover {
+#homepage-middle .widget_inn-next-event-widget h3 a:hover {
   color: #000000;
 }
-.home #homepage-middle .widget_inn-next-event-widget p {
+#homepage-middle .widget_inn-next-event-widget p {
   font-size: 1.2rem;
 }
-.home #homepage-middle .widget_inn-next-event-widget btn {
+#homepage-middle .widget_inn-next-event-widget btn {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
