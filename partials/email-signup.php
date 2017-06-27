@@ -8,7 +8,8 @@
 			<form action="//inn.us1.list-manage.com/subscribe/post?u=81670c9d1b5fbeba1c29f2865&amp;id=19bec3393e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 			    <div id="mc_embed_signup_scroll">
 					<div class="mc-field-group">
-						<input type="email" value="email address" name="EMAIL" class="required email" id="mce-EMAIL">
+						<input type="email" placeholder="email address" name="EMAIL" class="required email" id="mce-EMAIL">
+						<label for="EMAIL" class="visuallyhidden">email address</label>
 					</div>
 					<div id="mce-responses" class="clear">
 						<div class="response" id="mce-error-response" style="display:none"></div>
