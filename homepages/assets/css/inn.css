@@ -7,10 +7,10 @@
   max-width: 100%;
 }
 .home #hero {
-  background-image: url("../img/INN-Days-Hero.svg");
+  background-image: url("../img/emerging-leaders.jpg");
   background-size: cover;
   background-position: center;
-  padding: 50px;
+  padding: 100px;
   padding-left: 100px;
   margin-bottom: 1em;
 }
