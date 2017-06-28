@@ -1,5 +1,3 @@
-<?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
-
 <section class="normal">
 	<div id="homepage-top-widgets" class="row-fluid">
 		<div id="homepage-top-right" class="span4">

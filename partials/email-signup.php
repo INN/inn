@@ -1,3 +1,4 @@
+<?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 <section id="email" class="interstitial branding">
 	<div class="content">
 		<img class="mail-icon" src="<? echo $img_path . 'icons/mail-squares.png'; ?>" />
