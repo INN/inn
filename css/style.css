@@ -670,6 +670,9 @@ section,
   float: left;
   margin: 1em 3em 1em 1em;
 }
+.branding .center {
+  text-align: center;
+}
 .branding .content {
   overflow: auto;
 }
@@ -679,10 +682,9 @@ section,
 }
 .branding h3 {
   font-weight: 400;
-  text-transform: uppercase;
   font-size: 2em;
   margin-bottom: 0.25em;
-  text-align: left;
+  color: #000000;
 }
 .branding form {
   display: block;
