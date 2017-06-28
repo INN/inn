@@ -96,14 +96,37 @@
     padding: 3px;
     display: block;
     font-weight: 300;
+    margin-bottom: 1.5rem;
+    @media (max-width: 600px) {
+      margin-bottom: 1em;
+    }
   }
+  .largo-recent-posts h5,
   h3 {
     font-size: 1.4rem;
+    font-family: @sans;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
+    a {
+      color: @black;
+      &:hover {
+        color: @black;
+      }
+    }
+  }
+  h5.top-tag {
+    margin-top: 1em;
+  }
+  .widget {
+    border: 2px solid transparent;
   }
 
   // widget-specific styles
   .widget_inn-next-event-widget {
-    border: 2px solid @dkgray;
+    border-color: @dkgray;
 
     .inner {
       padding: 1.5rem 1.5rem;
@@ -124,12 +147,6 @@
       margin-top: 1rem;
       margin-bottom: 0.75rem;
       color: @black;
-      a {
-        color: @black;
-        &:hover {
-          color: @black;
-        }
-      }
     }
     p {
       font-size: 1.2rem;
@@ -138,6 +155,23 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+  .largo-recent-posts {
+    ul {
+      margin-bottom: 0;
+      p:last-child,
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .widget:not(.widget_inn-next-event-widget) + .widget:not(.widget_inn-next-event-widget) {
+      .widgettitle {
+        border-top: 1px solid @ltgray;
+        padding-top: 1em;
+      }
     }
   }
 
