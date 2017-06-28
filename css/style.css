@@ -692,14 +692,13 @@ section,
   margin: 0 auto;
 }
 .branding input {
-  float: left;
   margin-right: 6px;
   padding: 12px 10px;
   width: 400px;
+  display: inline-block;
 }
 .branding input.btn {
-  display: block;
-  float: left;
+  display: inline-block;
   clear: none;
   padding: 13px 1em;
   width: 200px;

@@ -184,11 +184,15 @@ body.home.admin-bar .sticky-nav-holder {
     border-bottom: #aaaaaa 1px solid;
   }
 }
-#email img {
-  /*margin: 0 10% 0 0;*/
-  display: block;
-  width: 15%;
-  height: auto;
+#email .mc-field-group {
+  display: inline;
+}
+#email input {
+  margin-bottom: 0;
+  max-width: 350px;
+}
+#email input.btn {
+  max-width: 150px;
 }
 #testimonial img {
   width: 140px;
