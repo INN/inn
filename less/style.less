@@ -22,7 +22,7 @@ Version:        0.2.0
   }
 }
 .search-submit.btn {
-  padding: 4px 10px; 
+  padding: 4px 10px;
 }
 #site-header {
   img {
@@ -42,7 +42,7 @@ Version:        0.2.0
   @media (max-width: 1050px) {
     padding: 0 10px;
   }
-}  
+}
 
 #header-search {
   float: right;
@@ -445,5 +445,29 @@ body.normal.page .stories .top-tag {
   .byline,
   #nav-below {
     display: none;
-  }	
+  }
+}
+
+// WooCommerce product overrides
+.single-product .product .summary {
+	width: auto !important;
+	float: none !important;
+}
+
+
+button.single_add_to_cart_button.button.alt.disabled.wc-variation-selection-needed {
+	background: #ccc;
+}
+
+button.single_add_to_cart_button.button.alt,
+input#place_order {
+    background: #09c9ff;
+}
+
+.woocommerce div.product form.cart .variations td {
+	display: block;
+}
+
+.woocommerce div.product form.cart .variations select {
+	min-width: 50px;
 }
