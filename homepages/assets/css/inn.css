@@ -33,12 +33,6 @@
   font-weight: 300;
   text-align: center;
 }
-.home #hero .content .btn {
-  background-color: #000;
-}
-.home #hero .content .btn:hover {
-  background-color: #1a1a1a;
-}
 @media (max-width: 1000px) {
   .home #hero .gradient-overlay {
     padding: 10px;
