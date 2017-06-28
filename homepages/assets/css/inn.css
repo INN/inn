@@ -40,25 +40,17 @@
   background-color: #1a1a1a;
 }
 @media (max-width: 1000px) {
-  .home #hero {
-    padding: 30px;
+  .home #hero .gradient-overlay {
+    padding: 10px;
+    padding-top: 40px;
   }
-  .home #hero .content h2 {
-    font-size: 4em;
-  }
-  .home #hero .content h3 {
-    font-size: 2em;
+  .home #hero .gradient-overlay .content h4 {
+    font-size: 25.33px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .home #hero {
-    padding: 30px;
-  }
-  .home #hero .content {
-    text-align: center;
-  }
-  .home #hero .content h2 {
-    font-size: 3em;
+    height: 350px;
   }
 }
 .home #homepage-top-right ol {
