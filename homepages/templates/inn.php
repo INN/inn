@@ -1,15 +1,12 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
-<section id="hero">
-	<div class="content">
-<<<<<<< a4aaddcb25d64271724fca74073dc266213ed91d
-		<h2>INN Days 2017</h2>
-		<h3>Growing the Business<br>of Nonprofit News</h3>
-		<h4>June 21-22, 2017 in Phoenix, AZ</h4>
-		<a class="btn" href="https://inn.org/2017/05/inn-days-2017/">Learn More</a>
-=======
-		<h4>INN's Emerging Leaders group has its first meeting in Phoenix, Arizona</h4>
->>>>>>> add emerging leaders img
+<section id="hero" class="clearfix">
+	<div class="flex-container flex">
+		<div class="gradient-overlay">
+			<div class="content">
+				<h4>INN's Emerging Leaders group has its first meeting in Phoenix, Arizona</h4>
+			</div>
+		</div>
 	</div>
 </section>
 
