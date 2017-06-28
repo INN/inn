@@ -582,29 +582,9 @@ a:hover {
   padding: 1em 2em;
   text-align: left;
 }
-@media (max-width: 980px) {
-  #main .row-fluid .span4 {
-    padding: 1.5em 2em;
-  }
-}
-@media (max-width: 600px) {
-  #main .row-fluid .span4 {
-    width: 100%;
-    margin: 0;
-    clear: both;
-    padding: 0.5em 10%;
-  }
-}
 @media (max-width: 1230px) {
   #main .row-fluid .span6 {
     padding: 1em 2em;
-  }
-}
-@media (max-width: 980px) {
-  #main .row-fluid .span5,
-  #main .row-fluid .span6,
-  #main .row-fluid .span7 {
-    padding: 1.5em 2em;
   }
 }
 @media (max-width: 600px) {
