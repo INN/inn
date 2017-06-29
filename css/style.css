@@ -336,7 +336,7 @@ body.admin-bar .sticky-nav-holder {
   #sticky-nav .nav-shelf li:hover,
   #sticky-nav .nav-shelf li a:hover {
     color: #000000;
-    background-color: #b3b3b3;
+    background-color: #f2f2f2;
   }
   #page {
     margin-top: 58px;
@@ -349,7 +349,7 @@ header#site-header {
   border-bottom: none;
 }
 .navbar.sticky-navbar li > a:hover {
-  background-color: #b3b3b3;
+  background-color: #f2f2f2;
 }
 .navbar.sticky-navbar li.dropdown .dropdown-menu li a {
   color: #4d4d4d;
@@ -387,7 +387,7 @@ header#site-header {
   font-weight: 300;
 }
 #main-nav li > a:hover {
-  background-color: #b3b3b3;
+  background-color: #f2f2f2;
   text-decoration: underline;
 }
 #main-nav ul#navbar-left {
@@ -398,7 +398,7 @@ header#site-header {
   margin: 0;
 }
 #main-nav a.btn-navbar:hover {
-  background-color: #b3b3b3;
+  background-color: #f2f2f2;
 }
 #main-nav .btn-navbar {
   display: none;
