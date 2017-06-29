@@ -4,14 +4,13 @@
 	<div class="flex-container">
 		<div class="gradient-overlay">
 			<div class="content">
-				<h4>INN's Emerging Leaders group has its first meeting in Phoenix, Arizona</h4>
+				<a href="https://inn.org/project/emerging-leaders/"><h4>INN's Emerging Leaders group has its first meeting in Phoenix, Arizona</h4></a>
 			</div>
 		</div>
 	</div>
 </section>
 
 <section class="normal">
-
 	<div id="homepage-top-widgets" class="row-fluid">
 		<div id="homepage-top-left" class="span6">
 

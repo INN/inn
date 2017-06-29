@@ -31,11 +31,16 @@
       margin: 0 auto .75em;
       max-width: 1070px;
       color: #fff;
+      a h4 {
+        text-decoration: none;
+        &:hover {
+          color: @blue;
+        }
+      }
 
       h4 {
         color: #fff;
         text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-        font-weight: 300;
         text-align: center;
       }
     }
@@ -50,8 +55,8 @@
       }
     }
 
-    @media (max-width: 500px) {
-      height: 350px;
+    @media (max-width: 700px) {
+      height: 100%;
     }
   }
 

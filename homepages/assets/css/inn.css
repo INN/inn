@@ -27,10 +27,15 @@
   max-width: 1070px;
   color: #fff;
 }
+.home #hero .content a h4 {
+  text-decoration: none;
+}
+.home #hero .content a h4:hover {
+  color: #09c9ff;
+}
 .home #hero .content h4 {
   color: #fff;
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-  font-weight: 300;
   text-align: center;
 }
 @media (max-width: 1000px) {
@@ -42,9 +47,9 @@
     font-size: 25.33px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .home #hero {
-    height: 350px;
+    height: 100%;
   }
 }
 .home #homepage-top-right ol {
