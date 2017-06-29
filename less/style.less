@@ -10,6 +10,7 @@ Version:        0.2.0
 
 @import "variables.less";
 @import "utilities.less";
+@import "_nav.less";
 @import "common.less";
 @import "forms.less";
 
@@ -37,12 +38,6 @@ Version:        0.2.0
     margin-bottom: 0;
   }
 }
-.navbar .container {
-  padding: 0 90px;
-  @media (max-width: 1050px) {
-    padding: 0 10px;
-  }
-}
 
 #header-search {
   float: right;
@@ -50,6 +45,7 @@ Version:        0.2.0
 }
 
 .alert-wrapper {
+  margin-top: 0;
   background: transparent;
   border: none;
   padding: 0;
@@ -60,6 +56,7 @@ Version:        0.2.0
   clear: both;
   max-width: 1170px;
   box-sizing: border-box;
+  margin-top: 0;
 
   .widget {
   }
@@ -85,13 +82,9 @@ Version:        0.2.0
   }
 }
 
-#page {
-  max-width: 100%;
-  padding: 0;
-}
 #main {
   max-width: 1170px;
-  margin: 4em auto;
+  margin-bottom: 4em;
   .row-fluid {
     img.icon,
     a.program img {

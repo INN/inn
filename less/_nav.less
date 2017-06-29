@@ -2,14 +2,13 @@
  * this file assumes the presence of the main nav logo function in functions.php
  */
 
-// These colors copied from Largo/less/inc/variables.less
-@white: #fff;
+// These color names copied from Largo/less/inc/variables.less and are necessary for Largo/less/inc/navbar-sticky.lessnavbar-sticky.less
 @bodyBackground:        @white;
 @grayLighter: @ltgray;
 
-// for lack of a better description
-@customNavHeight: 58px;
+// for lack of a better description, call this "custom nav height"
 // this is used in a bunch of places that don't all make sense but they're all in navs.
+@customNavHeight: 58px;
 
 // Change all the sticky nav colors
 @baseColor: @blue; //? This is the Largo Blue in Largo
@@ -65,9 +64,14 @@ header#site-header {
 
 #main-nav {
   background-color: @bodyBackground;
+  &.navbar {
+    border: none;
+  }
 
   img {
     display: inline-block;
+    margin-top: 20px;
+    margin-right: 0;
     float: left;
   }
 
@@ -75,13 +79,19 @@ header#site-header {
     float: none;
   }
 
-  ul {
-    margin: 20px;
+  .nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   ul li {
     display: inline-block;
-    margin-right: 30px;
+    font-size: 0.9em;
+    margin-right: 1.5em;
+    &:last-child {
+      margin-right: 0;
+    }
+
     a {
       color: @stickyNavbarText;
       font-weight: 300;
@@ -130,6 +140,9 @@ header#site-header {
     .nav li a {
       line-height: @customNavHeight;
     }
+    .dropdown-menu li a {
+      line-height: 1.5;
+    }
   }
 }
 @media (max-width: 1000px) {
@@ -139,7 +152,6 @@ header#site-header {
       height: 40px;
     }
     ul li {
-      font-size: 1em;
       margin-right: 15px;
       margin-left: 15px;
     }
