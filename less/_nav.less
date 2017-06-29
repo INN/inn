@@ -33,6 +33,9 @@
       }
     }
   }
+  #page {
+    margin-top: @customNavHeight;
+  }
 }
 
 header#site-header {
@@ -46,11 +49,6 @@ header#site-header {
 .navbar.sticky-navbar {
   li > a:hover {
     background-color: darken( @bodyBackground, 30% );
-  }
-  li.home-icon {
-    > a img {
-      height: 44px;
-    }
   }
 
   li.dropdown .dropdown-menu {

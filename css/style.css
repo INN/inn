@@ -338,6 +338,9 @@ body.admin-bar .sticky-nav-holder {
     color: #000000;
     background-color: #b3b3b3;
   }
+  #page {
+    margin-top: 58px;
+  }
 }
 header#site-header {
   display: none;
@@ -347,9 +350,6 @@ header#site-header {
 }
 .navbar.sticky-navbar li > a:hover {
   background-color: #b3b3b3;
-}
-.navbar.sticky-navbar li.home-icon > a img {
-  height: 44px;
 }
 .navbar.sticky-navbar li.dropdown .dropdown-menu li a {
   color: #4d4d4d;
@@ -1011,6 +1011,12 @@ a:hover {
   color: white;
   text-decoration: none;
   border: 1px solid #09c9ff;
+}
+@media (max-width: 768px) {
+  #alert-container a {
+    margin-top: 1em;
+    padding: 0.5em 10%;
+  }
 }
 #main {
   max-width: 1170px;
