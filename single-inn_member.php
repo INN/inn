@@ -33,23 +33,23 @@ $meta = get_post_meta( $post->ID );
 			<ul class="social">
 				<?php
 					if ( ! empty( $meta['_facebook_url'][0] ) ) {
-						$url = $meta['_facebook_url'][0];
+						$url = esc_url_raw( $meta['_facebook_url'][0] );
 						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-facebook"></i></a></li>';
 					}
 					if ( ! empty( $meta['_twitter_url'][0] ) ) {
-						$url = $meta['_twitter_url'][0];
+						$url = esc_url_raw( $meta['_twitter_url'][0] );
 						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-twitter"></i></a></li>';
 					}
 					if ( ! empty( $meta['_youtube_url'][0] ) ) {
-						$url = $meta['_youtube_url'][0];
+						$url = esc_url_raw( $meta['_youtube_url'][0] );
 						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-youtube"></i></a></li>';
 					}
 					if ( ! empty( $meta['_google_plus_url'][0] ) ) {
-						$url = $meta['_google_plus_url'][0];
+						$url = esc_url_raw( $meta['_google_plus_url'][0] );
 						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-googleplus"></i></a></li>';
 					}
 					if ( ! empty( $meta['_rss_feed'][0] ) ) {
-						$url = $meta['_rss_feed'][0];
+						$url = esc_url_raw( $meta['_rss_feed'][0] );
 						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-rss"></i></a></li>';
 					}
 				?>
