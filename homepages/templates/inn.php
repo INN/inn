@@ -1,16 +1,16 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
-<section id="hero">
-	<div class="content">
-		<h2>INN Days 2017</h2>
-		<h3>Growing the Business<br>of Nonprofit News</h3>
-		<h4>June 21-22, 2017 in Phoenix, AZ</h4>
-		<a class="btn" href="https://inn.org/2017/05/inn-days-2017/">Learn More</a>
+<section id="hero" class="clearfix">
+	<div class="flex-container">
+		<div class="gradient-overlay">
+			<div class="content">
+				<a href="https://inn.org/project/emerging-leaders/"><h4>INN's Emerging Leaders group has its first meeting in Phoenix, Arizona</h4></a>
+			</div>
+		</div>
 	</div>
 </section>
 
 <section class="normal">
-
 	<div id="homepage-top-widgets" class="row-fluid">
 		<div id="homepage-top-left" class="span6">
 
