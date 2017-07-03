@@ -33,24 +33,19 @@ $meta = get_post_meta( $post->ID );
 			<ul class="social">
 				<?php
 					if ( ! empty( $meta['_facebook_url'][0] ) ) {
-						$url = "https://fb.com/" . $meta['_facebook_url'][0];
-						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-facebook"></i></a></li>';
+						echo '<li><a href="' . esc_url( $meta['_facebook_url'][0] ) . '" target="_blank"><i class="icon-facebook"></i></a></li>';
 					}
 					if ( ! empty( $meta['_twitter_url'][0] ) ) {
-						$url = "https://twitter.com/" . $meta['_twitter_url'][0];
-						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-twitter"></i></a></li>';
+						echo '<li><a href="' . esc_url( $meta['_twitter_url'][0] ) . '" target="_blank"><i class="icon-twitter"></i></a></li>';
 					}
 					if ( ! empty( $meta['_youtube_url'][0] ) ) {
-						$url = "https://twitter.com/" . $meta['_youtube_url'][0];
-						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-youtube"></i></a></li>';
+						echo '<li><a href="' . esc_url( $meta['_youtube_url'][0] ) . '" target="_blank"><i class="icon-youtube"></i></a></li>';
 					}
 					if ( ! empty( $meta['_google_plus_url'][0] ) ) {
-						$url = "https://twitter.com/" . $meta['_google_plus_url'][0];
-						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-googleplus"></i></a></li>';
+						echo '<li><a href="' . esc_url( $meta['_google_plus_url'][0] ) . '" target="_blank"><i class="icon-googleplus"></i></a></li>';
 					}
 					if ( ! empty( $meta['_rss_feed'][0] ) ) {
-						$url = "https://twitter.com/" . $meta['_rss_feed'][0];
-						echo '<li><a href="' . $url . '" target="_blank"><i class="icon-rss"></i></a></li>';
+						echo '<li><a href="' . esc_url( $meta['_rss_feed'][0] ) . '" target="_blank"><i class="icon-rss"></i></a></li>';
 					}
 				?>
 			</ul>
