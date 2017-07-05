@@ -10,6 +10,7 @@ define( 'SHOW_GLOBAL_NAV', false );
 // Includes
 $includes = array(
 	'/inc/sidebars.php',
+	'/inc/common.php',
 	'/homepages/homepage.php',
 	'/inc/member-directory.php',
 	'/inc/widgets/next-event.php',
