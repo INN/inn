@@ -103,20 +103,26 @@ a {
 #supplementary ul.menu li {
   border-bottom: none;
 }
-#supplementary div:nth-child(3) {
-  margin-top: 2.015em;
-}
-#supplementary div:first-child {
-  padding: 10px 30px 0 0;
-}
-#supplementary div.menu-footer-2-container {
-  padding: 0;
-}
 
 
 .row-fluid .span4.right,
 .row-fluid .span8.right {
   float: right;
+}
+@media (max-width: 1024px) {
+  #supplementary .textwidget {
+    max-width: 30em;
+    margin: 0 auto;
+  }
+  #site-footer .row-fluid .span4,
+  #site-footer .row-fluid .span8 {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    clear: both;
+    text-align: center;
+  }
 }
 
 #site-footer {
@@ -166,8 +172,10 @@ a {
     margin-top: 1em;
   }
 }
-#menu-footer-navigation,
-#supplementary ul.menu {
+
+#supplementary,
+#boilerplate,
+#site-footer ul { // guh
   font-family: @sans;
 }
 #supplementary {
@@ -175,63 +183,108 @@ a {
   padding-top: 3em;
   margin-bottom: 0;
 }
+
 #boilerplate {
   border-top: none;
-  font-family: @sans;
+  text-align: right;
 
   .copyright,
   .menu,
   .footer-bottom {
     margin-bottom: 0.5em;
   }
-}
-@media (max-width: 768px) {
-  #site-footer {
-    text-align: center;
-  }
-  #site-footer img.alignleft {
-    float: none;
-    margin: 0 auto 1.5em;
-  }
-  #site-footer p,
-  #site-footer li {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-  #boilerplate .copyright,
-  #boilerplate .menu,
-  #boilerplate .footer-bottom {
-    margin-bottom: 1.5em;
-  }
-  #supplementary {
-    padding-top: 1em;
-  }
-  #supplementary div:nth-child(2),
-  #site-footer #supplementary div:nth-child(2) .widget,
-  #site-footer #supplementary div:nth-child(2) ul.menu {
-    margin-bottom: 0;
-  }
-  #supplementary div:nth-child(3) {
-    margin-top: 0;
-  }
-  #supplementary div:first-child {
+  .menu li {
     padding: 0;
   }
-  #menu-footer-navigation li,
-  #supplementary ul.menu li {
-    font-size: 19px;
-    margin-bottom: 8px;
+}
+
+// stuff particular to this one menu
+#menu-footer-navigation{
+  #boilerplate & { // overriding a largo style
+    display: flex;
   }
-  #site-footer .widget_nav_menu .widgettitle {
-    font-size: 21px;
-    margin-bottom: 0.5em;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+
+  .menu-item {
+    flex: 0 1 auto;
+  }
+
+  &.menu .menu-label {
+    display: none;
+  }
+}
+
+// stuff particular to this one menu
+#menu-footer-bottom.menu {
+  display: block;
+  li {
+    padding-right: 0;
+    & + li {
+      padding-left: 0.5em;
+    }
+  }
+}
+#menu-footer-bottom.menu li,
+p.footer-credit {
+  font-size: 14px;
+  color: @ltgray;
+  a {
+    color: @ltgray;
+  }
+}
+
+@media (min-width: 769px) {
+  .footer-bottom {
+    border-top: 1px solid @ltgray;
+    padding-top: 3em;
+  }
+  #menu-footer-bottom.menu li,
+  p.footer-credit {
+    text-align: right;
+  }
+}
+@media (max-width: 768px) {
+  #supplementary {
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    .textwidget {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    .span4.left { // this holds the INN logo
+      border-top: 1px solid @ltgray;
+      padding-top: 48px - 22.04913122px;
+      margin-top: 3em;
+    }
+  }
+  #boilerplate #menu-footer-navigation.menu {
+    display: block;
+    padding-top: 48px;
+
+    .menu-item {
+      display: block;
+      text-align: center;
+      color: @white;
+      margin-bottom: 1em;
+
+      a {
+        padding: 0.25em; // make touch target bigger!
+        color: @white;
+      }
+    }
+  }
+  .footer-credit {
+    text-align: center;
   }
 }
 .footer-credit-padding-inn-logo-missing {
   margin-top: 0;
-}
-.footer-credit {
-  text-align: right;
 }
 
 .top-tag {
