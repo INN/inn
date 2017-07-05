@@ -591,8 +591,15 @@ a:hover {
 #supplementary div.menu-footer-2-container {
   padding: 0;
 }
+.row-fluid .span4.right,
+.row-fluid .span8.right {
+  float: right;
+}
+#site-footer .span4.left {
+  margin: 0;
+}
 #site-footer a {
-  color: #aaaaaa;
+  color: white;
 }
 #site-footer a:hover {
   color: #09c9ff;
@@ -605,6 +612,10 @@ a:hover {
 #site-footer .widgettitle a,
 #site-footer li.menu-label a {
   color: #fafafa;
+}
+#site-footer .textwidget {
+  font-weight: 700;
+  font-size: 20px;
 }
 #site-footer #footer-social {
   display: block;
@@ -665,15 +676,7 @@ a:hover {
   margin-bottom: 0;
 }
 #boilerplate {
-  text-align: center;
   border-top: none;
-}
-#boilerplate .span6 {
-  margin: 0 auto;
-  float: none;
-}
-#boilerplate .span6.right {
-  text-align: center;
 }
 #boilerplate .copyright,
 #boilerplate .menu,

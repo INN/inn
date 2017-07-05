@@ -1,6 +1,6 @@
 <section class="normal">
 	<div id="homepage-top-widgets" class="row-fluid">
-		<div id="homepage-top-right" class="span4">
+		<div id="homepage-top-right" class="span4 right">
 			<?php dynamic_sidebar( 'homepage-top-right' ); ?>
 		</div>
 		<div id="homepage-top-left" class="span8">

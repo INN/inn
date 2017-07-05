@@ -53,7 +53,7 @@ a {
     color: #fff;
     background-color: @btnprimarybg;
     &:hover {
-	  background-color: darken(@btnprimarybg, 6.3%);
+      background-color: darken(@btnprimarybg, 6.3%);
     }
   }
   &.btn.search-submit {
@@ -71,8 +71,8 @@ a {
 }
 #top-nav {
   li {
-	padding-top: 2px;
-	&.main_site_home_link {
+    padding-top: 2px;
+    &.main_site_home_link {
       padding-top: 0;
       font-size: 16px;
       font-weight: bold;
@@ -113,21 +113,39 @@ a {
   padding: 0;
 }
 
+
+.row-fluid .span4.right,
+.row-fluid .span8.right {
+  float: right;
+}
+
 #site-footer {
+  .span4.left {
+    margin: 0; // second+ items in .row-fluid get margin-left: 0 from Bootstrap, so we need to nix that because this is visually first in row.
+  }
+
   a {
-    color: @ltgray;
+    color: @white;
     &:hover {
       color: @blue;
     }
   }
+
   .widgettitle,
   li.menu-label {
     color: #fafafa;
     font-weight: 700;
     a {
-	  color: #fafafa;
+      color: #fafafa;
     }
   }
+
+  .textwidget {
+    // styles specific to the "At INN, our mission is...." statement
+    font-weight: 700;
+    font-size: 20px;
+  }
+
   #footer-social {
     display: block;
     margin: 0 auto;
@@ -153,8 +171,8 @@ a {
     }
     @media (max-width: 768px) {
       float: none;
-      li { 
-	    min-height: 56px; 
+      li {
+        min-height: 56px;
         i {
           font-size: 24px;
         }
@@ -186,15 +204,8 @@ a {
   margin-bottom: 0;
 }
 #boilerplate {
-  .span6 {
-    margin: 0 auto;
-    float: none;
-    &.right {
-	  text-align: center;
-    }
-  }
-  text-align: center;
   border-top: none;
+
   .copyright,
   .menu,
   .footer-bottom {
@@ -206,7 +217,7 @@ a {
     text-align: center;
   }
   #site-footer img.alignleft {
-	float: none;
+    float: none;
     margin: 0 auto 1.5em;
   }
   #site-footer p,

@@ -6,9 +6,6 @@
     border-bottom: #aaaaaa 1px solid;
   }
 }
-#homepage-top-right {
-  float: right;
-}
 #homepage-top-right .widget_text {
   text-align: left;
 }
