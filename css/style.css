@@ -598,6 +598,11 @@ a:hover {
 #site-footer .span4.left {
   margin: 0;
 }
+#site-footer .span4.left p {
+  margin-bottom: 0;
+  line-height: 1.3;
+  font-weight: 300;
+}
 #site-footer a {
   color: white;
 }
@@ -616,41 +621,6 @@ a:hover {
 #site-footer .textwidget {
   font-weight: 700;
   font-size: 20px;
-}
-#site-footer #footer-social {
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 0;
-  text-align: center;
-}
-#site-footer #footer-social li {
-  float: none;
-  display: inline-block;
-}
-#site-footer #footer-social li i {
-  color: #fff;
-  background-color: #909799;
-  padding: 14px;
-  border-radius: 30px;
-  margin: 0 4px;
-}
-#site-footer #footer-social li i:hover {
-  background-color: #fff;
-  color: #909799;
-}
-#site-footer #footer-social li i.icon-github:hover {
-  color: #909799;
-}
-@media (max-width: 768px) {
-  #site-footer #footer-social {
-    float: none;
-  }
-  #site-footer #footer-social li {
-    min-height: 56px;
-  }
-  #site-footer #footer-social li i {
-    font-size: 24px;
-  }
 }
 @media (max-width: 768px) {
   #site-footer img[alt="INN logo"] {
@@ -677,6 +647,7 @@ a:hover {
 }
 #boilerplate {
   border-top: none;
+  font-family: "effra", helvetica, sans-serif;
 }
 #boilerplate .copyright,
 #boilerplate .menu,
@@ -727,6 +698,9 @@ a:hover {
 }
 .footer-credit-padding-inn-logo-missing {
   margin-top: 0;
+}
+.footer-credit {
+  text-align: right;
 }
 .top-tag {
   font-weight: 300;
