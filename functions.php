@@ -198,3 +198,33 @@ if ( $query->is_archive( 'inn_member') && $query->is_main_query() && ! is_admin(
     }
 }
 add_action( 'pre_get_posts', 'inn_member_archive_query' );
+
+
+/*
+ * Add org name to list table view for network content
+ */
+function inn_post_list_table_org_column( $cols ) {
+
+	$cols['org'] = __( 'Org Name' );
+
+	return $cols;
+}
+
+function inn_post_list_table_org_value( $column_name, $post_id ) {
+
+	if ( 'org' === $column_name ) {
+
+		// thumbnail of WP 2.9
+		$member = get_post_meta( $post_id, 'from_member_id', true );
+
+		if ( isset( $member ) && $member ) {
+			echo $member;
+		} else {
+			echo __( '' );
+		}
+	}
+}
+
+// for posts
+add_filter( 'manage_network_content_posts_columns', 'inn_post_list_table_org_column' );
+add_action( 'manage_network_content_posts_custom_column', 'inn_post_list_table_org_value', 10, 2 );
