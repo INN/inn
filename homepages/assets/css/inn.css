@@ -83,7 +83,7 @@
   font-weight: 300;
   margin-bottom: 1.5rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   #homepage-middle .widgettitle {
     margin-bottom: 1em;
   }
@@ -95,7 +95,7 @@
   font-weight: 700;
   margin-bottom: 1rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   #homepage-middle .largo-recent-posts h5,
   #homepage-middle h3 {
     font-size: 2rem;
@@ -151,7 +151,7 @@
 #homepage-middle .largo-recent-posts ul li:last-child {
   margin-bottom: 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   #homepage-middle .widget:not(.widget_inn-next-event-widget) + .widget:not(.widget_inn-next-event-widget) .widgettitle {
     border-top: 1px solid #aaaaaa;
     padding-top: 1em;
@@ -163,7 +163,7 @@
   margin-right: 0;
   padding: 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 720px) {
   #homepage-middle .span4 {
     width: calc( ( 100% - (2 * 24px) )/3 );
   }

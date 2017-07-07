@@ -338,9 +338,6 @@ body.admin-bar .sticky-nav-holder {
     color: #000000;
     background-color: #f2f2f2;
   }
-  #page {
-    margin-top: 58px;
-  }
 }
 header#site-header {
   display: none;

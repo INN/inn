@@ -1,5 +1,9 @@
 @import "../../../less/variables.less";
 
+// set up some breakpoints
+@hometopbreakpoint: 600px;
+@homemidbreakpoint: 720px;
+
 .home {
   .sticky-nav-holder {
     border-bottom: none;
@@ -31,7 +35,7 @@
       }
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: @hometopbreakpoint) {
     width: 100%;
     margin: 0;
     clear: both;
@@ -81,7 +85,7 @@
       }
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: @hometopbreakpoint) {
     width: 100%;
     margin: 0;
     clear: both;
@@ -98,7 +102,7 @@
     display: block;
     font-weight: 300;
     margin-bottom: 1.5rem;
-    @media (max-width: 600px) {
+    @media (max-width: @homemidbreakpoint) {
       margin-bottom: 1em;
     }
   }
@@ -108,7 +112,7 @@
     font-family: @sans;
     font-weight: 700;
     margin-bottom: 1rem;
-    @media (max-width: 600px) {
+    @media (max-width: @homemidbreakpoint) {
       font-size: 2rem;
     }
     a {
@@ -167,7 +171,7 @@
       }
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: @homemidbreakpoint) {
     .widget:not(.widget_inn-next-event-widget) + .widget:not(.widget_inn-next-event-widget) {
       .widgettitle {
         border-top: 1px solid @ltgray;
@@ -183,7 +187,7 @@
     margin-right: 0;
     padding: 0;
   }
-  @media (min-width: 600px) {
+  @media (min-width: @homemidbreakpoint) {
     // we want to keep the widths of the span4s equal and keep the borders in the middle of the spacing
 
     // LESS does not like this formulation, so we have to math by hand
