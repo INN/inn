@@ -492,15 +492,17 @@ button.single_add_to_cart_button.button.alt.disabled.wc-variation-selection-need
 }
 
 button.single_add_to_cart_button.button.alt,
-input#place_order {
+input#place_order,
+input#place_order:disabled[disabled] {
     background: #09c9ff;
 }
 
-.woocommerce div.product {
-	.price {
-		display: none;
-	}
+// Dues page only
+#product-481415 .summary > .price {
+	display: none;
+}
 
+.woocommerce div.product {
 	form.cart .variations {
 		td {
 			display: block;
