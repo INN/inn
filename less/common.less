@@ -27,7 +27,8 @@ input[type="search"] {
 }
 h1,h2,h3,h4,h5,
 .widgettitle {
-  font-weight: 500;
+  font-weight: 700;
+  line-height: 1.2;
 }
 a {
   color: @linkcolor;
@@ -57,6 +58,12 @@ a {
   }
   &.btn.search-submit {
     padding: 4px 10px;
+  }
+  &.btn-small {
+    padding: 5px 9px;
+  }
+  &.btn-mini {
+    padding: 2px 6px;
   }
 }
 .donate-btn a:hover {
@@ -114,7 +121,7 @@ a {
   .widgettitle,
   li.menu-label {
     color: #fafafa;
-    font-weight: 500;
+    font-weight: 700;
     a {
 	  color: #fafafa;
     }
@@ -246,11 +253,11 @@ a {
     font-size: 24px;
     margin-bottom: 0.5em;
     a {
-	  color: @dkgray;
-	  &:hover {
-	    color: @blue;
-	  }
-	}
+      color: @dkgray;
+      &:hover {
+        color: @blue;
+      }
+    }
   }
   h5.byline {
     display: none;
