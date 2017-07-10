@@ -10,6 +10,7 @@ define( 'SHOW_GLOBAL_NAV', false );
 // Includes
 $includes = array(
 	'/inc/sidebars.php',
+	'/inc/common.php',
 	'/homepages/homepage.php',
 	'/inc/member-directory.php',
 	'/inc/widgets/next-event.php',
@@ -203,3 +204,24 @@ add_filter( 'woocommerce_checkout_login_message', 'inn_checkout_login_message' )
 function inn_checkout_login_message( $message ) {
 	return __( 'Have an account?', 'woocommerce' );
 }
+
+/**
+ * Put the sticky nave logo in the main nav
+ *
+ * @see less/_nav.less
+ */
+function inn_main_nav_logo() {
+	if ( of_get_option('sticky_header_logo') !== '') { ?>
+		<li class="home-icon">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<?php
+				if ( of_get_option( 'sticky_header_logo' ) !== '' )
+					largo_home_icon( 'icon-white' , 'orig' );
+				?>
+			</a>
+		</li>
+	<?php } else { ?>
+		<li class="site-name"><a href="/"><?php echo $site_name; ?></a></li>
+	<?php }
+}
+add_action( 'largo_before_main_nav_shelf', 'inn_main_nav_logo' );

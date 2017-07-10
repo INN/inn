@@ -10,6 +10,7 @@ Version:        0.2.0
 
 @import "variables.less";
 @import "utilities.less";
+@import "_nav.less";
 @import "common.less";
 @import "forms.less";
 
@@ -37,12 +38,6 @@ Version:        0.2.0
     margin-bottom: 0;
   }
 }
-.navbar .container {
-  padding: 0 90px;
-  @media (max-width: 1050px) {
-    padding: 0 10px;
-  }
-}
 
 #header-search {
   float: right;
@@ -50,6 +45,7 @@ Version:        0.2.0
 }
 
 .alert-wrapper {
+  margin-top: 0;
   background: transparent;
   border: none;
   padding: 0;
@@ -60,6 +56,7 @@ Version:        0.2.0
   clear: both;
   max-width: 1170px;
   box-sizing: border-box;
+  margin-top: 0;
 
   .widget {
   }
@@ -82,16 +79,18 @@ Version:        0.2.0
       text-decoration: none;
       border: 1px solid @btnbg;
     }
+
+    @media ( max-width: 768px ) {
+      margin-top: 1em;
+      padding: 0.5em 10%;
+
+    }
   }
 }
 
-#page {
-  max-width: 100%;
-  padding: 0;
-}
 #main {
   max-width: 1170px;
-  margin: 4em auto;
+  margin-bottom: 4em;
   .row-fluid {
     img.icon,
     a.program img {
@@ -202,6 +201,9 @@ section,
     float: left;
     margin: 1em 3em 1em 1em;
   }
+  .center {
+    text-align: center;
+  }
   .content {
     overflow: auto;
   }
@@ -211,10 +213,9 @@ section,
   }
   h3 {
     font-weight: 400;
-    text-transform: uppercase;
     font-size: 2em;
     margin-bottom: 0.25em;
-    text-align: left;
+    color: @black;
   }
   form {
     display: block;
@@ -222,14 +223,13 @@ section,
     margin: 0 auto;
   }
   input {
-    float: left;
     margin-right: 6px;
     padding: 12px 10px;
-    width: 400px
+    width: 400px;
+    display: inline-block;
   }
   input.btn {
-    display: block;
-    float: left;
+    display: inline-block;
     clear: none;
     padding: 13px 1em;
     width: 200px;

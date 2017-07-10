@@ -44,6 +44,12 @@ class inn_next_event_widget extends WP_Widget {
 		// actually need to get the correct output here
 		// instead of placeholder stuff
 		// but for now, let us make a placeholder item
+		$events = tribe_get_events( array(
+			'posts_per_page' => 1,
+			'start_date' => date( 'Y-m-d H:i:s' )
+		) );
+
+		// $events is an array of WP_Posts
 
 		echo $args['before_widget'];
 
@@ -51,14 +57,42 @@ class inn_next_event_widget extends WP_Widget {
 			echo $args['before_title'] . $instance['title'] . $args['after_title'];
 		}
 
-		?>
-		<div class="inner">
-			<a href=""><img src="https://inn.org/wp-content/uploads/2017/05/page-header-wide.jpg" alt="serious placeholder content"/></a>
-			<h3><a href="">(R)amp Up Your Email List Now, Boost Donations Later (3-part series)</a></h3>
-			<p class="">Thursday, Jun 1 at 1:00pm</p>
-			<a class="btn btn-small" href="">Sign up</a>
-		</div>
-		<?php
+
+		// presere the global $post
+		global $post;
+		$preserve = $post;
+
+		$event = $events[0];
+		$event_id = $event->ID;
+		echo '<div class="inner">';
+			// based off of markup in Largo/partials/widget-content.php
+			printf(
+				'<a href="%1$s">%2$s</a>',
+				esc_url( get_permalink( $event_id ) ),
+				get_the_post_thumbnail( $event_id, 'large', array( 'class' => ' attachment-large' ) )
+			);
+			printf(
+				'<h3><a href="%1$s">%2$s</a></h3>',
+				esc_url( get_permalink( $event_id ) ),
+				get_the_title( $event_id )
+			);
+			printf(
+				'<a class="excerpt" href="%1$s">%2$s</a>',
+				esc_url( get_permalink( $event_id ) ),
+				largo_excerpt( $event, 2, null, null, false, true, true )
+			);
+
+			$url = get_post_meta( $event_id, '_EventURL', true );
+			error_log(var_export( $url, true));
+			if ( ! empty( $url ) ) {
+				printf(
+					'<a class="btn btn-small center" href="%1$s">%2$s</a>',
+					esc_url( $url ),
+					__( 'More Info', 'inn' )
+				);
+			}
+		echo '</div>';
+
 		echo $args['after_widget'];
 	}
 

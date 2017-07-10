@@ -1,5 +1,9 @@
 @import "../../../less/variables.less";
 
+// set up some breakpoints
+@hometopbreakpoint: 600px;
+@homemidbreakpoint: 720px;
+
 .home {
   .sticky-nav-holder {
     border-bottom: none;
@@ -12,7 +16,7 @@
 #homepage-top-right {
   // normally this would be floated left because it is the first span6, but
   // we want it to be first in the markup but to the right
-  float: right;
+  // this is handled by the .right class; see common.less
 
   .widget_text {
     text-align: left;
@@ -31,7 +35,7 @@
       }
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: @hometopbreakpoint) {
     width: 100%;
     margin: 0;
     clear: both;
@@ -81,7 +85,7 @@
       }
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: @hometopbreakpoint) {
     width: 100%;
     margin: 0;
     clear: both;
@@ -89,7 +93,8 @@
 
 }
 #homepage-middle {
-  padding: 1.5 * 16px;
+  padding-top: 1.5 * 16px;
+  padding-bottom: 1.5 * 16px;
   box-sizing: border-box;
 
   .widgettitle {
@@ -97,7 +102,7 @@
     display: block;
     font-weight: 300;
     margin-bottom: 1.5rem;
-    @media (max-width: 600px) {
+    @media (max-width: @homemidbreakpoint) {
       margin-bottom: 1em;
     }
   }
@@ -107,7 +112,7 @@
     font-family: @sans;
     font-weight: 700;
     margin-bottom: 1rem;
-    @media (max-width: 600px) {
+    @media (max-width: @homemidbreakpoint) {
       font-size: 2rem;
     }
     a {
@@ -130,6 +135,13 @@
 
     .inner {
       padding: 1.5rem 1.5rem;
+    }
+    .excerpt {
+      color: @black;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .widgettitle {
@@ -166,7 +178,7 @@
       }
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: @homemidbreakpoint) {
     .widget:not(.widget_inn-next-event-widget) + .widget:not(.widget_inn-next-event-widget) {
       .widgettitle {
         border-top: 1px solid @ltgray;
@@ -182,7 +194,7 @@
     margin-right: 0;
     padding: 0;
   }
-  @media (min-width: 600px) {
+  @media (min-width: @homemidbreakpoint) {
     // we want to keep the widths of the span4s equal and keep the borders in the middle of the spacing
 
     // LESS does not like this formulation, so we have to math by hand
@@ -216,11 +228,15 @@ body.home.admin-bar .sticky-nav-holder {
 }
 
 #email {
-  img {
-    /*margin: 0 10% 0 0;*/
-    display: block;
-    width: 15%;
-    height: auto;
+  .mc-field-group {
+    display: inline;
+  }
+  input {
+    margin-bottom: 0;
+    max-width: 350px;
+  }
+  input.btn {
+    max-width: 150px;
   }
 }
 #testimonial {

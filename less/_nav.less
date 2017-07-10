@@ -1,0 +1,199 @@
+/**
+ * this file assumes the presence of the main nav logo function in functions.php
+ */
+
+// These color names copied from Largo/less/inc/variables.less and are necessary for Largo/less/inc/navbar-sticky.lessnavbar-sticky.less
+@bodyBackground:        @white;
+@grayLighter: @ltgray;
+
+// for lack of a better description, call this "custom nav height"
+// this is used in a bunch of places that don't all make sense but they're all in navs.
+@customNavHeight: 58px;
+
+// Change all the sticky nav colors
+@baseColor: @blue; //? This is the Largo Blue in Largo
+@stickyNavbarBackgroundColor: @bodyBackground;
+@stickyNavbarText: @black;
+@stickyNavbarLinkColor: @stickyNavbarText;
+@stickyNavbarLinkColorHover: lighten(@stickyNavbarLinkColor, 5%);
+@stickyNavbarDropdownCaretColor: @stickyNavbarLinkColor;
+@stickyNavbarDropdownCaretColorHover: lighten(@stickyNavbarLinkColor, 5%);
+
+@import "../../largo/less/inc/mixins.less";
+@import "../../largo/less/inc/navbar-sticky.less";
+
+@media (max-width: 768px) {
+  #sticky-nav .nav-shelf {
+    li, li a {
+      color: @stickyNavbarText;
+
+      &:hover {
+        color: @stickyNavbarText;
+        background-color: @xltgray;
+      }
+    }
+  }
+}
+
+header#site-header {
+  display: none; // this because we duplicate everything from it in the main nav.
+}
+
+.sticky-nav-holder {
+  border-bottom: none;
+}
+
+.navbar.sticky-navbar {
+  li > a:hover {
+    background-color: @xltgray;
+  }
+
+  li.dropdown .dropdown-menu {
+    li a {
+      color: @dkgray;
+    }
+  }
+}
+
+/* Navigation Bar */
+
+#main-nav {
+  background-color: @bodyBackground;
+  &.navbar {
+    border: none;
+  }
+
+  img {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 0;
+    float: left;
+  }
+
+  div.navbar-inner {
+    float: none;
+  }
+
+  .nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  ul li {
+    display: inline-block;
+    font-size: 0.9em;
+    margin-right: 1.5em;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      color: @stickyNavbarText;
+      font-weight: 300;
+    }
+  }
+
+  li > a:hover {
+    background-color: @xltgray;
+    text-decoration: underline;
+  }
+
+  ul#navbar-left {
+    float: left;
+  }
+
+  ul#navbar-right {
+    float: right;
+    margin: 0;
+  }
+
+  a.btn-navbar:hover {
+    background-color: @xltgray;
+  }
+
+  .btn-navbar {
+    display: none;
+    padding: 0 20px;
+    line-height: 69px;
+    .bars {
+      display: inline-block;
+      .icon-bar {
+        background-color: @bodyBackground;
+        display: block;
+        width: 18px;
+        height: 3px;
+        margin-top: 3px;
+      }
+    }
+  }
+}
+@media (min-width: 1001px) {
+  #main-nav {
+    .nav {
+      float: right;
+    }
+    .nav li a {
+      line-height: @customNavHeight;
+    }
+    .dropdown-menu li a {
+      line-height: 1.5;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #main-nav {
+    img {
+      max-width: 150px;
+      height: 40px;
+    }
+    ul li {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    .home-icon,
+    ul {
+      margin: 12px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  #main-nav {
+    img {
+      height: 44px;
+      margin: 6px 0 6px 0;
+    }
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    ul li {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: @stickyNavLineHeight;
+    }
+  }
+
+  .navbar.sticky-navbar li.home-icon a img {
+    vertical-align: middle;
+  }
+}
+@media (max-width: 650px) {
+  #main-nav {
+
+    ul#navbar-left {
+      display: none;
+    }
+
+    .btn-navbar {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  // this because otherwise the navs start wrapping and everything breaks unpleasantly.
+  .global-nav .nav-right .donate-btn {
+    display: none;
+  }
+}
