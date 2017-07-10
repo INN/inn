@@ -46,7 +46,7 @@ $term_id = $term->term_id;
 				'sub_operator' 	=> 'any',
 				'query' 		=> $term_id
 			);
-			$query = paupress_filter_process( $search );
+			$query = $search;
 
 			if ( ! empty( $query['member_search'] ) ) {
 				foreach ( $query['member_search'] as $user_id ) {
