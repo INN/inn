@@ -45,6 +45,8 @@ function inn_enqueue() {
 		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array( 'jquery' ), '1.1', true );
 	}
 
+	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/style.css', array('largo-stylesheet'), '201707075' );
+
 	if ( is_archive( 'inn_member' ) ) {
 		wp_add_inline_script( 'jquery-core', "
 			jQuery(document).ready(function($){
@@ -182,6 +184,34 @@ if ( $query->is_archive( 'inn_member') && $query->is_main_query() && ! is_admin(
 }
 add_action( 'pre_get_posts', 'inn_member_archive_query' );
 
+/*
+ * Add org name to list table view for network content
+ */
+function inn_post_list_table_org_column( $cols ) {
+
+	$cols['org'] = __( 'Org Name' );
+
+	return $cols;
+}
+
+function inn_post_list_table_org_value( $column_name, $post_id ) {
+
+	if ( 'org' === $column_name ) {
+
+		// thumbnail of WP 2.9
+		$member = get_post_meta( $post_id, 'from_member_id', true );
+
+		if ( isset( $member ) && $member ) {
+			echo $member;
+		} else {
+			echo __( '' );
+		}
+	}
+}
+
+// for posts
+add_filter( 'manage_network_content_posts_columns', 'inn_post_list_table_org_column' );
+add_action( 'manage_network_content_posts_custom_column', 'inn_post_list_table_org_value', 10, 2 );
 
 // WooCommerce overrides
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );

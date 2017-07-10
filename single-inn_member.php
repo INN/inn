@@ -92,7 +92,7 @@ $meta = get_post_meta( $post->ID );
 						}
 
 						if ( !empty ( $meta['_email'] ) ) {
-							echo '<a class="btn email" href="mailto:' . $meta['_email']  . '">Contact This Member</a>';
+							echo '<a class="btn email" href="mailto:' . $meta['_email'][0]  . '">Contact This Member</a>';
 						}
 					echo '</div>';
 
