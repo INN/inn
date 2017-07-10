@@ -121,6 +121,13 @@
 #homepage-middle .widget_inn-next-event-widget .inner {
   padding: 1.5rem 1.5rem;
 }
+#homepage-middle .widget_inn-next-event-widget .excerpt {
+  color: #000000;
+  text-decoration: none;
+}
+#homepage-middle .widget_inn-next-event-widget .excerpt:hover {
+  text-decoration: underline;
+}
 #homepage-middle .widget_inn-next-event-widget .widgettitle {
   background-color: #4d4d4d;
   margin-bottom: 0;
