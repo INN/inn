@@ -514,10 +514,10 @@ h5,
   line-height: 1.2;
 }
 a {
-  color: #09c9ff;
+  color: #df4646;
 }
 a:hover {
-  color: #3cd4ff;
+  color: #e77171;
 }
 .btn {
   text-shadow: none;
@@ -1321,7 +1321,7 @@ section,
   font-size: 24px;
   margin-bottom: 1.25em;
   text-transform: uppercase;
-  color: #09c9ff;
+  color: #df4646;
 }
 .internal-subnav ul {
   margin-left: 0;
@@ -1339,7 +1339,7 @@ section,
   color: #909799;
 }
 .internal-subnav ul li a:hover {
-  color: #3cd4ff;
+  color: #e77171;
 }
 .internal-subnav ul.children {
   margin: 12px 0 0 20px;
