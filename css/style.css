@@ -971,6 +971,12 @@ p.footer-credit a {
 .gform_wrapper.membership_form_wrapper #field_2_33 .gfield_label {
   font-size: 24px;
 }
+/**
+ * Styles specific to events
+ */
+.event-is-recurring .tribe-events-divider {
+  display: none;
+}
 #header-social .icon-youtube-parent,
 #header-social .icon-gplus-parent,
 #header-social .icon-linkedin-parent,
