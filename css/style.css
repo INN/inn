@@ -499,7 +499,7 @@ input[type="search"] {
 .entry-content p,
 .entry-content ul,
 .entry-content ol {
-  font-family: "leitura-news", georgia, serif;
+  font-family: "effra", helvetica, sans-serif;
   font-weight: 300;
 }
 h1,
@@ -757,9 +757,14 @@ p.footer-credit a {
   display: none;
 }
 .type-pull-quote {
+  font-family: serif;
   border-left: 1px solid #aaaaaa;
   padding-left: 40px;
   color: #4d4d4d;
+}
+.type-pull-quote h6,
+.type-pull-quote cite {
+  font-family: serif;
 }
 @media (max-width: 768px) {
   .type-pull-quote {

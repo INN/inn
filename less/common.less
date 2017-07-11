@@ -22,7 +22,7 @@ input[type="search"] {
 .entry-content p,
 .entry-content ul,
 .entry-content ol {
-  font-family: @serif;
+  font-family: @sans;
   font-weight: 300;
 }
 h1,h2,h3,h4,h5,
@@ -306,9 +306,13 @@ p.footer-credit {
   }
 }
 .type-pull-quote {
+  font-family: serif;
   border-left: 1px solid @ltgray;
   padding-left: 40px;
   color: @dkgray;
+  h6, cite {
+    font-family: serif;
+  }
 
   @media (max-width: 768px) {
       padding: 20px 10px;
