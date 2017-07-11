@@ -1020,12 +1020,32 @@ p.footer-credit a {
   padding: 0.5em 2.5%;
   display: block;
   border: 1px solid #000000;
+  position: relative;
 }
 #alert-container a:hover {
   background-color: #09c9ff;
   color: white;
   text-decoration: none;
   border: 1px solid #09c9ff;
+}
+@media (min-width: 600px) {
+  #alert-container a::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    content: " ";
+    height: 40px;
+    width: 40px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><g id="g3344" transform="matrix(1.25,0,0,-1.25,0,200)"> <path d="m 82,118 36,0 0,-36 -36,0 0,36 z m 36,-76 -36,0 0,36 36,0 0,-36 z m -40,0 -36,0 0,36 36,0 0,-36 z m 0,80 0,-40 -40,0 0,-44 40,0 4,0 40,0 0,40 0,4 0,40 -44,0 z" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3346" /></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  #alert-container a:hover::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><g id="g3344" transform="matrix(1.25,0,0,-1.25,0,200)"> <path d="m 82,118 36,0 0,-36 -36,0 0,36 z m 36,-76 -36,0 0,36 36,0 0,-36 z m -40,0 -36,0 0,36 36,0 0,-36 z m 0,80 0,-40 -40,0 0,-44 40,0 4,0 40,0 0,40 0,4 0,40 -44,0 z" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3346" /></g></svg>');
+  }
 }
 @media (max-width: 768px) {
   #alert-container a {
