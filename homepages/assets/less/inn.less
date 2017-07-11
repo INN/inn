@@ -27,9 +27,11 @@
     }
 
     .textwidget {
-      font-size: 1.8rem;
       line-height: 1.2;
       color: @black;
+
+      // scaling font size based on width
+      font-size: 1.8rem;
       @media (min-width: 601px) and (max-width: 1100px) {
         font-size: ~"calc(0.4rem + 1.7vw);"
       }
@@ -55,28 +57,27 @@
   .widget_sp_image {
     padding: 0;
     position: relative;
+    color: @white;
 
     .widget_sp_image-description {
-      // set up the main thing
       position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
+      top: 3em;
 
-      display: table;
+      // scaling font size based on width
+      font-size: 1.8rem;
+      @media (min-width: 601px) and (max-width: 1100px) {
+        font-size: ~"calc(0.4rem + 1.7vw);"
+      }
+      @media (max-width: 600px) {
+        font-size: ~"calc(0.4rem + 2.7vw);"
+      }
 
       p {
         padding-left: 2rem;
-        display: table-cell;
-        vertical-align: middle;
         height: 100%;
+        font-size: inherit;
+        text-shadow: 0 0 20px black, 0 0 30px black;
       }
-
-      font-size: 3rem;
-      color: @white;
 
       b {
         display: block;
