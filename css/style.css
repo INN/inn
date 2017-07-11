@@ -572,6 +572,15 @@ a:hover {
 .navbar li.home-icon > a img {
   height: 58px;
 }
+/*
+ * post template adjustments
+ */
+.single .hero.span12 {
+  margin-left: 0;
+}
+/*
+ * footer adjustments
+ */
 .footer-bg {
   background-color: #000000;
 }
