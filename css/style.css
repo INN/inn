@@ -423,6 +423,10 @@ header#site-header {
     float: none;
     text-align: left;
   }
+  .caret,
+  .navbar li > a {
+    padding: 0 4px;
+  }
 }
 @media (min-width: 1021px) {
   #main-nav .nav {
