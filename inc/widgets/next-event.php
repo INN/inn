@@ -83,7 +83,6 @@ class inn_next_event_widget extends WP_Widget {
 			);
 
 			$url = get_post_meta( $event_id, '_EventURL', true );
-			error_log(var_export( $url, true));
 			if ( ! empty( $url ) ) {
 				printf(
 					'<a class="btn btn-small center" href="%1$s">%2$s</a>',
