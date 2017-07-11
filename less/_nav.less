@@ -82,7 +82,6 @@ header#site-header {
   ul li {
     display: inline-block;
     font-size: 0.9em;
-    margin-right: 1.5em;
     &:last-child {
       margin-right: 0;
     }
@@ -127,7 +126,23 @@ header#site-header {
     }
   }
 }
-@media (min-width: 1001px) {
+@media (min-width: 769px) and (max-width: 1020px) {
+  #main-nav {
+    .nav {
+      float: none;
+      text-align: center;
+      width: 100%;
+      clear: both;
+      width: 95vw; //#page has 2.5% margins on either side, and is thus 95% of the browser width
+      
+      li {
+        float: none;
+        text-align: left;
+      }
+    }
+  }
+}
+@media (min-width: 1021px) {
   #main-nav {
     .nav {
       float: right;
@@ -137,22 +152,6 @@ header#site-header {
     }
     .dropdown-menu li a {
       line-height: 1.5;
-    }
-  }
-}
-@media (max-width: 1000px) {
-  #main-nav {
-    img {
-      max-width: 150px;
-      height: 40px;
-    }
-    ul li {
-      margin-right: 15px;
-      margin-left: 15px;
-    }
-    .home-icon,
-    ul {
-      margin: 12px;
     }
   }
 }
