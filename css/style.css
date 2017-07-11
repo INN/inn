@@ -578,6 +578,36 @@ a:hover {
 .single .hero.span12 {
   margin-left: 0;
 }
+.classic h5.top-tag {
+  margin-bottom: 1em;
+}
+.classic h1.entry-title {
+  margin-bottom: 0.5em;
+}
+.classic h5.byline {
+  text-align: left;
+  margin-bottom: 2em;
+}
+@media (min-width: 769px) {
+  .classic #content {
+    padding-right: 24px;
+    border-right: 1px solid #aaaaaa;
+  }
+  .classic #sidebar {
+    margin-left: 0;
+  }
+}
+.normal h1.entry-title {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.normal h5.byline {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.normal article > .top-tag {
+  display: none;
+}
 /*
  * footer adjustments
  */
@@ -1144,14 +1174,6 @@ body.page.page-template-full-page #content {
 }
 body.normal.page .entry-content {
   padding: 0;
-}
-h1.entry-title {
-  text-align: center;
-  margin-bottom: 0.5em;
-}
-h5.byline {
-  text-align: center;
-  margin-bottom: 2em;
 }
 #hero,
 section.interstitial {

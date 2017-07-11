@@ -225,3 +225,11 @@ function inn_main_nav_logo() {
 	<?php }
 }
 add_action( 'largo_before_main_nav_shelf', 'inn_main_nav_logo' );
+
+/**
+ * put the top term on two-column posts
+ */
+function inn_maybe_top_term() {
+	largo_maybe_top_term();
+}
+add_action( 'largo_before_post_header', 'inn_maybe_top_term' );

@@ -98,6 +98,41 @@ a {
 .single .hero.span12 {
   margin-left: 0;
 }
+.classic {
+  h5.top-tag {
+    margin-bottom: 1em;
+  }
+  h1.entry-title {
+    margin-bottom: 0.5em;
+  }
+  h5.byline {
+    text-align: left;
+    margin-bottom: 2em;
+  }
+  // draw a line between the left content and the right sidebar
+  @media ( min-width: 769px ) {
+    #content {
+      padding-right: 24px;
+      border-right: 1px solid @ltgray;
+    }
+    #sidebar {
+      margin-left: 0;
+    }
+  }
+}
+.normal {
+  h1.entry-title {
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+  h5.byline {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  article > .top-tag {
+    display: none;
+  }
+}
 
 /*
  * footer adjustments
