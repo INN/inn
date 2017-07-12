@@ -9,6 +9,27 @@
  */
 
 /**
+ * Put the sticky nave logo in the main nav
+ *
+ * @see less/_nav.less
+ */
+function inn_main_nav_logo() {
+	if ( of_get_option('sticky_header_logo') !== '') { ?>
+		<li class="home-icon">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<?php
+				if ( of_get_option( 'sticky_header_logo' ) !== '' )
+					largo_home_icon( 'icon-white' , 'orig' );
+				?>
+			</a>
+		</li>
+	<?php } else { ?>
+		<li class="site-name"><a href="/"><?php echo $site_name; ?></a></li>
+	<?php }
+}
+add_action( 'largo_before_main_nav_shelf', 'inn_main_nav_logo' );
+
+/**
  * Output the INN logo, used in the footer
  *
  * Pluggable function plug, replaces image URL /img/inn_logo_gray.php with /images/logo-white.png
