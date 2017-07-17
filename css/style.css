@@ -818,6 +818,92 @@ p.footer-credit a {
     max-width: 90%;
   }
 }
+#hero,
+section.interstitial {
+  max-width: 100%;
+  background-color: #f2f2f2;
+}
+section,
+.interstitial .content {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.interstitial {
+  max-width: 100%;
+  margin: 0 auto 3em;
+  background-color: #f2f2f2;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.branding {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+.branding img {
+  float: left;
+  margin: 1em 3em 1em 1em;
+}
+.branding .center {
+  text-align: center;
+}
+.branding .content {
+  overflow: auto;
+}
+.branding .content-inner {
+  float: right;
+  width: 75%;
+}
+.branding h3 {
+  font-weight: 400;
+  font-size: 2em;
+  margin-bottom: 0.25em;
+  color: #000000;
+}
+.branding form {
+  display: block;
+  float: none;
+  margin: 0 auto;
+}
+.branding input {
+  margin-right: 6px;
+  padding: 12px 10px;
+  width: 400px;
+  display: inline-block;
+}
+.branding input.btn {
+  display: inline-block;
+  clear: none;
+  padding: 13px 1em;
+  width: 200px;
+}
+@media (max-width: 700px) {
+  .branding img {
+    float: none;
+    margin: 0 auto 1em;
+    width: 30%;
+  }
+  .branding .content {
+    overflow: visible;
+  }
+  .branding .content-inner {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+  .branding h3 {
+    text-align: center;
+  }
+  .branding input {
+    float: none;
+    margin-right: 0;
+    max-width: 75%;
+  }
+  .branding input.btn {
+    float: none;
+    margin: 0 auto;
+    clear: both;
+  }
+}
 .gform_wrapper.donation_form_wrapper .gfield_required,
 .gform_wrapper.membership_form_wrapper .gfield_required,
 .gform_wrapper.donation_form_wrapper .ginput_product_price_label,
@@ -1174,92 +1260,6 @@ body.page.page-template-full-page #content {
 }
 body.normal.page .entry-content {
   padding: 0;
-}
-#hero,
-section.interstitial {
-  max-width: 100%;
-  background-color: #f2f2f2;
-}
-section,
-.interstitial .content {
-  margin: 0 auto;
-  max-width: 1170px;
-}
-.interstitial {
-  max-width: 100%;
-  margin: 0 auto 3em;
-  background-color: #f2f2f2;
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-.branding {
-  padding-left: 3em;
-  padding-right: 3em;
-}
-.branding img {
-  float: left;
-  margin: 1em 3em 1em 1em;
-}
-.branding .center {
-  text-align: center;
-}
-.branding .content {
-  overflow: auto;
-}
-.branding .content-inner {
-  float: right;
-  width: 75%;
-}
-.branding h3 {
-  font-weight: 400;
-  font-size: 2em;
-  margin-bottom: 0.25em;
-  color: #000000;
-}
-.branding form {
-  display: block;
-  float: none;
-  margin: 0 auto;
-}
-.branding input {
-  margin-right: 6px;
-  padding: 12px 10px;
-  width: 400px;
-  display: inline-block;
-}
-.branding input.btn {
-  display: inline-block;
-  clear: none;
-  padding: 13px 1em;
-  width: 200px;
-}
-@media (max-width: 700px) {
-  .branding img {
-    float: none;
-    margin: 0 auto 1em;
-    width: 30%;
-  }
-  .branding .content {
-    overflow: visible;
-  }
-  .branding .content-inner {
-    width: 100%;
-    float: none;
-    text-align: center;
-  }
-  .branding h3 {
-    text-align: center;
-  }
-  .branding input {
-    float: none;
-    margin-right: 0;
-    max-width: 75%;
-  }
-  .branding input.btn {
-    float: none;
-    margin: 0 auto;
-    clear: both;
-  }
 }
 #quick-links {
   text-align: center;

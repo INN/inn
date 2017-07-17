@@ -367,3 +367,94 @@ p.footer-credit {
       max-width: 90%;
   }
 }
+
+// Building blocks (normal and interstitial)
+#hero,
+section.interstitial {
+  max-width: 100%;
+  background-color: @xltgray;
+}
+section,
+.interstitial .content {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.interstitial {
+  max-width: 100%;
+  margin: 0 auto 3em;
+  background-color: @xltgray;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.branding {
+  padding-left: 3em;
+  padding-right: 3em;
+  img {
+    float: left;
+    margin: 1em 3em 1em 1em;
+  }
+  .center {
+    text-align: center;
+  }
+  .content {
+    overflow: auto;
+  }
+  .content-inner {
+    float: right;
+    width: 75%;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 2em;
+    margin-bottom: 0.25em;
+    color: @black;
+  }
+  form {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+  input {
+    margin-right: 6px;
+    padding: 12px 10px;
+    width: 400px;
+    display: inline-block;
+  }
+  input.btn {
+    display: inline-block;
+    clear: none;
+    padding: 13px 1em;
+    width: 200px;
+  }
+  @media ( max-width: 700px ) {
+    img {
+      float: none;
+      margin: 0 auto 1em;
+      width: 30%;
+    }
+    .content {
+      overflow: visible;
+    }
+    .content-inner {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+    }
+    input {
+      float: none;
+      margin-right: 0;
+      max-width: 75%;
+      &.btn {
+        float: none;
+        margin: 0 auto;
+        clear: both;
+      }
+    }
+  }
+}
+
