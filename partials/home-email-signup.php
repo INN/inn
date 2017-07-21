@@ -2,7 +2,6 @@
 <section id="email" class="interstitial branding">
 	<div class="content">
 		<h3 class="center">INNovation! Get the weekly newsletter.</h3>
-		<p class="center">News from INN and our members. <strong>Delivered weekly.</strong></p>
 
 		<form action="//inn.us1.list-manage.com/subscribe/post?u=81670c9d1b5fbeba1c29f2865&amp;id=19bec3393e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="center validate" target="_blank" novalidate>
 			<div id="mc_embed_signup_scroll">
