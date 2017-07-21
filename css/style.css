@@ -1409,6 +1409,29 @@ body.normal.single #content.has-menu {
 body.normal.page .stories .top-tag {
   float: none;
 }
+.classic #sidebar .widgettitle {
+  color: #aaa;
+  margin-bottom: 1em;
+  font-size: 16px;
+  font-weight: 300;
+}
+.classic #sidebar .largo-recent-posts li {
+  margin-bottom: 0;
+}
+.classic #sidebar .largo-recent-posts li a {
+  color: #000000;
+}
+.classic #sidebar .largo-recent-posts li h5 {
+  margin-bottom: 0;
+}
+.classic #sidebar .largo-recent-posts li + li::before {
+  display: block;
+  width: 4em;
+  height: 0.4em;
+  background-color: #000000;
+  content: '';
+  margin: 1.5em 0;
+}
 .single-pauinn_project .bottom {
   padding-top: 2em;
 }
