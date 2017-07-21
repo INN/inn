@@ -1,6 +1,7 @@
 <?php
 /**
  * The homepage template
+ *
  */
 
 /**
@@ -8,6 +9,7 @@
  *
  * Largo comes with a built-in homepage template system, documented in homepages/README.md
  * It's generally better to use that system than to have your child theme use its own home.php template
+ * This is modified from Largo's in order to remove the containing div#content
  */
 
 get_header();
