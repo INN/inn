@@ -654,6 +654,9 @@ a:hover {
     text-align: center;
   }
 }
+#inn-logo {
+  max-width: 300px;
+}
 #site-footer .span4.left {
   margin: 0;
 }
