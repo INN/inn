@@ -380,7 +380,16 @@ header#site-header {
 }
 #main-nav ul li a {
   color: #000000;
-  font-weight: 300;
+  font-weight: 400;
+}
+#main-nav ul li a[href*='/donate'] {
+  margin-top: 15px;
+  padding: 4px 1em;
+  line-height: 20px;
+  background-color: #09c9ff;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 #main-nav li > a:hover {
   background-color: #f2f2f2;
