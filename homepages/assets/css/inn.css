@@ -85,6 +85,7 @@
   padding: 3px;
   display: block;
   font-weight: 300;
+  font-size: 18px;
   margin-bottom: 1.5rem;
 }
 @media (max-width: 720px) {
