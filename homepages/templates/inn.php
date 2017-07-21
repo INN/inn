@@ -11,7 +11,7 @@
 
 <?php get_template_part('partials/home-widget-row'); ?>
 
-<?php get_template_part('partials/email-signup'); ?>
+<?php get_template_part('partials/home-email-signup'); ?>
 
 <?php get_template_part('partials/testimonials'); ?>
 
