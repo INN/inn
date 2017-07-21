@@ -1480,6 +1480,9 @@ body.normal.page .stories .top-tag {
     display: none;
   }
 }
+.post .byline {
+  display: none;
+}
 .postid-434290 .top-tag,
 .postid-434290 .byline,
 .postid-434290 #nav-below {
