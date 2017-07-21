@@ -1163,6 +1163,7 @@ section,
   display: block;
   border: 1px solid #000000;
   position: relative;
+  text-align: center;
 }
 #alert-container a:hover {
   background-color: #09c9ff;
@@ -1193,7 +1194,6 @@ section,
   #alert-container a {
     margin-top: 1em;
     padding: 0.5em 10%;
-    text-align: center;
   }
 }
 #main {
