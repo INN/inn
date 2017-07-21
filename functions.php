@@ -13,6 +13,7 @@ $includes = array(
 	'/homepages/homepage.php',
 	'/inc/member-directory.php',
 	'/inc/widgets/next-event.php',
+	'/inc/widgets/from-inn-members.php',
 );
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
