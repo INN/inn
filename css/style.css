@@ -680,6 +680,7 @@ a:hover {
 #site-footer .textwidget {
   font-weight: 700;
   font-size: 20px;
+  text-align: left;
 }
 @media (max-width: 768px) {
   #site-footer img[alt="INN logo"] {
