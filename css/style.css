@@ -553,11 +553,13 @@ a:hover {
   color: #fff;
 }
 #top-nav li {
-  padding-top: 2px;
+  margin: 0 2em 0 0;
+  font-size: 18px;
+  font-family: "effra", helvetica, sans-serif;
+  line-height: 38px;
 }
 #top-nav li.main_site_home_link {
   padding-top: 0;
-  font-size: 16px;
   font-weight: bold;
 }
 #top-nav li.main_site_home_link a {
