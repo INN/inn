@@ -420,7 +420,7 @@ header#site-header {
   height: 3px;
   margin-top: 3px;
 }
-@media (min-width: 769px) and (max-width: 1020px) {
+@media (min-width: 769px) and (max-width: 1222px) {
   #main-nav .nav {
     float: none;
     text-align: center;
@@ -437,7 +437,12 @@ header#site-header {
     padding: 0 4px;
   }
 }
-@media (min-width: 1021px) {
+@media (min-width: 906px) {
+  #main-nav .nav > li + li {
+    margin-left: 1em;
+  }
+}
+@media (min-width: 1223px) {
   #main-nav .nav {
     float: right;
   }
