@@ -1188,6 +1188,13 @@ body.normal.single #content.has-menu {
   font-size: 24px;
   margin-bottom: 1.25em;
   text-transform: uppercase;
+  color: #000000;
+  font-weight: 300;
+}
+.internal-subnav h3 a {
+  color: #000000;
+}
+.internal-subnav h3 a:hover {
   color: #df4646;
 }
 .internal-subnav ul {

@@ -12,7 +12,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 
 	// bascially all child pages of the about or members pages + all the posts in the projects post type get the side menu
 	if ( is_page( $about_pg_id ) || in_array( $about_pg_id , $ancestors) )
-		$show_menu = 'About';
+		$show_menu = 'About INN';
 	if ( is_page( $members_pg_id ) || in_array( $members_pg_id , $ancestors) )
 		$show_menu = 'Membership';
 	if ( is_singular( 'pauinn_project' ) || is_page( $programs_pg_id ) )
@@ -28,7 +28,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	}
 
 	// about and member pages and children get their respective page trees
-	if ( $show_menu == 'About' || $show_menu == 'Membership' ) {
+	if ( $show_menu == 'About INN' || $show_menu == 'Membership' ) {
 		$pg_id = ( $show_menu == 'About' ) ? $about_pg_id : $members_pg_id;
 		$show_pages = get_pages('child_of=' . $pg_id);
 

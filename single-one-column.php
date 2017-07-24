@@ -25,7 +25,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 
 	// bascially all child pages of the about or members pages + all the posts in the projects post type get the side menu
 	if ( is_page( $about_pg_id ) || in_array( $about_pg_id , $ancestors) )
-		$show_menu = 'About';
+		$show_menu = 'About INN';
 	if ( is_page( $members_pg_id ) || in_array( $members_pg_id , $ancestors) )
 		$show_menu = 'Membership';
 	if ( is_singular( 'pauinn_project' ) || is_page( $programs_pg_id ) )
@@ -38,7 +38,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	}
 
 	// about and member pages and children get their respective page trees
-	if ( $show_menu == 'About' || $show_menu == 'Membership' ) {
+	if ( $show_menu == 'About INN' || $show_menu == 'Membership' ) {
 		$pg_id = ( $show_menu == 'About' ) ? $about_pg_id : $members_pg_id;
 		echo '<h3><a href="' . get_permalink( $pg_id ) . '">' . $show_menu . '</a></h3>';
 		echo '<ul>';
@@ -51,16 +51,16 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
 
 		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-		    echo '<ul>';
-		    foreach ( $terms as $term ) {
-			    $term_link = '/project/' . $term->slug . '/';
-			    if ( is_single( $term->name ) ) {
+			echo '<ul>';
+			foreach ( $terms as $term ) {
+				$term_link = '/project/' . $term->slug . '/';
+				if ( is_single( $term->name ) ) {
 					echo '<li class="current_page_item"><a href="' . $term_link . '">' . $term->name . '</a></li>';
 				} else {
-		    		echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
-		    	}
-		    }
-		    echo '</ul>';
+					echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
+				}
+			}
+			echo '</ul>';
 		}
 	}
 
