@@ -526,10 +526,12 @@ h1,
 h2,
 h3,
 h4,
-h5,
-.widgettitle {
+h5 {
   font-weight: 700;
   line-height: 1.2;
+}
+.widgettitle {
+  font-weight: 300;
 }
 a {
   color: #df4646;
@@ -814,6 +816,9 @@ p.footer-credit a {
 }
 .top-tag {
   font-weight: 300;
+}
+.top-tag a {
+  color: #000000;
 }
 .stories h2.entry-title {
   font-size: 24px;
@@ -1143,6 +1148,16 @@ section,
 .event-is-recurring .tribe-events-divider {
   display: none;
 }
+h3.widgettitle {
+  padding: 3px;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+h3.widgettitle a {
+  color: #000000;
+}
 /**
  * styles for the 'default' page template with a hierarchivcal page men in a sidebar.
  */
@@ -1356,7 +1371,6 @@ body.normal.single #content.has-menu {
 #main .row-fluid h5.top-tag {
   font-weight: 300;
   font-size: 16px;
-  color: #000000;
 }
 #main .row-fluid h5 a:hover {
   color: #09c9ff;
@@ -1440,10 +1454,8 @@ body.normal.page .stories .top-tag {
   float: none;
 }
 .classic #sidebar .widgettitle {
-  color: #aaa;
+  color: #000000;
   margin-bottom: 1em;
-  font-size: 16px;
-  font-weight: 300;
 }
 .classic #sidebar .largo-recent-posts li {
   margin-bottom: 0;

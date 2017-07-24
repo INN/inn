@@ -38,13 +38,6 @@ class from_inn_members_widget extends WP_Widget {
 
 			<div class="post-lead clearfix">
 				<?php
-					// thumbnail
-					if (has_post_thumbnail( $post->ID ) ) {
-						echo get_the_post_thumbnail( $post->ID, 'large' );
-					}
-				?>
-
-				<?php
 					// source, which takes the appearance of an h5.top-tag
 					if ( isset($custom["lr_source"][0] ) ) {
 						$lr_source = '<h5 class="top-tag source">';
@@ -62,7 +55,15 @@ class from_inn_members_widget extends WP_Widget {
 					}
 				?>
 
+				<?php
+					// thumbnail
+					if (has_post_thumbnail( $post->ID ) ) {
+						echo get_the_post_thumbnail( $post->ID, 'large' );
+					}
+				?>
+
 				<h3><?php
+					// headline
 					if ( isset( $custom["lr_url"][0] ) ) {
 						$output = '<a href="' . $custom["lr_url"][0] . '" ';
 						if ( $instance['new_window'] == 'on' ) {
