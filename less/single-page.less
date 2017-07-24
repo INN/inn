@@ -16,7 +16,7 @@
     margin: 0;
   }
   h1.entry-title,
-  .byline {
+  h5.byline {
     text-align: left;
   }
 }
@@ -24,9 +24,11 @@ body.normal.page #content.has-menu,
 body.normal.single #content.has-menu {
   margin-left: 0;
   padding-right: 24px;
-  border-right: 1px solid #aaaaaa;
   width: 74.4680851%;
   float: left;
+  @media (min-width: 981px) {
+    border-right: 1px solid #aaaaaa;
+  }
   @media (max-width: 980px) {
     width: 100%;
     padding: 0 10%;

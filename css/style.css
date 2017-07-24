@@ -1155,16 +1155,21 @@ body.page.page-template-default article.page > header {
   margin: 0;
 }
 .page-template-default h1.entry-title,
-.page-template-default .byline {
+.page-template-default h5.byline {
   text-align: left;
 }
 body.normal.page #content.has-menu,
 body.normal.single #content.has-menu {
   margin-left: 0;
   padding-right: 24px;
-  border-right: 1px solid #aaaaaa;
   width: 74.4680851%;
   float: left;
+}
+@media (min-width: 981px) {
+  body.normal.page #content.has-menu,
+  body.normal.single #content.has-menu {
+    border-right: 1px solid #aaaaaa;
+  }
 }
 @media (max-width: 980px) {
   body.normal.page #content.has-menu,
