@@ -517,6 +517,8 @@ input[type="search"] {
 .entry-content ol {
   font-family: "effra", helvetica, sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 1em;
 }
 h1,
 h2,
@@ -532,12 +534,6 @@ a {
 }
 a:hover {
   color: #e77171;
-}
-.entry-content ol,
-.entry-content ul,
-p {
-  font-size: 16px;
-  margin-bottom: 1em;
 }
 .btn {
   text-shadow: none;
@@ -1378,9 +1374,6 @@ body.page.page-template-single-two-column #content {
 body.page.page-template-full-page #content {
   margin-left: 0;
   width: 100%;
-}
-body.normal.page .entry-content {
-  padding: 0;
 }
 #quick-links {
   text-align: center;
