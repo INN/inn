@@ -14,6 +14,7 @@ Version:        0.2.0
 @import "common.less";
 @import "forms.less";
 @import "events.less";
+@import "single-page.less";
 
 #header-social {
   .icon-youtube-parent,
@@ -250,68 +251,6 @@ body.normal.page .entry-content {
   padding: 0 !important;
 }
 
-// skinny left nav on interior pages
-.internal-subnav {
-  h3 {
-    font-size: 24px;
-    margin-bottom: 1.25em;
-    text-transform: uppercase;
-    color: @linkcolor;
-  }
-  ul {
-    margin-left: 0;
-    padding-bottom: 2em;
-    border-right: 10px @blue solid;
-    li {
-      list-style: none;
-      font-size: 15px;
-      &.current_page_item {
-        font-weight: bold;
-      }
-      a {
-        color: @medgray;
-        &:hover {
-          color: @linkhover;
-        }
-      }
-    }
-    &.children {
-      margin: 12px 0 0 20px;
-      font-weight: normal;
-      border-right: none;
-      padding-bottom: 0;
-    }
-  }
-}
-
-.internal-subnav-dropdown {
-  text-align: center;
-  margin: 0 0 1.5em 0;
-  h3 {
-    font-size: 20px;
-    margin: 0 0 0.5em 0;
-  }
-  .choose-a-page {
-    font-size: 16px;
-    color: @ltgray;
-    margin: 0 0 0.5em 0;
-  }
-}
-
-body.normal.page #content.has-menu,
-body.normal.single #content.has-menu {
-  margin-left: 0;
-  padding-left: 80px;
-  width: 74.4680851%;
-  float: left;
-  @media (max-width: 980px) {
-  width: 100%;
-  padding: 0 10%;
-  }
-  @media (max-width: 640px) {
-    padding: 0 3%;
-  }
-}
 body.normal.page .stories .top-tag {
   float: none;
 }

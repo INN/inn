@@ -158,6 +158,7 @@
   margin-right: auto;
 }
 #homepage-middle .largo-recent-posts ul {
+  margin-top: 0;
   margin-bottom: 0;
 }
 #homepage-middle .largo-recent-posts ul p:last-child,
