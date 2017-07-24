@@ -3,7 +3,7 @@
 }
 @media (max-width: 768px) {
   .home .sticky-nav-holder {
-    border-bottom: #aaaaaa 1px solid;
+    border-bottom: #aaa 1px solid;
   }
 }
 #homepage-top-right .widget_text {
@@ -15,7 +15,7 @@
 }
 #homepage-top-right .widget_text .textwidget {
   line-height: 1.2;
-  color: #000000;
+  color: #000;
   font-size: 1.8rem;
 }
 @media (min-width: 601px) and (max-width: 1100px) {
@@ -104,11 +104,11 @@
 }
 #homepage-middle .largo-recent-posts h5 a,
 #homepage-middle h3 a {
-  color: #000000;
+  color: #000;
 }
 #homepage-middle .largo-recent-posts h5 a:hover,
 #homepage-middle h3 a:hover {
-  color: #000000;
+  color: #000;
 }
 #homepage-middle h5.top-tag {
   margin-top: 1em;
@@ -124,7 +124,7 @@
   padding: 1.5rem 1.5rem;
 }
 #homepage-middle .widget_inn-next-event-widget .excerpt {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 #homepage-middle .widget_inn-next-event-widget .excerpt:hover {
@@ -143,7 +143,7 @@
 #homepage-middle .widget_inn-next-event-widget h3 {
   margin-top: 1rem;
   margin-bottom: 0.75rem;
-  color: #000000;
+  color: #000;
 }
 #homepage-middle .widget_inn-next-event-widget p {
   font-size: 1.2rem;
@@ -163,7 +163,7 @@
 }
 @media (max-width: 720px) {
   #homepage-middle .widget:not(.widget_inn-next-event-widget) + .widget:not(.widget_inn-next-event-widget) .widgettitle {
-    border-top: 1px solid #aaaaaa;
+    border-top: 1px solid #aaa;
     padding-top: 1em;
   }
 }
@@ -173,15 +173,38 @@
   margin-right: 0;
   padding: 0;
 }
-@media (min-width: 720px) {
-  #homepage-middle .span4 {
-    width: calc( ( 100% - (2 * 24px) )/3 );
+@supports not (display: flex) {
+  @media (min-width: 720px) {
+    #homepage-middle .span4 {
+      width: calc( ( 100% - (2 * 24px) )/3 );
+    }
+    #homepage-middle .span4:nth-child(3n+2),
+    #homepage-middle .span4:nth-child(3n+3) {
+      margin-left: 24px;
+      border-left: 1px solid #aaa;
+      padding-left: 24px;
+    }
   }
-  #homepage-middle .span4:nth-child(3n+2),
-  #homepage-middle .span4:nth-child(3n+3) {
-    margin-left: 24px;
-    border-left: 1px solid #aaaaaa;
-    padding-left: 24px;
+}
+@supports (display: flex) {
+  @media (min-width: 720px) {
+    #homepage-middle {
+      display: flex;
+      align-items: stretch;
+    }
+    #homepage-middle .span4 {
+      flex: 0 1 auto;
+      margin-left: 0;
+    }
+    #homepage-middle .span4:nth-child(3n+1),
+    #homepage-middle .span4:nth-child(3n+2) {
+      margin-right: 2em;
+    }
+    #homepage-middle .span4:nth-child(3n+2),
+    #homepage-middle .span4:nth-child(3n+3) {
+      padding-left: 2em;
+      border-left: 1px solid #aaa;
+    }
   }
 }
 body.home.admin-bar .sticky-nav-holder {
@@ -189,7 +212,7 @@ body.home.admin-bar .sticky-nav-holder {
 }
 @media (max-width: 768px) {
   body.home.admin-bar .sticky-nav-holder {
-    border-bottom: #aaaaaa 1px solid;
+    border-bottom: #aaa 1px solid;
   }
 }
 #email .mc-field-group {

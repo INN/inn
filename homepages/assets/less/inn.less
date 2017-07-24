@@ -188,34 +188,57 @@
   }
 
   // responsive styles
+
   .span4 {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
     padding: 0;
   }
-  @media (min-width: @homemidbreakpoint) {
-    // we want to keep the widths of the span4s equal and keep the borders in the middle of the spacing
+  @supports not (display: flex) {
+    @media (min-width: @homemidbreakpoint) {
+      // we want to keep the widths of the span4s equal and keep the borders in the middle of the spacing
 
-    // LESS does not like this formulation, so we have to math by hand
-    // @item-width: calc( ( 100% - ( 2 * @gutter-half ) )/3 );
-    // @gutter-width: (2 * @gutter-half) + 1px; // (2*24px) + 1px = 48px + 1 = 49px; 
-    @gutter-half: 1.5 * 16px; // 16px is 1rem: 24px
-    @gutter-width: 49px;
-    @item-width: ~"calc( ( 100% - (2 * 24px) )/3 )"; // ~"" escapes the content
+      // LESS does not like this formulation, so we have to math by hand
+      // @item-width: calc( ( 100% - ( 2 * @gutter-half ) )/3 );
+      // @gutter-width: (2 * @gutter-half) + 1px; // (2*24px) + 1px = 48px + 1 = 49px; 
+      @gutter-half: 1.5 * 16px; // 16px is 1rem: 24px
+      @gutter-width: 49px;
+      @item-width: ~"calc( ( 100% - (2 * 24px) )/3 )"; // ~"" escapes the content
 
-    @gutter-border: 1px solid @ltgray;
+      @gutter-border: 1px solid @ltgray;
 
-    .span4 {
-      width: @item-width;
+      .span4 {
+        width: @item-width;
+      }
+      .span4:nth-child(3n+1) {
+      }
+      .span4:nth-child(3n+2),
+      .span4:nth-child(3n+3) {
+        margin-left: @gutter-half;
+        border-left: @gutter-border;
+        padding-left: @gutter-half;
+      }
     }
-    .span4:nth-child(3n+1) {
-    }
-    .span4:nth-child(3n+2),
-    .span4:nth-child(3n+3) {
-      margin-left: @gutter-half;
-      border-left: @gutter-border;
-      padding-left: @gutter-half;
+  }
+  @supports (display: flex) {
+    @media (min-width: @homemidbreakpoint) {
+      display: flex;
+      align-items: stretch;
+      .span4 {
+        flex: 0 1 auto;
+        margin-left: 0;
+
+        &:nth-child(3n+1),
+        &:nth-child(3n+2) {
+          margin-right: 2em;
+        }
+        &:nth-child(3n+2),
+        &:nth-child(3n+3) {
+          padding-left: 2em;
+          border-left: 1px solid @ltgray;
+        }
+      }
     }
   }
 }

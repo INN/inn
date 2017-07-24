@@ -70,7 +70,7 @@ Version:        0.2.0
   visibility: hidden;
   opacity: 0;
   background-color: white;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaa;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
   -ms-transition: opacity 0.3s;
@@ -119,17 +119,17 @@ body.admin-bar .sticky-nav-holder {
   transition: opacity 0.3s;
 }
 .navbar.sticky-navbar .nav {
-  color: #000000;
+  color: #000;
 }
 .navbar.sticky-navbar li a {
   line-height: 56px;
-  color: #000000;
+  color: #000;
 }
 .navbar.sticky-navbar li a:hover {
   color: #0d0d0d;
 }
 .navbar.sticky-navbar li a .caret:before {
-  border-top-color: #000000;
+  border-top-color: #000;
 }
 .navbar.sticky-navbar li a:hover .caret:before {
   border-top-color: #0d0d0d;
@@ -138,7 +138,7 @@ body.admin-bar .sticky-nav-holder {
   color: #0d0d0d;
 }
 .navbar.sticky-navbar li.dropdown .dropdown-menu li a {
-  color: #000000;
+  color: #000;
 }
 .navbar.sticky-navbar li.dropdown .dropdown-menu li a:hover {
   color: #0d0d0d;
@@ -156,7 +156,7 @@ body.admin-bar .sticky-nav-holder {
   display: inline-block;
 }
 .navbar.sticky-navbar .btn-navbar .icon-bar {
-  background-color: #000000;
+  background-color: #000;
 }
 .navbar.sticky-navbar .btn-navbar:hover .icon-bar {
   background-color: #0d0d0d;
@@ -274,7 +274,7 @@ body.admin-bar .sticky-nav-holder {
 .navbar.sticky-navbar .site-name a {
   font-weight: bold;
   padding: 0 10px 0 0;
-  color: #000000;
+  color: #000;
   max-width: 214px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -331,11 +331,11 @@ body.admin-bar .sticky-nav-holder {
 @media (max-width: 768px) {
   #sticky-nav .nav-shelf li,
   #sticky-nav .nav-shelf li a {
-    color: #000000;
+    color: #000;
   }
   #sticky-nav .nav-shelf li:hover,
   #sticky-nav .nav-shelf li a:hover {
-    color: #000000;
+    color: #000;
     background-color: #f2f2f2;
   }
 }
@@ -379,7 +379,7 @@ header#site-header {
   margin-right: 0;
 }
 #main-nav ul li a {
-  color: #000000;
+  color: #000;
   font-weight: 400;
 }
 #main-nav ul li a[href*='/donate'] {
@@ -504,7 +504,7 @@ textarea {
   border: 0;
 }
 h1 {
-  color: #000000;
+  color: #000;
 }
 textarea,
 input[type="text"],
@@ -555,7 +555,7 @@ a:hover {
 }
 .btn.btn-primary {
   color: #fff;
-  background-color: #f77710;
+  background-color: #F77710;
 }
 .btn.btn-primary:hover {
   background-color: #df6807;
@@ -620,7 +620,7 @@ a:hover {
 @media (min-width: 769px) {
   .classic #content {
     padding-right: 24px;
-    border-right: 1px solid #aaaaaa;
+    border-right: 1px solid #aaa;
   }
   .classic #sidebar {
     margin-left: 0;
@@ -641,7 +641,7 @@ a:hover {
  * footer adjustments
  */
 .footer-bg {
-  background-color: #000000;
+  background-color: #000;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label,
@@ -762,15 +762,15 @@ a:hover {
 #menu-footer-bottom.menu li,
 p.footer-credit {
   font-size: 14px;
-  color: #aaaaaa;
+  color: #aaa;
 }
 #menu-footer-bottom.menu li a,
 p.footer-credit a {
-  color: #aaaaaa;
+  color: #aaa;
 }
 @media (min-width: 769px) {
   .footer-bottom {
-    border-top: 1px solid #aaaaaa;
+    border-top: 1px solid #aaa;
     padding-top: 3em;
   }
   #menu-footer-bottom.menu li,
@@ -789,7 +789,7 @@ p.footer-credit a {
     padding-right: 1em;
   }
   #supplementary .span4.left {
-    border-top: 1px solid #aaaaaa;
+    border-top: 1px solid #aaa;
     padding-top: 25.95086878px;
     margin-top: 3em;
   }
@@ -818,7 +818,7 @@ p.footer-credit a {
   font-weight: 300;
 }
 .top-tag a {
-  color: #000000;
+  color: #000;
 }
 .stories h2.entry-title {
   font-size: 24px;
@@ -835,7 +835,7 @@ p.footer-credit a {
 }
 .type-pull-quote {
   font-family: "leitura-news", georgia, serif;
-  border-left: 1px solid #aaaaaa;
+  border-left: 1px solid #aaa;
   padding-left: 24px;
   color: #4d4d4d;
 }
@@ -894,7 +894,7 @@ section,
   font-size: 2em;
   margin-top: 0;
   margin-bottom: 0.5em;
-  color: #000000;
+  color: #000;
 }
 .branding form {
   display: block;
@@ -955,7 +955,7 @@ section,
 }
 .gform_wrapper.donation_form_wrapper .gsection,
 .gform_wrapper.membership_form_wrapper .gsection {
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaa;
 }
 .gform_wrapper.donation_form_wrapper .field_sublabel_above,
 .gform_wrapper.membership_form_wrapper .field_sublabel_above {
@@ -996,7 +996,7 @@ section,
 .gform_wrapper.membership_form_wrapper .gform_button[type=submit],
 .gform_wrapper.donation_form_wrapper .gform_next_button,
 .gform_wrapper.membership_form_wrapper .gform_next_button {
-  background-color: #f77710;
+  background-color: #F77710;
   position: relative;
   top: -4px;
 }
@@ -1062,7 +1062,7 @@ section,
   color: #fff;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li input[type=radio]:checked + label {
-  background-color: #f77710;
+  background-color: #F77710;
   font-weight: 500;
 }
 @media (max-width: 480px) {
@@ -1153,10 +1153,10 @@ h3.widgettitle {
   display: block;
   font-size: 18px;
   margin-bottom: 1.5rem;
-  color: #000000;
+  color: #000;
 }
 h3.widgettitle a {
-  color: #000000;
+  color: #000;
 }
 /**
  * styles for the 'default' page template with a hierarchivcal page men in a sidebar.
@@ -1206,11 +1206,11 @@ body.normal.single #content.has-menu {
   font-size: 24px;
   margin-bottom: 1.25em;
   text-transform: uppercase;
-  color: #000000;
+  color: #000;
   font-weight: 300;
 }
 .internal-subnav h3 a {
-  color: #000000;
+  color: #000;
 }
 .internal-subnav h3 a:hover {
   color: #df4646;
@@ -1248,7 +1248,7 @@ body.normal.single #content.has-menu {
 }
 .internal-subnav-dropdown .choose-a-page {
   font-size: 16px;
-  color: #aaaaaa;
+  color: #aaa;
   margin: 0 0 0.5em 0;
 }
 #header-social .icon-youtube-parent,
@@ -1291,15 +1291,15 @@ body.normal.single #content.has-menu {
 }
 #alert-container p {
   margin-bottom: 0;
-  color: #000000;
+  color: #000;
   font-family: "effra", helvetica, sans-serif;
   text-align: center;
 }
 #alert-container a {
-  color: #000000;
+  color: #000;
   padding: 0.5em 2.5%;
   display: block;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   position: relative;
   text-align: center;
 }
@@ -1427,8 +1427,8 @@ body.page.page-template-full-page #content {
 }
 #programs h3,
 #member-info h3 {
-  background-color: #f77710;
-  color: #f77710;
+  background-color: #F77710;
+  color: #F77710;
 }
 @media (max-width: 600px) {
   #programs h3,
@@ -1440,7 +1440,7 @@ body.page.page-template-full-page #content {
 }
 #programs h5 a:hover,
 #member-info h5 a:hover {
-  color: #f77710;
+  color: #F77710;
 }
 @media (max-width: 530px) {
   .single #content {
@@ -1454,14 +1454,14 @@ body.normal.page .stories .top-tag {
   float: none;
 }
 .classic #sidebar .widgettitle {
-  color: #000000;
+  color: #000;
   margin-bottom: 1em;
 }
 .classic #sidebar .largo-recent-posts li {
   margin-bottom: 0;
 }
 .classic #sidebar .largo-recent-posts li a {
-  color: #000000;
+  color: #000;
 }
 .classic #sidebar .largo-recent-posts li h5 {
   margin-bottom: 0;
@@ -1470,7 +1470,7 @@ body.normal.page .stories .top-tag {
   display: block;
   width: 4em;
   height: 0.4em;
-  background-color: #000000;
+  background-color: #000;
   content: '';
   margin: 1.5em 0;
 }
