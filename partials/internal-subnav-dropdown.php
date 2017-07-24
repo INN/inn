@@ -1,4 +1,7 @@
 <?php
+/**
+ * Dropdown for internal sub navigation of pages
+ */
 
 $about_pg_id = INN_ABOUT_PAGE_ID;
 $programs_pg_id = INN_PROGRAMS_PAGE_ID;
