@@ -16,12 +16,8 @@ get_header();
 
 // INN-specific adaptation for pages with particular content
 //is this a page or a post in the projects post type
-if ( is_page() || is_singular( 'pauinn_project' ) ) {
-	get_template_part('partials/internal-subnav');
-}
-
 get_template_part('partials/internal-subnav-dropdown');
-$content_class = apply_filters( 'inn_single_one_column_content_class', 'span8' );
+$content_class = 'span8';
 if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
 ?>
 

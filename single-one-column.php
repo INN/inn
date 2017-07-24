@@ -15,14 +15,7 @@ $about_pg_id = INN_ABOUT_PAGE_ID;
 $programs_pg_id = INN_PROGRAMS_PAGE_ID;
 $members_pg_id = INN_MEMBERS_PAGE_ID;
 
-// INN-specific adaptation for pages with particular content
-//is this a page or a post in the projects post type
-if ( is_page() || is_singular( 'pauinn_project' ) ) {
-	get_template_part('partials/internal-subnav');
-}
-
-get_template_part('partials/internal-subnav-dropdown');
-$content_class = apply_filters( 'inn_single_one_column_content_class', 'span12' );
+$content_class = 'span12';
 if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
 ?>
 

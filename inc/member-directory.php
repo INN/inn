@@ -103,8 +103,8 @@ add_filter( 'manage_inn_member_posts_columns', 'inn_post_list_table_thumb_column
 add_action( 'manage_inn_member_posts_custom_column', 'inn_post_list_table_thumb_value', 10, 2 );
 
 // for pages
-add_filter( 'manage_pages_columns', 'AddThumbColumn' );
-add_action( 'manage_pages_custom_column', 'AddThumbValue', 10, 2 );
+#add_filter( 'manage_pages_columns', 'AddThumbColumn' );
+#add_action( 'manage_pages_custom_column', 'AddThumbValue', 10, 2 );
 
 function inn_project_post_type() {
 	$labels = array(

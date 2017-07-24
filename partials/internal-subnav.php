@@ -6,7 +6,6 @@
 $about_pg_id = INN_ABOUT_PAGE_ID;
 $programs_pg_id = INN_PROGRAMS_PAGE_ID;
 $members_pg_id = INN_MEMBERS_PAGE_ID;
-$content_class = 'span12';
 
 // should we show a menu? let's find out.
 $show_menu = '';
@@ -25,7 +24,7 @@ if ( $show_menu != '' ) {
 	add_filter( 'inn_single_one_column_content_class', function( $var ) {
 		return 'span9 has-menu';
 	});
-	echo '<div class="internal-subnav span3 visible-desktop">';
+	echo '<div class=" widget internal-subnav ">';
 }
 
 // about and member pages and children get their respective page trees

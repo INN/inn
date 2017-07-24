@@ -33,3 +33,13 @@ function inn_register_sidebars() {
 	}
 }
 add_action( 'widgets_init', 'inn_register_sidebars' );
+
+/**
+ * Add the page navigation to the bottom of the sidebar
+ */
+function inn_sidebar_subnav_dropdown() {
+	if ( is_page() || is_singular( 'pauinn_project' ) ) {
+		get_template_part('partials/internal-subnav');
+	}
+}
+add_action( 'largo_before_sidebar_widgets', 'inn_sidebar_subnav_dropdown' );
