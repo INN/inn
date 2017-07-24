@@ -11,12 +11,8 @@ add_filter( 'body_class', function( $classes ) {
 
 get_header();
 
-$about_pg_id = INN_ABOUT_PAGE_ID;
-$programs_pg_id = INN_PROGRAMS_PAGE_ID;
-$members_pg_id = INN_MEMBERS_PAGE_ID;
-
 $content_class = 'span12';
-if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
+if ( is_page( 'press' ) ) $content_class .= ' stories';
 ?>
 
 
@@ -26,13 +22,7 @@ if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
 
 			$partial = ( is_page() ) ? 'page' : 'single';
 
-			if ( is_singular( 'pauinn_project' ) ) {
-
-				get_template_part( 'partials/content', 'page' );
-
-				get_template_part( 'partials/content', 'projects' );
-
-			} else if ( $partial === 'single' ) {
+			if ( $partial === 'single' ) {
 
 				get_template_part( 'partials/content', $partial );
 
@@ -51,19 +41,6 @@ if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
 				do_action(' largo_before_comments' );
 
 				do_action( 'largo_after_comments' );
-
-			} else if ( is_page( 'press' ) ) {
-
-				get_template_part( 'partials/content', 'press' );
-
-			} else if ( is_page ( 'news' ) ) {
-
-				get_template_part( 'partials/content', 'news' );
-
-			} else  {
-
-				get_template_part( 'partials/content', $partial );
-
 			}
 
 		endwhile;

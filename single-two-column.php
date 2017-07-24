@@ -29,9 +29,14 @@ if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
 
 			$partial = ( is_page() ) ? 'page' : 'single-classic';
 
-			get_template_part( 'partials/content', $partial );
+			if ( is_singular( 'pauinn_project' ) ) {
 
-			if ( $partial == 'single-classic' ) {
+				get_template_part( 'partials/content', 'page' );
+				get_template_part( 'partials/content', 'projects' );
+
+			} else if ( $partial == 'single-classic' ) {
+
+				get_template_part( 'partials/content', $partial );
 
 				do_action( 'largo_before_post_bottom_widget_area' );
 
@@ -44,6 +49,20 @@ if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
 				comments_template( '', true );
 
 				do_action( 'largo_after_comments' );
+
+
+			} else if ( is_page( 'press' ) ) {
+
+				get_template_part( 'partials/content', 'press' );
+
+			} else if ( is_page ( 'news' ) ) {
+
+				get_template_part( 'partials/content', 'news' );
+
+			} else  {
+
+				get_template_part( 'partials/content', $partial );
+
 			}
 
 		endwhile;
