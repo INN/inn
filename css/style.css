@@ -500,6 +500,8 @@ select,
 textarea {
   font-family: "effra", helvetica, sans-serif;
   color: #4d4d4d;
+  padding: 0;
+  border: 0;
 }
 h1 {
   color: #000000;
