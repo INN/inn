@@ -826,9 +826,9 @@ p.footer-credit a {
   display: none;
 }
 .type-pull-quote {
-  font-family: serif;
+  font-family: "leitura-news", georgia, serif;
   border-left: 1px solid #aaaaaa;
-  padding-left: 40px;
+  padding-left: 24px;
   color: #4d4d4d;
 }
 .type-pull-quote h6,
