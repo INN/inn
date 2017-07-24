@@ -567,6 +567,9 @@ a:hover {
 .btn.btn-mini {
   padding: 2px 6px;
 }
+.entry-content {
+  overflow-x: scroll;
+}
 .donate-btn a:hover {
   color: #fff;
 }
