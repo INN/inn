@@ -222,6 +222,13 @@ body.home.admin-bar .sticky-nav-holder {
   margin-bottom: 0;
   max-width: 350px;
 }
+@media (max-width: 768px) {
+  #email input {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0.5em;
+  }
+}
 #email input.btn {
   max-width: 150px;
 }

@@ -257,6 +257,11 @@ body.home.admin-bar .sticky-nav-holder {
   input {
     margin-bottom: 0;
     max-width: 350px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 0.5em;
+    }
   }
   input.btn {
     max-width: 150px;
