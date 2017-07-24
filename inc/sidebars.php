@@ -42,4 +42,4 @@ function inn_sidebar_subnav_dropdown() {
 		get_template_part('partials/internal-subnav');
 	}
 }
-add_action( 'largo_before_sidebar_widgets', 'inn_sidebar_subnav_dropdown' );
+add_action( 'largo_after_sidebar_widgets', 'inn_sidebar_subnav_dropdown' );
