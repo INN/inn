@@ -145,9 +145,15 @@
   text-align: center;
   color: white;
   font-weight: 700;
+  width: 100%;
 }
 #homepage-middle .widget_inn-next-event-widget .widgettitle a {
+  display: block;
   color: white;
+}
+#homepage-middle .widget_inn-next-event-widget .widgettitle a:hover {
+  background-color: #000;
+  text-decoration: none;
 }
 #homepage-middle .widget_inn-next-event-widget h3 {
   margin-top: 1rem;

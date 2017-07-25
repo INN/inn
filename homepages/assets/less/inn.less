@@ -156,8 +156,14 @@
       text-align: center;
       color: @white;
       font-weight: 700;
+      width: 100%;
       a {
-       color: @white;
+        display: block;
+        color: @white;
+        &:hover {
+          background-color: @black;
+          text-decoration: none;
+        }
       }
     }
 

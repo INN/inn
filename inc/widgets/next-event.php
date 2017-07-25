@@ -53,6 +53,9 @@ class inn_next_event_widget extends WP_Widget {
 
 		echo $args['before_widget'];
 
+		// add the link to the title
+		$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Events', 'inn' ) : $instance['title'], $instance, $this->id_base );
+
 		if ( $instance['title'] ) {
 			echo $args['before_title'] . $instance['title'] . $args['after_title'];
 		}
