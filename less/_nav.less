@@ -56,12 +56,14 @@ header#site-header {
 }
 
 /* Navigation Bar */
-#sticky-nav {
-  ul li {
-    a[href*='/donate'] {
-      text-transform: uppercase;
-      background-color: @blue;
-      color: @white;
+@media (max-width: 768px ) {
+  #sticky-nav {
+    ul li {
+      a[href*='/donate'] {
+        text-transform: uppercase;
+        background-color: @blue;
+        color: @white;
+      }
     }
   }
 }
