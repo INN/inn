@@ -9,7 +9,7 @@
  */
 
 /**
- * Put the sticky nave logo in the main nav
+ * Put the non-sticky nav logo in the main nav
  *
  * @see less/_nav.less
  */
@@ -18,8 +18,18 @@ function inn_main_nav_logo() {
 		<li class="home-icon">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<?php
-				if ( of_get_option( 'sticky_header_logo' ) !== '' )
-					largo_home_icon( 'icon-white' , 'orig' );
+				if ( of_get_option( 'banner_image_sm' ) !== '' )
+					$logo = of_get_option( 'banner_image_sm' );
+					$default = '<i class="icon-home orig"></i>';
+					if ( ! empty( $logo ) ) {
+						if ( preg_match( '/^http(s)?\:\/\//', $logo ) ) {
+							echo '<img src="' . $logo . '" class="attachment-home-logo" alt="logo">';
+						} else {
+							echo $default;
+						}
+					} else {
+						echo $default;
+					}
 				?>
 			</a>
 		</li>
