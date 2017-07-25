@@ -1478,11 +1478,6 @@ body.page.page-template-full-page #content {
 #member-info h5 a:hover {
   color: #F77710;
 }
-@media (max-width: 530px) {
-  .single #content {
-    padding: 0 5%;
-  }
-}
 .article-bottom .widget {
   padding: 0 !important;
 }
