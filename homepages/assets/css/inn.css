@@ -95,6 +95,7 @@
   font-size: 1.4rem;
   font-family: "effra", helvetica, sans-serif;
   font-weight: 700;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 @media (max-width: 720px) {
