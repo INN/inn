@@ -232,6 +232,12 @@ body.home.admin-bar .sticky-nav-holder {
 #email input.btn {
   max-width: 150px;
 }
+@media (max-width: 768px) {
+  #email .break-mobile {
+    display: block;
+    clear: left;
+  }
+}
 #testimonial img {
   width: 140px;
   height: 140px;

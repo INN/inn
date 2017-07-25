@@ -1,7 +1,7 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 <section id="email" class="interstitial branding">
 	<div class="content">
-		<h3 class="center">INNovation! Get the weekly newsletter.</h3>
+		<h3 class="center">INNovation! <span class="break-mobile">Get the weekly newsletter.</span></h3>
 
 		<form action="//inn.us1.list-manage.com/subscribe/post?u=81670c9d1b5fbeba1c29f2865&amp;id=19bec3393e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="center validate" target="_blank" novalidate>
 			<div id="mc_embed_signup_scroll">
