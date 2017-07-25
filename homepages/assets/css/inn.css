@@ -82,13 +82,14 @@
   box-sizing: border-box;
 }
 #homepage-middle .widgettitle {
-  font-weight: 700;
+  font-weight: 300;
 }
 @media (max-width: 720px) {
   #homepage-middle .widgettitle {
     margin-bottom: 1em;
   }
 }
+#homepage-middle .from-inn-members .top-tag,
 #homepage-middle .largo-recent-posts h5,
 #homepage-middle h3 {
   font-size: 1.4rem;
@@ -97,15 +98,18 @@
   margin-bottom: 1rem;
 }
 @media (max-width: 720px) {
+  #homepage-middle .from-inn-members .top-tag,
   #homepage-middle .largo-recent-posts h5,
   #homepage-middle h3 {
     font-size: 2rem;
   }
 }
+#homepage-middle .from-inn-members .top-tag a,
 #homepage-middle .largo-recent-posts h5 a,
 #homepage-middle h3 a {
   color: #000;
 }
+#homepage-middle .from-inn-members .top-tag a:hover,
 #homepage-middle .largo-recent-posts h5 a:hover,
 #homepage-middle h3 a:hover {
   color: #000;
@@ -113,6 +117,10 @@
 #homepage-middle h5.top-tag {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+#homepage-middle .from-inn-members .top-tag,
+#homepage-middle .largo-recent-posts h5 {
+  text-transform: none;
 }
 #homepage-middle .widget {
   border: 2px solid transparent;
