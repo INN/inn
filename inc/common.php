@@ -2,6 +2,10 @@
 /**
  * Common functions for all INN child themes
  *
+ * DO NOT REMOVE THIS FILE
+ * until you have removed references to it from:
+ * - cjet/functions.php
+ *
  * This should be used with:
  * less/common.less
  * less/variables.less
