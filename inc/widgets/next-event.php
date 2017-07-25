@@ -76,11 +76,7 @@ class inn_next_event_widget extends WP_Widget {
 				esc_url( get_permalink( $event_id ) ),
 				get_the_title( $event_id )
 			);
-			printf(
-				'<a class="excerpt" href="%1$s">%2$s</a>',
-				esc_url( get_permalink( $event_id ) ),
-				largo_excerpt( $event, 2, null, null, false, true, true )
-			);
+			largo_excerpt( $event, 2 );
 
 			$url = get_post_meta( $event_id, '_EventURL', true );
 			if ( ! empty( $url ) ) {
