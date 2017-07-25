@@ -391,6 +391,9 @@ header#site-header {
   text-transform: uppercase;
   font-weight: 700;
 }
+#main-nav ul li a[href*='/donate']:hover {
+  background-color: #00a6d5;
+}
 #main-nav li > a:hover {
   background-color: #f2f2f2;
   text-decoration: none;
