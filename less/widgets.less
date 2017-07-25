@@ -8,3 +8,37 @@ h3.widgettitle {
     color: @black;
   }
 }
+
+#sidebar {
+  .widgettitle {
+    color: @black;
+    margin-bottom: 1em;
+  }
+
+  .widget {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .largo-recent-posts {
+    li {
+      margin-bottom: 0;
+      a {
+        color: @black
+      }
+      h5 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .widget + .widget::before {
+    display: block;
+    width: 4em;
+    height: 0.4em;
+    background-color: @black;
+    content: '';
+    margin: 1.5em 0;
+  }
+}

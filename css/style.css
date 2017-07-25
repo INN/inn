@@ -1160,6 +1160,30 @@ h3.widgettitle {
 h3.widgettitle a {
   color: #000;
 }
+#sidebar .widgettitle {
+  color: #000;
+  margin-bottom: 1em;
+}
+#sidebar .widget p:last-child {
+  margin-bottom: 0;
+}
+#sidebar .largo-recent-posts li {
+  margin-bottom: 0;
+}
+#sidebar .largo-recent-posts li a {
+  color: #000;
+}
+#sidebar .largo-recent-posts li h5 {
+  margin-bottom: 0;
+}
+#sidebar .widget + .widget::before {
+  display: block;
+  width: 4em;
+  height: 0.4em;
+  background-color: #000;
+  content: '';
+  margin: 1.5em 0;
+}
 /**
  * styles for the 'default' page template with a hierarchivcal page men in a sidebar.
  */
@@ -1454,27 +1478,6 @@ body.page.page-template-full-page #content {
 }
 body.normal.page .stories .top-tag {
   float: none;
-}
-#sidebar .widgettitle {
-  color: #000;
-  margin-bottom: 1em;
-}
-#sidebar .largo-recent-posts li {
-  margin-bottom: 0;
-}
-#sidebar .largo-recent-posts li a {
-  color: #000;
-}
-#sidebar .largo-recent-posts li h5 {
-  margin-bottom: 0;
-}
-#sidebar .largo-recent-posts li + li::before {
-  display: block;
-  width: 4em;
-  height: 0.4em;
-  background-color: #000;
-  content: '';
-  margin: 1.5em 0;
 }
 .single-pauinn_project .bottom {
   padding-top: 2em;
