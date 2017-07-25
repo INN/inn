@@ -393,7 +393,7 @@ header#site-header {
 }
 #main-nav li > a:hover {
   background-color: #f2f2f2;
-  text-decoration: underline;
+  text-decoration: none;
 }
 #main-nav ul#navbar-left {
   float: left;
