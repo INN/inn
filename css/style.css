@@ -1164,8 +1164,11 @@ h3.widgettitle a {
   color: #000;
   margin-bottom: 1em;
 }
+#sidebar .widget ol:last-child,
+#sidebar .widget ul:last-child,
 #sidebar .widget p:last-child {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 #sidebar .largo-recent-posts li {
   margin-bottom: 0;
