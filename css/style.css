@@ -816,10 +816,10 @@ p.footer-credit a {
 .footer-credit-padding-inn-logo-missing {
   margin-top: 0;
 }
-.top-tag {
+h5.top-tag {
   font-weight: 300;
 }
-.top-tag a {
+h5.top-tag a {
   color: #000;
 }
 .stories h2.entry-title {
