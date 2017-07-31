@@ -22,7 +22,7 @@ Version:        0.2.0
   }
 }
 .search-submit.btn {
-  padding: 4px 10px;
+  padding: 4px 10px; 
 }
 #site-header {
   img {
@@ -42,47 +42,31 @@ Version:        0.2.0
   @media (max-width: 1050px) {
     padding: 0 10px;
   }
-}
+}  
 
 #header-search {
   float: right;
   margin-left: 0;
 }
-
-.alert-wrapper {
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-#alert-container {
-  background-color: @white;
-  padding: 0;
+.alert {
+  padding: 3px 2.5%;
+  background-color: #df4646;
+  width: 95%;
   clear: both;
-  max-width: 1170px;
-  box-sizing: border-box;
-
-  .widget {
-  }
-
   p {
     margin-bottom: 0;
-    color: @black;
-    font-family: @sans;
+    color: #fff;
+    font-family: "effra", helvetica, sans-serif;
     text-align: center;
-  }
-  a {
-    color: @black;
-    padding: 0.5em 2.5%;
-    display: block;
-    border: 1px solid @black;
-
-    &:hover {
-      background-color: @btnbg;
-      color: @white;
-      text-decoration: none;
-      border: 1px solid @btnbg;
+    a {
+      color: #fff;
     }
   }
+}
+
+//temporarily hide the alert on the homepage to avoid duplication
+.home .alert {
+  display: none;
 }
 
 #page {
@@ -100,19 +84,33 @@ Version:        0.2.0
       margin-bottom: 0.8em;
     }
     .span4 {
-      & #sidebar {
-        padding: 1em 2em;
-        text-align: left;
+      text-align: center;
+      padding: 2em 5em;
+      &#sidebar {
+	    padding: 1em 2em;
+	    text-align: left;
+      }
+      @media (max-width: 980px) {
+        padding: 1.5em 2em;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+        margin: 0;
+        clear: both;
+        padding: 0.5em 10%;
       }
     }
     @media (max-width: 1230px) {
       .span6 {
-        padding: 1em 2em;
-      }
+	    padding: 1em 2em;
+	  }
     }
     .span5,
     .span6,
     .span7 {
+      @media (max-width: 980px) {
+        padding: 1.5em 2em;
+      }
       @media (max-width: 600px) {
         width: 100%;
         margin: 0;
@@ -126,11 +124,11 @@ Version:        0.2.0
       font-weight: 400;
       margin-bottom: 0.25em;
       &.top-tag {
-        font-weight: 300;
-        font-size: 16px;
-        color: @black;
+	    font-weight: 300;
+	    font-size: 16px;
       }
       a {
+        color: @medgray;
         &:hover {
           color: @blue;
         }
@@ -179,7 +177,7 @@ h5.byline {
 #hero,
 section.interstitial {
   max-width: 100%;
-  background-color: @xltgray;
+  background-color: @dkgray;
 }
 section,
 .interstitial .content {
@@ -187,17 +185,50 @@ section,
   max-width: 1170px;
 }
 
-.interstitial {
-  max-width: 100%;
-  margin: 0 auto 3em;
-  background-color: @xltgray;
-  padding-top: 3em;
-  padding-bottom: 3em;
+section.normal {
+  height: auto;
+  h3 {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    width: 62%;
+    background-color: @blue;
+    color: @blue;
+    line-height: 10px;
+    margin: 2em auto 1.5em;
+    span {
+      background-color: #fff;
+      padding: 0 60px;
+    }
+    @media (max-width: 900px) {
+      width: 90%;
+      span {
+        padding: 0 30px;
+      }
+    }
+    @media (max-width: 600px) {
+      line-height: 1.5;
+      background-color: transparent;
+      margin: 0.5em auto;
+      span {
+        padding: 0;
+      }
+    }
+  }
 }
 
-.branding {
-  padding-left: 3em;
-  padding-right: 3em;
+.interstitial {
+  max-width: 100%;
+  padding: 3em;
+  margin: 0 auto 3em;
+  background-color: @dkgray;
+  color: @xltgray;
+  h3 {
+  color: @xltgray;
+  }
+}
+
+.interstitial.branding {
   img {
     float: left;
     margin: 1em 3em 1em 1em;
@@ -446,39 +477,5 @@ body.normal.page .stories .top-tag {
   .byline,
   #nav-below {
     display: none;
-  }
-}
-
-// WooCommerce product overrides
-.single-product .product .summary {
-	width: auto !important;
-	float: none !important;
-}
-
-
-button.single_add_to_cart_button.button.alt.disabled.wc-variation-selection-needed {
-	background: #ccc;
-}
-
-button.single_add_to_cart_button.button.alt,
-input#place_order,
-input#place_order:disabled[disabled] {
-    background: #09c9ff;
-}
-
-// Dues page only
-#product-481415 .summary > .price {
-	display: none;
-}
-
-.woocommerce div.product {
-	form.cart .variations {
-		td {
-			display: block;
-		}
-
-		select {
-			min-width: 50px;
-		}
-	}
+  }	
 }
