@@ -12,6 +12,7 @@ $includes = array(
 	'/inc/sidebars.php',
 	'/homepages/homepage.php',
 	'/inc/member-directory.php',
+	'/inc/woocommerce/survey-tab.php',
 );
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
