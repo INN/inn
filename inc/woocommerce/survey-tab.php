@@ -16,7 +16,7 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 		add_action( 'init', array( $this, 'add_endpoints' ) );
 		add_filter( 'query_vars', array( $this, 'add_query_vars' ), 0 );
 
-		if ( $this->get_most_recent_user_form_submissions( 1 ) ) {
+		if ( $this->get_most_recent_user_form_submissions( 7 ) ) {
 
 			// Change the My Account page title.
 			add_filter( 'the_title', array( $this, 'endpoint_title' ) );
@@ -109,14 +109,14 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 	 * Endpoint HTML content.
 	 */
 	public function endpoint_content() {
-		$entries = $this->get_most_recent_user_form_submissions( 1 );
+		$entries = $this->get_most_recent_user_form_submissions( 7 );
 		$entry = GFAPI::get_entry( $entries[0]['id'] );
-		$form = GFAPI::get_form( 1 );
+		$form = GFAPI::get_form( 7 );
 
 		// If there are form fields.
 		if ( count( $form['fields'] ) > 0 ) {
 
-			echo '<h2>Your Submitted Information:</h2>';
+			echo '<h2>Your Submitted Information:<h2>';
 			echo '<hr />';
 
 			// Print data for each form field.
