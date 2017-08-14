@@ -251,3 +251,22 @@ add_filter( 'woocommerce_checkout_login_message', 'inn_checkout_login_message' )
 function inn_checkout_login_message( $message ) {
 	return __( 'Have an account?', 'woocommerce' );
 }
+
+function inn_woocommerce_terms_replace_permalink( $id ) {
+	$current_page_id = get_the_ID();
+
+	$term_page_overrides = array(
+		'481768' => array(
+			'label' => 'DonorSearch Annual Subscription',
+			'product_id' => '481768',
+			'terms_id' => 490827,
+		),
+	);
+
+	if ( array_key_exists( $current_page_id, $term_page_overrides ) ) {
+		return $term_page_overrides[ $current_page_id ]['terms_id'];
+	} else {
+		return $id;
+	}
+}
+add_filter( 'woocommerce_get_terms_page_id', 'inn_woocommerce_terms_replace_permalink' );
