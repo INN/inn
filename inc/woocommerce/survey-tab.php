@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * This adds additional pages to the WooCommerce my account section
+ *
+ * @link https://github.com/INN/inn/pull/48/
+ */
 class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 
 	/**
@@ -23,7 +29,7 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 
 			// Insering your new tab/page into the My Account page.
 			add_filter( 'woocommerce_account_menu_items', array( $this, 'new_menu_items' ) );
-			add_action( 'woocommerce_account_' . self::$endpoint .  '_endpoint', array( $this, 'endpoint_content' ) );
+			add_action( 'woocommerce_account_' . self::$endpoint . '_endpoint', array( $this, 'endpoint_content' ) );
 		}
 	}
 
@@ -91,12 +97,25 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 
 	/**
 	 * Get most recent user form submission.
+	 *
+	 * @param int $form_id
 	 */
 	public function get_most_recent_user_form_submissions( $form_id ) {
 		$current_user = wp_get_current_user();
-		$search_criteria['field_filters'][] = array( 'key' => 'created_by', 'value' => $current_user->ID );
-		$sorting = array( 'key' => 'id', 'direction' => 'ASC', 'is_numeric' => true );
-		$paging = array( 'offset' => 0, 'page_size' => 1 );
+		$search_criteria['field_filters'][] = array(
+			'key' => 'created_by',
+			'value' => $current_user->ID
+		);
+		$sorting = array(
+			'key' => 'id',
+			'direction' => 'ASC',
+			'is_numeric' => true
+		);
+		$paging = array(
+			'offset' => 0,
+			'page_size' => 1
+		);
+
 		$entries = GFAPI::get_entries( $form_id, $search_criteria, $sorting, $paging );
 		if ( is_array( $entries ) & count( $entries ) > 0 ) {
 			return $entries;
