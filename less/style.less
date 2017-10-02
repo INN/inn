@@ -49,9 +49,27 @@ Version:        0.2.0
   margin-left: 0;
 }
 .alert {
-  padding: 3px 2.5%;
-  background-color: #df4646;
-  width: 95%;
+
+  // newsmatch styles for https://github.com/INN/inn/issues/51
+  border-bottom:10px solid #33BF95;
+  background-color: #fff;
+  padding: 1em 0 .75em 0;
+  .img {
+    margin:.75em 0 15px 0;
+  }
+  @media (max-width: 768px) {
+    text-align: center;
+    padding: 1em 2.5%;
+    .img {
+      display: block;
+      margin: 0 auto;
+    }
+    img {
+    }
+  }
+
+  //background-color: #df4646;
+  // width: 95%;
   clear: both;
   p {
     margin-bottom: 0;
