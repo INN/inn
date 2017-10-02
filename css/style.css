@@ -528,10 +528,23 @@ a:hover {
   margin-left: 0;
 }
 .alert {
-  padding: 3px 2.5%;
-  background-color: #df4646;
-  width: 95%;
+  border-bottom: 10px solid #33BF95;
+  background-color: #fff;
+  padding-top: 10px;
   clear: both;
+}
+.alert .img {
+  margin: .75em 0 15px 0;
+}
+@media (max-width: 768px) {
+  .alert {
+    text-align: center;
+    padding: 1em 2.5%;
+  }
+  .alert .img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 .alert p {
   margin-bottom: 0;
