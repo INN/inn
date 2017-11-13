@@ -61,7 +61,7 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 
 		if ( $is_endpoint && ! is_admin() && is_main_query() && in_the_loop() && is_account_page() ) {
 			// New page title.
-			$title = __( 'Nonprofit Survey Submissions', 'woocommerce' );
+			$title = __( 'Nonprofit News Organization Survey', 'woocommerce' );
 
 			remove_filter( 'the_title', array( $this, 'endpoint_title' ) );
 		}
@@ -136,7 +136,7 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 	}
 }
 
-new Nonprofit_Survey_Submissions_My_Account_Endpoint();
+$Nonprofit_Survey_Submissions_My_Account_Endpoint = new Nonprofit_Survey_Submissions_My_Account_Endpoint();
 
 // Flush rewrite rules on plugin activation.
 register_activation_hook( __FILE__, array( 'Nonprofit_Survey_Submissions_My_Account_Endpoint', 'install' ) );

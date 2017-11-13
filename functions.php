@@ -45,7 +45,7 @@ function inn_enqueue() {
 		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array( 'jquery' ), '1.1', true );
 	}
 
-	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/style.css', array('largo-stylesheet'), '20171002' );
+	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/style.css', array('largo-stylesheet'), '20171113' );
 
 	if ( is_archive( 'inn_member' ) ) {
 		wp_add_inline_script( 'jquery-core', "
@@ -270,3 +270,35 @@ function inn_woocommerce_terms_replace_permalink( $id ) {
 	}
 }
 add_filter( 'woocommerce_get_terms_page_id', 'inn_woocommerce_terms_replace_permalink' );
+
+function inn_woocommerce_dashboard() {
+	$user = wp_get_current_user();
+	$form = GFAPI::get_form( 7 );
+
+	if ( $form['scheduleForm'] ) {
+		if ( strtotime( $form['scheduleStart'] ) > time() || strtotime( $form['scheduleEnd'] < time() ) ) {
+			return;
+		}
+	}
+
+	if ( is_super_admin( $user->ID ) || in_array( 'inn_member_survey', $user->roles ) ) {
+		echo '<div id="nonprofit-news-organization-survey">';
+			echo '<h4>Nonprofit News Organization Survey</h4>';
+			echo sprintf(
+				'<p>Fill out the <a href="%s">Nonprofit News Organization Survey</a> by %s to participate!</p>',
+				get_permalink( 486132 ),
+				date( 'F j, Y', strtotime( $form['scheduleEnd'] ) )
+			);
+			echo sprintf(
+				'<a class="btn btn-primary" href="%s">%s</a>',
+				get_permalink( 486132 ),
+				'Get Started'
+			);
+			/*
+			$survey_class = new Nonprofit_Survey_Submissions_My_Account_Endpoint();
+			$submissions = $survey_class->get_most_recent_user_form_submissions( 7 );
+			*/
+		echo '</div>';
+	}
+}
+add_action( 'woocommerce_account_dashboard', 'inn_woocommerce_dashboard' );
