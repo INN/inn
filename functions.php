@@ -45,7 +45,7 @@ function inn_enqueue() {
 		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array( 'jquery' ), '1.1', true );
 	}
 
-	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/style.css', array('largo-stylesheet'), '201711152' );
+	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/style.css', array('largo-stylesheet'), '201711154' );
 
 	if ( is_archive( 'inn_member' ) ) {
 		wp_add_inline_script( 'jquery-core', "
