@@ -45,7 +45,7 @@ function inn_enqueue() {
 		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array( 'jquery' ), '1.1', true );
 	}
 
-	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/style.css', array('largo-stylesheet'), '20171113' );
+	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/style.css', array('largo-stylesheet'), '201711152' );
 
 	if ( is_archive( 'inn_member' ) ) {
 		wp_add_inline_script( 'jquery-core', "
@@ -302,3 +302,12 @@ function inn_woocommerce_dashboard() {
 	}
 }
 add_action( 'woocommerce_account_dashboard', 'inn_woocommerce_dashboard' );
+
+function inn_member_survey_body_class( $classes ) {
+	$user = wp_get_current_user();
+	if ( is_super_admin( $user->ID ) || in_array( 'inn_member_survey', $user->roles ) ) {
+		$classes[] = 'inn_member_survey';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'inn_member_survey_body_class' );

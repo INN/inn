@@ -81,7 +81,7 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 		unset( $items['customer-logout'] );
 
 		// Insert your custom endpoint.
-		$items[ self::$endpoint ] = __( 'Nonprofit Survey Submissions', 'woocommerce' );
+		$items[ self::$endpoint ] = __( 'Survey Submissions', 'woocommerce' );
 
 		// Insert back the logout item.
 		$items['customer-logout'] = $logout;
