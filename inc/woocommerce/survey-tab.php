@@ -121,8 +121,12 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 
 			// Print data for each form field.
 			foreach ( $form['fields'] as $field ) {
-				echo '<h5>' . $field->label . '</h5>';
-				echo '<p>' . $entry[ $field->id ] . '</p>';
+				if ( 'html' === $field->type ) {
+					echo '<h5>' . $field->content . '</h5>';
+				} else {
+					echo '<h5>' . $field->label . '</h5>';
+					echo '<p>' . $entry[ $field->id ] . '</p>';
+				}
 			}
 		}
 	}
