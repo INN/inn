@@ -961,33 +961,33 @@ body.normal.page .stories .top-tag {
   padding: .5em .75em;
   background: #f1f1f1;
 }
-body.inn_member_survey .alert {
+body.inn_member_survey.woocommerce-account .alert {
   display: none;
 }
-body.inn_member_survey #main-nav {
+body.inn_member_survey.woocommerce-account #main-nav {
   display: none;
 }
-body.inn_member_survey #site-header {
+body.inn_member_survey.woocommerce-account #site-header {
   border-bottom: 1px solid #aaa;
   padding-bottom: 20px;
 }
-body.inn_member_survey #site-header .widget {
+body.inn_member_survey.woocommerce-account #site-header .widget {
   display: none;
 }
-body.inn_member_survey #site-header img {
+body.inn_member_survey.woocommerce-account #site-header img {
   max-width: 200px!important;
   margin-left: 100px;
 }
-body.inn_member_survey .sticky-nav-wrapper {
+body.inn_member_survey.woocommerce-account .sticky-nav-wrapper {
   display: none;
 }
-body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation {
+body.inn_member_survey.woocommerce-account.woocommerce-account .woocommerce-MyAccount-navigation {
   position: absolute;
   left: 0;
   top: 101px;
   width: 100%;
 }
-body.inn_member_survey .woocommerce-MyAccount-navigation ul {
+body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation ul {
   list-style-type: none;
   margin: 0;
   font-size: 1em;
@@ -997,14 +997,14 @@ body.inn_member_survey .woocommerce-MyAccount-navigation ul {
   border: 1px solid #ccc;
   text-align: center;
 }
-body.inn_member_survey .woocommerce-MyAccount-navigation li {
+body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li {
   margin-bottom: 0;
   max-width: 200px;
   display: inline-block;
   text-align: center;
   font-weight: 400;
 }
-body.inn_member_survey .woocommerce-MyAccount-navigation li a {
+body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li a {
   padding: .5em 1em;
   margin: 0;
   min-width: auto;
@@ -1012,20 +1012,20 @@ body.inn_member_survey .woocommerce-MyAccount-navigation li a {
   font-family: "effra", sans-serif;
   font-weight: 400;
 }
-body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-content {
+body.inn_member_survey.woocommerce-account.woocommerce-account .woocommerce-MyAccount-content {
   float: none;
   width: 100%;
 }
-body.inn_member_survey .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--orders,
-body.inn_member_survey .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--members-area,
-body.inn_member_survey .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--downloads,
-body.inn_member_survey .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--subscriptions,
-body.inn_member_survey .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--edit-address,
-body.inn_member_survey .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--payment-methods {
+body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--orders,
+body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--members-area,
+body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--downloads,
+body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--subscriptions,
+body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--edit-address,
+body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--payment-methods {
   display: none;
 }
 @media (max-width: 768px) {
-  body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation {
+  body.inn_member_survey.woocommerce-account.woocommerce-account .woocommerce-MyAccount-navigation {
     top: 0;
     font-size: 85%;
   }
