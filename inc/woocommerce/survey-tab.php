@@ -140,7 +140,11 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 	}
 }
 
-$Nonprofit_Survey_Submissions_My_Account_Endpoint = new Nonprofit_Survey_Submissions_My_Account_Endpoint();
+if ( class_exists( 'GFAPI' ) ) {
+	add_action( 'after_setup_theme', function() {
+		$Nonprofit_Survey_Submissions_My_Account_Endpoint = new Nonprofit_Survey_Submissions_My_Account_Endpoint();
+	});
+}
 
 // Flush rewrite rules on plugin activation.
 register_activation_hook( __FILE__, array( 'Nonprofit_Survey_Submissions_My_Account_Endpoint', 'install' ) );
