@@ -61,7 +61,7 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 
 		if ( $is_endpoint && ! is_admin() && is_main_query() && in_the_loop() && is_account_page() ) {
 			// New page title.
-			$title = __( 'Nonprofit News Organization Survey', 'woocommerce' );
+			$title = esc_html__( 'Nonprofit News Organization Survey', 'inn' );
 
 			remove_filter( 'the_title', array( $this, 'endpoint_title' ) );
 		}
