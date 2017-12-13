@@ -271,6 +271,13 @@ function inn_woocommerce_terms_replace_permalink( $id ) {
 }
 add_filter( 'woocommerce_get_terms_page_id', 'inn_woocommerce_terms_replace_permalink' );
 
+/**
+ * Item for the WooCommerce Account Dashboard to display the news org survey prompt
+ *
+ * This appears on the "My Account" page that's set in Dashboard > Accounts > My Account Page
+ *
+ * @echo HTML
+ */
 function inn_woocommerce_dashboard() {
 	$user = wp_get_current_user();
 	$form = GFAPI::get_form( 7 );
@@ -295,6 +302,8 @@ function inn_woocommerce_dashboard() {
 				'Get Started'
 			);
 			/*
+			 * Nonprofit_Survey_Submissions_My_Account_Endpoint is set up in inc/woocommerce/survey-tab.php instead of here
+			 * this section is commented out because we don't have any display logic for form submissions, yet.
 			$survey_class = new Nonprofit_Survey_Submissions_My_Account_Endpoint();
 			$submissions = $survey_class->get_most_recent_user_form_submissions( 7 );
 			*/

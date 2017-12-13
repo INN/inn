@@ -1,4 +1,14 @@
 <?php
+/**
+ * File for the NonProfit Survey submissions customizations to the WooCommerce thing.
+ *
+ * "Endpoint" may be misleadingly named here - for most intents and purposes the
+ * "endpoint" is the box at /my-account/ labeled "Nonprofit News Organization Survey"
+ */
+
+/**
+ * Creates the Nonprofit Survey and the associated user interface items.
+ */
 class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 
 	/**
@@ -9,16 +19,24 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 	public static $endpoint = 'nonprofit-survey-submissions';
 
 	/**
-	 * Plugin actions.
+	 * Plugin constructor, adding actions
+	 *
+	 * - Registers an "endpoint"
+	 * - Filters query vars to do ???
+	 * - Changes the "My Account" page title if the user has submitted stuff.
+	 *
+	 * This appears on the "My Account" page that's set in Dashboard > Accounts > My Account Page
+	 *
+	 * @return null
 	 */
 	public function __construct() {
-		// Actions used to insert a new endpoint in the WordPress.
+		// Actions used to insert a new endpoint in the WordPress REST API.
 		add_action( 'init', array( $this, 'add_endpoints' ) );
 		add_filter( 'query_vars', array( $this, 'add_query_vars' ), 0 );
 
 		if ( $this->get_most_recent_user_form_submissions( 7 ) ) {
 
-			// Change the My Account page title.
+			// Change the My Account page title in the endpoint
 			add_filter( 'the_title', array( $this, 'endpoint_title' ) );
 
 			// Insering your new tab/page into the My Account page.
@@ -49,7 +67,7 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 	}
 
 	/**
-	 * Set endpoint title.
+	 * Set survey box title to "Nonprofit News Organization Survey" via filter
 	 *
 	 * @param string $title
 	 * @return string
@@ -76,7 +94,7 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 	 * @return array
 	 */
 	public function new_menu_items( $items ) {
-		// Remove the logout menu item.
+		// Remove the logout menu item: we'll re-add it later to make sure it's at the end.
 		$logout = $items['customer-logout'];
 		unset( $items['customer-logout'] );
 
@@ -90,7 +108,10 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 	}
 
 	/**
-	 * Get most recent user form submission.
+	 * Get most recent user form submission for a given form
+	 *
+	 * @param Int The form ID the entries of which we desire.
+	 * @return Array|Boolean Either an array of entries or False.
 	 */
 	public function get_most_recent_user_form_submissions( $form_id ) {
 		$current_user = wp_get_current_user();
@@ -107,6 +128,9 @@ class Nonprofit_Survey_Submissions_My_Account_Endpoint {
 
 	/**
 	 * Endpoint HTML content.
+	 * @uses get_most_recent_user_form_submissions
+	 * @returns null
+	 * @echo HTML
 	 */
 	public function endpoint_content() {
 		$entries = $this->get_most_recent_user_form_submissions( 7 );
