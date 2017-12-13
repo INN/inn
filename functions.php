@@ -301,7 +301,9 @@ function inn_woocommerce_dashboard() {
 		echo '</div>';
 	}
 }
-add_action( 'woocommerce_account_dashboard', 'inn_woocommerce_dashboard' );
+if ( class_exists( 'GFAPI' ) && class_exists( 'Nonprofit_Survey_Submissions_My_Account_Endpoint' ) ) {
+	add_action( 'woocommerce_account_dashboard', 'inn_woocommerce_dashboard' );
+}
 
 function inn_member_survey_body_class( $classes ) {
 	$user = wp_get_current_user();
