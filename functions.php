@@ -290,9 +290,9 @@ function inn_woocommerce_dashboard() {
 
 	if ( is_super_admin( $user->ID ) || in_array( 'inn_member_survey', $user->roles ) ) {
 		echo '<div id="nonprofit-news-organization-survey">';
-			echo '<h4>Nonprofit News Organization Survey</h4>';
+			echo '<h4>The INN Index</h4>';
 			echo sprintf(
-				'<p>Fill out the <a href="%s">Nonprofit News Organization Survey</a> by %s to participate!</p>',
+				'<p>Fill out the <a href="%s">Nonprofit News Organization Survey</a> by %s to participate.</p>',
 				get_permalink( 486132 ),
 				date( 'F j, Y', strtotime( $form['scheduleEnd'] ) )
 			);
