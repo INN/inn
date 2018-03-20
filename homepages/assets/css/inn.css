@@ -8,7 +8,7 @@
 }
 .home #hero {
   background-size: cover;
-  height: 400px;
+  height: 600px;
   margin-bottom: 1em;
 }
 .home #hero .flex-container {
@@ -114,16 +114,16 @@
 }
 @media (max-width: 1000px) {
   .home #hero .gradient-overlay {
-    padding: 10px;
     padding-top: 40px;
   }
   .home #hero .gradient-overlay .content h4 {
+    padding: 0 5px;
     font-size: 25.33px;
   }
 }
 @media (max-width: 700px) {
   .home #hero {
-    height: 200px;
+    height: 300px;
   }
 }
 .home #homepage-top-right ol {
