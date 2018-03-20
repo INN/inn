@@ -9,7 +9,7 @@
 		</div>
 		<div class="gradient-overlay">
 			<div class="content">
-				<a href="/2018/03/inn-impact-prize-for-nonprofit-news-photography-2017/"><h4>Winners of the INN Impact Prize for Nonprofit News Photography</h4></a>
+				<a href="/gallery-inn-impact-prize/"><h4>Winners of the INN Impact Prize for Nonprofit News Photography</h4></a>
 			</div>
 		</div>
 	</div>
