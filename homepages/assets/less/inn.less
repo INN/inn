@@ -1,13 +1,10 @@
 @import "../../../less/variables.less";
 
 .home {
-  .sticky-nav-holder {
-    border-bottom: none;
-    @media (max-width: 768px) {
-      border-bottom: @ltgray 1px solid;
-    }
+  #page {
+    max-width: 100%;
+    padding: 0;
   }
-
   #main {
     margin: 0;
     max-width: 100%;
@@ -46,39 +43,7 @@
         text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         text-align: center;
       }
-
-#homepage-top-right {
-  // normally this would be floated left because it is the first span6, but
-  // we want it to be first in the markup but to the right
-  float: right;
-
-  .widget_text {
-    text-align: left;
-
-    h4 {
-      font-size: 1rem;
-      font-weight: 300;
     }
-
-    .textwidget {
-      font-size: 1.8rem;
-      line-height: 1.2;
-      color: @black;
-      @media (min-width: 601px) and (max-width: 1100px) {
-        font-size: ~"calc(0.4rem + 1.7vw);"
-      }
-    }
-  }
-  @media (max-width: 600px) {
-    width: 100%;
-    margin: 0;
-    clear: both;
-    .widget_text {
-      text-align: center;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
 
     @media (max-width: 1000px) {
       .gradient-overlay {
@@ -92,168 +57,88 @@
 
     @media (max-width: 700px) {
       height: 100%;
-}
-
-#homepage-top-left {
-  // and we want this to go the left, despite being second in markup
-  margin-left: 0;
-
-  .widget_sp_image {
-    padding: 0;
-    position: relative;
-
-    .widget_sp_image-description {
-      // set up the main thing
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-
-      display: table;
-
-      p {
-        padding-left: 2rem;
-        display: table-cell;
-        vertical-align: middle;
-        height: 100%;
-      }
-
-      font-size: 3rem;
-      color: @white;
-
-      b {
-        display: block;
-        font-size: 150%;
-        clear: both;
-      }
     }
   }
-  @media (max-width: 600px) {
-    width: 100%;
-    margin: 0;
-    clear: both;
+
+  #homepage-top-right {
+    ol {
+	  margin: 0;
+    }
+    .tribe-events-adv-list-widget ol li {
+	  margin-bottom: 1em;
+    }
+    h4.entry-title {
+	  font-size: 20px;
+	  font-weight: 400;
+	  margin-bottom: 0.25em;
+	  a {
+	    color: @medgray;
+	  }
+    }
   }
-
-}
-#homepage-middle {
-  padding: 1.5 * 16px;
-  box-sizing: border-box;
-
-  .widgettitle {
-    padding: 3px;
-    display: block;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-    @media (max-width: 600px) {
+  #hire-us {
+    padding: 3em;
+    text-align: center;
+    h5 {
+      color: #fff;
+    }
+  }
+  #members {
+    height: auto;
+    background: none;
+    margin-bottom: 3em;
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
       margin-bottom: 1em;
     }
   }
-  .largo-recent-posts h5,
-  h3 {
-    font-size: 1.4rem;
-    font-family: @sans;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    @media (max-width: 600px) {
-      font-size: 2rem;
-    }
-    a {
-      color: @black;
-      &:hover {
-        color: @black;
-      }
-    }
-  }
-  h5.top-tag {
-    margin-top: 1em;
-  }
-  .widget {
-    border: 2px solid transparent;
-  }
-
-  // widget-specific styles
-  .widget_inn-next-event-widget {
-    border-color: @dkgray;
-
-    .inner {
-      padding: 1.5rem 1.5rem;
-    }
-
-    .widgettitle {
-      background-color: @dkgray;
-      margin-bottom: 0;
-      text-align: center;
-      color: @white;
-      font-weight: 700;
-      a {
-       color: @white;
-      }
-    }
-
-    h3 {
-      margin-top: 1rem;
-      margin-bottom: 0.75rem;
-      color: @black;
-    }
-    p {
-      font-size: 1.2rem;
-    }
-    btn {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-  .largo-recent-posts {
-    ul {
-      margin-bottom: 0;
-      p:last-child,
-      li:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-  @media (max-width: 600px) {
-    .widget:not(.widget_inn-next-event-widget) + .widget:not(.widget_inn-next-event-widget) {
-      .widgettitle {
-        border-top: 1px solid @ltgray;
-        padding-top: 1em;
-      }
-    }
-  }
-
-  // responsive styles
-  .span4 {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-  }
-  @media (min-width: 600px) {
-    // we want to keep the widths of the span4s equal and keep the borders in the middle of the spacing
-
-    // LESS does not like this formulation, so we have to math by hand
-    // @item-width: calc( ( 100% - ( 2 * @gutter-half ) )/3 );
-    // @gutter-width: (2 * @gutter-half) + 1px; // (2*24px) + 1px = 48px + 1 = 49px; 
-    @gutter-half: 1.5 * 16px; // 16px is 1rem: 24px
-    @gutter-width: 49px;
-    @item-width: ~"calc( ( 100% - (2 * 24px) )/3 )"; // ~"" escapes the content
-
-    @gutter-border: 1px solid @ltgray;
-
+  #main #supporters {
+    padding-top: 2em;
+    background-color: @xltgray;
+    margin-bottom: 0;
+    padding-bottom: 0;
     .span4 {
-      width: @item-width;
+      padding: 2em 2em 1em;
     }
-    .span4:nth-child(3n+1) {
+    h3 {
+      width: auto;
+      color: @dkgray;
+      background-color: transparent;
+      line-height: 1;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
     }
-    .span4:nth-child(3n+2),
-    .span4:nth-child(3n+3) {
-      margin-left: @gutter-half;
-      border-left: @gutter-border;
-      padding-left: @gutter-half;
+    li {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 1em;
+      color: @medgray;
+      a {
+        color: @medgray;
+      }
+    }
+    @media (max-width: 768px) {
+      padding-bottom: 2em;
+      .span4 {
+        clear: both;
+        width: 100%;
+        padding: 0 2em;
+        margin: 0;
+      }
+      h3 {
+        margin-bottom: 1em;
+      }
+      li {
+        text-align: center;
+      }
+    }
+  }
+  .sticky-nav-holder {
+    border-bottom: none;
+    @media (max-width: 768px) {
+      border-bottom: @ltgray 1px solid;
     }
   }
 }
