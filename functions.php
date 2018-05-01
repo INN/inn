@@ -12,7 +12,7 @@ $includes = array(
 	'/inc/sidebars.php',
 	'/homepages/homepage.php',
 	'/inc/member-directory.php',
-	'/inc/widgets/next-event.php',
+	'/inc/woocommerce/survey-tab.php',
 );
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
@@ -45,7 +45,7 @@ function inn_enqueue() {
 		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array( 'jquery' ), '1.1', true );
 	}
 
-	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/style.css', array('largo-stylesheet'), '201707075' );
+	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/css/style.css', array('largo-stylesheet'), '20180123' );
 
 	if ( is_archive( 'inn_member' ) ) {
 		wp_add_inline_script( 'jquery-core', "
@@ -175,6 +175,24 @@ function inn_print_scripts() {
 }
 //add_action('wp_print_styles', 'inn_print_scripts', 100);
 
+/**
+ * Add alert banner to nav
+ */
+function inn_alert() {
+	get_template_part( 'partials/alert' );
+}
+add_action( 'largo_after_nav', 'inn_alert' );
+
+/**
+ * Add search box to main nav
+ * uncomment this and remove partials/nav-main.php when 0.5.5 ships
+ */
+function inn_add_search_box() {
+	get_template_part( 'partials/inn-nav-search-form' );
+}
+add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
+
+
 function inn_member_archive_query( $query ) {
 if ( $query->is_archive( 'inn_member') && $query->is_main_query() && ! is_admin() ) {
         $query->set( 'posts_per_page', 500 );
@@ -233,3 +251,74 @@ add_filter( 'woocommerce_checkout_login_message', 'inn_checkout_login_message' )
 function inn_checkout_login_message( $message ) {
 	return __( 'Have an account?', 'woocommerce' );
 }
+
+function inn_woocommerce_terms_replace_permalink( $id ) {
+	$current_page_id = get_the_ID();
+
+	$term_page_overrides = array(
+		'481768' => array(
+			'label' => 'DonorSearch Annual Subscription',
+			'product_id' => '481768',
+			'terms_id' => 490827,
+		),
+	);
+
+	if ( array_key_exists( $current_page_id, $term_page_overrides ) ) {
+		return $term_page_overrides[ $current_page_id ]['terms_id'];
+	} else {
+		return $id;
+	}
+}
+add_filter( 'woocommerce_get_terms_page_id', 'inn_woocommerce_terms_replace_permalink' );
+
+/**
+ * Item for the WooCommerce Account Dashboard to display the news org survey prompt
+ *
+ * This appears on the "My Account" page that's set in Dashboard > Accounts > My Account Page
+ *
+ * @echo HTML
+ */
+function inn_woocommerce_dashboard() {
+	$user = wp_get_current_user();
+	$form = GFAPI::get_form( 7 );
+
+	if ( $form['scheduleForm'] ) {
+		if ( strtotime( $form['scheduleStart'] ) > time() || strtotime( $form['scheduleEnd'] < time() ) ) {
+			return;
+		}
+	}
+
+	if ( is_super_admin( $user->ID ) || in_array( 'inn_member_survey', $user->roles ) ) {
+		echo '<div id="nonprofit-news-organization-survey">';
+			echo '<h4>The INN Index</h4>';
+			echo sprintf(
+				'<p>Fill out the <a href="%s">Nonprofit News Organization Survey</a> by %s to participate.</p>',
+				get_permalink( 486132 ),
+				date( 'F j, Y', strtotime( $form['scheduleEnd'] ) )
+			);
+			echo sprintf(
+				'<a class="btn btn-primary" href="%s">%s</a>',
+				get_permalink( 486132 ),
+				'Get Started'
+			);
+			/*
+			 * Nonprofit_Survey_Submissions_My_Account_Endpoint is set up in inc/woocommerce/survey-tab.php instead of here
+			 * this section is commented out because we don't have any display logic for form submissions, yet.
+			$survey_class = new Nonprofit_Survey_Submissions_My_Account_Endpoint();
+			$submissions = $survey_class->get_most_recent_user_form_submissions( 7 );
+			*/
+		echo '</div>';
+	}
+}
+if ( class_exists( 'GFAPI' ) && class_exists( 'Nonprofit_Survey_Submissions_My_Account_Endpoint' ) ) {
+	add_action( 'woocommerce_account_dashboard', 'inn_woocommerce_dashboard' );
+}
+
+function inn_member_survey_body_class( $classes ) {
+	$user = wp_get_current_user();
+	if ( is_super_admin( $user->ID ) || in_array( 'inn_member_survey', $user->roles ) ) {
+		$classes[] = 'inn_member_survey';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'inn_member_survey_body_class' );

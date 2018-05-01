@@ -56,7 +56,7 @@
   line-height: 1.7em;
 }
 .normal h3 span {
-  color: #4d4d4d;
+  color: #555555;
 }
 .interstitial {
   margin-bottom: 5em;
@@ -150,7 +150,7 @@
   font-size: 18px;
 }
 #news-and-benefits-and-funders.row-fluid li a {
-  color: #4d4d4d;
+  color: #555555;
 }
 #news-and-benefits-and-funders.row-fluid li a:hover {
   color: #09c9ff;

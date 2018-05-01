@@ -7,4 +7,7 @@ Author URI:     http://nerds.inn.org
 Template:       largo
 Version:        0.2.0
 */
-@import "css/style.css?201707075";
+
+/**
+ * Not actually enqueued; the primary styles are in css/style.css and are enqueued by a function in functions.php
+ */
