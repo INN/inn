@@ -82,7 +82,7 @@ $states = array(
 		<header class="entry-header">
 			<h1 class="entry-title">Member Directory</h1>
 			<section class="entry-content">
-				<p>Every one of INN's 120+ members is a nonprofit, nonpartisan organization committed to donor transparency. <a href="https://inn.org/for-members/membership-standards/">Learn more about our membership standards</a>.<br>
+				<p>Every one of INN's 150+ members is a nonprofit, nonpartisan organization committed to donor transparency. <a href="https://inn.org/for-members/membership-standards/">Learn more about our membership standards</a>.<br>
 			</section>
 		</header>
 
