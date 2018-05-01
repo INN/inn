@@ -1,18 +1,20 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
 <section id="hero" class="clearfix">
-	<div class="flex-container">
-		<div class="heroslider">
-		  <div class="heroslide1"></div>
-		  <div class="heroslide2"></div>
-		  <div class="heroslide3"></div>
-		</div>
-		<div class="gradient-overlay">
-			<div class="content">
-				<a href="/gallery-inn-impact-prize/"><h4>Winners of the INN Impact Prize for Nonprofit News Photography</h4></a>
+	<a href="/2018/05/inn-impact-prize-for-nonprofit-news-photography-2017/">
+		<div class="flex-container">
+			<div class="heroslider">
+			  <div class="heroslide1"></div>
+			  <div class="heroslide2"></div>
+			  <div class="heroslide3"></div>
+			</div>
+			<div class="gradient-overlay">
+				<div class="content">
+					<h4>Winners of the INN Impact Prize for Nonprofit News Photography</h4></a>
+				</div>
 			</div>
 		</div>
-	</div>
+	</a>
 </section>
 
 <section class="normal">
