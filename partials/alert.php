@@ -1,9 +1,8 @@
 <div class="alert" style="background-color: #fff;">
 	<p>
 		<strong>
-			Thank you
-			<a href="https://www.newsmatch.org/" style="color:#33BF95;">News Match</a>
-			donors for supporting nonprofit newsrooms!
+			Accelerating nonprofit news: 
+			<a href="/2018/05/inn-days-2018/" style="color:#33BF95;">Register for INN Days June 13-14</a>
 		</strong>
 	</p>
 </div>
