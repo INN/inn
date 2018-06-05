@@ -10,14 +10,64 @@
     max-width: 100%;
   }
   #hero {
-    background-image: url("../img/emerging-leaders.jpg");
     background-size: cover;
-    height: 400px;
+    height: 600px;
     margin-bottom: 1em;
     
     .flex-container {
       display: flex;
       height: inherit;
+      position:relative;
+    }
+
+    .heroslider {
+      width:100%;
+      height:inherit;
+      overflow:hidden;
+    }
+    .heroslide1,.heroslide2,.heroslide3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .heroslide1 {
+      background: url(../img/impact-winners/1.jpg)no-repeat center 25%;
+      background-size: cover;
+      animation:fade 15s infinite;
+      -webkit-animation:fade 15s infinite;
+    } 
+    .heroslide2 {
+      background: url(../img/impact-winners/2.jpg)no-repeat center 25%;
+      background-size: cover;
+      animation:fade2 15s infinite;
+      -webkit-animation:fade2 15s infinite;
+    }
+    .heroslide3 {
+      background: url(../img/impact-winners/3.jpg)no-repeat center 25%;
+      background-size: cover;
+      animation:fade3 15s infinite;
+      -webkit-animation:fade3 15s infinite;
+    }
+    @keyframes fade
+    {
+      0%   {opacity:1}
+      33.333% { opacity: 0}
+      66.666% { opacity: 0}
+      100% { opacity: 1}
+    }
+    @keyframes fade2
+    {
+      0%   {opacity:0}
+      33.333% { opacity: 1}
+      66.666% { opacity: 0 }
+      100% { opacity: 0}
+    }
+    @keyframes fade3
+    {
+      0%   {opacity:0}
+      33.333% { opacity: 0}
+      66.666% { opacity: 1}
+      100% { opacity: 0}
     }
 
     .gradient-overlay {
@@ -25,6 +75,8 @@
       align-self: flex-end;
       padding-top: 70px;
       width: 100%;
+      z-index: 2;
+      position: absolute;
     }
 
     .content {
@@ -48,15 +100,15 @@
     @media (max-width: 1000px) {
       .gradient-overlay {
         .content h4 {
+          padding: 0 5px;
           font-size: 25.33px;
         }
-        padding: 10px;
         padding-top: 40px;
       }
     }
 
     @media (max-width: 700px) {
-      height: 100%;
+      height: 300px;
     }
   }
 
