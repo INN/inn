@@ -3,6 +3,15 @@
  * Single Post Template: One Column (Standard Layout)
  * Template Name: One Column (Standard Layout)
  * Description: Shows the post but does not load any sidebars.
+ *
+ * Contains a large chunk of conditional logic that may load
+ * any of the following partials:
+ * - partials/content-page
+ * - partials/content-projects
+ * - partials/content-single
+ * - partials/content-press
+ * - partials/content-news
+ * - partials/content.php
  */
 add_filter( 'body_class', function( $classes ) {
 	$classes[] = 'normal';
