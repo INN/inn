@@ -158,6 +158,9 @@
 #news-and-benefits-and-funders.row-fluid li a:hover {
   color: #09c9ff;
 }
+#news-and-benefits-and-funders.row-fluid h5 {
+  font-weight: 600;
+}
 @media (max-width: 600px) {
   #news-and-benefits-and-funders.row-fluid #news,
   #news-and-benefits-and-funders.row-fluid #benefits-and-funders {
