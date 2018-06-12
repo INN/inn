@@ -85,7 +85,7 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 					<li><a href="http://www.driehausfoundation.org/">Richard H. Driehaus Foundation</a></li>
 					<li><a href="http://rbf.org/">Rockefeller Brothers Fund</a></li>
 				</ul>
-				<h5>Individual Donors</h5>
+				<h4>Individual Donors</h4>
 				<ul class="donors">
 					<li><a href="/about/people/board-of-directors/">The INN Board</a></li>
 					<li>Charles Anesi</li>
