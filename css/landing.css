@@ -138,6 +138,9 @@
   font-size: 18px;
   margin: 0 0 1.5em 0;
 }
+#news-and-benefits-and-funders.row-fluid #benefits-and-funders ul.donors {
+  margin: 0 0 2em 0;
+}
 #news-and-benefits-and-funders.row-fluid #benefits-and-funders ul.donors li {
   margin: 0 0 0.5em 0;
 }
