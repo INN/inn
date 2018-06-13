@@ -71,20 +71,27 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 			<?php } else if (is_page('for-funders')) { ?>
 				<h4>Major Donors</h4>
 				<ul class="donors">
-					<li>Atlantic Philanthropies</li>
-					<li>Democracy Fund</li>
-					<li>The William and Flora Hewlett Foundation</li>
-					<li>The Peter and Carmen Lucia Buck Foundation</li>
-					<li>Buzz Woolley</li>
-					<li>Ethics and Excellence in Journalism Foundation</li>
-					<li>The John S. and James L. Knight Foundation</li>
-					<li>John D. Catherine T. MacArthur Foundation</li>
-					<li>Robert R. McCormick Foundation</li>
+					<li><a href="https://www.craigslist.org/about/charitable">craigslist Charitable Fund</a></li>
+					<li><a href="http://democracyfund.org/">Democracy Fund</a></li>
+					<li><a href="http://www.journalismfoundation.org/default.asp">Ethics &amp; Excellence in Journalism Foundation</a></li>
+					<li><a href="https://www.fordfoundation.org/">Ford Foundation</a></li>
+					<li><a href="http://www.knightfoundation.org/">The John S. and James L. Knight Foundation</a></li>
+					<li><a href="http://www.macfound.org/">John D. &amp; Catherine T. MacArthur Foundation</a></li>
+					<li><a href="https://jonathanloganfamilyfoundation.org/">Jonathan Logan Family Foundation</a></li>
+					<li><a href="http://www.joycefdn.org/">Joyce Foundation</a></li>
+					<li><a href="http://www.mccormickfoundation.org/">Robert R. McCormick Foundation</a></li>
+					<li><a href="http://www.opensocietyfoundations.org/">Open Society Foundations</a></li>
+					<li>Present Progressive Fund</li>
+					<li><a href="http://www.driehausfoundation.org/">Richard H. Driehaus Foundation</a></li>
+					<li><a href="http://rbf.org/">Rockefeller Brothers Fund</a></li>
+				</ul>
+				<h4>Individual Donors</h4>
+				<ul class="donors">
+					<li><a href="/about/people/board-of-directors/">The INN Board</a></li>
+					<li>Charles Anesi</li>
+					<li>Paul Kumleben</li>
+					<li>Philippa Straum</li>
 					<li>Karin Winner</li>
-					<li>Open Society Foundations</li>
-					<li>The Patterson Foundation</li>
-					<li>Rockefeller Brothers Fund</li>
-					<li>The INN Board</li>
 				</ul>
 			<?php } ?>
 		</div>
