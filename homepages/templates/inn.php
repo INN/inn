@@ -1,20 +1,28 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
-<section id="hero" class="clearfix">
-	<a href="/2018/05/inn-impact-prize-for-nonprofit-news-photography-2017/">
-		<div class="flex-container">
-			<div class="heroslider">
-			  <div class="heroslide1"></div>
-			  <div class="heroslide2"></div>
-			  <div class="heroslide3"></div>
+<section id="hero" class="normal">
+	<div class="content">
+		<div class="row-fluid">
+			<div class="span4 heroitem" style="background:url('//placeimg.com/400/200/nature')">
+				<div class="heroitem-content">
+					<h5>Web Design + Development</h5>
+					<p>From full redesigns and CMS migrations to technology audits&mdash;and more.</p>
+				</div>
 			</div>
-			<div class="gradient-overlay">
-				<div class="content">
-					<h4>Winners of the INN Impact Prize for Nonprofit News Photography</h4></a>
+			<div class="span4 heroitem" style="background:url('//placeimg.com/400/200/arch')">
+				<div class="heroitem-content">
+					<h5>Business + Growth Strategy</h5>
+					<p>Sustainable revenue and audience development for nonprofit news organizations.</p>
+				</div>
+			</div>
+			<div class="span4 heroitem" style="background:url('//placeimg.com/400/200/tech')">
+				<div class="heroitem-content">
+					<h5>News Applications</h5>
+					<p>Data analysis and visualization for special editorial projects.</p>
 				</div>
 			</div>
 		</div>
-	</a>
+	</div>
 </section>
 
 <section class="normal">
