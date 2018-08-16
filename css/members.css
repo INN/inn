@@ -16,7 +16,7 @@ body.post-type-archive-inn_member #inn-members-no-results {
 body.post-type-archive-inn_member section {
   padding-left: 5%;
   padding-right: 5%;
-  max-width: 30em;
+  max-width: 45em;
 }
 body.single-inn_member h1.entry-title {
   margin-bottom: 0.5em;
