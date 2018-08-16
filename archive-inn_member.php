@@ -5,6 +5,7 @@
  * @package INN
  * @since 0.1
  * @filter largo_partial_by_post_type
+ * @see functions.php: inn_member_archive_query for significant modifications
  */
 get_header();
 $queried_object = get_queried_object();
@@ -82,7 +83,23 @@ $states = array(
 		<header class="entry-header">
 			<h1 class="entry-title">Member Directory</h1>
 			<section class="entry-content">
-				<p>Every one of INN's 150+ members is a nonprofit, nonpartisan organization committed to donor transparency. <a href="https://inn.org/for-members/membership-standards/">Learn more about our membership standards</a>.<br>
+				<p>Every one of INN's
+				<?php
+					/**
+					 * How many members? This many.
+					 *
+					 * Draws from the global query, which because of the pre_get_posts filter inn_member_archive_query contains <=500 INN members.
+					 * @since https://github.com/INN/inn/issues/73
+					 */
+					 global $wp_query;
+					if ( is_int( $wp_query->post_count ) && 0 < $wp_query->post_count ) {
+						echo (string) $wp_query->post_count;
+					} else {
+						echo '170+';
+						echo '<!-- check the logic here, something has gone wrong -->';
+					}
+				?>
+				members is a nonprofit, nonpartisan organization committed to editorial independence and transparency.</p>
 			</section>
 		</header>
 
