@@ -99,7 +99,7 @@ $states = array(
 						echo '<!-- check the logic here, something has gone wrong -->';
 					}
 				?>
-				members is a nonprofit, nonpartisan organization committed to donor transparency. <a href="https://inn.org/for-members/membership-standards/">Learn more about our membership standards</a>.<br>
+				members is a nonprofit, nonpartisan organization committed to editorial independence and transparency.</p>
 			</section>
 		</header>
 
