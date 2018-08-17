@@ -1,26 +1,15 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
 <section id="hero" class="normal">
-	<div class="content">
+	<div class="hero-background">
 		<div class="row-fluid">
-			<div class="span4 heroitem" style="background:url('//placeimg.com/400/200/nature')">
+			<?php dynamic_sidebar( 'hero-headlines' ); ?>
+			<!-- <div class="span4 heroitem">
 				<div class="heroitem-content">
-					<h5>Web Design + Development</h5>
-					<p>From full redesigns and CMS migrations to technology audits&mdash;and more.</p>
+					<h2>INN Business Intensive</h2>
+					<p>Join us for two jam-packed days of audience development training with Tim Griggs and a special chance to meet the leadership team of The Texas Tribune on Sept. 11 + 12 in Austin.</p>
 				</div>
-			</div>
-			<div class="span4 heroitem" style="background:url('//placeimg.com/400/200/arch')">
-				<div class="heroitem-content">
-					<h5>Business + Growth Strategy</h5>
-					<p>Sustainable revenue and audience development for nonprofit news organizations.</p>
-				</div>
-			</div>
-			<div class="span4 heroitem" style="background:url('//placeimg.com/400/200/tech')">
-				<div class="heroitem-content">
-					<h5>News Applications</h5>
-					<p>Data analysis and visualization for special editorial projects.</p>
-				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
