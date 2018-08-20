@@ -8,7 +8,7 @@
 }
 .home #hero {
   background-size: cover;
-  background: url(//placeimg.com/1300/500/nature) no-repeat center 25%;
+  background: url(//placeimg.com/1450/500/nature) no-repeat center 25%;
   margin-bottom: 1em;
   padding: 0;
   height: 500px;
@@ -26,10 +26,16 @@
   background-color: rgba(0, 0, 0, 0.75);
   height: auto;
   position: absolute;
+  left: 0;
+  right: 0;
   bottom: 0;
   width: auto;
   display: block;
   padding: 0.5em 2em;
+}
+.home #hero .hero-background .row-fluid {
+  max-width: 1170px;
+  margin: auto;
 }
 @media only screen and (max-width: 600px) {
   .home #hero .hero-background {
@@ -40,7 +46,7 @@
 }
 .home #hero .heroitem {
   padding: 0;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   text-align: left;
 }
 @media only screen and (max-width: 600px) {
