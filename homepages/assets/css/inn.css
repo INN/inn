@@ -21,6 +21,9 @@
     height: auto;
     margin-bottom: 0;
   }
+  .home #hero img {
+    margin-bottom: 16px;
+  }
 }
 .home #hero .hero-background {
   background-color: rgba(0, 0, 0, 0.75);
@@ -42,6 +45,9 @@
     background: unset;
     position: unset;
     padding: 0.5em 10%;
+  }
+  .home #hero .hero-background a {
+    color: #909799;
   }
 }
 .home #hero .heroitem {
