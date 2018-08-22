@@ -178,10 +178,10 @@ function inn_print_scripts() {
 /**
  * Add alert banner to nav
  */
-function inn_alert() {
-	get_template_part( 'partials/alert' );
-}
-add_action( 'largo_after_nav', 'inn_alert' );
+// function inn_alert() {
+// 	get_template_part( 'partials/alert' );
+// }
+// add_action( 'largo_after_nav', 'inn_alert' );
 
 /**
  * Add search box to main nav

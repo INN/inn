@@ -1,20 +1,18 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
-<section id="hero" class="clearfix">
-	<a href="/2018/05/inn-impact-prize-for-nonprofit-news-photography-2017/">
-		<div class="flex-container">
-			<div class="heroslider">
-			  <div class="heroslide1"></div>
-			  <div class="heroslide2"></div>
-			  <div class="heroslide3"></div>
-			</div>
-			<div class="gradient-overlay">
-				<div class="content">
-					<h4>Winners of the INN Impact Prize for Nonprofit News Photography</h4></a>
+<section id="hero" class="normal">
+	<img src="/wp-content/themes/inn/homepages/assets/img/hero0818.jpg">
+	<div class="hero-background">
+		<div class="row-fluid">
+			<?php dynamic_sidebar( 'hero-headlines' ); ?>
+			<!-- <div class="span4 heroitem">
+				<div class="heroitem-content">
+					<h2>INN Business Intensive</h2>
+					<p>Join us for two jam-packed days of audience development training with Tim Griggs and a special chance to meet the leadership team of The Texas Tribune on Sept. 11 + 12 in Austin.</p>
 				</div>
-			</div>
+			</div> -->
 		</div>
-	</a>
+	</div>
 </section>
 
 <section class="normal">
