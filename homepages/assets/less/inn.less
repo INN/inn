@@ -8,15 +8,25 @@
   #main {
     margin: 0;
     max-width: 100%;
+    .row-fluid .span12 {
+      text-align:center;
+      padding:0 12em;
+      @media only screen and (max-width: 728px) {
+        padding:0;
+      }
+    }
   }
   #hero {
     background-color:white;
     background-size:contain;
-    margin-bottom: 1em;
     padding:0;
     height:48vw;
     position:relative;
     overflow:hidden;
+
+    img {
+      width:100%;
+    }
 
     @media only screen and (max-width: 600px) {
       background:unset;
@@ -37,7 +47,7 @@
       bottom:0;
       width:auto;
       display:block;
-      padding: 0.5em 2em;
+      padding: 1.5em 2em 1em;
 
       .row-fluid {
         max-width: 1170px;
@@ -74,6 +84,7 @@
         color:#fff;
         line-height: 1.3;
         font-weight: 300;
+        font-size:18px;
         @media only screen and (max-width: 600px) {
           color:#000;
         }
@@ -84,7 +95,9 @@
       }
     }
   }
-
+  #top-widgets {
+    padding-top:3em;
+  }
   #homepage-top-right {
     ol {
 	  margin: 0;
