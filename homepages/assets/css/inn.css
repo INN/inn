@@ -6,6 +6,15 @@
   margin: 0;
   max-width: 100%;
 }
+.home #main .row-fluid .span12 {
+  text-align: center;
+  padding: 0 12em;
+}
+@media only screen and (max-width: 728px) {
+  .home #main .row-fluid .span12 {
+    padding: 0;
+  }
+}
 .home #hero {
   background-color: white;
   background-size: contain;

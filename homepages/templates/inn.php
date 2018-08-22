@@ -32,6 +32,9 @@
 	<div class="content">
 		<h3><span>About INN</span></h3>
 		<div class="row-fluid">
+			<div class="span12">
+				<h5>INN is a network of more than 180 nonprofit newsrooms across the U.S., working to strengthen the sources of trusted news for thousands of diverse communities.</h5>
+			</div>
 			<div class="span4">
 				<a href="/about/"><img class="icon" src="<? echo $img_path . 'icons/mission.svg'; ?>" /></a>
 				<h5><a href="/about/">Mission</a></h5>
@@ -40,7 +43,7 @@
 			<div class="span4">
 				<a href="/members/"><img class="icon" src="<? echo $img_path . 'icons/memberdirectory.svg'; ?>" /></a>
 				<h5><a href="/members/">Our Members</a></h5>
-				<p>100+ nonprofits publishing news in the public interest</p>
+				<p>180+ nonprofits publishing news in the public interest</p>
 			</div>
 			<div class="span4">
 				<a href="/news/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
