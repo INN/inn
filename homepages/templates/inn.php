@@ -15,7 +15,7 @@
 	</div>
 </section>
 
-<section class="normal">
+<section id="top-widgets" class="normal">
 	<div id="homepage-top-widgets" class="row-fluid">
 		<div id="homepage-top-left" class="span6">
 
