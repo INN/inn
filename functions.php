@@ -47,6 +47,8 @@ function inn_enqueue() {
 
 	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/css/style.css', array('largo-stylesheet'), '20180816' );
 
+	remove_action('cc_tabby_css', 30);
+
 	if ( is_archive( 'inn_member' ) ) {
 		wp_add_inline_script( 'jquery-core', "
 			jQuery(document).ready(function($){
