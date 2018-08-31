@@ -110,14 +110,14 @@
 	clear: both;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
 	.responsive-tabs .responsive-tabs__panel--closed-accordion-only {
 		display: block;
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
 	.responsive-tabs .responsive-tabs__list {
 		display: none;
