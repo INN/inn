@@ -113,8 +113,11 @@ section {
 	margin:0 auto;
 	padding: 20px 20px 0;
 	word-wrap: break-word;
-	column-count:2;
 	max-width:1170px;
+}
+
+.responsive-tabs .responsive-tabs__panel .columnize {
+	column-count:2;
 }
 
 .responsive-tabs .responsive-tabs__panel:after {
@@ -146,7 +149,7 @@ section {
 	}
 
 	h1.entry-title {
-	    font-size: 4rem;
+	    font-size: 3rem;
 	}
 
 	.responsive-tabs .responsive-tabs__list {
