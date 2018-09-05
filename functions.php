@@ -47,7 +47,7 @@ function inn_enqueue() {
 		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array( 'jquery' ), '1.1', true );
 	}
 
-	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/css/style.css', array('largo-stylesheet'), '20180816' );
+	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/css/style.css', array('largo-stylesheet'), '20180905' );
 
 
 
@@ -106,7 +106,7 @@ function inn_landing_page_enqueue() {
 		wp_enqueue_style( 'press', get_stylesheet_directory_uri() . '/css/press.css', null, '1.0.0' );
 	} elseif ( is_page( 'people' ) ) {
 		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/people.css', null, '1.0.0' );
-	} elseif ( is_page( 'inn-days-tabby' ) ) {
+	} elseif ( is_page( 'inn-days' ) ) {
 		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/tabby.css', null, '1.0.0' );
 	}
 	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.2' );
