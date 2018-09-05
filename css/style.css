@@ -1037,3 +1037,6 @@ body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li.
     font-size: 85%;
   }
 }
+.single .hero.span12 {
+  margin-left: 0;
+}

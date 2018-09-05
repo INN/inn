@@ -54,8 +54,6 @@ function inn_enqueue() {
 		filemtime( get_stylesheet_directory() . '/css/style.css' )
 	);
 
-
-
 	if ( is_archive( 'inn_member' ) ) {
 		wp_add_inline_script( 'jquery-core', "
 			jQuery(document).ready(function($){
