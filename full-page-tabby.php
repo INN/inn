@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Full Width Page
+ * Template Name: Full Width Page Plus Tabs
  * Single Post Template: Full-width (no sidebar)
- * Description: Shows the post but does not load any sidebars, allowing content to span full container width.
+ * Description: Shows the post but does not load any sidebars, allowing content to span full container width. Also loads in the Tabby CSS to create a tab structure, a la the INN Days page.
  *
  * @package Largo
  * @since 0.1
