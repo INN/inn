@@ -95,7 +95,7 @@ section {
 }
 
 .responsive-tabs .responsive-tabs__list__item:hover {
-	color: red;
+	color: #ffb50f;
 	background: transparent;
 }
 
