@@ -32,10 +32,10 @@ button,
 select,
 textarea {
   font-family: "effra", helvetica, sans-serif;
-  color: #555;
+  color: #555555;
 }
 h1 {
-  color: #333;
+  color: #333333;
 }
 textarea,
 input[type="text"],
@@ -81,7 +81,7 @@ a:hover {
 }
 .btn.btn-primary {
   color: #fff;
-  background-color: #F77710;
+  background-color: #f77710;
 }
 .btn.btn-primary:hover {
   background-color: #df6807;
@@ -113,7 +113,7 @@ a:hover {
   height: 58px;
 }
 .footer-bg {
-  background-color: #555;
+  background-color: #555555;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label,
@@ -131,7 +131,7 @@ a:hover {
   padding: 0;
 }
 #site-footer a {
-  color: #aaa;
+  color: #aaaaaa;
 }
 #site-footer a:hover {
   color: #09c9ff;
@@ -272,7 +272,7 @@ a:hover {
   margin-bottom: 0.5em;
 }
 .stories h2.entry-title a {
-  color: #555;
+  color: #555555;
 }
 .stories h2.entry-title a:hover {
   color: #09c9ff;
@@ -281,17 +281,17 @@ a:hover {
   display: none;
 }
 .type-pull-quote {
-  border-left: 1px solid #aaa;
+  border-left: 1px solid #aaaaaa;
   padding-left: 40px;
-  color: #555;
+  color: #555555;
 }
 @media (max-width: 768px) {
   .type-pull-quote {
     padding: 20px 10px;
     text-align: center;
     border: none;
-    border-top: 3px solid #555;
-    border-bottom: 3px solid #555;
+    border-top: 3px solid #555555;
+    border-bottom: 3px solid #555555;
     margin: 0 auto 1em;
     max-width: 90%;
   }
@@ -308,7 +308,7 @@ a:hover {
 }
 .gform_wrapper.donation_form_wrapper .gsection,
 .gform_wrapper.membership_form_wrapper .gsection {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
 }
 .gform_wrapper.donation_form_wrapper .field_sublabel_above,
 .gform_wrapper.membership_form_wrapper .field_sublabel_above {
@@ -349,7 +349,7 @@ a:hover {
 .gform_wrapper.membership_form_wrapper .gform_button[type=submit],
 .gform_wrapper.donation_form_wrapper .gform_next_button,
 .gform_wrapper.membership_form_wrapper .gform_next_button {
-  background-color: #F77710;
+  background-color: #f77710;
   position: relative;
   top: -4px;
 }
@@ -415,7 +415,7 @@ a:hover {
   color: #fff;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li input[type=radio]:checked + label {
-  background-color: #F77710;
+  background-color: #f77710;
   font-weight: 500;
 }
 @media (max-width: 480px) {
@@ -654,7 +654,8 @@ body.page.page-template-single-two-column #content {
     padding: 0 2%;
   }
 }
-body.page.page-template-full-page #content {
+body.page.page-template-full-page #content,
+body.page.page-template-full-page-tabby #content {
   margin-left: 0;
   width: 100%;
 }
@@ -672,7 +673,7 @@ h5.byline {
 #hero,
 section.interstitial {
   max-width: 100%;
-  background-color: #555;
+  background-color: #555555;
 }
 section,
 .interstitial .content {
@@ -718,7 +719,7 @@ section.normal h3 span {
   max-width: 100%;
   padding: 3em;
   margin: 0 auto 3em;
-  background-color: #555;
+  background-color: #555555;
   color: #edf1f4;
 }
 .interstitial h3 {
@@ -793,7 +794,7 @@ section.normal h3 span {
   margin-bottom: 2em;
 }
 #quick-links h4 {
-  color: #555;
+  color: #555555;
   text-transform: uppercase;
 }
 @media (max-width: 600px) {
@@ -821,8 +822,8 @@ section.normal h3 span {
 }
 #programs h3,
 #member-info h3 {
-  background-color: #F77710;
-  color: #F77710;
+  background-color: #f77710;
+  color: #f77710;
 }
 @media (max-width: 600px) {
   #programs h3,
@@ -834,7 +835,7 @@ section.normal h3 span {
 }
 #programs h5 a:hover,
 #member-info h5 a:hover {
-  color: #F77710;
+  color: #f77710;
 }
 @media (max-width: 530px) {
   .single #content {
@@ -884,7 +885,7 @@ section.normal h3 span {
 }
 .internal-subnav-dropdown .choose-a-page {
   font-size: 16px;
-  color: #aaa;
+  color: #aaaaaa;
   margin: 0 0 0.5em 0;
 }
 body.normal.page #content.has-menu,
@@ -1036,4 +1037,7 @@ body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li.
     top: 0;
     font-size: 85%;
   }
+}
+.single .hero.span12 {
+  margin-left: 0;
 }

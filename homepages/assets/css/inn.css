@@ -138,7 +138,7 @@
 }
 .home #main #supporters h3 {
   width: auto;
-  color: #555;
+  color: #555555;
   background-color: transparent;
   line-height: 1;
   margin: 0;
@@ -176,7 +176,7 @@
 }
 @media (max-width: 768px) {
   .home .sticky-nav-holder {
-    border-bottom: #aaa 1px solid;
+    border-bottom: #aaaaaa 1px solid;
   }
 }
 body.home.admin-bar .sticky-nav-holder {
@@ -184,7 +184,7 @@ body.home.admin-bar .sticky-nav-holder {
 }
 @media (max-width: 768px) {
   body.home.admin-bar .sticky-nav-holder {
-    border-bottom: #aaa 1px solid;
+    border-bottom: #aaaaaa 1px solid;
   }
 }
 #email img {
