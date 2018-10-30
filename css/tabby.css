@@ -4,11 +4,14 @@
 	background:url(/wp-content/themes/inn/images/inndaysbg.png) no-repeat center;
 	background-size:100% 100%;
 	height:33vw;
+	display: table-cell;
+    vertical-align: middle;
+    padding:0 15vw;
 }
 
 h1.entry-title {
-	line-height:33vw;
-	font-size:8rem;
+	width:70vw;
+	font-size:5.5rem;
 }
 
 h5.byline {
