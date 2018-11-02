@@ -86,6 +86,13 @@ a:hover {
 .btn.btn-primary:hover {
   background-color: #df6807;
 }
+.btn.btn-new {
+  color: #fff;
+  background-color: #0089bb;
+}
+.btn.btn-new:hover {
+  background-color: #00719b;
+}
 .btn.btn.search-submit {
   padding: 4px 10px;
 }
