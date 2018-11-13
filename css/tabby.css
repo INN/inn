@@ -234,3 +234,9 @@ section {
 		column-count:1;
 	}
 }
+
+@media screen and (min-width:769px) {
+	.page-id-621700 .responsive-tabs .responsive-tabs__list__item {
+	    display: inline-block;
+	}
+}
