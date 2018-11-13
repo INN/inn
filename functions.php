@@ -109,10 +109,8 @@ function inn_landing_page_enqueue() {
 		wp_enqueue_style( 'press', get_stylesheet_directory_uri() . '/css/press.css', null, '1.0.0' );
 	} elseif ( is_page( 'people' ) ) {
 		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/people.css', null, '1.0.0' );
-	} elseif ( is_page( 'inn-days' ) ) {
+	} elseif ( is_page_template( 'full-page-tabby.php' ) ) {
 		wp_enqueue_style( 'tabby', get_stylesheet_directory_uri() . '/css/tabby.css', null, '1.0.0' );
-	} elseif ( is_page( 'services' ) ) {
-		wp_enqueue_style( 'tabby', get_stylesheet_directory_uri() . '/css/tabby-accordion.css', null, '1.0.0' );
 	}
 	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.2' );
 }
