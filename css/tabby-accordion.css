@@ -157,15 +157,15 @@ h1.entry-title {
 }
 
 .responsive-tabs .responsive-tabs__heading {
-	background: #fff;
-	border-bottom: 1px solid #ccc;
-	color: #777;
+	background: #000;
+	border-bottom: 1px solid #222;
+	color: #fff;
 	font-size: 18px;
 	font-weight: 500;
 	text-transform: uppercase;
 	margin: 0;
 	padding: 10px 0;
-	padding-left: 20px;
+	padding-left: calc((100% - 800px)/2);
 	position: relative;
 }
 
@@ -177,28 +177,28 @@ h1.entry-title {
 .responsive-tabs .responsive-tabs__heading:after {
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
-	border-top: 6px solid #777;
+	border-top: 6px solid #fff;
 	content:"";
 	display: block;
 	position: absolute;
-	right: 20px;
+	right: calc((100% - 800px)/2);
 	top: 20px;
 	height: 0;
 	width: 0;
 }
 
 .responsive-tabs .responsive-tabs__heading:hover {
-	background: #eee;
-	color: #777;
+	background: #0088bd;
+	color: #fff;
 }
 
 .responsive-tabs .responsive-tabs__heading:hover:after {
-	border-top: 6px solid #777;
+	border-top: 6px solid #fff;
 }
 
 .responsive-tabs .responsive-tabs__heading--active,
 .responsive-tabs .responsive-tabs__heading--active:hover {
-	background: #ccc;
+	background: #0088bd;
 	color: #fff;
 }
 
@@ -211,13 +211,22 @@ h1.entry-title {
 
 .responsive-tabs .responsive-tabs__panel {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 0px;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
 	border-top: none;
-	margin: 0;
 	padding: 0 20px;
 	padding-top: 20px;
 	column-count:1;
+}
+
+@media screen and (max-width:800px) {
+	.responsive-tabs .responsive-tabs__heading:after {
+		right:20px;
+	}
+
+	.responsive-tabs .responsive-tabs__heading {
+		padding-left:20px;
+	}
 }
