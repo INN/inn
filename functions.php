@@ -185,7 +185,6 @@ add_action( 'largo_after_nav', 'inn_alert' );
 
 /**
  * Add search box to main nav
- * uncomment this and remove partials/nav-main.php when 0.5.5 ships
  */
 function inn_add_search_box() {
 	get_template_part( 'partials/inn-nav-search-form' );
