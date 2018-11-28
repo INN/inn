@@ -110,7 +110,7 @@ section {
 
 .responsive-tabs .responsive-tabs__list__item--active,
 .responsive-tabs .responsive-tabs__list__item--active:hover {
-	background: #222;
+	background: #0088bd;
 	color: white;
 	margin-top: 0;
 }
