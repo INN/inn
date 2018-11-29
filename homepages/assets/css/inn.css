@@ -5,6 +5,7 @@
 .home #main {
   margin: 0;
   max-width: 100%;
+  padding: 0;
 }
 .home #main .row-fluid .span12 {
   text-align: center;
