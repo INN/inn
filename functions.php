@@ -13,6 +13,7 @@ $includes = array(
 	'/homepages/homepage.php',
 	'/inc/member-directory.php',
 	'/inc/woocommerce/survey-tab.php',
+	'/inc/woocommerce.php',
 );
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
@@ -194,7 +195,6 @@ function inn_print_scripts() {
 
 /**
  * Add search box to main nav
- * uncomment this and remove partials/nav-main.php when 0.5.5 ships
  */
 function inn_add_search_box() {
 	get_template_part( 'partials/inn-nav-search-form' );
