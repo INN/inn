@@ -32,10 +32,10 @@ button,
 select,
 textarea {
   font-family: "effra", helvetica, sans-serif;
-  color: #555;
+  color: #555555;
 }
 h1 {
-  color: #333;
+  color: #333333;
 }
 textarea,
 input[type="text"],
@@ -60,10 +60,10 @@ h5,
   font-weight: 500;
 }
 a {
-  color: #0089BB;
+  color: #0089bb;
 }
 a:hover {
-  color: #00aeee;
+  color: #22c4ff;
 }
 .btn {
   text-shadow: none;
@@ -71,7 +71,7 @@ a:hover {
   text-transform: uppercase;
   font-weight: bold;
   padding: 12px 24px;
-  background-color: #0089BB;
+  background-color: #0089bb;
   color: #fff;
   border-radius: 0;
 }
@@ -81,7 +81,7 @@ a:hover {
 }
 .btn.btn-primary {
   color: #fff;
-  background-color: #F77710;
+  background-color: #f77710;
 }
 .btn.btn-primary:hover {
   background-color: #df6807;
@@ -108,7 +108,7 @@ a:hover {
   font-weight: bold;
 }
 #top-nav li.main_site_home_link a {
-  color: #09c9ff;
+  color: #0089bb;
 }
 .dropdown-menu .main_site_home_link {
   display: none;
@@ -120,7 +120,7 @@ a:hover {
   height: 58px;
 }
 .footer-bg {
-  background-color: #555;
+  background-color: #555555;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label,
@@ -138,10 +138,10 @@ a:hover {
   padding: 0;
 }
 #site-footer a {
-  color: #aaa;
+  color: #aaaaaa;
 }
 #site-footer a:hover {
-  color: #09c9ff;
+  color: #0089bb;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label {
@@ -279,26 +279,26 @@ a:hover {
   margin-bottom: 0.5em;
 }
 .stories h2.entry-title a {
-  color: #555;
+  color: #555555;
 }
 .stories h2.entry-title a:hover {
-  color: #09c9ff;
+  color: #0089bb;
 }
 .stories h5.byline {
   display: none;
 }
 .type-pull-quote {
-  border-left: 1px solid #aaa;
+  border-left: 1px solid #aaaaaa;
   padding-left: 40px;
-  color: #555;
+  color: #555555;
 }
 @media (max-width: 768px) {
   .type-pull-quote {
     padding: 20px 10px;
     text-align: center;
     border: none;
-    border-top: 3px solid #555;
-    border-bottom: 3px solid #555;
+    border-top: 3px solid #555555;
+    border-bottom: 3px solid #555555;
     margin: 0 auto 1em;
     max-width: 90%;
   }
@@ -315,7 +315,7 @@ a:hover {
 }
 .gform_wrapper.donation_form_wrapper .gsection,
 .gform_wrapper.membership_form_wrapper .gsection {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
 }
 .gform_wrapper.donation_form_wrapper .field_sublabel_above,
 .gform_wrapper.membership_form_wrapper .field_sublabel_above {
@@ -345,7 +345,7 @@ a:hover {
 .gform_wrapper.donation_form_wrapper .gform_previous_button,
 .gform_wrapper.membership_form_wrapper .gform_previous_button {
   padding: 12px 36px;
-  background-color: #09c9ff;
+  background-color: #0089bb;
   color: #fff;
   font-family: "effra", helvetica, sans-serif;
   border: none;
@@ -356,7 +356,7 @@ a:hover {
 .gform_wrapper.membership_form_wrapper .gform_button[type=submit],
 .gform_wrapper.donation_form_wrapper .gform_next_button,
 .gform_wrapper.membership_form_wrapper .gform_next_button {
-  background-color: #F77710;
+  background-color: #f77710;
   position: relative;
   top: -4px;
 }
@@ -416,13 +416,13 @@ a:hover {
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li label {
   padding: 7px 24px;
   margin: 0;
-  background-color: #09c9ff;
+  background-color: #0089bb;
   font-size: 18px;
   font-family: "effra", helvetica, sans-serif;
   color: #fff;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li input[type=radio]:checked + label {
-  background-color: #F77710;
+  background-color: #f77710;
   font-weight: 500;
 }
 @media (max-width: 480px) {
@@ -648,7 +648,7 @@ a:hover {
   color: #909799;
 }
 #main .row-fluid h5 a:hover {
-  color: #09c9ff;
+  color: #0089bb;
 }
 #main .row-fluid p {
   font-size: 16px;
@@ -689,7 +689,7 @@ h5.byline {
 #hero,
 section.interstitial {
   max-width: 100%;
-  background-color: #555;
+  background-color: #555555;
 }
 section,
 .interstitial .content {
@@ -704,8 +704,8 @@ section.normal h3 {
   text-align: center;
   text-transform: uppercase;
   width: 62%;
-  background-color: #09c9ff;
-  color: #09c9ff;
+  background-color: #0089bb;
+  color: #0089bb;
   line-height: 10px;
   margin: 2em auto 1.5em;
 }
@@ -735,7 +735,7 @@ section.normal h3 span {
   max-width: 100%;
   padding: 3em;
   margin: 0 auto 3em;
-  background-color: #555;
+  background-color: #555555;
   color: #edf1f4;
 }
 .interstitial h3 {
@@ -810,7 +810,7 @@ section.normal h3 span {
   margin-bottom: 2em;
 }
 #quick-links h4 {
-  color: #555;
+  color: #555555;
   text-transform: uppercase;
 }
 @media (max-width: 600px) {
@@ -838,8 +838,8 @@ section.normal h3 span {
 }
 #programs h3,
 #member-info h3 {
-  background-color: #F77710;
-  color: #F77710;
+  background-color: #f77710;
+  color: #f77710;
 }
 @media (max-width: 600px) {
   #programs h3,
@@ -851,7 +851,7 @@ section.normal h3 span {
 }
 #programs h5 a:hover,
 #member-info h5 a:hover {
-  color: #F77710;
+  color: #f77710;
 }
 @media (max-width: 530px) {
   .single #content {
@@ -865,12 +865,12 @@ section.normal h3 span {
   font-size: 24px;
   margin-bottom: 1.25em;
   text-transform: uppercase;
-  color: #0089BB;
+  color: #0089bb;
 }
 .internal-subnav ul {
   margin-left: 0;
   padding-bottom: 2em;
-  border-right: 10px #09c9ff solid;
+  border-right: 10px #0089bb solid;
 }
 .internal-subnav ul li {
   list-style: none;
@@ -883,7 +883,7 @@ section.normal h3 span {
   color: #909799;
 }
 .internal-subnav ul li a:hover {
-  color: #00aeee;
+  color: #22c4ff;
 }
 .internal-subnav ul.children {
   margin: 12px 0 0 20px;
@@ -901,7 +901,7 @@ section.normal h3 span {
 }
 .internal-subnav-dropdown .choose-a-page {
   font-size: 16px;
-  color: #aaa;
+  color: #aaaaaa;
   margin: 0 0 0.5em 0;
 }
 body.normal.page #content.has-menu,
@@ -948,7 +948,7 @@ body.normal.page .stories .top-tag {
   color: #909799;
 }
 .single-pauinn_project .bottom .span6 li a:hover {
-  color: #09c9ff;
+  color: #0089bb;
 }
 .single-pauinn_project .bottom .span6.members a {
   display: block;
