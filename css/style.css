@@ -60,7 +60,7 @@ h5,
   font-weight: 500;
 }
 a {
-  color: #0089bb;
+  color: #0089BB;
 }
 a:hover {
   color: #00aeee;
@@ -71,7 +71,7 @@ a:hover {
   text-transform: uppercase;
   font-weight: bold;
   padding: 12px 24px;
-  background-color: #0089bb;
+  background-color: #0089BB;
   color: #fff;
   border-radius: 0;
 }
@@ -533,6 +533,9 @@ a:hover {
   #header-search {
     padding: 10px 0;
   }
+  .navbar li.home-icon > a img {
+    height: 76px;
+  }
 }
 .navbar .container {
   padding: 0 90px;
@@ -860,7 +863,7 @@ section.normal h3 span {
   font-size: 24px;
   margin-bottom: 1.25em;
   text-transform: uppercase;
-  color: #0089bb;
+  color: #0089BB;
 }
 .internal-subnav ul {
   margin-left: 0;
