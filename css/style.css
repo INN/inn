@@ -730,6 +730,9 @@ section.normal h3 span {
 .interstitial h3 {
   color: #edf1f4;
 }
+.interstitial a {
+  color: #66b8d6;
+}
 .interstitial.branding img {
   float: left;
   margin: 1em 3em 1em 1em;
@@ -827,8 +830,8 @@ section.normal h3 span {
 }
 #programs h3,
 #member-info h3 {
-  background-color: #f77710;
-  color: #f77710;
+  background-color: #0089bb;
+  color: #0089bb;
 }
 @media (max-width: 600px) {
   #programs h3,
@@ -840,7 +843,7 @@ section.normal h3 span {
 }
 #programs h5 a:hover,
 #member-info h5 a:hover {
-  color: #f77710;
+  color: #0089bb;
 }
 @media (max-width: 530px) {
   .single #content {

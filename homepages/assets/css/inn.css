@@ -76,7 +76,9 @@
   font-size: 24px;
   line-height: 1;
   margin-bottom: 12px;
-  color: #39f;
+}
+.home #hero .heroitem a {
+  color: #66b8d6;
 }
 .home #hero .heroitem p,
 .home #hero .heroitem div.textwidget {
