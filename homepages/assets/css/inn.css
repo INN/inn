@@ -204,12 +204,12 @@ body.home.admin-bar .sticky-nav-holder {
 }
 #testimonial p {
   padding: 0 4em;
-  font-family: "leitura-news", georgia, serif;
+  font-family: "Merriweather", georgia, serif;
   font-size: 21px;
 }
 #testimonial p.credit {
   text-align: right;
-  font-family: "effra", helvetica, sans-serif;
+  font-family: "Raleway", helvetica, sans-serif;
   font-size: 18px;
 }
 @media (max-width: 900px) {

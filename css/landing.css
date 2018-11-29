@@ -52,7 +52,7 @@
   }
 }
 .normal > .row-fluid .page-content p {
-  font-family: "leitura-news", georgia, serif;
+  font-family: "Merriweather", georgia, serif;
   line-height: 1.7em;
 }
 .normal h3 span {
@@ -178,10 +178,10 @@
   float: left;
 }
 #membership-callout .btn {
-  background: #ff2c00;
+  background: #e22700;
 }
 #membership-callout .btn:hover {
-  background: #df2600;
+  background: #c22100;
 }
 @media (max-width: 768px) {
   #membership-callout {

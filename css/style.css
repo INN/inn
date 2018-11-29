@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Raleway:500,500i,700,700i');
 /*
 Theme Name:     INN
 Theme URI:      http://inn.org
@@ -31,11 +32,8 @@ input,
 button,
 select,
 textarea {
-  font-family: "effra", helvetica, sans-serif;
+  font-family: "Raleway", helvetica, sans-serif;
   color: #555555;
-}
-h1 {
-  color: #78828d;
 }
 textarea,
 input[type="text"],
@@ -48,7 +46,7 @@ input[type="search"] {
 .entry-content p,
 .entry-content ul,
 .entry-content ol {
-  font-family: "leitura-news", georgia, serif;
+  font-family: "Merriweather", georgia, serif;
   font-weight: 300;
 }
 h1,
@@ -57,7 +55,7 @@ h3,
 h4,
 h5,
 .widgettitle {
-  font-weight: 500;
+  font-weight: 700;
 }
 a {
   color: #0089bb;
@@ -81,10 +79,10 @@ a:hover {
 }
 .btn.btn-primary {
   color: #fff;
-  background-color: #ff2c00;
+  background-color: #e22700;
 }
 .btn.btn-primary:hover {
-  background-color: #df2600;
+  background-color: #c22100;
 }
 .btn.btn.search-submit {
   padding: 4px 10px;
@@ -192,7 +190,7 @@ a:hover {
 }
 #menu-footer-navigation,
 #supplementary ul.menu {
-  font-family: "effra", helvetica, sans-serif;
+  font-family: "Raleway", helvetica, sans-serif;
 }
 #supplementary {
   border-bottom: none;
@@ -336,7 +334,7 @@ a:hover {
   padding: 12px 36px;
   background-color: #0089bb;
   color: #fff;
-  font-family: "effra", helvetica, sans-serif;
+  font-family: "Raleway", helvetica, sans-serif;
   border: none;
   font-size: 21px;
   font-weight: bold;
@@ -407,7 +405,7 @@ a:hover {
   margin: 0;
   background-color: #0089bb;
   font-size: 18px;
-  font-family: "effra", helvetica, sans-serif;
+  font-family: "Raleway", helvetica, sans-serif;
   color: #fff;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li input[type=radio]:checked + label {
@@ -442,7 +440,7 @@ a:hover {
 }
 .gform_wrapper.donation_form_wrapper .gfield_price_1_20 .gfield_label,
 .gform_wrapper.donation_form_wrapper .gfield_total .gfield_label {
-  font-family: "effra", helvetica, sans-serif;
+  font-family: "Raleway", helvetica, sans-serif;
   font-size: 24px;
 }
 @media (max-width: 480px) {
