@@ -178,10 +178,10 @@
   float: left;
 }
 #membership-callout .btn {
-  background: #df4646;
+  background: #ff2c00;
 }
 #membership-callout .btn:hover {
-  background: #da2b2b;
+  background: #df2600;
 }
 @media (max-width: 768px) {
   #membership-callout {
