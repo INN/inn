@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Raleway:500,500i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Montserrat:500,500i,700,700i');
 /*
 Theme Name:     INN
 Theme URI:      http://inn.org
@@ -32,7 +32,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Raleway", helvetica, sans-serif;
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   color: #555555;
 }
 textarea,
@@ -190,7 +190,7 @@ a:hover {
 }
 #menu-footer-navigation,
 #supplementary ul.menu {
-  font-family: "Raleway", helvetica, sans-serif;
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
 }
 #supplementary {
   border-bottom: none;
@@ -334,7 +334,7 @@ a:hover {
   padding: 12px 36px;
   background-color: #0089bb;
   color: #fff;
-  font-family: "Raleway", helvetica, sans-serif;
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   border: none;
   font-size: 21px;
   font-weight: bold;
@@ -405,7 +405,7 @@ a:hover {
   margin: 0;
   background-color: #0089bb;
   font-size: 18px;
-  font-family: "Raleway", helvetica, sans-serif;
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   color: #fff;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li input[type=radio]:checked + label {
@@ -440,7 +440,7 @@ a:hover {
 }
 .gform_wrapper.donation_form_wrapper .gfield_price_1_20 .gfield_label,
 .gform_wrapper.donation_form_wrapper .gfield_total .gfield_label {
-  font-family: "Raleway", helvetica, sans-serif;
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   font-size: 24px;
 }
 @media (max-width: 480px) {
@@ -632,10 +632,10 @@ a:hover {
   font-size: 16px;
 }
 #main .row-fluid h5 a {
-  color: #909799;
+  color: #0089bb;
 }
 #main .row-fluid h5 a:hover {
-  color: #0089bb;
+  color: #66b8d6;
 }
 #main .row-fluid p {
   font-size: 16px;
@@ -676,7 +676,7 @@ h5.byline {
 #hero,
 section.interstitial {
   max-width: 100%;
-  background-color: #555555;
+  background-color: #005270;
 }
 section,
 .interstitial .content {
@@ -722,14 +722,14 @@ section.normal h3 span {
   max-width: 100%;
   padding: 3em;
   margin: 0 auto 3em;
-  background-color: #555555;
+  background-color: #005270;
   color: #edf1f4;
 }
 .interstitial h3 {
   color: #edf1f4;
 }
 .interstitial a {
-  color: #66b8d6;
+  color: #ffd200;
 }
 .interstitial.branding img {
   float: left;
@@ -828,8 +828,8 @@ section.normal h3 span {
 }
 #programs h3,
 #member-info h3 {
-  background-color: #0089bb;
-  color: #0089bb;
+  background-color: #005270;
+  color: #005270;
 }
 @media (max-width: 600px) {
   #programs h3,
@@ -841,7 +841,7 @@ section.normal h3 span {
 }
 #programs h5 a:hover,
 #member-info h5 a:hover {
-  color: #0089bb;
+  color: #005270;
 }
 @media (max-width: 530px) {
   .single #content {

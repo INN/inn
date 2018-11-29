@@ -8,7 +8,7 @@ Template:       largo
 Version:        0.2.0
 */
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Raleway:500,500i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Montserrat:500,500i,700,700i');
 
 @import "variables.less";
 @import "utilities.less";
@@ -157,9 +157,9 @@ Version:        0.2.0
 		font-size: 16px;
 	  }
 	  a {
-		color: @medgray;
+		color: @linkcolor;
 		&:hover {
-		  color: @blue;
+		  color: @linkhover;
 		}
 	  }
 	}
@@ -206,7 +206,7 @@ h5.byline {
 #hero,
 section.interstitial {
   max-width: 100%;
-  background-color: @dkgray;
+  background-color: @darkblue;
 }
 section,
 .interstitial .content {
@@ -250,13 +250,13 @@ section.normal {
   max-width: 100%;
   padding: 3em;
   margin: 0 auto 3em;
-  background-color: @dkgray;
+  background-color: @darkblue;
   color: @xltgray;
   h3 {
   color: @xltgray;
   }
   a {
-	  color:@lightblue;
+	  color:@yellow;
 	}
 }
 
@@ -358,8 +358,8 @@ section.normal {
 #programs,
 #member-info {
   h3 {
-	background-color: @blue;
-	color: @blue;
+	background-color: @darkblue;
+	color: @darkblue;
 	@media (max-width: 600px) {
 	  line-height: 1.5;
 	  background-color: transparent;
@@ -367,7 +367,7 @@ section.normal {
 	}
   }
   h5 a:hover {
-	color: @blue;
+	color: @darkblue;
   }
 }
 
