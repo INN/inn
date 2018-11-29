@@ -9,7 +9,7 @@ input, button, select, textarea  {
   color: @dkgray;
 }
 h1 {
-  color: @xdkgray;
+  color: @darkgray;
 }
 textarea,
 input[type="text"],
@@ -53,13 +53,6 @@ a {
     background-color: @btnprimarybg;
     &:hover {
     background-color: darken(@btnprimarybg, 6.3%);
-    }
-  }
-  &.btn-new {
-    color: #fff;
-    background-color: #0089bb;
-    &:hover {
-	  background-color: darken(#0089bb, 6.3%);
     }
   }
   &.btn.search-submit {
@@ -135,17 +128,13 @@ a {
       float: none;
       display: inline-block;
       i {
-        color: #fff;
+        color: @white;
         background-color: @medgray;
         padding: 14px;
         border-radius: 30px;
         margin: 0 4px;
         &:hover {
-          background-color: #fff;
-          color: @medgray;
-        }
-        &.icon-github:hover {
-          color: @medgray;
+          background-color: @blue;
         }
       }
     }

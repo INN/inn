@@ -35,7 +35,7 @@ textarea {
   color: #555555;
 }
 h1 {
-  color: #333333;
+  color: #78828d;
 }
 textarea,
 input[type="text"],
@@ -63,7 +63,7 @@ a {
   color: #0089bb;
 }
 a:hover {
-  color: #22c4ff;
+  color: #66b8d6;
 }
 .btn {
   text-shadow: none;
@@ -81,17 +81,10 @@ a:hover {
 }
 .btn.btn-primary {
   color: #fff;
-  background-color: #f77710;
+  background-color: #ff2c00;
 }
 .btn.btn-primary:hover {
-  background-color: #df6807;
-}
-.btn.btn-new {
-  color: #fff;
-  background-color: #0089bb;
-}
-.btn.btn-new:hover {
-  background-color: #00719b;
+  background-color: #df2600;
 }
 .btn.btn.search-submit {
   padding: 4px 10px;
@@ -163,18 +156,14 @@ a:hover {
   display: inline-block;
 }
 #site-footer #footer-social li i {
-  color: #fff;
+  color: #ffffff;
   background-color: #909799;
   padding: 14px;
   border-radius: 30px;
   margin: 0 4px;
 }
 #site-footer #footer-social li i:hover {
-  background-color: #fff;
-  color: #909799;
-}
-#site-footer #footer-social li i.icon-github:hover {
-  color: #909799;
+  background-color: #0089bb;
 }
 @media (max-width: 768px) {
   #site-footer #footer-social {
@@ -870,7 +859,7 @@ section.normal h3 span {
 .internal-subnav ul {
   margin-left: 0;
   padding-bottom: 2em;
-  border-right: 10px #0089bb solid;
+  border-right: 10px #555555 solid;
 }
 .internal-subnav ul li {
   list-style: none;
@@ -880,10 +869,10 @@ section.normal h3 span {
   font-weight: bold;
 }
 .internal-subnav ul li a {
-  color: #909799;
+  color: #78828d;
 }
 .internal-subnav ul li a:hover {
-  color: #22c4ff;
+  color: #66b8d6;
 }
 .internal-subnav ul.children {
   margin: 12px 0 0 20px;
