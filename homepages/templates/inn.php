@@ -1,23 +1,21 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
-<section id="hero" class="clearfix">
-	<a href="/2018/05/inn-impact-prize-for-nonprofit-news-photography-2017/">
-		<div class="flex-container">
-			<div class="heroslider">
-			  <div class="heroslide1"></div>
-			  <div class="heroslide2"></div>
-			  <div class="heroslide3"></div>
-			</div>
-			<div class="gradient-overlay">
-				<div class="content">
-					<h4>Winners of the INN Impact Prize for Nonprofit News Photography</h4></a>
+<section id="hero" class="normal">
+	<img src="/wp-content/themes/inn/homepages/assets/img/hero0818.jpg">
+	<div class="hero-background">
+		<div class="row-fluid">
+			<?php dynamic_sidebar( 'hero-headlines' ); ?>
+			<!-- <div class="span4 heroitem">
+				<div class="heroitem-content">
+					<h2>INN Business Intensive</h2>
+					<p>Join us for two jam-packed days of audience development training with Tim Griggs and a special chance to meet the leadership team of The Texas Tribune on Sept. 11 + 12 in Austin.</p>
 				</div>
-			</div>
+			</div> -->
 		</div>
-	</a>
+	</div>
 </section>
 
-<section class="normal">
+<section id="top-widgets" class="normal">
 	<div id="homepage-top-widgets" class="row-fluid">
 		<div id="homepage-top-left" class="span6">
 
@@ -34,6 +32,11 @@
 	<div class="content">
 		<h3><span>About INN</span></h3>
 		<div class="row-fluid">
+			<div class="span12">
+				<h5>INN is a network of more than 180 nonprofit newsrooms across the U.S., working to strengthen the sources of trusted news for thousands of diverse communities.</h5>
+			</div>
+		</div>
+		<div class="row-fluid">
 			<div class="span4">
 				<a href="/about/"><img class="icon" src="<? echo $img_path . 'icons/mission.svg'; ?>" /></a>
 				<h5><a href="/about/">Mission</a></h5>
@@ -42,7 +45,7 @@
 			<div class="span4">
 				<a href="/members/"><img class="icon" src="<? echo $img_path . 'icons/memberdirectory.svg'; ?>" /></a>
 				<h5><a href="/members/">Our Members</a></h5>
-				<p>100+ nonprofits publishing news in the public interest</p>
+				<p>180+ nonprofits publishing news in the public interest</p>
 			</div>
 			<div class="span4">
 				<a href="/news/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>

@@ -38,6 +38,14 @@ Version:        0.2.0
 	margin-bottom: 0;
   }
 }
+@media (min-width: 769px) {
+	.navbar li>a {
+	  padding:10px;
+	}
+	#header-search {
+		padding:10px 0;
+	}
+}
 .navbar .container {
   padding: 0 90px;
   @media (max-width: 1050px) {
@@ -170,7 +178,7 @@ body.page.page-template-single-two-column {
 	}
   }
 }
-body.page.page-template-full-page #content {
+body.page.page-template-full-page #content, body.page.page-template-full-page-tabby #content {
   margin-left: 0;
   width: 100%;
 }
@@ -581,4 +589,9 @@ body.inn_member_survey.woocommerce-account {
 			font-size:85%;
 		}
 	}
+}
+
+// https://github.com/INN/largo/issues/1401
+.single .hero.span12 {
+  margin-left: 0;
 }

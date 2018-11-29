@@ -60,10 +60,10 @@ h5,
   font-weight: 500;
 }
 a {
-  color: #09c9ff;
+  color: #0089bb;
 }
 a:hover {
-  color: #3cd4ff;
+  color: #00aeee;
 }
 .btn {
   text-shadow: none;
@@ -71,12 +71,12 @@ a:hover {
   text-transform: uppercase;
   font-weight: bold;
   padding: 12px 24px;
-  background-color: #09c9ff;
+  background-color: #0089bb;
   color: #fff;
   border-radius: 0;
 }
 .btn:hover {
-  background-color: #00b5e8;
+  background-color: #00719b;
   color: #fff;
 }
 .btn.btn-primary {
@@ -85,6 +85,13 @@ a:hover {
 }
 .btn.btn-primary:hover {
   background-color: #df6807;
+}
+.btn.btn-new {
+  color: #fff;
+  background-color: #0089bb;
+}
+.btn.btn-new:hover {
+  background-color: #00719b;
 }
 .btn.btn.search-submit {
   padding: 4px 10px;
@@ -519,6 +526,14 @@ a:hover {
 #site-header .widget {
   margin-bottom: 0;
 }
+@media (min-width: 769px) {
+  .navbar li > a {
+    padding: 10px;
+  }
+  #header-search {
+    padding: 10px 0;
+  }
+}
 .navbar .container {
   padding: 0 90px;
 }
@@ -650,7 +665,8 @@ body.page.page-template-single-two-column #content {
     padding: 0 2%;
   }
 }
-body.page.page-template-full-page #content {
+body.page.page-template-full-page #content,
+body.page.page-template-full-page-tabby #content {
   margin-left: 0;
   width: 100%;
 }
@@ -844,7 +860,7 @@ section.normal h3 span {
   font-size: 24px;
   margin-bottom: 1.25em;
   text-transform: uppercase;
-  color: #09c9ff;
+  color: #0089bb;
 }
 .internal-subnav ul {
   margin-left: 0;
@@ -862,7 +878,7 @@ section.normal h3 span {
   color: #909799;
 }
 .internal-subnav ul li a:hover {
-  color: #3cd4ff;
+  color: #00aeee;
 }
 .internal-subnav ul.children {
   margin: 12px 0 0 20px;
@@ -1032,4 +1048,7 @@ body.inn_member_survey.woocommerce-account .woocommerce-MyAccount-navigation li.
     top: 0;
     font-size: 85%;
   }
+}
+.single .hero.span12 {
+  margin-left: 0;
 }

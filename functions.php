@@ -37,6 +37,8 @@ function inn_init() {
 }
 add_action( 'init', 'inn_init' );
 
+remove_action('wp_print_styles', 'cc_tabby_css', 30);
+
 
 /**
  * Load custom JS
@@ -46,7 +48,12 @@ function inn_enqueue() {
 		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array( 'jquery' ), '1.1', true );
 	}
 
-	wp_enqueue_style( 'largo-child-styles', get_stylesheet_directory_uri() . '/css/style.css', array('largo-stylesheet'), '20180123' );
+	wp_enqueue_style(
+		'largo-child-styles',
+		get_stylesheet_directory_uri() . '/css/style.css',
+		array('largo-stylesheet'),
+		filemtime( get_stylesheet_directory() . '/css/style.css' )
+	);
 
 	if ( is_archive( 'inn_member' ) ) {
 		wp_add_inline_script( 'jquery-core', "
@@ -103,6 +110,8 @@ function inn_landing_page_enqueue() {
 		wp_enqueue_style( 'press', get_stylesheet_directory_uri() . '/css/press.css', null, '1.0.0' );
 	} elseif ( is_page( 'people' ) ) {
 		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/people.css', null, '1.0.0' );
+	} elseif ( is_page_template( 'full-page-tabby.php' ) ) {
+		wp_enqueue_style( 'tabby', get_stylesheet_directory_uri() . '/css/tabby.css', null, '1.0.0' );
 	}
 	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.2' );
 }
@@ -179,10 +188,10 @@ function inn_print_scripts() {
 /**
  * Add alert banner to nav
  */
-function inn_alert() {
-	get_template_part( 'partials/alert' );
-}
-add_action( 'largo_after_nav', 'inn_alert' );
+// function inn_alert() {
+// 	get_template_part( 'partials/alert' );
+// }
+// add_action( 'largo_after_nav', 'inn_alert' );
 
 /**
  * Add search box to main nav

@@ -10,7 +10,7 @@ class INNHomepageLayout extends Homepage {
     $defaults = array(
       'template' => get_stylesheet_directory() . '/homepages/templates/inn.php',
       'assets' => array(
-	  		array('inn', get_stylesheet_directory_uri() . '/homepages/assets/css/inn.css', array(), '20170227'),
+	  		array('inn', get_stylesheet_directory_uri() . '/homepages/assets/css/inn.css', array(), '20180816'),
 	  	)
     );
 	$options = array_merge($defaults, $options);
