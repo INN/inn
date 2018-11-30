@@ -151,10 +151,6 @@ section {
 }
 
 @media (max-width: 768px) {
-	.responsive-tabs__list {
-		display:none;
-	}
-	
 	#main {
 		max-width:unset;
 		margin-top:3.5rem;
@@ -164,7 +160,7 @@ section {
 	    font-size: 3rem;
 	}
 
-	.responsive-tabs .responsive-tabs__list {
+	.responsive-tabs__list {
 		display: none;
 	}
 
