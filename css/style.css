@@ -510,7 +510,6 @@ a.btn.btn.search-submit {
 .search-submit.btn {
   padding: 4px 10px;
 }
-.dropdown-menu,
 .navbar .navbar-inner,
 .sticky-nav-holder {
   background-color: #edf1f4;
@@ -520,11 +519,14 @@ a.btn.btn.search-submit {
   margin-left: 100px;
 }
 #site-header a.btn-primary {
-  margin-right: 100px;
+  margin-right: 20px;
   margin-top: 12px;
 }
 #site-header .widget {
   margin-bottom: 0;
+}
+#site-header aside {
+  max-width: 260px;
 }
 @media (min-width: 769px) {
   .navbar li > a {
