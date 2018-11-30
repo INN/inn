@@ -151,6 +151,10 @@ section {
 }
 
 @media (max-width: 768px) {
+	.responsive-tabs__list {
+		display:none;
+	}
+	
 	#main {
 		max-width:unset;
 		margin-top:3.5rem;
