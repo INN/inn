@@ -510,6 +510,11 @@ a.btn.btn.search-submit {
 .search-submit.btn {
   padding: 4px 10px;
 }
+.dropdown-menu,
+.navbar .navbar-inner,
+.sticky-nav-holder {
+  background-color: #edf1f4;
+}
 #site-header img {
   max-width: 280px;
   margin-left: 100px;
