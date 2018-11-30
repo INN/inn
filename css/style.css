@@ -19,6 +19,14 @@ Version:        0.2.0
   /*IE*/
 }
 body,
+input,
+button,
+select,
+textarea,
+h5 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555555;
+}
 .btn-primary,
 .btn,
 .navbar,
@@ -26,12 +34,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-.widgettitle,
-input,
-button,
-select,
-textarea {
+.widgettitle {
   font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   color: #555555;
 }
@@ -691,8 +694,8 @@ section.normal h3 {
   text-align: center;
   text-transform: uppercase;
   width: 62%;
-  background-color: #0089bb;
-  color: #0089bb;
+  background-color: #005270;
+  color: #005270;
   line-height: 10px;
   margin: 2em auto 1.5em;
 }
@@ -729,7 +732,7 @@ section.normal h3 span {
   color: #edf1f4;
 }
 .interstitial a {
-  color: #ffd200;
+  color: #7ac1db;
 }
 .interstitial.branding img {
   float: left;

@@ -38,7 +38,11 @@
   }
 }
 .home #hero .hero-background {
-  background-color: rgba(0, 0, 0, 0.75);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, #000000 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, #000000 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, #000000 100%);
   height: auto;
   position: absolute;
   left: 0;
@@ -78,7 +82,7 @@
   margin-bottom: 12px;
 }
 .home #hero .heroitem a {
-  color: #66b8d6;
+  color: #7ac1db;
 }
 .home #hero .heroitem p,
 .home #hero .heroitem div.textwidget {
