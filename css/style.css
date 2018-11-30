@@ -66,7 +66,8 @@ a {
 a:hover {
   color: #66b8d6;
 }
-.btn {
+.btn,
+a.btn {
   text-shadow: none;
   border: none;
   text-transform: uppercase;
@@ -76,18 +77,22 @@ a:hover {
   color: #fff;
   border-radius: 0;
 }
-.btn:hover {
+.btn:hover,
+a.btn:hover {
   background-color: #00719b;
   color: #fff;
 }
-.btn.btn-primary {
+.btn.btn-primary,
+a.btn.btn-primary {
   color: #fff;
   background-color: #e22700;
 }
-.btn.btn-primary:hover {
+.btn.btn-primary:hover,
+a.btn.btn-primary:hover {
   background-color: #c22100;
 }
-.btn.btn.search-submit {
+.btn.btn.search-submit,
+a.btn.btn.search-submit {
   padding: 4px 10px;
 }
 .donate-btn a:hover {
@@ -135,7 +140,7 @@ a:hover {
   color: #aaaaaa;
 }
 #site-footer a:hover {
-  color: #0089bb;
+  color: #ffffff;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label {
@@ -732,7 +737,7 @@ section.normal h3 span {
   color: #edf1f4;
 }
 .interstitial a {
-  color: #7ac1db;
+  color: #66d7de;
 }
 .interstitial.branding img {
   float: left;
