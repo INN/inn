@@ -749,6 +749,9 @@ section.normal h3 span {
 .interstitial a {
   color: #66d7de;
 }
+.interstitial a.btn {
+  color: #ffffff;
+}
 .interstitial.branding img {
   float: left;
   margin: 1em 3em 1em 1em;
