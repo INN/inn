@@ -340,7 +340,7 @@ a.btn.btn.search-submit {
 .gform_wrapper.donation_form_wrapper .gform_previous_button,
 .gform_wrapper.membership_form_wrapper .gform_previous_button {
   padding: 12px 36px;
-  background-color: #0089bb;
+  background-color: #aaaaaa;
   color: #fff;
   font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   border: none;
@@ -351,7 +351,7 @@ a.btn.btn.search-submit {
 .gform_wrapper.membership_form_wrapper .gform_button[type=submit],
 .gform_wrapper.donation_form_wrapper .gform_next_button,
 .gform_wrapper.membership_form_wrapper .gform_next_button {
-  background-color: #f77710;
+  background-color: #0089bb;
   position: relative;
   top: -4px;
 }
@@ -411,13 +411,13 @@ a.btn.btn.search-submit {
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li label {
   padding: 7px 24px;
   margin: 0;
-  background-color: #0089bb;
+  background-color: #aaaaaa;
   font-size: 18px;
   font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   color: #fff;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li input[type=radio]:checked + label {
-  background-color: #f77710;
+  background-color: #0089bb;
   font-weight: 500;
 }
 @media (max-width: 480px) {
