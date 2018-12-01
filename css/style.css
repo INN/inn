@@ -529,6 +529,9 @@ a.btn.btn.search-submit {
   max-width: 260px;
 }
 @media (min-width: 769px) {
+  #main-nav .navbar-inner .container .nav-shelf .nav {
+    width: 80%;
+  }
   .navbar li > a {
     padding: 10px;
   }
