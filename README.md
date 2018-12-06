@@ -1,4 +1,4 @@
-The Investigative News Network WordPress Theme
+The Institute for Nonprofit News WordPress Theme
 ===
 
 This is the WordPress child theme used for https://inn.org.
