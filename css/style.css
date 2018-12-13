@@ -530,10 +530,11 @@ a.btn.btn.search-submit {
 }
 @media (min-width: 769px) {
   #main-nav .navbar-inner .container .nav-shelf .nav {
-    width: 80%;
+    width: 100%;
   }
   .navbar li > a {
-    padding: 10px;
+    padding: 10px 8px;
+    letter-spacing: -0.5px;
   }
   #header-search {
     padding: 10px 0;
