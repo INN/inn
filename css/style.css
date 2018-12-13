@@ -536,6 +536,13 @@ a.btn.btn.search-submit {
     padding: 10px 8px;
     letter-spacing: -0.5px;
   }
+  .navbar li > a:hover {
+    background-color: #0089bb;
+    color: #ffffff;
+  }
+  .navbar li.dropdown .dropdown-menu li a:hover {
+    color: #ffffff;
+  }
   #header-search {
     padding: 10px 0;
   }
