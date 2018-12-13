@@ -85,11 +85,11 @@ a.btn:hover {
 .btn.btn-primary,
 a.btn.btn-primary {
   color: #fff;
-  background-color: #e22700;
+  background-color: #fb4d42;
 }
 .btn.btn-primary:hover,
 a.btn.btn-primary:hover {
-  background-color: #c22100;
+  background-color: #fa2f23;
 }
 .btn.btn.search-submit,
 a.btn.btn.search-submit {
