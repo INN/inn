@@ -1,16 +1,10 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
 <section id="hero" class="normal">
-	<img src="/wp-content/themes/inn/homepages/assets/img/hero0818.jpg">
+	<img src="/wp-content/themes/inn/homepages/assets/img/hero1218.jpg">
 	<div class="hero-background">
 		<div class="row-fluid">
 			<?php dynamic_sidebar( 'hero-headlines' ); ?>
-			<!-- <div class="span4 heroitem">
-				<div class="heroitem-content">
-					<h2>INN Business Intensive</h2>
-					<p>Join us for two jam-packed days of audience development training with Tim Griggs and a special chance to meet the leadership team of The Texas Tribune on Sept. 11 + 12 in Austin.</p>
-				</div>
-			</div> -->
 		</div>
 	</div>
 </section>
