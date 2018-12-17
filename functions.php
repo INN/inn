@@ -197,7 +197,9 @@ function inn_print_scripts() {
  * Add search box to main nav
  */
 function inn_add_search_box() {
-	get_template_part( 'partials/inn-nav-search-form' );
+	if ( ! is_search() ) {
+		get_template_part( 'partials/inn-nav-search-form' );
+	}
 }
 add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
 
