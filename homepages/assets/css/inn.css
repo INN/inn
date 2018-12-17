@@ -62,9 +62,6 @@
     position: unset;
     padding: 0.5em 10%;
   }
-  .home #hero .hero-background a {
-    color: #909799;
-  }
 }
 .home #hero .heroitem {
   padding: 0;
@@ -81,8 +78,10 @@
   line-height: 1;
   margin-bottom: 12px;
 }
-.home #hero .heroitem a {
-  color: #ffffff;
+@media only screen and (min-width: 600px) {
+  .home #hero .heroitem a {
+    color: #ffffff;
+  }
 }
 .home #hero .heroitem p,
 .home #hero .heroitem div.textwidget {

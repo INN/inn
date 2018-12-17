@@ -62,10 +62,6 @@
         background:unset;
         position:unset;
         padding: 0.5em 10%;
-
-        a {
-          color:#909799;
-        }
       }
     }
 
@@ -84,7 +80,9 @@
       }
 
       a {
-        color:@white;
+        @media only screen and (min-width: 600px) {
+          color:@white;
+        }
       }
 
       p, div.textwidget {
