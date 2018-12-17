@@ -892,7 +892,7 @@ section.normal h3 span {
 .internal-subnav ul {
   margin-left: 0;
   padding-bottom: 2em;
-  border-right: 10px #555555 solid;
+  border-right: 2px #ff8b4d solid;
 }
 .internal-subnav ul li {
   list-style: none;
