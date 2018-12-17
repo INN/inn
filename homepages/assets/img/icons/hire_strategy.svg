@@ -4,7 +4,7 @@
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 50"
 	 style="enable-background:new 0 0 60 50;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#66D7DE;}
+	.st0{fill:#FF8B4D;}
 </style>
 <title>bar chart</title>
 <desc>Created with Sketch.</desc>
@@ -12,10 +12,10 @@
 	<g id="INN-Homepage-3" transform="translate(-704.000000, -3215.000000)" sketch:type="MSArtboardGroup">
 		<g id="Consulting" transform="translate(-51.000000, 3018.000000)" sketch:type="MSLayerGroup">
 			<g id="bar-chart" transform="translate(755.204837, 197.000000)" sketch:type="MSShapeGroup">
-				<path id="Fill-176" class="st0" d="M18.6,46.2h-3.7v-19H7.5v19H3.8V23.4h14.9V46.2"/>
-				<path id="Fill-177" class="st0" d="M37.2,46.2h-3.7V15.8h-7.4v30.4h-3.7V12h14.9V46.2"/>
-				<path id="Fill-178" class="st0" d="M55.8,46.2h-3.7V4.4h-7.4v41.7H41V0.6h14.9V46.2"/>
-				<path id="Fill-179" class="st0" d="M0,46.2h59.5v3.8H0V46.2z"/>
+				<path id="Fill-176" class="st0" d="M18.6,46.2h-3.7v-19H7.5v19H3.8V23.4h14.9L18.6,46.2"/>
+				<path id="Fill-177" class="st0" d="M37.2,46.2h-3.7V15.8h-7.4v30.4h-3.7V12h14.9L37.2,46.2"/>
+				<path id="Fill-178" class="st0" d="M55.8,46.2h-3.7V4.4h-7.4v41.7H41V0.6h14.9v45.6"/>
+				<path id="Fill-179" class="st0" d="M0,46.2h59.5V50H0V46.2z"/>
 			</g>
 		</g>
 	</g>
