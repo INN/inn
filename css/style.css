@@ -112,6 +112,10 @@ a.btn.btn.search-submit {
 .donate-btn a:hover {
   color: #fff;
 }
+.navbar.sticky-navbar .nav-right #header-extras .donate a span {
+  background-color: #ff8b4d;
+  font-weight: 700;
+}
 #top-nav li {
   padding-top: 2px;
 }
