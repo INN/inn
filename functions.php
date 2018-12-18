@@ -5,7 +5,7 @@ define( 'INN_MEMBER_TAXONOMY', 'ppu_focus_areas' );
 define( 'INN_ABOUT_PAGE_ID', 2212 );
 define( 'INN_PROGRAMS_PAGE_ID', 2587 );
 define( 'INN_MEMBERS_PAGE_ID', 234260 );
-define( 'SHOW_GLOBAL_NAV', false );
+define( 'SHOW_GLOBAL_NAV', true );
 
 // Includes
 $includes = array(
@@ -196,12 +196,12 @@ function inn_print_scripts() {
 /**
  * Add search box to main nav
  */
-function inn_add_search_box() {
-	if ( ! is_search() ) {
-		get_template_part( 'partials/inn-nav-search-form' );
-	}
-}
-add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
+// function inn_add_search_box() {
+// 	if ( ! is_search() ) {
+// 		get_template_part( 'partials/inn-nav-search-form' );
+// 	}
+// }
+// add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
 
 
 function inn_member_archive_query( $query ) {
