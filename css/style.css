@@ -536,6 +536,7 @@ a.btn.btn.search-submit {
   font-size: 12px;
   line-height: 1.4;
   padding: 8px;
+  cursor: pointer;
 }
 #site-header .widget {
   margin-bottom: 0;
@@ -564,6 +565,10 @@ a.btn.btn.search-submit {
   .navbar li.home-icon > a img {
     height: 76px;
   }
+}
+.navbar .container {
+  max-width: 1170px;
+  margin: 0 auto;
 }
 @media (max-width: 1230px) {
   .navbar .container {
