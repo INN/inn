@@ -30,13 +30,23 @@ Version:        0.2.0
 .navbar .navbar-inner, .sticky-nav-holder {
     background-color: @xltgray;
 }
+#main-nav.navbar {
+    border-top: 0;
+    border-bottom: 0;
+}
 #site-header {
+	max-width:1170px;
+	margin:24px auto;
+
+	@media (max-width: 1230px) {
+		padding:0 2em;
+	}
+
   img {
 	max-width: 280px;
-	margin-left: 100px;
   }
   a.btn {
-	margin-right: 20px;
+	margin-left: 20px;
 	margin-top: 24px;
 	font-size:12px;
 	line-height:1.4;
@@ -72,15 +82,17 @@ Version:        0.2.0
 	}
 }
 .navbar .container {
-  padding: 0 90px;
-  @media (max-width: 1050px) {
-	padding: 0 10px;
-  }
+  @media (max-width: 1230px) {
+		padding:0 2em;
+	}
 }
-
+#main-nav .navbar-inner .container .nav-shelf .nav {
+	width:~"calc(100% - 195px)";
+}
 #header-search {
   float: right;
   margin-left: 0;
+  width:195px;
 }
 .alert {
 
@@ -354,7 +366,7 @@ section.normal {
   text-align: center;
   margin-bottom: 2em;
   h4 {
-	color: @dkgray;
+	color: @darkblue;
 	text-transform: uppercase;
 	@media (max-width: 600px) {
 	  margin-bottom: 0.5em;

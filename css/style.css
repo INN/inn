@@ -36,7 +36,7 @@ h3,
 h4,
 .widgettitle {
   font-family: "Montserrat", "Raleway", helvetica, sans-serif;
-  color: #1c1c1c;
+  color: #005270;
 }
 textarea,
 input[type="text"],
@@ -514,12 +514,24 @@ a.btn.btn.search-submit {
 .sticky-nav-holder {
   background-color: #edf1f4;
 }
+#main-nav.navbar {
+  border-top: 0;
+  border-bottom: 0;
+}
+#site-header {
+  max-width: 1170px;
+  margin: 24px auto;
+}
+@media (max-width: 1230px) {
+  #site-header {
+    padding: 0 2em;
+  }
+}
 #site-header img {
   max-width: 280px;
-  margin-left: 100px;
 }
 #site-header a.btn {
-  margin-right: 20px;
+  margin-left: 20px;
   margin-top: 24px;
   font-size: 12px;
   line-height: 1.4;
@@ -553,17 +565,18 @@ a.btn.btn.search-submit {
     height: 76px;
   }
 }
-.navbar .container {
-  padding: 0 90px;
-}
-@media (max-width: 1050px) {
+@media (max-width: 1230px) {
   .navbar .container {
-    padding: 0 10px;
+    padding: 0 2em;
   }
+}
+#main-nav .navbar-inner .container .nav-shelf .nav {
+  width: calc(100% - 195px);
 }
 #header-search {
   float: right;
   margin-left: 0;
+  width: 195px;
 }
 .alert {
   border-bottom: 10px solid #33BF95;
@@ -832,7 +845,7 @@ section.normal h3 span {
   margin-bottom: 2em;
 }
 #quick-links h4 {
-  color: #555555;
+  color: #005270;
   text-transform: uppercase;
 }
 @media (max-width: 600px) {
