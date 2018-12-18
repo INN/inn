@@ -559,9 +559,6 @@ a.btn.btn.search-submit {
   .navbar li.dropdown .dropdown-menu li a:hover {
     color: #ffffff;
   }
-  #header-search {
-    padding: 10px 0;
-  }
   .navbar li.home-icon > a img {
     height: 76px;
   }
@@ -574,14 +571,6 @@ a.btn.btn.search-submit {
   .navbar .container {
     padding: 0 2em;
   }
-}
-#main-nav .navbar-inner .container .nav-shelf .nav {
-  width: calc(100% - 195px);
-}
-#header-search {
-  float: right;
-  margin-left: 0;
-  width: 195px;
 }
 .alert {
   border-bottom: 10px solid #33BF95;
