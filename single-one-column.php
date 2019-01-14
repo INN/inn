@@ -53,10 +53,13 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	switch ( $show_menu) {
 		case "About":
 			$pg_id = $about_pg_id;
+			break;
 		case "Membership":
 			$pg_id = $members_pg_id;
+			break;
 		case "Services":
 			$pg_id = $services_pg_id;
+			break;
 	}
 
 	if ( ! empty ($pg_id)) {
