@@ -23,6 +23,7 @@ get_header();
 $about_pg_id = INN_ABOUT_PAGE_ID;
 $programs_pg_id = INN_PROGRAMS_PAGE_ID;
 $members_pg_id = INN_MEMBERS_PAGE_ID;
+$services_pg_id = INN_SERVICES_PAGE_ID;
 $content_class = 'span12';
 
 //is this a page or a post in the projects post type
@@ -32,13 +33,15 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	$show_menu = '';
 	$ancestors = get_post_ancestors( $post );
 
-	// bascially all child pages of the about or members pages + all the posts in the projects post type get the side menu
+	// bascially all child pages of the about, members or services pages + all the posts in the projects post type get the side menu
 	if ( is_page( $about_pg_id ) || in_array( $about_pg_id , $ancestors) )
 		$show_menu = 'About';
 	if ( is_page( $members_pg_id ) || in_array( $members_pg_id , $ancestors) )
 		$show_menu = 'Membership';
 	if ( is_singular( 'pauinn_project' ) || is_page( $programs_pg_id ) )
 		$show_menu = 'Projects';
+	if ( is_page( $services_pg_id ) || in_array( $services_pg_id , $ancestors) )
+		$show_menu = 'Services';
 
 	// yep, we should show a menu, modify the layout appropriately
 	if ( $show_menu != '' ) {
@@ -46,13 +49,22 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		echo '<div class="internal-subnav span3 visible-desktop">';
 	}
 
-	// about and member pages and children get their respective page trees
-	if ( $show_menu == 'About' || $show_menu == 'Membership' ) {
-		$pg_id = ( $show_menu == 'About' ) ? $about_pg_id : $members_pg_id;
+	// about, member and services pages and children get their respective page trees
+	switch ( $show_menu) {
+		case "About":
+			$pg_id = $about_pg_id;
+		case "Membership":
+			$pg_id = $members_pg_id;
+		case "Services":
+			$pg_id = $services_pg_id;
+	}
+
+	if ( ! empty ($pg_id)) {
 		echo '<h3><a href="' . get_permalink( $pg_id ) . '">' . $show_menu . '</a></h3>';
 		echo '<ul>';
 			wp_list_pages('title_li=&child_of=' . $pg_id . '&echo=1');
 		echo '</ul>';
+	}
 
 	// project pages show a list of projects, add the current_page_item class if necessary for consistency
 	} else if ( $show_menu == 'Projects' ) {
