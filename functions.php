@@ -5,6 +5,7 @@ define( 'INN_MEMBER_TAXONOMY', 'ppu_focus_areas' );
 define( 'INN_ABOUT_PAGE_ID', 2212 );
 define( 'INN_PROGRAMS_PAGE_ID', 2587 );
 define( 'INN_MEMBERS_PAGE_ID', 234260 );
+define( 'INN_SERVICES_PAGE_ID', 654834);
 define( 'SHOW_GLOBAL_NAV', false );
 
 // Includes
