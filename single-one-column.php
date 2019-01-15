@@ -71,10 +71,9 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		echo '<ul>';
 			wp_list_pages('title_li=&child_of=' . $pg_id . '&echo=1');
 		echo '</ul>';
-	}
-
-	// project pages show a list of projects, add the current_page_item class if necessary for consistency
 	} else if ( $show_menu == 'Projects' ) {
+		// project pages show a list of projects, and
+		// add the current_page_item class if necessary for consistency
 		echo '<h3>Projects</h3>';
 		$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
 
