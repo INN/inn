@@ -38,7 +38,11 @@
   }
 }
 .home #hero .hero-background {
-  background-color: rgba(0, 0, 0, 0.75);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, #000000 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, #000000 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, #000000 100%);
   height: auto;
   position: absolute;
   left: 0;
@@ -58,9 +62,6 @@
     position: unset;
     padding: 0.5em 10%;
   }
-  .home #hero .hero-background a {
-    color: #909799;
-  }
 }
 .home #hero .heroitem {
   padding: 0;
@@ -76,11 +77,15 @@
   font-size: 24px;
   line-height: 1;
   margin-bottom: 12px;
-  color: #39f;
+}
+@media only screen and (min-width: 600px) {
+  .home #hero .heroitem a {
+    color: #ffffff;
+  }
 }
 .home #hero .heroitem p,
 .home #hero .heroitem div.textwidget {
-  color: #fff;
+  color: #e2e2e2;
   line-height: 1.3;
   font-weight: 300;
   font-size: 18px;
@@ -139,7 +144,7 @@
 }
 .home #main #supporters h3 {
   width: auto;
-  color: #555;
+  color: #555555;
   background-color: transparent;
   line-height: 1;
   margin: 0;
@@ -177,7 +182,7 @@
 }
 @media (max-width: 768px) {
   .home .sticky-nav-holder {
-    border-bottom: #aaa 1px solid;
+    border-bottom: #aaaaaa 1px solid;
   }
 }
 body.home.admin-bar .sticky-nav-holder {
@@ -185,7 +190,7 @@ body.home.admin-bar .sticky-nav-holder {
 }
 @media (max-width: 768px) {
   body.home.admin-bar .sticky-nav-holder {
-    border-bottom: #aaa 1px solid;
+    border-bottom: #aaaaaa 1px solid;
   }
 }
 #email img {
@@ -202,12 +207,12 @@ body.home.admin-bar .sticky-nav-holder {
 }
 #testimonial p {
   padding: 0 4em;
-  font-family: "leitura-news", georgia, serif;
+  font-family: "Merriweather", georgia, serif;
   font-size: 21px;
 }
 #testimonial p.credit {
   text-align: right;
-  font-family: "effra", helvetica, sans-serif;
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   font-size: 18px;
 }
 @media (max-width: 900px) {

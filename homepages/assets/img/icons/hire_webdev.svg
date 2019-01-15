@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="59px" height="48px" viewBox="0 0 59 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>Imported Layers</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="INN-Homepage-3" sketch:type="MSArtboardGroup" transform="translate(-241.000000, -3215.000000)" fill="#FF9657">
-            <g id="Consulting" sketch:type="MSLayerGroup" transform="translate(-51.000000, 3018.000000)">
-                <path d="M292,197 L350.604651,197 L350.604651,244.675676 L292,244.675676 L292,197 Z M296.186047,240.702703 L346.418605,240.702703 L346.418605,204.945946 L296.186047,204.945946 L296.186047,240.702703 Z M301.418605,211.567568 L308.046512,211.567568 L314.674419,220.175676 L308.046512,228.783784 L301.418605,228.783784 L308.046512,220.175676 L301.418605,211.567568 L301.418605,211.567568 Z" id="Imported-Layers" sketch:type="MSShapeGroup"></path>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 59 48"
+	 style="enable-background:new 0 0 59 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF8B4D;}
+</style>
+<title>Imported Layers</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="INN-Homepage-3" transform="translate(-241.000000, -3215.000000)" sketch:type="MSArtboardGroup">
+		<g id="Consulting" transform="translate(-51.000000, 3018.000000)" sketch:type="MSLayerGroup">
+			<path id="Imported-Layers" sketch:type="MSShapeGroup" class="st0" d="M292,197h58.6v47.7H292V197z M296.2,240.7h50.2v-35.8
+				h-50.2V240.7z M301.4,211.6h6.6l6.6,8.6l-6.6,8.6h-6.6l6.6-8.6L301.4,211.6L301.4,211.6z"/>
+		</g>
+	</g>
+</g>
 </svg>

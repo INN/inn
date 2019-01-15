@@ -1,15 +1,29 @@
 body,
+input, button, select, textarea, h5  {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: @black;
+}
+.entry-content h2 {
+  color:@darkblue;
+  font-size: 2.75em;
+  font-weight:700;
+}
+.entry-content h3 {
+  color:@black;
+  font-size: 2.2em;
+  font-weight:400;
+}
+.entry-content h4 {
+  font-size: 1.25em;
+  font-weight:700;
+}
 .btn-primary,
 .btn,
 .navbar,
-h1,h2,h3,h4,h5,
-.widgettitle,
-input, button, select, textarea  {
+h1,h2,h3,h4,
+.widgettitle {
   font-family: @sans;
-  color: @dkgray;
-}
-h1 {
-  color: @xdkgray;
+  color: @darkblue;
 }
 textarea,
 input[type="text"],
@@ -27,7 +41,7 @@ input[type="search"] {
 }
 h1,h2,h3,h4,h5,
 .widgettitle {
-  font-weight: 500;
+  font-weight: 700;
 }
 a {
   color: @linkcolor;
@@ -35,7 +49,7 @@ a {
     color: @linkhover;
   }
 }
-.btn {
+.btn, a.btn {
   text-shadow: none;
   border: none;
   text-transform: uppercase;
@@ -55,19 +69,16 @@ a {
     background-color: darken(@btnprimarybg, 6.3%);
     }
   }
-  &.btn-new {
-    color: #fff;
-    background-color: #0089bb;
-    &:hover {
-	  background-color: darken(#0089bb, 6.3%);
-    }
-  }
   &.btn.search-submit {
     padding: 4px 10px;
   }
 }
 .donate-btn a:hover {
   color: #fff;
+}
+.navbar.sticky-navbar .nav-right #header-extras .donate a span {
+  background-color:@orange;
+  font-weight:700;
 }
 #top-nav {
   li {
@@ -115,7 +126,7 @@ a {
   a {
     color: @ltgray;
     &:hover {
-      color: @blue;
+      color: @white;
     }
   }
   .widgettitle,
@@ -135,17 +146,13 @@ a {
       float: none;
       display: inline-block;
       i {
-        color: #fff;
+        color: @white;
         background-color: @medgray;
         padding: 14px;
         border-radius: 30px;
         margin: 0 4px;
         &:hover {
-          background-color: #fff;
-          color: @medgray;
-        }
-        &.icon-github:hover {
-          color: @medgray;
+          background-color: @blue;
         }
       }
     }
@@ -253,7 +260,7 @@ a {
     font-size: 24px;
     margin-bottom: 0.5em;
     a {
-	  color: @dkgray;
+	  color: @black;
 	  &:hover {
 	    color: @blue;
 	  }
@@ -266,7 +273,7 @@ a {
 .type-pull-quote {
   border-left: 1px solid @ltgray;
   padding-left: 40px;
-  color: @dkgray;
+  color: @black;
 
   @media (max-width: 768px) {
       padding: 20px 10px;
