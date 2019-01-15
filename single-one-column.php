@@ -73,7 +73,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		printf(
 			'<h3><a href="%1$s">%2$s</a></h3>',
 			get_permalink( $pg_id ),
-			wp_kses_post( __( $show_menu, 'inn' ) ),
+			wp_kses_post( __( $show_menu, 'inn' ) )
 		);
 		echo '<ul>';
 			wp_list_pages( 'title_li=&child_of=' . $pg_id . '&echo=1' );
