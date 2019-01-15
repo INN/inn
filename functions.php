@@ -6,7 +6,7 @@ define( 'INN_ABOUT_PAGE_ID', 2212 );
 define( 'INN_PROGRAMS_PAGE_ID', 2587 );
 define( 'INN_MEMBERS_PAGE_ID', 234260 );
 define( 'INN_SERVICES_PAGE_ID', 654834);
-define( 'SHOW_GLOBAL_NAV', false );
+define( 'SHOW_GLOBAL_NAV', true );
 
 // Includes
 $includes = array(
@@ -14,6 +14,7 @@ $includes = array(
 	'/homepages/homepage.php',
 	'/inc/member-directory.php',
 	'/inc/woocommerce/survey-tab.php',
+	'/inc/woocommerce.php',
 );
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
@@ -111,7 +112,7 @@ function inn_landing_page_enqueue() {
 	} elseif ( is_page( 'people' ) ) {
 		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/people.css', null, '1.0.0' );
 	} elseif ( is_page_template( 'full-page-tabby.php' ) ) {
-		wp_enqueue_style( 'people', get_stylesheet_directory_uri() . '/css/tabby.css', null, '1.0.0' );
+		wp_enqueue_style( 'tabby', get_stylesheet_directory_uri() . '/css/tabby.css', null, '1.0.0' );
 	}
 	wp_enqueue_style( 'members', get_stylesheet_directory_uri() . '/css/members.css', null, '1.2' );
 }
@@ -195,12 +196,13 @@ function inn_print_scripts() {
 
 /**
  * Add search box to main nav
- * uncomment this and remove partials/nav-main.php when 0.5.5 ships
  */
-function inn_add_search_box() {
-	get_template_part( 'partials/inn-nav-search-form' );
-}
-add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
+// function inn_add_search_box() {
+// 	if ( ! is_search() ) {
+// 		get_template_part( 'partials/inn-nav-search-form' );
+// 	}
+// }
+// add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
 
 
 function inn_member_archive_query( $query ) {

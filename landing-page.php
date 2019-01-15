@@ -101,7 +101,7 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 <?php if (is_page('for-members')) { ?>
 <section id="membership-callout" class="interstitial branding">
 	<div class="content">
-		<img class="member-icon" src="<? echo $img_path . 'red_boxes.png'; ?>" />
+		<img class="member-icon" src="<?php echo $img_path . 'red_boxes.png'; ?>" />
 		<div class="content-inner">
 			<h3>Not a member yet?</h3>
 			<p>Join the growing community of sustainable nonprofit news organizations that are changing the way we do journalism.</p>
@@ -122,15 +122,15 @@ if (is_page('for-funders')) { ?>
 			<h3>In recent years, INN...</h3>
 			<div class="row-fluid">
 				<div class="span4">
-					<img class="icon" src="<? echo $img_path . 'brag_members.svg'; ?>" />
+					<img class="icon" src="<?php echo $img_path . 'brag_members.svg'; ?>" />
 					<p>Helped 270+ organizations through our programs.</p>
 				</div>
 				<div class="span4">
-					<img class="icon" src="<? echo $img_path . 'brag_funding.svg'; ?>" />
+					<img class="icon" src="<?php echo $img_path . 'brag_funding.svg'; ?>" />
 					<p>Contributed more than $616,000 annually to our members.</p>
 				</div>
 				<div class="span4">
-					<img class="icon" src="<? echo $img_path . 'brag_tech.svg'; ?>" />
+					<img class="icon" src="<?php echo $img_path . 'brag_tech.svg'; ?>" />
 					<p>Had 120+ publishing sites using <a href="http://largoproject.org">Largo.</a></p>
 				</div>
 			</div>

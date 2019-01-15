@@ -8,10 +8,13 @@ Template:       largo
 Version:        0.2.0
 */
 
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Montserrat:500,500i,700,700i');
+
 @import "variables.less";
 @import "utilities.less";
 @import "common.less";
 @import "forms.less";
+@import "tribe-events.less";
 
 #header-social {
   .icon-youtube-parent,
@@ -24,38 +27,76 @@ Version:        0.2.0
 .search-submit.btn {
   padding: 4px 10px;
 }
+.navbar .navbar-inner, .sticky-nav-holder {
+    background-color: @xltgray;
+}
+#main-nav.navbar {
+    border-top: 0;
+    border-bottom: 0;
+}
 #site-header {
+	max-width:1170px;
+	margin:24px auto;
+
+	@media (max-width: 1230px) {
+		padding:0 2em;
+	}
+
   img {
 	max-width: 280px;
-	margin-left: 100px;
   }
-  a.btn-primary {
-	margin-right: 100px;
-	margin-top: 12px;
+  a.btn {
+	margin-left: 20px;
+	margin-top: 24px;
+	font-size:12px;
+	line-height:1.4;
+	padding:8px;
+	cursor:pointer;
   }
   .widget {
 	margin-bottom: 0;
   }
+  aside {
+	max-width: 200px;
+	}
 }
 @media (min-width: 769px) {
-	.navbar li>a {
-	  padding:10px;
+	#main-nav .navbar-inner .container .nav-shelf .nav {
+		width:100%;
+		display: flex;
+    	justify-content: space-evenly;
+    	flex-wrap: wrap;
 	}
-	#header-search {
-		padding:10px 0;
+	.navbar li>a {
+	  padding:10px 8px;
+	  letter-spacing: -0.5px;
+	}
+	.navbar li>a:hover {
+		background-color:@blue;
+		color:@white;
+	}
+	.navbar li.dropdown .dropdown-menu li a:hover {
+		color:@white;
+	}
+	// #header-search {
+	// 	padding:10px 0;
+	// }
+	.navbar li.home-icon > a img {
+	  height: 76px;
 	}
 }
 .navbar .container {
-  padding: 0 90px;
-  @media (max-width: 1050px) {
-	padding: 0 10px;
-  }
+	max-width:1170px;
+	margin:0 auto;
+  @media (max-width: 1230px) {
+		padding:0 2em;
+	}
 }
-
-#header-search {
-  float: right;
-  margin-left: 0;
-}
+// #header-search {
+//   float: right;
+//   margin-left: 0;
+//   width:195px;
+// }
 .alert {
 
   // newsmatch styles for https://github.com/INN/inn/issues/51
@@ -94,8 +135,11 @@ Version:        0.2.0
   padding: 0;
 }
 #main {
-  max-width: 1170px;
+  max-width: 1190px;
+  padding: 0 10px;
   margin: 4em auto;
+  box-sizing: border-box;
+
   .row-fluid {
 	img.icon,
 	a.program img {
@@ -148,9 +192,9 @@ Version:        0.2.0
 		font-size: 16px;
 	  }
 	  a {
-		color: @medgray;
+		color: @linkcolor;
 		&:hover {
-		  color: @blue;
+		  color: @linkhover;
 		}
 	  }
 	}
@@ -197,7 +241,7 @@ h5.byline {
 #hero,
 section.interstitial {
   max-width: 100%;
-  background-color: @dkgray;
+  background-color: @darkblue;
 }
 section,
 .interstitial .content {
@@ -212,8 +256,8 @@ section.normal {
 	text-align: center;
 	text-transform: uppercase;
 	width: 62%;
-	background-color: @blue;
-	color: @blue;
+	background-color: @orange;
+	color: @darkblue;
 	line-height: 10px;
 	margin: 2em auto 1.5em;
 	span {
@@ -241,11 +285,17 @@ section.normal {
   max-width: 100%;
   padding: 3em;
   margin: 0 auto 3em;
-  background-color: @dkgray;
+  background-color: @darkblue;
   color: @xltgray;
   h3 {
   color: @xltgray;
   }
+  a {
+	  color:@orange;
+	}
+	a.btn {
+	color:@white;
+}
 }
 
 .interstitial.branding {
@@ -319,7 +369,7 @@ section.normal {
   text-align: center;
   margin-bottom: 2em;
   h4 {
-	color: @dkgray;
+	color: @darkblue;
 	text-transform: uppercase;
 	@media (max-width: 600px) {
 	  margin-bottom: 0.5em;
@@ -347,7 +397,7 @@ section.normal {
 #member-info {
   h3 {
 	background-color: @orange;
-	color: @orange;
+	color: @darkblue;
 	@media (max-width: 600px) {
 	  line-height: 1.5;
 	  background-color: transparent;
@@ -355,7 +405,7 @@ section.normal {
 	}
   }
   h5 a:hover {
-	color: @orange;
+	color: @darkblue;
   }
 }
 
@@ -379,7 +429,7 @@ section.normal {
   ul {
 	margin-left: 0;
 	padding-bottom: 2em;
-	border-right: 10px @blue solid;
+	border-right: 2px @orange solid;
 	li {
 	  list-style: none;
 	  font-size: 15px;
@@ -387,7 +437,7 @@ section.normal {
 		font-weight: bold;
 	  }
 	  a {
-		color: @medgray;
+		color: @darkgray;
 		&:hover {
 		  color: @linkhover;
 		}

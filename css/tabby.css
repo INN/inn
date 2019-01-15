@@ -4,11 +4,14 @@
 	background:url(/wp-content/themes/inn/images/inndaysbg.png) no-repeat center;
 	background-size:100% 100%;
 	height:33vw;
+	display: table-cell;
+    vertical-align: middle;
+    padding:0 15vw;
 }
 
 h1.entry-title {
-	line-height:33vw;
-	font-size:8rem;
+	width:70vw;
+	font-size:5.5rem;
 }
 
 h5.byline {
@@ -62,27 +65,34 @@ section {
 }
 
 .responsive-tabs ul.responsive-tabs__list {
+	width: 100%;
+    display: table;
+    table-layout: fixed;
 	font-size: 18px;
 	line-height: 18px;
 	margin: 0 auto;
 	padding: 12px 0;
-    text-align: center;
+    text-align: left;
     font-family: "effra", helvetica, sans-serif;
     font-weight:500;
     text-transform:uppercase;
-    background-color:black;
+    background-color:white;
 }
 
 .responsive-tabs .responsive-tabs__list__item {
-	background: transparent;
-	color: #999;
+	display: inline-table;
+	vertical-align: middle;
+	width:calc(25% - 30px);
+	height:40px;
+	margin:0 5px 10px 5px;
+	padding:10px;
+	color: black;
+	background-color:#ddd;
 	font-size: 18px;
 	line-height: 19px;
+	text-align:center;
 	text-transform: inherit;
-	margin: 0 12px 0 0;
-	padding: 10px 12px;
-	white-space: nowrap;
-	/*float: left;*/
+	white-space:unset;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -95,15 +105,13 @@ section {
 }
 
 .responsive-tabs .responsive-tabs__list__item:hover {
-	color: #ffb50f;
-	background: transparent;
+	background-color: #ccc;
 }
 
 .responsive-tabs .responsive-tabs__list__item--active,
 .responsive-tabs .responsive-tabs__list__item--active:hover {
-	background: #fff;
-	color: #666;
-	padding-bottom: 11px;
+	background: #0088bd;
+	color: white;
 	margin-top: 0;
 }
 
@@ -148,11 +156,15 @@ section {
 		margin-top:3.5rem;
 	}
 
+	.responsive-tabs ul.responsive-tabs__list {
+		display:none;
+	}
+
 	h1.entry-title {
 	    font-size: 3rem;
 	}
 
-	.responsive-tabs .responsive-tabs__list {
+	.responsive-tabs__list {
 		display: none;
 	}
 
@@ -229,5 +241,11 @@ section {
 		padding: 0 20px;
 		padding-top: 20px;
 		column-count:1;
+	}
+}
+
+@media screen and (min-width:769px) {
+	.page-id-621700 .responsive-tabs .responsive-tabs__list__item {
+	    display: inline-block;
 	}
 }

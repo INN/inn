@@ -1,16 +1,10 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
 <section id="hero" class="normal">
-	<img src="/wp-content/themes/inn/homepages/assets/img/hero0818.jpg">
+	<img src="/wp-content/themes/inn/homepages/assets/img/hero1218.jpg">
 	<div class="hero-background">
 		<div class="row-fluid">
 			<?php dynamic_sidebar( 'hero-headlines' ); ?>
-			<!-- <div class="span4 heroitem">
-				<div class="heroitem-content">
-					<h2>INN Business Intensive</h2>
-					<p>Join us for two jam-packed days of audience development training with Tim Griggs and a special chance to meet the leadership team of The Texas Tribune on Sept. 11 + 12 in Austin.</p>
-				</div>
-			</div> -->
 		</div>
 	</div>
 </section>
@@ -38,34 +32,34 @@
 		</div>
 		<div class="row-fluid">
 			<div class="span4">
-				<a href="/about/"><img class="icon" src="<? echo $img_path . 'icons/mission.svg'; ?>" /></a>
+				<a href="/about/"><img class="icon" src="<?php echo $img_path . 'icons/mission.svg'; ?>" /></a>
 				<h5><a href="/about/">Mission</a></h5>
 				<p>How we started, what we do and why</p>
 			</div>
 			<div class="span4">
-				<a href="/members/"><img class="icon" src="<? echo $img_path . 'icons/memberdirectory.svg'; ?>" /></a>
+				<a href="/members/"><img class="icon" src="<?php echo $img_path . 'icons/memberdirectory.svg'; ?>" /></a>
 				<h5><a href="/members/">Our Members</a></h5>
 				<p>180+ nonprofits publishing news in the public interest</p>
 			</div>
 			<div class="span4">
-				<a href="/news/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
+				<a href="/news/"><img class="icon" src="<?php echo $img_path . 'icons/news.svg'; ?>" /></a>
 				<h5><a href="/news/">News</a></h5>
 				<p>The latest news about our programs</p>
 			</div>
 		</div>
 		<div class="row-fluid">
 			<div class="span4">
-				<a href="/financials/"><img class="icon" src="<? echo $img_path . 'icons/financial.svg'; ?>" /></a>
+				<a href="/financials/"><img class="icon" src="<?php echo $img_path . 'icons/financial.svg'; ?>" /></a>
 				<h5><a href="/financials/">Financial</a></h5>
 				<p>How we're funded, tax forms and our major donors</p>
 			</div>
 			<div class="span4">
-				<a href="/people/"><img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" /></a>
+				<a href="/people/"><img class="icon" src="<?php echo $img_path . 'icons/people.svg'; ?>" /></a>
 				<h5><a href="/people/">People</a></h5>
 				<p>Our staff and board</p>
 			</div>
 			<div class="span4">
-				<a href="/contact/"><img class="icon" src="<? echo $img_path . 'icons/contact.svg'; ?>" /></a>
+				<a href="/contact/"><img class="icon" src="<?php echo $img_path . 'icons/contact.svg'; ?>" /></a>
 				<h5><a href="/contact/">Contact</a></h5>
 				<p>We'd love to hear from you</p>
 			</div>
@@ -75,7 +69,7 @@
 
 <section id="email" class="interstitial branding">
 	<div class="content">
-		<img class="mail-icon" src="<? echo $img_path . 'icons/mail-squares.png'; ?>" />
+		<img class="mail-icon" src="<?php echo $img_path . 'icons/mail-squares.png'; ?>" />
 		<div class="content-inner">
 			<h3>Stay Up To Date</h3>
 			<p>News from INN and our members. <strong>Delivered weekly.</strong></p>
@@ -105,17 +99,17 @@
 		<p>We offer affordable consulting services (at an even more discounted rate for members).</p>
 		<div class="row-fluid">
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/hire_webdev.svg'; ?>" />
+				<img class="icon" src="<?php echo $img_path . 'icons/hire_webdev.svg'; ?>" />
 				<h5>Web Design + Development</h5>
 				<p>From full redesigns and CMS migrations to technology audits&mdash;and more.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/hire_strategy.svg'; ?>" />
+				<img class="icon" src="<?php echo $img_path . 'icons/hire_strategy.svg'; ?>" />
 				<h5>Business + Growth Strategy</h5>
 				<p>Sustainable revenue and audience development for nonprofit news organizations.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/hire_apps.svg'; ?>" />
+				<img class="icon" src="<?php echo $img_path . 'icons/hire_apps.svg'; ?>" />
 				<h5>News Applications</h5>
 				<p>Data analysis and visualization for special editorial projects.</p>
 			</div>
@@ -133,17 +127,17 @@
 		<h3><span>Membership Info</span></h3>
 		<div class="row-fluid">
 			<div class="span4">
-				<a href="/for-members/member-benefits/"><img class="icon" src="<? echo $img_path . 'icons/memberbenefits.svg'; ?>" /></a>
+				<a href="/for-members/member-benefits/"><img class="icon" src="<?php echo $img_path . 'icons/memberbenefits.svg'; ?>" /></a>
 				<h5><a href="/for-members/member-benefits/">Member Benefits</a></h5>
 				<p>Exclusive access to discounts and programs</p>
 			</div>
 			<div class="span4">
-				<a href="/for-members/become-a-member/"><img class="icon" src="<? echo $img_path . 'icons/becomemember.svg'; ?>" /></a>
+				<a href="/for-members/become-a-member/"><img class="icon" src="<?php echo $img_path . 'icons/becomemember.svg'; ?>" /></a>
 				<h5><a href="/for-members/become-a-member/">Become a Member</a></h5>
 				<p>Fill out an application</p>
 			</div>
 			<div class="span4">
-				<a href="/for-members/membership-faqs/"><img class="icon" src="<? echo $img_path . 'icons/memberfaq.svg'; ?>" /></a>
+				<a href="/for-members/membership-faqs/"><img class="icon" src="<?php echo $img_path . 'icons/memberfaq.svg'; ?>" /></a>
 				<h5><a href="/for-members/membership-faqs/">FAQs</a></h5>
 				<p>Answers to all your questions</p>
 			</div>
