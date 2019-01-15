@@ -34,14 +34,18 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	$ancestors = get_post_ancestors( $post );
 
 	// bascially all child pages of the about, members or services pages + all the posts in the projects post type get the side menu
-	if ( is_page( $about_pg_id ) || in_array( $about_pg_id , $ancestors) )
+	if ( is_page( $about_pg_id ) || in_array( $about_pg_id , $ancestors) ) {
 		$show_menu = 'About';
-	if ( is_page( $members_pg_id ) || in_array( $members_pg_id , $ancestors) )
+	}
+	if ( is_page( $members_pg_id ) || in_array( $members_pg_id , $ancestors) ) {
 		$show_menu = 'Membership';
-	if ( is_singular( 'pauinn_project' ) || is_page( $programs_pg_id ) )
+	}
+	if ( is_singular( 'pauinn_project' ) || is_page( $programs_pg_id ) ) {
 		$show_menu = 'Projects';
-	if ( is_page( $services_pg_id ) || in_array( $services_pg_id , $ancestors) )
+	}
+	if ( is_page( $services_pg_id ) || in_array( $services_pg_id , $ancestors) ) {
 		$show_menu = 'Services';
+	}
 
 	// yep, we should show a menu, modify the layout appropriately
 	if ( $show_menu != '' ) {
