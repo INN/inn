@@ -78,16 +78,16 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
 
 		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-		    echo '<ul>';
-		    foreach ( $terms as $term ) {
-			    $term_link = '/project/' . $term->slug . '/';
-			    if ( is_single( $term->name ) ) {
+			echo '<ul>';
+			foreach ( $terms as $term ) {
+				$term_link = '/project/' . $term->slug . '/';
+				if ( is_single( $term->name ) ) {
 					echo '<li class="current_page_item"><a href="' . $term_link . '">' . $term->name . '</a></li>';
 				} else {
-		    		echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
-		    	}
-		    }
-		    echo '</ul>';
+					echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
+				}
+			}
+			echo '</ul>';
 		}
 	}
 
