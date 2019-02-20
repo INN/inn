@@ -3,6 +3,9 @@
 <section id="hero" class="normal">
 	<img src="/wp-content/themes/inn/homepages/assets/img/hero0219.jpg">
 	<div class="hero-background">
+		
+	</div>
+	<div class="cta-row">
 		<div class="row-fluid">
 			<?php dynamic_sidebar( 'hero-headlines' ); ?>
 		</div>
