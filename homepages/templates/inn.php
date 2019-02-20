@@ -1,7 +1,7 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
 <section id="hero" class="normal">
-	<img src="/wp-content/themes/inn/homepages/assets/img/hero1218.jpg">
+	<img src="/wp-content/themes/inn/homepages/assets/img/hero0219.jpg">
 	<div class="hero-background">
 		<div class="row-fluid">
 			<?php dynamic_sidebar( 'hero-headlines' ); ?>
