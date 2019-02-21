@@ -1,11 +1,22 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
 <section id="hero" class="normal">
-	<img src="/wp-content/themes/inn/homepages/assets/img/hero1218.jpg">
-	<div class="hero-background">
-		<div class="row-fluid">
-			<?php dynamic_sidebar( 'hero-headlines' ); ?>
+	<a href="#">
+		<img src="/wp-content/themes/inn/homepages/assets/img/hero0219.jpg">
+		<div class="hero-background">
+			<div class="row-fluid">
+				<div class="span12 heroitem">
+					<h2>The INN Futures Fellowships</h2>
+					<p>invest in the future of nonprofit news</p>
+				</div>
+			</div>
 		</div>
+	</a>
+</section>
+
+<section id="headlines-row" class="interstitial">
+	<div class="row-fluid">
+		<?php dynamic_sidebar( 'hero-headlines' ); ?>
 	</div>
 </section>
 
