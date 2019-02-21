@@ -526,6 +526,13 @@ form.give-form,
 form[id*=give-form] {
   font-family: "Montserrat", "Raleway", helvetica, sans-serif;
 }
+form[id*=give-form] #give-donation-level-radio-list > li {
+  margin: 0 0 20px 0;
+}
+form[id*=give-form] #give-donation-level-radio-list > li label {
+  display: inline;
+  font-size: 18px;
+}
 .tribe-events-tooltip .entry-title {
   padding: 3px 6px 6px;
   font-size: 2em;
