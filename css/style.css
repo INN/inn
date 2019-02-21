@@ -531,6 +531,7 @@ form[id*=give-form] #give-donation-level-radio-list > li {
 }
 form[id*=give-form] #give-donation-level-radio-list > li label {
   display: inline;
+  font-size: 18px;
 }
 .tribe-events-tooltip .entry-title {
   padding: 3px 6px 6px;
