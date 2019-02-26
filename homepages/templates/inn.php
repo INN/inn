@@ -7,7 +7,7 @@
 			<div class="row-fluid">
 				<div class="span12 heroitem">
 					<h2>The INN Futures Fellowships</h2>
-					<p>invest in the future of nonprofit news</p>
+					<p>Invest in the future of nonprofit news</p>
 				</div>
 			</div>
 		</div>
