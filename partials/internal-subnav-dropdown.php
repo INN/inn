@@ -3,6 +3,7 @@
 $about_pg_id = INN_ABOUT_PAGE_ID;
 $programs_pg_id = INN_PROGRAMS_PAGE_ID;
 $members_pg_id = INN_MEMBERS_PAGE_ID;
+$services_pg_id = INN_SERVICES_PAGE_ID;
 
 //is this a page or a post in the projects post type
 if ( is_page() || is_singular( 'pauinn_project' ) ) {
@@ -17,6 +18,9 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		$show_menu = 'Membership';
 	if ( is_singular( 'pauinn_project' ) || is_page( $programs_pg_id ) )
 		$show_menu = 'Projects';
+	if ( is_page( $services_pg_id ) || in_array( $services_pg_id , $ancestors ) ) {
+		$show_menu = 'Services';
+	}
 
 	// yep, we should show a menu, modify the layout appropriately
 	if ( $show_menu != '' ) { ?>
@@ -28,8 +32,18 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	}
 
 	// about and member pages and children get their respective page trees
-	if ( $show_menu == 'About' || $show_menu == 'Membership' ) {
-		$pg_id = ( $show_menu == 'About' ) ? $about_pg_id : $members_pg_id;
+	if ( $show_menu == 'About' || $show_menu == 'Membership' || $show_menu == 'Services') {
+		switch ( $show_menu ) {
+			case 'About':
+				$pg_id = $about_pg_id;
+				break;
+			case 'Membership':
+				$pg_id = $members_pg_id;
+				break;
+			case 'Services':
+				$pg_id = $services_pg_id;
+				break;
+		}
 		$show_pages = get_pages('child_of=' . $pg_id);
 
 		foreach ($show_pages as $show_page) {
