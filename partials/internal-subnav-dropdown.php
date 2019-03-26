@@ -24,7 +24,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 
 	// yep, we should show a menu, modify the layout appropriately
 	if ( $show_menu != '' ) { ?>
-		<div class="hidden-desktop internal-subnav-dropdown">
+		<div class="hidden-desktop visible-tablet internal-subnav-dropdown">
 			<h3><a href="<?php echo get_permalink( $pg_id ); ?>"><?php echo $show_menu; ?></a></h3>
 			<p class="choose-a-page">Choose a page...</p>
 			<select class="internal-subnav">
