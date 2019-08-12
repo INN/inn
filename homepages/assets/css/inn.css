@@ -60,6 +60,9 @@
 .home #hero .hero-background p {
   font-size: 28px;
 }
+.home #hero .hero-background p:not(:last-of-type) {
+  margin-bottom: 5px;
+}
 .home #headlines-row {
   background: #005270;
   border-top: 10px solid #ff8b4d;
