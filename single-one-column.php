@@ -104,6 +104,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	}
 }
 
+// load the mobile-nav implementation of the above item: a <select> with <options>
 get_template_part( 'partials/internal-subnav-dropdown' );
 
 if ( is_page( 'press' ) || is_page( 'news' ) ) {
