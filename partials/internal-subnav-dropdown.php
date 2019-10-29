@@ -1,53 +1,15 @@
 <?php
 /**
  * The dropdown used on mobile for these pages
+ *
+ * Depends on the following variables being populated:
+ *
+ * @param Bool $show_menu
+ * @param String $show_menu_title the title of the menu
+ * @param Array $ancestors An array of post IDs from nearest to farthest ancestor
+ * @Param Int $pg_id The post ID of the menu parent
  */
 
-// should we show a menu? let's find out.
-$show_menu_title = '';
-$show_menu = false;
-$ancestors = get_post_ancestors( $post );
-
-/*
- * @todo: rejigger this whole section with an array ( id => 'menu title', ... );
- */
-
-// bascially all child pages of the about or members pages + all the posts in the projects post type get the side menu
-if ( is_page( INN_ABOUT_PAGE_ID ) || in_array( INN_ABOUT_PAGE_ID , $ancestors) ) {
-	$show_menu_title = 'About';
-	$show_menu = true;
-	$pg_id = INN_ABOUT_PAGE_ID;
-}
-if ( is_page( INN_MEMBERS_PAGE_ID ) || in_array( INN_MEMBERS_PAGE_ID , $ancestors) ) {
-	$show_menu_title = 'Membership';
-	$show_menu = true;
-	$pg_id = INN_MEMBERS_PAGE_ID;
-}
-if ( is_singular( 'pauinn_project' ) || is_page( INN_PROGRAMS_PAGE_ID ) ) {
-	$show_menu_title = 'Projects';
-	$show_menu = true;
-	$pg_id = INN_PROGRAMS_PAGE_ID;
-}
-if ( is_page( INN_SERVICES_PAGE_ID ) || in_array( INN_SERVICES_PAGE_ID , $ancestors ) ) {
-	$show_menu_title = 'Services';
-	$show_menu = true;
-	$pg_id = INN_SERVICES_PAGE_ID;
-} 
-
-// check if this post or its parents are in the array of post IDs INN_PARENT_PAGE_IDS
-$intersection = array_intersect( $ancestors, INN_PARENT_PAGE_IDS );
-if ( ! empty( $intersection ) ) {
-	// one or more of the post's parents are in the array
-	$show_menu_title = "The Best of Nonprofit News";
-	$show_menu = true;
-	$pg_id = end( $ancestors );
-}
-if ( in_array( get_the_ID(), INN_PARENT_PAGE_IDS ) ) {
-	// the post itself is in the array
-	$show_menu_title = "The Best of Nonprofit News";
-	$show_menu = true;
-	$pg_id = get_the_ID();
-}
 
 // yep, we should show a menu, modify the layout appropriately
 if ( $show_menu === true ) {
