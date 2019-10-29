@@ -21,10 +21,10 @@ add_filter( 'body_class', function( $classes ) {
 
 get_header();
 
-$about_pg_id = INN_ABOUT_PAGE_ID;
-$programs_pg_id = INN_PROGRAMS_PAGE_ID;
-$members_pg_id = INN_MEMBERS_PAGE_ID;
-$services_pg_id = INN_SERVICES_PAGE_ID;
+/*
+ * @todo: rejigger this whole section with an array ( id => 'menu title', ... );
+ */
+
 $content_class = 'span12';
 
 // is this a page or a post in the projects post type?
@@ -34,77 +34,100 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	$show_menu = '';
 	$ancestors = get_post_ancestors( $post );
 
-	// bascially all child pages of the about, members or services pages 
-	// and all the posts in the projects post type
-	// get the side menu
-	if ( is_page( $about_pg_id ) || in_array( $about_pg_id, $ancestors, true ) ) {
-		$show_menu = 'About';
+	/*
+	 * Check whether this post needs a side menu
+	 */
+	// bascially all child pages of the about or members pages + all the posts in the projects post type get the side menu
+	if ( is_page( INN_ABOUT_PAGE_ID ) || in_array( INN_ABOUT_PAGE_ID , $ancestors) ) {
+		$show_menu_title = 'About';
+		$show_menu = true;
+		$pg_id = INN_ABOUT_PAGE_ID;
 	}
-	if ( is_page( $members_pg_id ) || in_array( $members_pg_id, $ancestors, true ) ) {
-		$show_menu = 'Membership';
+	if ( is_page( INN_MEMBERS_PAGE_ID ) || in_array( INN_MEMBERS_PAGE_ID , $ancestors) ) {
+		$show_menu_title = 'Membership';
+		$show_menu = true;
+		$pg_id = INN_MEMBERS_PAGE_ID;
 	}
-	if ( is_singular( 'pauinn_project' ) || is_page( $programs_pg_id ) ) {
-		$show_menu = 'Projects';
+	if ( is_singular( 'pauinn_project' ) || is_page( INN_PROGRAMS_PAGE_ID ) ) {
+		$show_menu_title = 'Projects';
+		$show_menu = true;
+		$pg_id = INN_PROGRAMS_PAGE_ID;
 	}
-	if ( is_page( $services_pg_id ) || in_array( $services_pg_id , $ancestors ) ) {
-		$show_menu = 'Services';
+	if ( is_page( INN_SERVICES_PAGE_ID ) || in_array( INN_SERVICES_PAGE_ID , $ancestors ) ) {
+		$show_menu_title = 'Services';
+		$show_menu = true;
+		$pg_id = INN_SERVICES_PAGE_ID;
+	} 
+
+	// check if this post or its parents are in the array of post IDs INN_PARENT_PAGE_IDS
+	$intersection = array_intersect( $ancestors, INN_PARENT_PAGE_IDS );
+	if ( ! empty( $intersection ) ) {
+		// one or more of the post's parents are in the array
+		$show_menu_title = "The Best of Nonprofit News";
+		$show_menu = true;
+		$pg_id = end( $ancestors );
+	}
+	if ( in_array( get_the_ID(), INN_PARENT_PAGE_IDS ) ) {
+		// the post itself is in the array
+		$show_menu_title = "The Best of Nonprofit News";
+		$show_menu = true;
+		$pg_id = get_the_ID();
 	}
 
+	/*
+	 * determine whether to show the side menu, and display it
+	 */
 	if ( ! empty( $show_menu ) ) {
 		// yep, we should show a menu, modify the layout appropriately.
 		$content_class = 'span9 has-menu';
 		echo '<div class="internal-subnav span3 visible-desktop">';
-	}
 
-	// about, member and services pages and children get their respective page trees.
-	switch ( $show_menu ) {
-		case 'About':
-			$pg_id = $about_pg_id;
-			break;
-		case 'Membership':
-			$pg_id = $members_pg_id;
-			break;
-		case 'Services':
-			$pg_id = $services_pg_id;
-			break;
-	}
+		if ( $show_menu_title === 'Projects' ) {
+			// project pages show a list of projects,
+			// and add the current_page_item class if necessary for consistency.
+			echo '<h3>Projects</h3>';
+			$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
 
-	if ( ! empty( $pg_id ) ) {
-		printf(
-			'<h3><a href="%1$s">%2$s</a></h3>',
-			get_permalink( $pg_id ),
-			wp_kses_post( __( $show_menu, 'inn' ) )
-		);
-		echo '<ul>';
-			wp_list_pages( 'title_li=&child_of=' . $pg_id . '&echo=1' );
-		echo '</ul>';
-	} elseif ( $show_menu === 'Projects' ) {
-		// project pages show a list of projects,
-		// and add the current_page_item class if necessary for consistency.
-		echo '<h3>Projects</h3>';
-		$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
-
-		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-			echo '<ul>';
-			foreach ( $terms as $term ) {
-				$term_link = '/project/' . $term->slug . '/';
-				if ( is_single( $term->name ) ) {
-					echo '<li class="current_page_item"><a href="' . esc_attr( $term_link ) . '">' . wp_kses_post( $term->name ) . '</a></li>';
-				} else {
-					echo '<li><a href="' . esc_attr( $term_link ) . '">' . wp_kses_post( $term->name ) . '</a></li>';
+			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+				echo '<ul>';
+				foreach ( $terms as $term ) {
+					$term_link = '/project/' . $term->slug . '/';
+					if ( is_single( $term->name ) ) {
+						echo '<li class="current_page_item"><a href="' . esc_attr( $term_link ) . '">' . wp_kses_post( $term->name ) . '</a></li>';
+					} else {
+						echo '<li><a href="' . esc_attr( $term_link ) . '">' . wp_kses_post( $term->name ) . '</a></li>';
+					}
 				}
+				echo '</ul>';
 			}
+		} else if ( ! empty( $pg_id ) ) {
+			printf(
+				'<h3><a href="%1$s">%2$s</a></h3>',
+				get_permalink( $pg_id ),
+				wp_kses_post( __( $show_menu_title, 'inn' ) )
+			);
+			echo '<ul>';
+				wp_list_pages( 'title_li=&child_of=' . $pg_id . '&echo=1' );
 			echo '</ul>';
 		}
-	}
 
-	// close the menu div.
-	if ( ! empty( $show_menu ) ) {
+		// close the menu div.
 		echo '</div>';
+
+		// load the mobile-nav implementation of the above item: a <select> with <options>
+		largo_render_template(
+			'partials/internal',
+			'subnav-dropdown',
+			array( 
+				'ancestors' => $ancestors,
+				'show_menu_title' => $show_menu_title,
+				'show_menu' => $show_menu,
+				'pg_id' => $pg_id,
+			),
+		);
 	}
 }
 
-get_template_part( 'partials/internal-subnav-dropdown' );
 
 if ( is_page( 'press' ) || is_page( 'news' ) ) {
 	$content_class .= ' stories';
