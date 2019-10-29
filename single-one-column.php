@@ -102,10 +102,20 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	if ( ! empty( $show_menu ) ) {
 		echo '</div>';
 	}
+
+	// load the mobile-nav implementation of the above item: a <select> with <options>
+	largo_render_template(
+		'partials/internal',
+		'subnav-dropdown',
+		array( 
+			'ancestors' => $ancestors,
+			'show_menu_title' => $show_menu_title,
+			'show_menu' => $show_menu,
+			'pg_id' => $pg_id,
+		),
+	);
 }
 
-// load the mobile-nav implementation of the above item: a <select> with <options>
-get_template_part( 'partials/internal-subnav-dropdown' );
 
 if ( is_page( 'press' ) || is_page( 'news' ) ) {
 	$content_class .= ' stories';
