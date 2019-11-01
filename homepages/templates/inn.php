@@ -1,14 +1,13 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
 <section id="hero" class="normal">
-	<a href="/inn-business-intensive-2019/">
-		<img src="/wp-content/themes/inn/homepages/assets/img/business-intensive.png">
+	<a href="https://newsmatch.org">
+		<img src="/wp-content/themes/inn/homepages/assets/img/newsmatch-2019.jpg">
 		<div class="hero-background">
 			<div class="row-fluid">
 				<div class="span12 heroitem">
-					<h2>INN Business Intensive 2019</h2>
-					<p>Podcast Your Way to New Audiences and New Revenue</p>
-					<p>Sept. 11, 2019 in New Orleans</p>
+					<h2>NewsMatch 2019</h2>
+					<p>Join the largest grassroots fundraising campaign supporting nonprofit news</p>
 					<div class="btn btn-primary" href="/inn-business-intensive-2019/">Learn more</div>
 				</div>
 			</div>
