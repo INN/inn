@@ -1,5 +1,6 @@
 <?php
 	//
+	$credit = "Photo by Reynaldo Leal for The Texas Tribune";
 	$alt = "The Texas Tribune's Juan Luis García Hernández (left) and Neena Satija interview Guatemalan asylum seeker Marcos Samayoa on the Brownsville/Gateway International Bridge in June 2018. Photo by Reynaldo Leal for The Texas Tribune";
 	$images = array(
 		// width without unit => path without $img_path;
@@ -14,23 +15,26 @@
 
 <section id="hero" class="normal">
 	<a href="https://newsmatch.org">
-		<img
-			src="<?php echo esc_attr( $img_path . reset( $images ) ); ?>"
-			alt="<?php echo esc_attr( $alt ); ?>"
-			<?php
-				$srcset = [];
-				foreach ( $images as $size => $image ) {
-					$srcset[] = $img_path . $image . ' ' . $size . 'w';
-				}
-				printf(
-					'srcset="%1$s"',
-					implode( ', ', $srcset )
-				);
+		<figure>
+			<img
+				src="<?php echo esc_attr( $img_path . reset( $images ) ); ?>"
+				alt="<?php echo esc_attr( $alt ); ?>"
+				<?php
+					$srcset = [];
+					foreach ( $images as $size => $image ) {
+						$srcset[] = $img_path . $image . ' ' . $size . 'w';
+					}
+					printf(
+						'srcset="%1$s"',
+						implode( ', ', $srcset )
+					);
 
-				// no custom sizes="" attribute because these images are displayed full width
-				echo 'sizes="100vw"';
-			?>
-		>
+					// no custom sizes="" attribute because these images are displayed full width
+					echo 'sizes="100vw"';
+				?>
+			>
+			<figcaption class="credit"><?php echo $credit; ?></figcaption>
+		</figure>
 		<div class="hero-background">
 			<div class="row-fluid">
 				<div class="span12 heroitem">

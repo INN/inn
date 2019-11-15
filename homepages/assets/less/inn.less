@@ -1,4 +1,4 @@
-@import "../../../less/variables.less";
+@import (reference) "../../../less/variables.less";
 
 .home {
   #page {
@@ -29,14 +29,38 @@
     img {
       width:100%;
     }
+    figure {
+      position: relative;
+    }
+    figcaption {
+      background-color: hsla( 0, 0, 0, 0.5 );
+      text-shadow: 1px  1px 3px black,
+                  -1px  1px 3px black,
+                   1px -1px 3px black,
+                  -1px -1px 3px black;
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      padding: 0.5em;
+      max-width: 25em;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
     @media only screen and (max-width: 600px) {
       background:unset;
       height:auto;
       margin-bottom:0;
 
-      img {
+      figure {
         margin-bottom: 16px;
+      }
+      figcaption {
+        position: absolute;
+        bottom: 0;
+        top: unset;
+        right: 0;
       }
     }
 

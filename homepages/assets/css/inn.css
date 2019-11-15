@@ -27,14 +27,35 @@
 .home #hero img {
   width: 100%;
 }
+.home #hero figure {
+  position: relative;
+}
+.home #hero figcaption {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px black, -1px 1px 3px black, 1px -1px 3px black, -1px -1px 3px black;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 0.5em;
+  max-width: 25em;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 @media only screen and (max-width: 600px) {
   .home #hero {
     background: unset;
     height: auto;
     margin-bottom: 0;
   }
-  .home #hero img {
+  .home #hero figure {
     margin-bottom: 16px;
+  }
+  .home #hero figcaption {
+    position: absolute;
+    bottom: 0;
+    top: unset;
+    right: 0;
   }
 }
 .home #hero .hero-background {
@@ -118,7 +139,7 @@
   .home #headlines-row .heroitem a,
   .home .heroitem h2,
   .home #headlines-row .heroitem h2 {
-    color: #ffffff;
+    color: #fff;
   }
 }
 .home .heroitem p,
@@ -187,7 +208,7 @@
 }
 .home #main #supporters h3 {
   width: auto;
-  color: #555555;
+  color: #555;
   background-color: transparent;
   line-height: 1;
   margin: 0;
@@ -225,7 +246,7 @@
 }
 @media (max-width: 768px) {
   .home .sticky-nav-holder {
-    border-bottom: #aaaaaa 1px solid;
+    border-bottom: #aaa 1px solid;
   }
 }
 body.home.admin-bar .sticky-nav-holder {
@@ -233,7 +254,7 @@ body.home.admin-bar .sticky-nav-holder {
 }
 @media (max-width: 768px) {
   body.home.admin-bar .sticky-nav-holder {
-    border-bottom: #aaaaaa 1px solid;
+    border-bottom: #aaa 1px solid;
   }
 }
 #email img {
