@@ -7,6 +7,7 @@ Author URI:     http://nerds.inn.org
 Template:       largo
 Version:        0.2.0
 */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Montserrat:500,500i,700,700i');
 .flip-horizontal {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
