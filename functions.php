@@ -22,12 +22,13 @@ foreach ( $includes as $include ) {
 }
 
 
-// Typekit
+// External fonts
 function inn_head() {
 	?>
 	<script src="//use.typekit.net/cui8tby.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 	<link rel="author" name="Institute for Nonprofit News" data-paypal="kevin.davis@investigativenewsnetwork.org">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Montserrat:500,500i,700,700i" rel="stylesheet">
 	<?php
 }
 add_action( 'wp_head', 'inn_head' );
