@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Montserrat:500,500i,700,700i');
 /*
 Theme Name:     INN
 Theme URI:      http://inn.org
@@ -8,6 +7,7 @@ Author URI:     http://nerds.inn.org
 Template:       largo
 Version:        0.2.0
 */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Montserrat:500,500i,700,700i');
 .flip-horizontal {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -143,7 +143,7 @@ a.btn.btn.search-submit,
   height: 58px;
 }
 .footer-bg {
-  background-color: #555555;
+  background-color: #555;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label,
@@ -161,10 +161,10 @@ a.btn.btn.search-submit,
   padding: 0;
 }
 #site-footer a {
-  color: #aaaaaa;
+  color: #aaa;
 }
 #site-footer a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label {
@@ -186,7 +186,7 @@ a.btn.btn.search-submit,
   display: inline-block;
 }
 #site-footer #footer-social li i {
-  color: #ffffff;
+  color: #fff;
   background-color: #909799;
   padding: 14px;
   border-radius: 30px;
@@ -307,7 +307,7 @@ a.btn.btn.search-submit,
   display: none;
 }
 .type-pull-quote {
-  border-left: 1px solid #aaaaaa;
+  border-left: 1px solid #aaa;
   padding-left: 40px;
   color: #1c1c1c;
 }
@@ -316,8 +316,8 @@ a.btn.btn.search-submit,
     padding: 20px 10px;
     text-align: center;
     border: none;
-    border-top: 3px solid #555555;
-    border-bottom: 3px solid #555555;
+    border-top: 3px solid #555;
+    border-bottom: 3px solid #555;
     margin: 0 auto 1em;
     max-width: 90%;
   }
@@ -334,7 +334,7 @@ a.btn.btn.search-submit,
 }
 .gform_wrapper.donation_form_wrapper .gsection,
 .gform_wrapper.membership_form_wrapper .gsection {
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaa;
 }
 .gform_wrapper.donation_form_wrapper .field_sublabel_above,
 .gform_wrapper.membership_form_wrapper .field_sublabel_above {
@@ -364,7 +364,7 @@ a.btn.btn.search-submit,
 .gform_wrapper.donation_form_wrapper .gform_previous_button,
 .gform_wrapper.membership_form_wrapper .gform_previous_button {
   padding: 12px 36px;
-  background-color: #aaaaaa;
+  background-color: #aaa;
   color: #fff;
   font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   border: none;
@@ -435,7 +435,7 @@ a.btn.btn.search-submit,
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li label {
   padding: 7px 24px;
   margin: 0;
-  background-color: #aaaaaa;
+  background-color: #aaa;
   font-size: 18px;
   font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   color: #fff;
@@ -593,10 +593,10 @@ form[id*=give-form] #give-donation-level-radio-list > li label {
   }
   .navbar li > a:hover {
     background-color: #0089bb;
-    color: #ffffff;
+    color: #fff;
   }
   .navbar li.dropdown .dropdown-menu li a:hover {
-    color: #ffffff;
+    color: #fff;
   }
   .navbar li.home-icon > a img {
     height: 76px;
@@ -807,7 +807,7 @@ section.normal h3 span {
   color: #ff8b4d;
 }
 .interstitial a.btn {
-  color: #ffffff;
+  color: #fff;
 }
 .interstitial.branding img {
   float: left;
@@ -969,7 +969,7 @@ section.normal h3 span {
 }
 .internal-subnav-dropdown .choose-a-page {
   font-size: 16px;
-  color: #aaaaaa;
+  color: #aaa;
   margin: 0 0 0.5em 0;
 }
 body.normal.page #content.has-menu,

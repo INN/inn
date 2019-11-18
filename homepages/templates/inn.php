@@ -1,8 +1,40 @@
-<?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
+<?php
+	//
+	$credit = "Photo by Reynaldo Leal for The Texas Tribune";
+	$alt = "The Texas Tribune's Juan Luis García Hernández (left) and Neena Satija interview Guatemalan asylum seeker Marcos Samayoa on the Brownsville/Gateway International Bridge in June 2018. Photo by Reynaldo Leal for The Texas Tribune";
+	$images = array(
+		// width without unit => path without $img_path;
+		// first item should be largest image for default src
+		'1616' => 'the-texas-tribune-img_4700-sarah-glen.jpg',
+		'1200' => 'the-texas-tribune-img_4700-sarah-glen_1200.jpg',
+		'800' => 'the-texas-tribune-img_4700-sarah-glen_800.jpg',
+		'400' => 'the-texas-tribune-img_4700-sarah-glen_400.jpg',
+	);
+	$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
+?>
 
 <section id="hero" class="normal">
 	<a href="https://newsmatch.org">
-		<img src="/wp-content/themes/inn/homepages/assets/img/newsmatch-2019.jpg">
+		<figure>
+			<img
+				src="<?php echo esc_attr( $img_path . reset( $images ) ); ?>"
+				alt="<?php echo esc_attr( $alt ); ?>"
+				<?php
+					$srcset = [];
+					foreach ( $images as $size => $image ) {
+						$srcset[] = $img_path . $image . ' ' . $size . 'w';
+					}
+					printf(
+						'srcset="%1$s"',
+						implode( ', ', $srcset )
+					);
+
+					// no custom sizes="" attribute because these images are displayed full width
+					echo 'sizes="100vw"';
+				?>
+			>
+			<figcaption class="credit"><?php echo $credit; ?></figcaption>
+		</figure>
 		<div class="hero-background">
 			<div class="row-fluid">
 				<div class="span12 heroitem">
