@@ -6,8 +6,8 @@
 	$button_link = "https://inn.org/inn-days-2020/";
 
 	// Image options
-	$credit = "TKTK THIS NEEDS INPUT AAAAAAA";
-	$alt = "Photograph of TKTK PERSON speaking at TKTK EVENT on TKTK DATE about TKTK TOPIC. Photo by TKTK PHOTOG for TKTK ORG";
+	$credit = "Photo by Michael Stravato";
+	$alt = "INN Days 2019 in Houston June 12, 2019. (Photo by Michael Stravato)";
 	$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
 	$images = array(
 		// width without unit => path without $img_path;
