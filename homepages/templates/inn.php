@@ -1,20 +1,27 @@
 <?php
-	//
-	$credit = "Photo by Reynaldo Leal for The Texas Tribune";
-	$alt = "The Texas Tribune's Juan Luis García Hernández (left) and Neena Satija interview Guatemalan asylum seeker Marcos Samayoa on the Brownsville/Gateway International Bridge in June 2018. Photo by Reynaldo Leal for The Texas Tribune";
+	// CTA options
+	$headline = "INN Days 2020";
+	$blurb = "Bringing the brightest nonprofit newsrooms together for intensive business training, June 16 and 17";
+	$button_text = "Learn more";
+	$button_link = "https://inn.org/inn-days-2020/";
+
+	// Image options
+	$credit = "TKTK THIS NEEDS INPUT AAAAAAA";
+	$alt = "Photograph of TKTK PERSON speaking at TKTK EVENT on TKTK DATE about TKTK TOPIC. Photo by TKTK PHOTOG for TKTK ORG";
+	$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
 	$images = array(
 		// width without unit => path without $img_path;
-		// first item should be largest image for default src
-		'1616' => 'the-texas-tribune-img_4700-sarah-glen.jpg',
-		'1200' => 'the-texas-tribune-img_4700-sarah-glen_1200.jpg',
-		'800' => 'the-texas-tribune-img_4700-sarah-glen_800.jpg',
-		'400' => 'the-texas-tribune-img_4700-sarah-glen_400.jpg',
+		// first item will be used as the default
+		'1200' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36_1200.JPG',
+		'5472' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36.JPG',
+		'2000' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36_2000.JPG',
+		'800' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36_400.JPG',
+		'400' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36_800.JPG',
 	);
-	$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
 ?>
 
 <section id="hero" class="normal">
-	<a href="https://newsmatch.org">
+	<a href="<?php echo esc_attr( $button_link ); ?>">
 		<figure>
 			<img
 				src="<?php echo esc_attr( $img_path . reset( $images ) ); ?>"
@@ -38,9 +45,9 @@
 		<div class="hero-background">
 			<div class="row-fluid">
 				<div class="span12 heroitem">
-					<h2>NewsMatch 2019</h2>
-					<p>Join the largest grassroots fundraising campaign supporting nonprofit news</p>
-					<div class="btn btn-primary" href="/inn-business-intensive-2019/">Learn more</div>
+					<h2><?php echo $headline; ?></h2>
+					<p><?php echo $blurb; ?></p>
+					<div class="btn btn-primary" href="<?php echo esc_attr( $button_link ); ?>"><?php echo $button_text; ?></div>
 				</div>
 			</div>
 		</div>
