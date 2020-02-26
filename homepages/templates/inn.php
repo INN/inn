@@ -1,22 +1,30 @@
 <?php
 	// CTA options
 	$headline = "INN Days 2020";
-	$blurb = "Bringing the brightest nonprofit newsrooms together for intensive business training, June 16 and 17";
+	$blurb = "June 16 and 17,<br/>The Westin Hotel Old Town, Alexandria, Virginia";
 	$button_text = "Learn more";
 	$button_link = "https://inn.org/inn-days-2020/";
 
 	// Image options
+	// image command, given an img.jpg and ImageMagick:
+	//     for WIDTH in 400 800 1200 2000
+	//     do
+	//         convert img.jpg -resize $WIDTHx$WIDTH img-$WIDTH.jpg
+	//     done
+	//
 	$credit = "Photo by Michael Stravato";
 	$alt = "INN Days 2019 in Houston June 12, 2019. (Photo by Michael Stravato)";
 	$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
 	$images = array(
 		// width without unit => path without $img_path;
 		// first item will be used as the default
-		'1200' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36_1200.JPG',
+		// make sure to update the weird width with the width of the image,
+		// which can be got from `identify img.jpg`
+		'1200' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36-1200.JPG',
 		'5472' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36.JPG',
-		'2000' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36_2000.JPG',
-		'800' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36_400.JPG',
-		'400' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36_800.JPG',
+		'2000' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36-2000.JPG',
+		'800' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36-400.JPG',
+		'400' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36-800.JPG',
 	);
 ?>
 

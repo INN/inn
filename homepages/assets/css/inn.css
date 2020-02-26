@@ -67,7 +67,7 @@
   position: absolute;
 }
 .home #hero .hero-background .span12 {
-  text-align: unset;
+  text-align: center;
   padding: unset;
 }
 .home #hero .hero-background h2 {
