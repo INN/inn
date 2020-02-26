@@ -1,7 +1,7 @@
 <?php
 	// CTA options
 	$headline = "INN Days 2020";
-	$blurb = "June 16 and 17, The Westin Hotel Old Town, Alexandria, Virginia";
+	$blurb = "June 16 and 17,<br/>The Westin Hotel Old Town, Alexandria, Virginia";
 	$button_text = "Learn more";
 	$button_link = "https://inn.org/inn-days-2020/";
 
