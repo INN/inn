@@ -1,9 +1,9 @@
 <?php
 	// CTA options
-	$headline = "INN Days 2020";
-	$blurb = "June 16 and 17,<br/>The Westin Hotel Old Town, Alexandria, Virginia";
-	$button_text = "Learn more";
-	$button_link = "https://inn.org/inn-days-2020/";
+	$headline = "COVID-19<br/>Resources for Nonprofit Newsrooms";
+	$blurb = "Ask questions and find answers about the current crisis";
+	$button_text = "COVID-19 Needs";
+	$button_link = "https://inn.org/covid-19-resources-for-nonprofit-newsrooms/";
 
 	// Image options
 	// image command, given an img.jpg and ImageMagick:
@@ -12,19 +12,19 @@
 	//         convert img.jpg -resize $WIDTHx$WIDTH img-$WIDTH.jpg
 	//     done
 	//
-	$credit = "Photo by Michael Stravato";
-	$alt = "INN Days 2019 in Houston June 12, 2019. (Photo by Michael Stravato)";
+	$credit = "Cory Lum/Civil Beat";
+	$alt = "Elizabeth Glenn, health services manager for the Institute for Human Services, is among IHS staff who conduct health screenings for shelter entrants. She's shown here wearing glasses and gloves, using a thermometer to take a patient's temperature. (Photo by Cory Lum for Honolulu Civil Beat)";
 	$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
 	$images = array(
 		// width without unit => path without $img_path;
 		// first item will be used as the default
 		// make sure to update the weird width with the width of the image,
 		// which can be got from `identify img.jpg`
-		'1200' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36-1200.JPG',
-		'5472' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36.JPG',
-		'2000' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36-2000.JPG',
-		'800' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36-400.JPG',
-		'400' => '74865172-59d8fc80-5316-11ea-9b03-c5bb04229d36-800.JPG',
+		'1200' => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS-1200.jpg',
+		'2600' => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS.jpg',
+		'2000' => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS-2000.jpg',
+		'800'  => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS-400.jpg',
+		'400'  => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS-800.jpg',
 	);
 ?>
 
