@@ -2,7 +2,7 @@
 	// CTA options
 	$headline = "COVID-19<br/>Resources for Nonprofit Newsrooms";
 	$blurb = "Ask questions and find answers about the current crisis";
-	$button_text = "COVID-19 Needs";
+	$button_text = "Share your COVID-19 needs";
 	$button_link = "https://inn.org/covid-19-resources-for-nonprofit-newsrooms/";
 
 	// Image options
