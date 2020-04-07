@@ -1,7 +1,7 @@
 <?php
 	// CTA options
-	$headline = "INN partnering with Facebook Journalism Project on COVID-19 Fund";
-	$blurb = "Nonprofit newsrooms: Apply for grants between $25,000 and $100,000";
+	$headline = "INN to work with Facebook Journalism";
+	$blurb = "Apply for grants starting April 13";
 	$button_text = "Learn more about fund";
 	$button_link = "https://inn.org/inn-partnering-with-facebook-journalism-project-on-covid-19-fund/";
 
