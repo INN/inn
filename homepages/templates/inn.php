@@ -1,9 +1,9 @@
 <?php
 	// CTA options
-	$headline = "COVID-19<br/>Resources for Nonprofit Newsrooms";
-	$blurb = "Ask questions and find answers about the current crisis";
-	$button_text = "Share your COVID-19 needs";
-	$button_link = "https://inn.org/covid-19-resources-for-nonprofit-newsrooms/";
+	$headline = "INN to work with Facebook Journalism";
+	$blurb = "Apply for grants starting April 13";
+	$button_text = "Learn more about fund";
+	$button_link = "https://inn.org/inn-partnering-with-facebook-journalism-project-on-covid-19-fund/";
 
 	// Image options
 	// image command, given an img.jpg and ImageMagick:
@@ -12,19 +12,19 @@
 	//         convert img.jpg -resize $WIDTHx$WIDTH img-$WIDTH.jpg
 	//     done
 	//
-	$credit = "Cory Lum/Civil Beat";
-	$alt = "Elizabeth Glenn, health services manager for the Institute for Human Services, is among IHS staff who conduct health screenings for shelter entrants. She's shown here wearing glasses and gloves, using a thermometer to take a patient's temperature. (Photo by Cory Lum for Honolulu Civil Beat)";
+	$credit = "Michael Stravato for The Texas Tribune";
+	$alt = "The streets of downtown Houston during the coronavirus pandemic. A man in a facemask and hoodie walks towards the camera, ";
 	$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
 	$images = array(
 		// width without unit => path without $img_path;
 		// first item will be used as the default
 		// make sure to update the weird width with the width of the image,
 		// which can be got from `identify img.jpg`
-		'1200' => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS-1200.jpg',
-		'2600' => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS.jpg',
-		'2000' => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS-2000.jpg',
-		'800'  => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS-400.jpg',
-		'400'  => 'RN-Elizabeth-Glenn-uses-thermometer-at-IHS-800.jpg',
+		'1200' => 'covid-header1200.jpg',
+		'3000' => 'covid-header.jpg',
+		'2000' => 'covid-header2000.jpg',
+		'800'  => 'covid-header400.jpg',
+		'400'  => 'covid-header800.jpg',
 	);
 ?>
 
