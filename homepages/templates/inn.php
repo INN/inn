@@ -28,6 +28,43 @@
 	);
 ?>
 
+<section id="debug" class="normal">
+	image:
+	<pre>
+		<?php
+			var_export( wp_get_attachment_metadata( get_theme_mod('inn_homepage_image') ) );
+		?>
+	</pre>
+
+	headline:
+	<pre>
+		<?php
+			var_export( get_theme_mod('inn_homepage_headline') );
+		?>
+	</pre>
+
+	blurb:
+	<pre>
+		<?php
+			var_export( get_theme_mod('inn_homepage_blurb') );
+		?>
+	</pre>
+
+	button text:
+	<pre>
+		<?php
+			var_export( get_theme_mod('inn_homepage_button_text') );
+		?>
+	</pre>
+
+	link:
+	<pre>
+		<?php
+			var_export( get_theme_mod('inn_homepage_featured_link') );
+		?>
+	</pre>
+</section>
+
 <section id="hero" class="normal">
 	<a href="<?php echo esc_attr( $button_link ); ?>">
 		<figure>
