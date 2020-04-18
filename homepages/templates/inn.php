@@ -5,98 +5,65 @@
 	$button_text = "Learn more about fund";
 	$button_link = "https://inn.org/inn-partnering-with-facebook-journalism-project-on-covid-19-fund/";
 
-	// Image options
-	// image command, given an img.jpg and ImageMagick:
-	//     for WIDTH in 400 800 1200 2000
-	//     do
-	//         convert img.jpg -resize $WIDTHx$WIDTH img-$WIDTH.jpg
-	//     done
-	//
-	$credit = "Michael Stravato for The Texas Tribune";
-	$alt = "The streets of downtown Houston during the coronavirus pandemic. A man in a facemask and hoodie walks towards the camera, ";
-	$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
-	$images = array(
-		// width without unit => path without $img_path;
-		// first item will be used as the default
-		// make sure to update the weird width with the width of the image,
-		// which can be got from `identify img.jpg`
-		'1200' => 'covid-header1200.jpg',
-		'3000' => 'covid-header.jpg',
-		'2000' => 'covid-header2000.jpg',
-		'800'  => 'covid-header400.jpg',
-		'400'  => 'covid-header800.jpg',
-	);
+	$image_id = get_theme_mod( 'inn_homepage_image' );
+	// credit needs to be carefully composed from various parts
+	if ( ! empty ( $image_id ) ) {
+		$image_custom = get_post_custom( $image_id );
+		if ( ! empty( $image_custom['_media_credit'][0] ) && ! empty( $image_custom['_navis_media_credit_org'][0] ) ) {
+			$credit = sprintf (
+				// translators: %1$s is the media credit name; %2$s is the name of the organization
+				__( '%1$s for %2$s', 'inn' ),
+				wp_kses_post( $image_custom['_media_credit'][0] ),
+				wp_kses_post( $image_custom['_navis_media_credit_org'][0] )
+			);
+		} else if ( ! empty( $image_custom['_media_credit'][0] ) ) {
+			$credit = wp_kses_post( $image_custom['_media_credit'][0] );
+		} else if ( ! empty( $image_custom['_navis_media_credit_org'][0] ) ) {
+			$credit = wp_kses_post( $image_custom['_navis_media_credit_org'][0] );
+		}
+		if ( ! empty( $image_custom['_media_credit_url'][0] ) ) {
+			$credit = sprintf(
+				'<a href="%1$s">%2$s</a>',
+				esc_attr( $image_custom['_media_credit_url'][0] ),
+				$credit
+			);
+		}
+	}
+
+	// other variables
+	$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/testimonials/';
 ?>
 
-<section id="debug" class="normal">
-	image:
-	<pre>
-		<?php
-			var_export( wp_get_attachment_metadata( get_theme_mod('inn_homepage_image') ) );
-		?>
-	</pre>
-
-	headline:
-	<pre>
-		<?php
-			var_export( get_theme_mod('inn_homepage_headline') );
-		?>
-	</pre>
-
-	blurb:
-	<pre>
-		<?php
-			var_export( get_theme_mod('inn_homepage_blurb') );
-		?>
-	</pre>
-
-	button text:
-	<pre>
-		<?php
-			var_export( get_theme_mod('inn_homepage_button_text') );
-		?>
-	</pre>
-
-	link:
-	<pre>
-		<?php
-			var_export( get_theme_mod('inn_homepage_featured_link') );
-		?>
-	</pre>
-</section>
-
 <section id="hero" class="normal">
-	<a href="<?php echo esc_attr( $button_link ); ?>">
-		<figure>
-			<img
-				src="<?php echo esc_attr( $img_path . reset( $images ) ); ?>"
-				alt="<?php echo esc_attr( $alt ); ?>"
-				<?php
-					$srcset = [];
-					foreach ( $images as $size => $image ) {
-						$srcset[] = $img_path . $image . ' ' . $size . 'w';
-					}
-					printf(
-						'srcset="%1$s"',
-						implode( ', ', $srcset )
-					);
-
-					// no custom sizes="" attribute because these images are displayed full width
-					echo 'sizes="100vw"';
+		<?php
+			if ( isset( $image_id ) ) {
 				?>
-			>
-			<figcaption class="credit"><?php echo $credit; ?></figcaption>
-		</figure>
-		<div class="hero-background">
-			<div class="row-fluid">
-				<div class="span12 heroitem">
-					<h2><?php echo $headline; ?></h2>
-					<p><?php echo $blurb; ?></p>
-					<div class="btn btn-primary" href="<?php echo esc_attr( $button_link ); ?>"><?php echo $button_text; ?></div>
-				</div>
-			</div>
-		</div>
-	</a>
+				<figure>
+					<a href="<?php echo esc_attr( $button_link ); ?>">
+						<?php echo wp_get_attachment_image( $image_id, 'full' ); ?>
+					</a>
+					<?php
+						if ( ! empty( $credit ) ) {
+							?>
+							<figcaption class="credit"><i class="icon-camera"></i> <?php echo $credit; ?></figcaption>
+							<?php
+						}
+					?>
+				</figure>
+				<a href="<?php echo esc_attr( $button_link ); ?>">
+					<div class="hero-background">
+						<div class="row-fluid">
+							<div class="span12 heroitem">
+								<h2><?php echo $headline; ?></h2>
+								<p><?php echo $blurb; ?></p>
+								<div class="btn btn-primary" href="<?php echo esc_attr( $button_link ); ?>"><?php echo $button_text; ?></div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<?php
+			}
+		?>
 </section>
 
 <section id="headlines-row" class="interstitial">
