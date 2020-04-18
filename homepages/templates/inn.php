@@ -54,8 +54,8 @@
 					<div class="hero-background">
 						<div class="row-fluid">
 							<div class="span12 heroitem">
-								<h2><?php echo $headline; ?></h2>
-								<p><?php echo $blurb; ?></p>
+								<h2><?php echo wp_kses_post( $headline ); ?></h2>
+								<p><?php echo wp_kses_post( wpautop( $blurb ) ); ?></p>
 								<div class="btn btn-primary" href="<?php echo esc_attr( $button_link ); ?>"><?php echo $button_text; ?></div>
 							</div>
 						</div>
