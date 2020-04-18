@@ -1,9 +1,9 @@
 <?php
 	// CTA options
-	$headline = "INN to work with Facebook Journalism";
-	$blurb = "Apply for grants starting April 13";
-	$button_text = "Learn more about fund";
-	$button_link = "https://inn.org/inn-partnering-with-facebook-journalism-project-on-covid-19-fund/";
+	$headline = get_theme_mod( 'inn_homepage_headline' );
+	$blurb = get_theme_mod( 'inn_homepage_blurb' );
+	$button_text = get_theme_mod( 'inn_homepage_button_text' );
+	$button_link = get_theme_mod( 'inn_homepage_featured_link' );
 
 	$image_id = get_theme_mod( 'inn_homepage_image' );
 	// credit needs to be carefully composed from various parts
