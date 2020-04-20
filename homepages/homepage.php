@@ -116,12 +116,12 @@ function inn_homepage_customize_image( $wp_customize ) {
 		'sanitize_callback' => 'sanitize_text_field',
 		'sanitize_js_callback' => '',
 	) );
-	// this saves a post ID
 	$wp_customize->add_control(
 		'inn_homepage_headline',
 		array(
 			'type' => 'text',
-			'label' => __( 'featured image headline', 'inn' ),
+			'label' => __( 'Featured Headline', 'inn' ),
+			'description' => __( 'This appears below the image, and above the blurb.', 'inn' ),
 			'section' => 'inn_homepage',
 		)
 	);
@@ -134,12 +134,11 @@ function inn_homepage_customize_image( $wp_customize ) {
 		'sanitize_callback' => 'sanitize_textarea_field',
 		'sanitize_js_callback' => '',
 	) );
-	// this saves a post ID
 	$wp_customize->add_control(
 		'inn_homepage_blurb',
 		array(
-			'label' => __( 'Featured blurb', 'inn' ),
-			'description' => __( 'This appears beneath the headline, but above the button.', 'inn' ),
+			'label' => __( 'Featured Blurb', 'inn' ),
+			'description' => __( 'This text appears beneath the headline, but above the button. To break a paragraph into two, use an empty line.', 'inn' ),
 			'type' => 'textarea',
 			'section' => 'inn_homepage',
 		)
@@ -157,8 +156,8 @@ function inn_homepage_customize_image( $wp_customize ) {
 	$wp_customize->add_control(
 		'inn_homepage_button_text',
 		array(
-			'label' => __( 'Featured button label', 'inn' ),
-			'description' => __( 'This text is shown on the button', 'inn' ),
+			'label' => __( 'Label for Featured Button', 'inn' ),
+			'description' => __( 'This text is shown on the button, which appears below the blurb text.', 'inn' ),
 			'section' => 'inn_homepage',
 			'type' => 'text',
 		)
@@ -177,7 +176,7 @@ function inn_homepage_customize_image( $wp_customize ) {
 	$wp_customize->add_control(
 		'inn_homepage_featured_link',
 		array(
-			'label' => __( 'Featured link', 'inn' ),
+			'label' => __( 'Featured Link', 'inn' ),
 			'description' => __( 'This link applies to the homepage featured image, headline, blurb and button.', 'inn' ),
 			'section' => 'inn_homepage',
 			'type' => 'url',
