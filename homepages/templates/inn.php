@@ -1,8 +1,8 @@
 <?php
 	// CTA options
-	$headline = get_theme_mod( 'inn_homepage_headline' );
-	$blurb = get_theme_mod( 'inn_homepage_blurb' );
-	$button_text = get_theme_mod( 'inn_homepage_button_text' );
+	$headline = wp_kses_post( get_theme_mod( 'inn_homepage_headline' ) );
+	$blurb = wp_kses_post( wpautop( get_theme_mod( 'inn_homepage_blurb' ) ) );
+	$button_text = esc_html( get_theme_mod( 'inn_homepage_button_text' ) );
 	$button_link = get_theme_mod( 'inn_homepage_featured_link' );
 
 	$image_id = get_theme_mod( 'inn_homepage_image' );
@@ -54,9 +54,26 @@
 					<div class="hero-background">
 						<div class="row-fluid">
 							<div class="span12 heroitem">
-								<h2><?php echo wp_kses_post( $headline ); ?></h2>
-								<p><?php echo wp_kses_post( wpautop( $blurb ) ); ?></p>
-								<div class="btn btn-primary" href="<?php echo esc_attr( $button_link ); ?>"><?php echo $button_text; ?></div>
+								<?php
+									if ( ! empty( $headline ) ) {
+										printf(
+											'<h2>%1$s</h2>',
+											// sanitized earlier
+											$headline
+										);
+									}
+									if ( ! empty( $blurb ) ) {
+										// sanitized earlier
+										echo $blurb;
+									}
+									if ( ! empty( $button_text ) ) {
+										printf(
+											'<div class="btn btn-primary" href="%1$s">%2$s</div>',
+											esc_attr( $button_link ),
+											$button_text // esc_html'd earlier
+										);
+									}
+								?>
 							</div>
 						</div>
 					</div>

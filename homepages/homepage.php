@@ -170,6 +170,7 @@ function inn_homepage_customize_image( $wp_customize ) {
 		'default' => null,
 		'transport' => 'refresh',
 		'sanitize_callback' => 'esc_url_raw',
+		'validate_callback' => 'inn_homepage_featured_link_validate',
 		'sanitize_js_callback' => '',
 	) );
 	// this saves a post ID
@@ -184,3 +185,16 @@ function inn_homepage_customize_image( $wp_customize ) {
 	);
 }
 add_action( 'customize_register', 'inn_homepage_customize_image' );
+
+/**
+ * Validation callback for the inn_homepage_featured_link customizer option
+ *
+ * @link https://developer.wordpress.org/themes/customize-api/tools-for-improved-user-experience/#validating-settings%c2%a0in-php
+ * @see inn_homepage_customize_image
+ */
+function inn_homepage_featured_link_validate( $validity, $value ) {
+	if ( empty( esc_url( $value ) ) || filter_var( $value, FILTER_VALIDATE_URL) === FALSE ) {
+		$validity->add( 'required', __( 'You must supply a valid URL.', 'inn' ) );
+	}
+	return $validity;
+}
