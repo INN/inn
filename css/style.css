@@ -539,11 +539,25 @@ form[id*=give-form] #give-donation-level-radio-list > li label {
   display: inline;
   font-size: 18px;
 }
-#sidebar .widget.rev {
+.widget.rev {
   padding: 24px;
   border: 8px solid #0089bb;
   font-family: "Merriweather", georgia, serif;
   font-weight: 300;
+  color: inherit;
+  background-color: transparent;
+}
+.widget.rev .widgettitle {
+  background-color: transparent;
+  color: #005270;
+  padding: 0;
+}
+.widget.rev .widgettitle a {
+  color: #005270;
+}
+.widget.rev a {
+  color: #0089bb;
+  font-weight: normal;
 }
 .tribe-events-tooltip .entry-title {
   padding: 3px 6px 6px;
