@@ -606,9 +606,9 @@ form[id*=give-form] #give-donation-level-radio-list > li label {
 #site-header a.btn {
   margin-left: 20px;
   margin-top: 24px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
-  padding: 8px;
+  padding: 12px;
   cursor: pointer;
 }
 #site-header .widget {
