@@ -82,13 +82,19 @@ a:hover {
   color: #08bdff;
 }
 .btn,
+a.btn {
+  padding: 12px 24px;
+}
+.give-btn {
+  padding: 12px;
+}
+.btn,
 a.btn,
 .give-btn {
   text-shadow: none;
   border: none;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 12px 24px;
   background-color: #0089bb;
   color: #fff;
   border-radius: 0;
@@ -533,9 +539,26 @@ form[id*=give-form] #give-donation-level-radio-list > li label {
   display: inline;
   font-size: 18px;
 }
+#sidebar .widget.rev {
+  padding: 24px;
+  border: 8px solid #0089bb;
+  font-family: "Merriweather", georgia, serif;
+  font-weight: 300;
+}
 .tribe-events-tooltip .entry-title {
   padding: 3px 6px 6px;
   font-size: 2em;
+}
+.give-form input[type="file"],
+.give-form select {
+  height: unset;
+}
+.give-submit.give-btn {
+  color: #fff;
+  background-color: #ff8b4d;
+}
+.give-submit.give-btn:hover {
+  background-color: #ff762d;
 }
 #header-social .icon-youtube-parent,
 #header-social .icon-gplus-parent,
