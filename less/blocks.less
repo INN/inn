@@ -1,0 +1,14 @@
+// Add whitespace to columns within fullwidth block
+// 781px matches Gutenberg's breakpoint where columns go from single-colum to multi-column
+// these styles assume that there won't be Fullwidth > * > Column setups
+// @link https://github.com/INN/umbrella-inndev/issues/159
+@min-width ( 781px ) {
+  .alignfull .wp-block-columns {
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+}
+.alignfull .wp-block-columns {
+  margin-left: 32px;
+  margin-right: 32px;
+}

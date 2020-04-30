@@ -539,6 +539,16 @@ form[id*=give-form] #give-donation-level-radio-list > li label {
   display: inline;
   font-size: 18px;
 }
+@min-width ( 781px ) {
+  .alignfull .wp-block-columns {
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+}
+.alignfull .wp-block-columns {
+  margin-left: 32px;
+  margin-right: 32px;
+}
 .widget.rev {
   padding: 24px;
   border: 8px solid #0089bb;
