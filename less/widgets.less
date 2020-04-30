@@ -1,0 +1,21 @@
+// Make the Reverse style be just a border around the plain Normal widget
+.widget.rev {
+  padding: 24px;
+  border: 8px solid @blue;
+  font-family: @serif;
+  font-weight: 300;
+  color: inherit;
+  background-color: transparent;
+  .widgettitle {
+    background-color: transparent;
+    color: @darkblue;
+    padding: 0;
+    a {
+      color: @darkblue;
+    }
+  }
+  a {
+    color: @blue;
+    font-weight: normal;
+  }
+}

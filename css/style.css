@@ -82,13 +82,19 @@ a:hover {
   color: #08bdff;
 }
 .btn,
+a.btn {
+  padding: 12px 24px;
+}
+.give-btn {
+  padding: 12px;
+}
+.btn,
 a.btn,
 .give-btn {
   text-shadow: none;
   border: none;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 12px 24px;
   background-color: #0089bb;
   color: #fff;
   border-radius: 0;
@@ -533,9 +539,50 @@ form[id*=give-form] #give-donation-level-radio-list > li label {
   display: inline;
   font-size: 18px;
 }
+@min-width ( 781px ) {
+  .alignfull .wp-block-columns {
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+}
+.alignfull .wp-block-columns {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.widget.rev {
+  padding: 24px;
+  border: 8px solid #0089bb;
+  font-family: "Merriweather", georgia, serif;
+  font-weight: 300;
+  color: inherit;
+  background-color: transparent;
+}
+.widget.rev .widgettitle {
+  background-color: transparent;
+  color: #005270;
+  padding: 0;
+}
+.widget.rev .widgettitle a {
+  color: #005270;
+}
+.widget.rev a {
+  color: #0089bb;
+  font-weight: normal;
+}
 .tribe-events-tooltip .entry-title {
   padding: 3px 6px 6px;
   font-size: 2em;
+}
+.give-form input[type="file"],
+.give-form select {
+  height: unset;
+}
+.give-submit.give-btn {
+  color: #fff;
+  background-color: #ff8b4d;
+}
+.give-submit.give-btn:hover {
+  background-color: #ff762d;
 }
 #header-social .icon-youtube-parent,
 #header-social .icon-gplus-parent,
@@ -569,9 +616,9 @@ form[id*=give-form] #give-donation-level-radio-list > li label {
 #site-header a.btn {
   margin-left: 20px;
   margin-top: 24px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
-  padding: 8px;
+  padding: 12px;
   cursor: pointer;
 }
 #site-header .widget {
