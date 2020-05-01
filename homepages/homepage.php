@@ -3,20 +3,25 @@
 include_once get_template_directory() . '/homepages/homepage-class.php';
 
 class INNHomepageLayout extends Homepage {
-  var $name = 'INN Main Site Homepage Layout';
-  var $description = 'Custom homepage layout for the main INN site.';
+	var $name = 'INN Main Site Homepage Layout';
+	var $description = 'Custom homepage layout for the main INN site.';
 
-  function __construct($options=array()) {
-    $defaults = array(
-      'template' => get_stylesheet_directory() . '/homepages/templates/inn.php',
-      'assets' => array(
-	  		array('inn', get_stylesheet_directory_uri() . '/homepages/assets/css/inn.css', array(), '20180816'),
-	  	)
-    );
+	function __construct($options=array()) {
+		$defaults = array(
+			'template' => get_stylesheet_directory() . '/homepages/templates/inn.php',
+			'assets' => array(
+				array(
+					'inn',
+					get_stylesheet_directory_uri() . '/homepages/assets/css/inn.css',
+					array(),
+					filemtime( get_stylesheet_directory() . '/homepages/assets/css/inn.css' ),
+				),
+			)
+		);
 	$options = array_merge($defaults, $options);
-    $this->init();
-    $this->load($options);
-  }
+		$this->init();
+		$this->load($options);
+	}
 }
 
 function inn_custom_homepage_layouts() {
@@ -70,4 +75,125 @@ function inn_get_testimonial() {
 	$num = mt_rand(0, count( $data ) - 1 );
 
 	return $testimonial = $data[$num];
+}
+
+/**
+ * WP Customizer functionality for managing the homepage featured image and other suchlike
+ */
+function inn_homepage_customize_image( $wp_customize ) {
+	$wp_customize->remove_section( 'largo_homepage' );
+	$wp_customize->add_section( 'inn_homepage', array(
+		'title' => __( 'INN Homepage Featured Image', 'inn' ),
+		'capability' => 'edit_theme_options',
+		'description' => __( 'Options for the big image on the homepage, and its text', 'inn' ),
+		'active_callback' => 'is_home',
+	) );
+
+	$wp_customize->add_setting( 'inn_homepage_image', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => null,
+		'transport' => 'refresh',
+		'sanitize_callback' => '',
+		'sanitize_js_callback' => '',
+	) );
+	// this saves a post ID
+	$wp_customize->add_control( new WP_Customize_Media_control(
+		$wp_customize,
+		'inn_homepage_image',
+		array(
+			'label' => __( 'Featured Homepage Image', 'inn' ),
+			'mime_type' => 'image',
+			'section' => 'inn_homepage',
+		)
+	) );
+
+	$wp_customize->add_setting( 'inn_homepage_headline', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => null,
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_js_callback' => '',
+	) );
+	$wp_customize->add_control(
+		'inn_homepage_headline',
+		array(
+			'type' => 'text',
+			'label' => __( 'Featured Headline', 'inn' ),
+			'description' => __( 'This appears below the image, and above the blurb.', 'inn' ),
+			'section' => 'inn_homepage',
+		)
+	);
+
+	$wp_customize->add_setting( 'inn_homepage_blurb', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => null,
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_js_callback' => '',
+	) );
+	$wp_customize->add_control(
+		'inn_homepage_blurb',
+		array(
+			'label' => __( 'Featured Blurb', 'inn' ),
+			'description' => __( 'This text appears beneath the headline, but above the button. To break a paragraph into two, use an empty line.', 'inn' ),
+			'type' => 'textarea',
+			'section' => 'inn_homepage',
+		)
+	);
+
+	$wp_customize->add_setting( 'inn_homepage_button_text', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => null,
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_js_callback' => '',
+	) );
+	// this saves a post ID
+	$wp_customize->add_control(
+		'inn_homepage_button_text',
+		array(
+			'label' => __( 'Label for Featured Button', 'inn' ),
+			'description' => __( 'This text is shown on the button, which appears below the blurb text.', 'inn' ),
+			'section' => 'inn_homepage',
+			'type' => 'text',
+		)
+	);
+
+	$wp_customize->add_setting( 'inn_homepage_featured_link', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => null,
+		'transport' => 'refresh',
+		'sanitize_callback' => 'esc_url_raw',
+		'validate_callback' => 'inn_homepage_featured_link_validate',
+		'sanitize_js_callback' => '',
+	) );
+	// this saves a post ID
+	$wp_customize->add_control(
+		'inn_homepage_featured_link',
+		array(
+			'label' => __( 'Featured Link', 'inn' ),
+			'description' => __( 'This link applies to the homepage featured image, headline, blurb and button.', 'inn' ),
+			'section' => 'inn_homepage',
+			'type' => 'url',
+		)
+	);
+}
+add_action( 'customize_register', 'inn_homepage_customize_image' );
+
+/**
+ * Validation callback for the inn_homepage_featured_link customizer option
+ *
+ * @link https://developer.wordpress.org/themes/customize-api/tools-for-improved-user-experience/#validating-settings%c2%a0in-php
+ * @see inn_homepage_customize_image
+ */
+function inn_homepage_featured_link_validate( $validity, $value ) {
+	if ( empty( esc_url( $value ) ) || filter_var( $value, FILTER_VALIDATE_URL) === FALSE ) {
+		$validity->add( 'required', __( 'You must supply a valid URL.', 'inn' ) );
+	}
+	return $validity;
 }

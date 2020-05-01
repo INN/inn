@@ -276,11 +276,15 @@ function inn_woocommerce_terms_replace_permalink( $id ) {
 		),
 	);
 
-	if ( array_key_exists( $current_page_id, $term_page_overrides ) ) {
-		return $term_page_overrides[ $current_page_id ]['terms_id'];
-	} else {
+	if ( ! is_string( $current_page_id ) && ! is_integer( $current_page_id ) ) {
 		return $id;
 	}
+
+	if ( array_key_exists( $current_page_id, $term_page_overrides ) ) {
+		return $term_page_overrides[ $current_page_id ]['terms_id'];
+	}
+
+	return $id;
 }
 add_filter( 'woocommerce_get_terms_page_id', 'inn_woocommerce_terms_replace_permalink' );
 
