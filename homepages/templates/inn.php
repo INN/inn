@@ -107,7 +107,7 @@
 		<h3><span>About INN</span></h3>
 		<div class="row-fluid">
 			<div class="span12">
-				<h5>INN supports more than 200 nonprofit newsrooms across the U.S., working to strengthen the sources of trusted news for thousands of diverse communities.</h5>
+				<h5>INN strengthens and supports more than 250 independent news organizations in a new kind of media network: nonprofit, nonpartisan and dedicated to public service.</h5>
 			</div>
 		</div>
 		<div class="row-fluid">
