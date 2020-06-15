@@ -95,7 +95,7 @@ $states = array(
 					if ( is_int( $wp_query->post_count ) && 0 < $wp_query->post_count ) {
 						echo (string) $wp_query->post_count;
 					} else {
-						echo '170+';
+						echo '250+';
 						echo '<!-- check the logic here, something has gone wrong -->';
 					}
 				?>

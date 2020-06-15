@@ -119,7 +119,7 @@
 			<div class="span4">
 				<a href="/members/"><img class="icon" src="<?php echo $img_path . 'icons/memberdirectory.svg'; ?>" /></a>
 				<h5><a href="/members/">Our Members</a></h5>
-				<p>200+ nonprofits publishing news in the public interest</p>
+				<p>250+ nonprofits publishing news in the public interest</p>
 			</div>
 			<div class="span4">
 				<a href="/news/"><img class="icon" src="<?php echo $img_path . 'icons/news.svg'; ?>" /></a>
