@@ -107,7 +107,7 @@
 		<h3><span>About INN</span></h3>
 		<div class="row-fluid">
 			<div class="span12">
-				<h5>INN is a network of more than 200 nonprofit newsrooms across the U.S., working to strengthen the sources of trusted news for thousands of diverse communities.</h5>
+				<h5>INN strengthens and supports more than 250 independent news organizations in a new kind of media network: nonprofit, nonpartisan and dedicated to public service.</h5>
 			</div>
 		</div>
 		<div class="row-fluid">
@@ -119,7 +119,7 @@
 			<div class="span4">
 				<a href="/members/"><img class="icon" src="<?php echo $img_path . 'icons/memberdirectory.svg'; ?>" /></a>
 				<h5><a href="/members/">Our Members</a></h5>
-				<p>200+ nonprofits publishing news in the public interest</p>
+				<p>250+ nonprofits publishing news in the public interest</p>
 			</div>
 			<div class="span4">
 				<a href="/news/"><img class="icon" src="<?php echo $img_path . 'icons/news.svg'; ?>" /></a>
@@ -221,35 +221,6 @@
 				<h5><a href="/for-members/membership-faqs/">FAQs</a></h5>
 				<p>Answers to all your questions</p>
 			</div>
-		</div>
-	</div>
-</section>
-
-<section id="supporters" class="interstitial">
-	<div class="content">
-		<h3>Thanks, Supporters!</h3>
-		<div class="row-fluid">
-			<ul class="span4">
-				<li><a href="https://www.craigslist.org/about/charitable">craigslist Charitable Fund</a></li>
-				<li><a href="http://democracyfund.org/">Democracy Fund</a></li>
-				<li><a href="http://www.journalismfoundation.org/default.asp">Ethics &amp; Excellence in Journalism Foundation</a></li>
-				<li><a href="https://www.fordfoundation.org/">Ford Foundation</a></li>
-				<li><a href="http://www.knightfoundation.org/">The John S. and James L. Knight Foundation</a></li>
-			</ul>
-			<ul class="span4">
-				<li><a href="http://www.macfound.org/">John D. &amp; Catherine T. MacArthur Foundation</a></li>
-				<li><a href="https://jonathanloganfamilyfoundation.org/">Jonathan Logan Family Foundation</a></li>
-				<li><a href="http://www.joycefdn.org/">Joyce Foundation</a></li>
-				<li><a href="http://www.mccormickfoundation.org/">Robert R. McCormick Foundation</a></li>
-				<li><a href="http://www.opensocietyfoundations.org/">Open Society Foundations</a></li>
-			</ul>
-			<ul class="span4">
-				<li>Park Foundation</li>
-				<li>Present Progressive Fund</li>
-				<li><a href="http://www.driehausfoundation.org/">Richard H. Driehaus Foundation</a></li>
-				<li><a href="http://rbf.org/">Rockefeller Brothers Fund</a></li>
-				<li><a href="/about/people/board-of-directors/">The INN Board</a></li>
-			</ul>
 		</div>
 	</div>
 </section>

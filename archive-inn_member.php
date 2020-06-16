@@ -90,14 +90,17 @@ $states = array(
 					 *
 					 * Draws from the global query, which because of the pre_get_posts filter inn_member_archive_query contains <=500 INN members.
 					 * @since https://github.com/INN/inn/issues/73
-					 */
 					 global $wp_query;
 					if ( is_int( $wp_query->post_count ) && 0 < $wp_query->post_count ) {
 						echo (string) $wp_query->post_count;
 					} else {
-						echo '170+';
+						echo '250+';
 						echo '<!-- check the logic here, something has gone wrong -->';
 					}
+					 */
+					 // per https://secure.helpscout.net/conversation/1193187834/5680/
+					 // fudging this to 250+ for now.
+					 echo '250+';
 				?>
 				members is a nonprofit, nonpartisan organization committed to editorial independence and transparency.</p>
 			</section>
