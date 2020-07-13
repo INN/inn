@@ -182,6 +182,96 @@ function inn_homepage_customize_image( $wp_customize ) {
 			'type' => 'url',
 		)
 	);
+
+	/*
+	 * Newsletter section
+	 */
+	$wp_customize->add_section( 'inn_homepage_newsletter', array(
+		'title' => __( 'INN Homepage Newsletter Section', 'inn' ),
+		'capability' => 'edit_theme_options',
+		'description' => __( 'Options for the Newsletter subscription area image on the homepage, and its text', 'inn' ),
+		'active_callback' => 'is_home',
+	) );
+
+	// Newsletter section header
+	$wp_customize->add_setting( 'inn_homepage_newsletter_headline', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => null,
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_js_callback' => '',
+	) );
+	// this saves a post ID
+	$wp_customize->add_control(
+		'inn_homepage_newsletter_headline',
+		array(
+			'label' => __( 'Label for Newsletter Section header', 'inn' ),
+			'description' => __( 'This text is shown at the top of the newsletter section.', 'inn' ),
+			'section' => 'inn_homepage_newsletter',
+			'type' => 'text',
+		)
+	);
+
+	// blurb text
+	$wp_customize->add_setting( 'inn_homepage_newsletter_blurb', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => null,
+		'transport' => 'refresh',
+		'sanitize_callback' => 'wp_kses_post',
+		'sanitize_js_callback' => '',
+	) );
+	$wp_customize->add_control(
+		'inn_homepage_newsletter_blurb',
+		array(
+			'label' => __( 'Newsletter Section Blurb', 'inn' ),
+			'description' => __( 'This text appears beneath the headline, but above the button. To break a paragraph into two, use an empty line.', 'inn' ),
+			'type' => 'textarea',
+			'section' => 'inn_homepage_newsletter',
+		)
+	);
+
+	// button text
+	$wp_customize->add_setting( 'inn_homepage_newsletter_button_text', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => null,
+		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_js_callback' => '',
+	) );
+	$wp_customize->add_control(
+		'inn_homepage_newsletter_button_text',
+		array(
+			'label' => __( 'Label for Newsletter Button', 'inn' ),
+			'description' => __( 'This text is shown on the button, which appears below the blurb text.', 'inn' ),
+			'section' => 'inn_homepage_newsletter',
+			'type' => 'text',
+		)
+	);
+
+	// button linke
+	$wp_customize->add_setting( 'inn_homepage_newsletter_button_link', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => null,
+		'transport' => 'refresh',
+		'sanitize_callback' => 'esc_url_raw',
+		'validate_callback' => 'inn_homepage_featured_link_validate',
+		'sanitize_js_callback' => '',
+	) );
+	$wp_customize->add_control(
+		'inn_homepage_newsletter_button_link',
+		array(
+			'label' => __( 'Featured Link', 'inn' ),
+			'description' => __( 'This link applies to the newsletter section button.', 'inn' ),
+			'section' => 'inn_homepage_newsletter',
+			'type' => 'url',
+		)
+	);
+
+
 }
 add_action( 'customize_register', 'inn_homepage_customize_image' );
 

@@ -151,18 +151,26 @@
 	<div class="content">
 		<img class="mail-icon" src="<?php echo $img_path . 'icons/mail-squares.png'; ?>" />
 		<div class="content-inner">
-			<h3>Stay Up To Date</h3>
-			<p>News from INN and our members. <strong>Delivered weekly.</strong></p>
+			<?php
+				
+				printf( 
+					'<h3>%1$s</h3>',
+					esc_html( get_theme_mod( 'inn_homepage_newsletter_headline' ) )
+				);
 
-			<!-- Begin Constant Contact Inline Form Code -->
-			<div class="ctct-inline-form" data-form-id="3616f3f6-cb66-46aa-ab4b-ed9191259019"></div>
-			<!-- End Constant Contact Inline Form Code -->
+				echo wp_kses_post( wpautop( get_theme_mod( 'inn_homepage_newsletter_blurb' ) ) );
 
-			<!-- Begin Constant Contact Active Forms -->
-			<script> var _ctct_m = "8822706d3cad02ed9d29ef563a1f2349"; </script>
-			<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
-			<!-- End Constant Contact Active Forms -->
+				$newsletter_button_text = esc_html( get_theme_mod( 'inn_homepage_newsletter_button_text' ) );
+				$newsletter_button_link = esc_html( get_theme_mod( 'inn_homepage_newsletter_button_link' ) );
+				if ( ! empty( $newsletter_button_text ) ) {
+					printf(
+						'<div class="btn btn-primary" href="%1$s">%2$s</div>',
+						esc_attr( $newsletter_button_link ),
+						$newsletter_button_text // esc_html'd earlier
+					);
+				}
 
+			?>
 		</div>
 	</div>
 </section>
