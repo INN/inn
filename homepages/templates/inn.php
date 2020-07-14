@@ -164,7 +164,7 @@
 				$newsletter_button_link = esc_html( get_theme_mod( 'inn_homepage_newsletter_button_link' ) );
 				if ( ! empty( $newsletter_button_text ) ) {
 					printf(
-						'<div class="btn btn-primary" href="%1$s">%2$s</div>',
+						'<a class="btn btn-primary" href="%1$s">%2$s</a>',
 						esc_attr( $newsletter_button_link ),
 						$newsletter_button_text // esc_html'd earlier
 					);
