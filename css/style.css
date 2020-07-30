@@ -569,6 +569,32 @@ form[id*=give-form] #give-donation-level-radio-list > li label {
   color: #0089bb;
   font-weight: normal;
 }
+.nav-shelf .header-widget a.btn,
+#site-header a.btn {
+  margin-left: 20px;
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 12px;
+  cursor: pointer;
+}
+.nav-shelf .header-widget .widget,
+#site-header .widget {
+  margin-bottom: 0;
+}
+#site-header aside {
+  max-width: 200px;
+}
+.nav-shelf .header-widget {
+  text-align: center;
+}
+.nav-shelf .header-widget aside {
+  max-width: 200px;
+  display: inline-block;
+}
+.nav-shelf .header-widget a.btn {
+  margin-top: 0;
+}
 .tribe-events-tooltip .entry-title {
   padding: 3px 6px 6px;
   font-size: 2em;
@@ -612,20 +638,6 @@ form[id*=give-form] #give-donation-level-radio-list > li label {
 }
 #site-header img {
   max-width: 280px;
-}
-#site-header a.btn {
-  margin-left: 20px;
-  margin-top: 24px;
-  font-size: 14px;
-  line-height: 1.4;
-  padding: 12px;
-  cursor: pointer;
-}
-#site-header .widget {
-  margin-bottom: 0;
-}
-#site-header aside {
-  max-width: 200px;
 }
 @media (min-width: 769px) {
   #main-nav .navbar-inner .container .nav-shelf .nav {
